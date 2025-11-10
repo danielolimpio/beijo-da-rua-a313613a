@@ -58,7 +58,26 @@ import extraMember9 from "@/assets/extra-member9.jpeg";
 
 const PopularMembers = () => {
   const [showAll, setShowAll] = useState(false);
-  const [filter, setFilter] = useState<"novos" | "ativos" | "populares">("novos");
+  const [filter, setFilter] = useState<"novos" | "ativos" | "populares">("populares");
+
+  // Shuffle array with seed for consistent randomization per filter
+  const shuffleArray = <T,>(array: T[], seed: string): T[] => {
+    const arr = [...array];
+    let currentIndex = arr.length;
+    
+    // Simple seeded random for consistent but different ordering per filter
+    const random = () => {
+      const x = Math.sin(seed.split('').reduce((a, b) => a + b.charCodeAt(0), 0) + currentIndex) * 10000;
+      return x - Math.floor(x);
+    };
+
+    while (currentIndex !== 0) {
+      const randomIndex = Math.floor(random() * currentIndex);
+      currentIndex--;
+      [arr[currentIndex], arr[randomIndex]] = [arr[randomIndex], arr[currentIndex]];
+    }
+    return arr;
+  };
 
   const allMembers = [
     // Novos membros (menos de 30 dias)
@@ -119,12 +138,13 @@ const PopularMembers = () => {
     { name: "Daniela Monteiro", status: "registrado há 3 meses", city: "MG - Betim", online: true, image: popularMember30, daysRegistered: 90 },
   ];
 
-  const filteredMembers = allMembers.filter(member => {
+  const baseFiltered = allMembers.filter(member => {
     if (filter === "novos") return member.daysRegistered <= 30;
     if (filter === "ativos") return member.online;
     return true; // populares mostra todos
   });
 
+  const filteredMembers = shuffleArray(baseFiltered, filter);
   const displayedMembers = showAll ? filteredMembers : filteredMembers.slice(0, 10);
 
   return (
@@ -171,9 +191,11 @@ const PopularMembers = () => {
                   alt={member.name}
                   className="w-24 h-24 rounded-full mx-auto border-4 border-primary/20 object-cover"
                 />
-                {member.online && (
-                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-success rounded-full border-4 border-background animate-pulse"></div>
-                )}
+                <div className={`absolute bottom-0 right-0 w-6 h-6 rounded-full border-4 border-background ${
+                  member.online 
+                    ? 'bg-success animate-pulse' 
+                    : 'bg-muted-foreground/40'
+                }`}></div>
               </div>
               <h4 className="font-bold text-foreground mb-1">{member.name}</h4>
               <p className="text-xs text-muted-foreground">{member.status}</p>

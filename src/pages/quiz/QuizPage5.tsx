@@ -1,167 +1,188 @@
+import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
-import { Helmet } from "react-helmet";
-import { Building2, Home as HomeIcon, TreePine } from "lucide-react";
+import { Building2, Home, MapPin, AlertTriangle, CheckCircle2, XCircle, Lightbulb, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const QuizPage5 = () => {
   return (
     <>
       <Helmet>
-        <title>Apps de namoro para homens no interior do Brasil vale a pena? | Beijo da Rua</title>
-        <meta name="description" content="Descubra como apps de namoro funcionam fora das capitais, estratégias para ampliar alcance e alternativas locais no Brasil." />
+        <title>Você Mora em Cidade Grande ou Interior? | Quiz Apps de Namoro</title>
+        <meta name="description" content="Descubra como sua localização influencia sua estratégia em apps de namoro. Estratégias específicas para capitais, cidades médias e interior." />
       </Helmet>
-      
+
       <QuizLayout 
-        title="Você mora em cidade grande ou interior?"
+        title="Você mora em cidade grande ou interior?" 
         description="Localização muda completamente a estratégia"
         progress={100}
       >
         {/* Educational Content */}
-        <article className="prose prose-lg max-w-none mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-4">
-            A realidade dos apps no interior do Brasil
-          </h2>
-          
-          <p className="text-foreground/80 mb-4">
-            Vamos com a verdade nua e crua: <strong>apps de namoro no interior brasileiro funcionam 
-            MUITO diferente das capitais</strong>. Em São Paulo, você pode ter 50+ matches por semana. 
-            No interior de Minas? Talvez 5 por mês. Mas isso não significa que não funciona.
-          </p>
-
-          <div className="bg-success/10 border-l-4 border-success p-6 my-6 rounded-r-lg">
-            <h3 className="text-xl font-semibold text-foreground mb-2">💡 Segredo que homens do interior ignoram:</h3>
-            <p className="text-foreground/80 mb-0">
-              Em cidades pequenas, você tem vantagem GIGANTE se souber jogar. Por quê? Menos 
-              competição. Enquanto homens em SP brigam por atenção com 10.000 outros, você compete 
-              com 50. Taxa de conversão de match → encontro é 3x maior no interior (78% vs 23%).
+        <article className="prose max-w-none mb-12 space-y-8">
+          {/* Section 1 */}
+          <section className="bg-muted/30 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 text-foreground">A realidade dos apps no interior do Brasil</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Vamos com a verdade nua e crua: apps de namoro no interior brasileiro funcionam MUITO diferente das capitais. 
+              Em São Paulo, você pode ter 50+ matches por semana. No interior de Minas? Talvez 5 por mês. 
+              Mas isso não significa que não funciona.
             </p>
-          </div>
+          </section>
 
-          <h3 className="text-xl font-semibold text-foreground mb-3">Estratégias por tipo de localização:</h3>
-          
-          <div className="space-y-4 mb-6">
-            <div className="bg-muted/50 p-4 rounded-lg">
-              <h4 className="font-semibold text-foreground mb-2">🏙️ Capitais e regiões metropolitanas</h4>
-              <p className="text-foreground/80 text-sm mb-2">
-                <strong>Apps TOP:</strong> Todos funcionam (Tinder, Bumble, Happn, Hinge, etc.)
-              </p>
-              <p className="text-foreground/80 text-sm mb-2">
-                Vantagens: Volume absurdo de opções, diversidade, apps nichados também funcionam.<br />
-                Desvantagens: Competição feroz, "paradoxo da escolha" (tanta opção que ninguém decide).
-              </p>
-              <p className="text-foreground/80 text-sm">
-                <strong>Estratégia vencedora:</strong> Seja específico em bio. Com 100.000 perfis, 
-                destaque é tudo. Mulheres em capitais filtram rápido — dê motivo para pausarem em você.
-              </p>
-            </div>
-
-            <div className="bg-muted/50 p-4 rounded-lg">
-              <h4 className="font-semibold text-foreground mb-2">🏘️ Cidades médias (100k-500k habitantes)</h4>
-              <p className="text-foreground/80 text-sm mb-2">
-                <strong>Apps TOP:</strong> Tinder, Bumble, ParPerfeito, Facebook Dating
-              </p>
-              <p className="text-foreground/80 text-sm mb-2">
-                Sweet spot. Opções suficientes, mas não avassaladoras. Facebook Dating funciona 
-                MUITO BEM aqui — usa conexões sociais reais (amigos de amigos).
-              </p>
-              <p className="text-foreground/80 text-sm">
-                <strong>Estratégia vencedora:</strong> Expanda raio para 50-80km. Cidades vizinhas 
-                aumentam matches em 200%. Mulheres de cidades médias aceitam deslocamento curto.
-              </p>
-            </div>
-
-            <div className="bg-muted/50 p-4 rounded-lg">
-              <h4 className="font-semibold text-foreground mb-2">🌳 Interior e cidades pequenas (-100k)</h4>
-              <p className="text-foreground/80 text-sm mb-2">
-                <strong>Apps TOP:</strong> Facebook Dating, Badoo, POF, Tinder (raio ampliado)
-              </p>
-              <p className="text-foreground/80 text-sm mb-2">
-                Aqui a estratégia muda completamente. Apps internacionais (Badoo, POF) têm mais 
-                penetração em cidades pequenas brasileiras. Facebook Dating é OURO — todo mundo 
-                está no Face, mesmo sem baixar app de namoro.
-              </p>
-              <p className="text-foreground/80 text-sm mb-3">
-                <strong>Estratégias avançadas:</strong>
-              </p>
-              <ul className="text-foreground/80 text-sm space-y-1 list-disc list-inside">
-                <li>Aumente raio para 100-150km (sim, é muito, mas necessário)</li>
-                <li>Use apps em finais de semana (pessoal viaja para cidade maior)</li>
-                <li>Mencione que tem carro/mobilidade (remove barreira logística)</li>
-                <li>Instagram como complemento — em cidade pequena, redes sociais {'>'}apps</li>
-              </ul>
+          {/* Highlight Box */}
+          <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+            <div className="flex items-start gap-3">
+              <Lightbulb className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="font-bold text-lg mb-2 text-foreground">Segredo que homens do interior ignoram:</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Em cidades pequenas, você tem vantagem GIGANTE se souber jogar. Por quê? Menos competição. 
+                  Enquanto homens em SP brigam por atenção com 10.000 outros, você compete com 50. 
+                  Taxa de conversão de match → encontro é 3x maior no interior (78% vs 23%).
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="bg-warning/10 border-l-4 border-warning p-6 my-6 rounded-r-lg">
-            <h3 className="text-xl font-semibold text-foreground mb-2">⚠️ Alerta para interior:</h3>
-            <p className="text-foreground/80 mb-2">
-              Em cidades pequenas, <strong>privacidade é quase zero</strong>. Todo mundo conhece todo mundo. 
-              Seu perfil será visto por conhecidos, ex, parentes de amigos. Aceite isso ou não use apps.
-            </p>
-            <p className="text-foreground/80 mb-0">
-              <strong>Solução:</strong> Seja discreto mas honesto. Esconder não funciona (vão te achar). 
-              Perfil respeitoso evita fofoca. 68% das mulheres do interior checam "o que falam dele na cidade" 
-              antes de aceitar encontro.
+          {/* Section 2 */}
+          <section>
+            <h2 className="text-2xl font-bold mb-6 text-foreground">Estratégias por tipo de localização</h2>
+            
+            {/* Capitais */}
+            <div className="bg-blue-50 p-6 rounded-lg mb-6">
+              <div className="flex items-start gap-3 mb-3">
+                <Building2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <h3 className="text-xl font-bold text-foreground">Capitais e regiões metropolitanas</h3>
+              </div>
+              <div className="space-y-2 text-muted-foreground ml-9">
+                <p><strong className="text-foreground">Apps TOP:</strong> Todos funcionam (Tinder, Bumble, Happn, Hinge, etc.)</p>
+                <p><strong className="text-foreground">Vantagens:</strong> Volume absurdo de opções, diversidade, apps nichados também funcionam</p>
+                <p><strong className="text-foreground">Desvantagens:</strong> Competição feroz, "paradoxo da escolha" (tanta opção que ninguém decide)</p>
+                <p><strong className="text-foreground">Estratégia vencedora:</strong> Seja específico em bio. Com 100.000 perfis, destaque é tudo. Mulheres em capitais filtram rápido — dê motivo para pausarem em você.</p>
+              </div>
+            </div>
+
+            {/* Cidades Médias */}
+            <div className="bg-purple-50 p-6 rounded-lg mb-6">
+              <div className="flex items-start gap-3 mb-3">
+                <Home className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                <h3 className="text-xl font-bold text-foreground">Cidades médias (100k–500k habitantes)</h3>
+              </div>
+              <div className="space-y-2 text-muted-foreground ml-9">
+                <p><strong className="text-foreground">Apps TOP:</strong> Tinder, Bumble, ParPerfeito, Facebook Dating</p>
+                <p><strong className="text-foreground">Sweet spot:</strong> Opções suficientes, mas não avassaladoras. Facebook Dating funciona MUITO BEM aqui — usa conexões sociais reais (amigos de amigos).</p>
+                <p><strong className="text-foreground">Estratégia vencedora:</strong> Expanda raio para 50–80km. Cidades vizinhas aumentam matches em 200%. Mulheres de cidades médias aceitam deslocamento curto.</p>
+              </div>
+            </div>
+
+            {/* Interior */}
+            <div className="bg-amber-50 p-6 rounded-lg">
+              <div className="flex items-start gap-3 mb-3">
+                <MapPin className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                <h3 className="text-xl font-bold text-foreground">Interior e cidades pequenas (&lt;100k)</h3>
+              </div>
+              <div className="space-y-2 text-muted-foreground ml-9">
+                <p><strong className="text-foreground">Apps TOP:</strong> Facebook Dating, Badoo, POF, Tinder (raio ampliado)</p>
+                <p>Aqui a estratégia muda completamente: Apps internacionais (Badoo, POF) têm mais penetração em cidades pequenas brasileiras. Facebook Dating é OURO — todo mundo está no Face, mesmo sem baixar app de namoro.</p>
+                <p className="font-semibold text-foreground mt-3">Estratégias avançadas:</p>
+                <ul className="list-disc ml-5 space-y-1">
+                  <li>Aumente raio para 100–150km (sim, é muito, mas necessário)</li>
+                  <li>Use apps em finais de semana (pessoal viaja para cidade maior)</li>
+                  <li>Mencione que tem carro/mobilidade (remove barreira logística)</li>
+                  <li>Instagram como complemento — em cidade pequena, redes sociais &gt; apps</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* Alert Box */}
+          <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="font-bold text-lg mb-2 text-foreground">Alerta para interior:</h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  Em cidades pequenas, privacidade é quase zero. Todo mundo conhece todo mundo. 
+                  Seu perfil será visto por conhecidos, ex, parentes de amigos. Aceite isso ou não use apps.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Solução:</strong> Seja discreto mas honesto. Esconder não funciona (vão te achar). 
+                  Perfil respeitoso evita fofoca. 68% das mulheres do interior checam "o que falam dele na cidade" antes de aceitar encontro.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Section 3 - Myths */}
+          <section className="bg-muted/30 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4 text-foreground">Mitos sobre apps no interior</h2>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-muted-foreground"><strong className="text-foreground">"Não tem ninguém no app"</strong> → Tem, mas precisa ampliar raio e paciência</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-muted-foreground"><strong className="text-foreground">"Só funciona em capital"</strong> → Taxa de conversão match→encontro é maior no interior</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <XCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-muted-foreground"><strong className="text-foreground">"Vou encontrar só fake"</strong> → Cidade pequena = menos fake (todo mundo se conhece)</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <p className="text-muted-foreground"><strong className="text-foreground">"Preciso complementar com redes sociais"</strong> → VERDADE. Instagram é essencial</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Final Verdict */}
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-lg border-2 border-primary/20">
+            <h3 className="text-xl font-bold mb-3 text-foreground">Veredito final:</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Apps no interior exigem mais paciência, mas menos competição. Qualidade do perfil conta 10x mais. 
+              Um homem bem apresentado em cidade de 30mil tem mais sucesso que homem mediano em SP com 12 milhões.
             </p>
           </div>
 
-          <h3 className="text-xl font-semibold text-foreground mb-3">Mitos sobre apps no interior:</h3>
-          <ul className="space-y-2 text-foreground/80 mb-6">
-            <li>✗ "Não tem ninguém no app" — Tem, mas precisa ampliar raio e paciência</li>
-            <li>✗ "Só funciona em capital" — Taxa de conversão match→encontro é maior no interior</li>
-            <li>✗ "Vou encontrar só fake" — Cidade pequena = menos fake (todo mundo se conhece)</li>
-            <li>✓ "Preciso complementar com redes sociais" — VERDADE. Instagram é essencial</li>
-          </ul>
-
-          <p className="text-foreground/80 mb-6">
-            <strong>Verdade final:</strong> Apps no interior exigem mais paciência, mas menos competição. 
-            Qualidade do perfil conta 10x mais. Um homem bem apresentado em cidade de 30mil tem mais 
-            sucesso que homem mediano em SP com 12 milhões.
-          </p>
-
-          <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 text-center">
-            <h3 className="text-xl font-bold text-foreground mb-3">
-              🎉 Parabéns! Você completou o quiz
-            </h3>
-            <p className="text-foreground/80 mb-4">
-              Agora você sabe exatamente qual app de namoro funciona melhor para seu perfil, 
-              idade, localização e objetivos.
+          {/* Congratulations Box */}
+          <div className="bg-pink-50 border-2 border-primary p-8 rounded-lg text-center">
+            <PartyPopper className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-3 text-foreground">🎉 Parabéns! Você completou o quiz</h3>
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Agora você sabe exatamente qual app de namoro funciona melhor para seu perfil, idade, localização e objetivos.
             </p>
-            <Button size="lg" className="group">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Ver Resultado Personalizado
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
             </Button>
           </div>
         </article>
 
-        {/* Quiz Options */}
-        <div className="space-y-6 mt-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Onde você mora?
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-4">
+        {/* Quiz Question */}
+        <div className="space-y-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-2 text-foreground">Onde você mora?</h2>
+            <p className="text-muted-foreground">Escolha a opção que melhor descreve sua localização</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
             <QuizOption
               title="Capital"
               description="São Paulo, Rio, capitais e regiões metropolitanas"
-              href="/melhores-apps-para-homens-em-sao-paulo-capital"
-              icon={<Building2 size={24} />}
+              icon={<Building2 className="w-6 h-6" />}
+              href="/apps-de-namoro"
             />
-            
             <QuizOption
               title="Cidade média"
-              description="100k-500k habitantes, cidades do interior desenvolvidas"
-              href="/apps-para-homens-em-cidades-medias-brasil"
-              icon={<HomeIcon size={24} />}
+              description="100k–500k habitantes, cidades do interior desenvolvidas"
+              icon={<Home className="w-6 h-6" />}
+              href="/apps-de-namoro"
             />
-            
             <QuizOption
               title="Interior"
               description="Cidades pequenas, menos de 100k habitantes"
-              href="/como-conhecer-mulheres-no-interior-usando-apps"
-              icon={<TreePine size={24} />}
+              icon={<MapPin className="w-6 h-6" />}
+              href="/apps-de-namoro"
             />
           </div>
         </div>

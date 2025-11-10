@@ -42,7 +42,7 @@ const Header = () => {
       <nav className="bg-background border-b border-border py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="/" className="flex items-center">
-            <img src={logo} alt="Beijo da Rua" className="h-12 w-auto" />
+            <img src={logo} alt="Beijo da Rua" className="h-16 md:h-20 w-auto" />
           </a>
           <div className="hidden md:flex items-center gap-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
