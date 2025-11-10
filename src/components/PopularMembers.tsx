@@ -36,36 +36,36 @@ const PopularMembers = () => {
   const [showAll, setShowAll] = useState(false);
 
   const allMembers = [
-    { name: "Fernando Souza", status: "registrado há 4 meses", online: true, image: popularMember1 },
-    { name: "Erika B. Carvalho", status: "registrado há 2 semanas", online: true, image: popularMember2 },
-    { name: "Aline R. Soares", status: "registrado há 1 semana", online: false, image: popularMember3 },
-    { name: "Kerolin Rosa", status: "registrado há 3 meses", online: true, image: popularMember4 },
-    { name: "Tatiane Figueiredo", status: "registrado há 5 dias", online: true, image: popularMember5 },
-    { name: "Amanda Silva", status: "registrado há 2 meses", online: false, image: popularMember6 },
-    { name: "Gisele Barros", status: "registrado há 6 meses", online: true, image: popularMember7 },
-    { name: "Emily Fernandes", status: "registrado há 1 mês", online: true, image: popularMember8 },
-    { name: "Alves Fernandes", status: "registrado há 3 semanas", online: false, image: popularMember9 },
-    { name: "Kathy Carvalho", status: "registrado há 4 dias", online: true, image: popularMember10 },
-    { name: "Juliana Costa", status: "registrado há 2 semanas", online: true, image: popularMember11 },
-    { name: "Rafaela Oliveira", status: "registrado há 1 mês", online: true, image: popularMember12 },
-    { name: "Camila Ribeiro", status: "registrado há 5 dias", online: true, image: popularMember13 },
-    { name: "Beatriz Santos", status: "registrado há 3 meses", online: true, image: popularMember14 },
-    { name: "Larissa Martins", status: "registrado há 1 semana", online: true, image: popularMember15 },
-    { name: "Fernanda Lima", status: "registrado há 2 meses", online: false, image: popularMember16 },
-    { name: "Priscila Alves", status: "registrado há 6 dias", online: true, image: popularMember17 },
-    { name: "Mariana Rocha", status: "registrado há 4 semanas", online: true, image: popularMember18 },
-    { name: "Vanessa Souza", status: "registrado há 3 dias", online: true, image: popularMember19 },
-    { name: "Isabela Cardoso", status: "registrado há 1 mês", online: true, image: popularMember20 },
-    { name: "Letícia Moreira", status: "registrado há 2 semanas", online: true, image: popularMember21 },
-    { name: "Bruna Pereira", status: "registrado há 5 dias", online: true, image: popularMember22 },
-    { name: "Gabriela Nunes", status: "registrado há 3 meses", online: true, image: popularMember23 },
-    { name: "Vitória Mendes", status: "registrado há 1 semana", online: true, image: popularMember24 },
-    { name: "Carolina Dias", status: "registrado há 4 dias", online: true, image: popularMember25 },
-    { name: "Natália Correia", status: "registrado há 2 meses", online: true, image: popularMember26 },
-    { name: "Patrícia Teixeira", status: "registrado há 1 mês", online: true, image: popularMember27 },
-    { name: "Renata Campos", status: "registrado há 3 semanas", online: true, image: popularMember28 },
-    { name: "Luciana Freitas", status: "registrado há 6 dias", online: true, image: popularMember29 },
-    { name: "Daniela Monteiro", status: "registrado há 1 semana", online: true, image: popularMember30 },
+    { name: "Fernando Souza", status: "registrado há 4 meses", city: "SP - São Paulo", online: true, image: popularMember1 },
+    { name: "Erika B. Carvalho", status: "registrado há 2 semanas", city: "RJ - Rio de Janeiro", online: true, image: popularMember2 },
+    { name: "Aline R. Soares", status: "registrado há 1 semana", city: "MG - Belo Horizonte", online: false, image: popularMember3 },
+    { name: "Kerolin Rosa", status: "registrado há 3 meses", city: "BA - Salvador", online: true, image: popularMember4 },
+    { name: "Tatiane Figueiredo", status: "registrado há 5 dias", city: "PR - Curitiba", online: true, image: popularMember5 },
+    { name: "Amanda Silva", status: "registrado há 2 meses", city: "RS - Porto Alegre", online: false, image: popularMember6 },
+    { name: "Gisele Barros", status: "registrado há 6 meses", city: "CE - Fortaleza", online: true, image: popularMember7 },
+    { name: "Emily Fernandes", status: "registrado há 1 mês", city: "PE - Recife", online: true, image: popularMember8 },
+    { name: "Alves Fernandes", status: "registrado há 3 semanas", city: "DF - Brasília", online: false, image: popularMember9 },
+    { name: "Kathy Carvalho", status: "registrado há 4 dias", city: "AM - Manaus", online: true, image: popularMember10 },
+    { name: "Juliana Costa", status: "registrado há 2 semanas", city: "SC - Florianópolis", online: true, image: popularMember11 },
+    { name: "Rafaela Oliveira", status: "registrado há 1 mês", city: "GO - Goiânia", online: true, image: popularMember12 },
+    { name: "Camila Ribeiro", status: "registrado há 5 dias", city: "ES - Vitória", online: true, image: popularMember13 },
+    { name: "Beatriz Santos", status: "registrado há 3 meses", city: "PA - Belém", online: true, image: popularMember14 },
+    { name: "Larissa Martins", status: "registrado há 1 semana", city: "MA - São Luís", online: true, image: popularMember15 },
+    { name: "Fernanda Lima", status: "registrado há 2 meses", city: "MT - Cuiabá", online: false, image: popularMember16 },
+    { name: "Priscila Alves", status: "registrado há 6 dias", city: "MS - Campo Grande", online: true, image: popularMember17 },
+    { name: "Mariana Rocha", status: "registrado há 4 semanas", city: "RN - Natal", online: true, image: popularMember18 },
+    { name: "Vanessa Souza", status: "registrado há 3 dias", city: "PB - João Pessoa", online: true, image: popularMember19 },
+    { name: "Isabela Cardoso", status: "registrado há 1 mês", city: "AL - Maceió", online: true, image: popularMember20 },
+    { name: "Letícia Moreira", status: "registrado há 2 semanas", city: "SE - Aracaju", online: true, image: popularMember21 },
+    { name: "Bruna Pereira", status: "registrado há 5 dias", city: "PI - Teresina", online: true, image: popularMember22 },
+    { name: "Gabriela Nunes", status: "registrado há 3 meses", city: "RO - Porto Velho", online: true, image: popularMember23 },
+    { name: "Vitória Mendes", status: "registrado há 1 semana", city: "AC - Rio Branco", online: true, image: popularMember24 },
+    { name: "Carolina Dias", status: "registrado há 4 dias", city: "TO - Palmas", online: true, image: popularMember25 },
+    { name: "Natália Correia", status: "registrado há 2 meses", city: "RR - Boa Vista", online: true, image: popularMember26 },
+    { name: "Patrícia Teixeira", status: "registrado há 1 mês", city: "AP - Macapá", online: true, image: popularMember27 },
+    { name: "Renata Campos", status: "registrado há 3 semanas", city: "SP - Campinas", online: true, image: popularMember28 },
+    { name: "Luciana Freitas", status: "registrado há 6 dias", city: "RJ - Niterói", online: true, image: popularMember29 },
+    { name: "Daniela Monteiro", status: "registrado há 1 semana", city: "MG - Uberlândia", online: true, image: popularMember30 },
   ];
 
   const displayedMembers = showAll ? allMembers : allMembers.slice(0, 10);
@@ -105,6 +105,7 @@ const PopularMembers = () => {
               </div>
               <h4 className="font-bold text-foreground mb-1">{member.name}</h4>
               <p className="text-xs text-muted-foreground">{member.status}</p>
+              <p className="text-xs text-muted-foreground font-medium mt-1">{member.city}</p>
             </div>
           ))}
         </div>
