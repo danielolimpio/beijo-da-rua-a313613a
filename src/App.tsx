@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
+import DatingApps from "./pages/DatingApps";
+import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
 import QuizPage3 from "./pages/quiz/QuizPage3";
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/contato" element={<Contact />} />
           <Route path="/sobre-nos" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/apps-de-namoro" element={<DatingApps />} />
+          <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<QuizPage2 />} />
           <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />

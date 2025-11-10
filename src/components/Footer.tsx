@@ -2,6 +2,7 @@ import { MapPin, Phone, Globe } from "lucide-react";
 import footerMember1 from "@/assets/footer-member1.jpg";
 import footerMember2 from "@/assets/footer-member2.jpg";
 import footerMember3 from "@/assets/footer-member3.jpg";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const featuredMembers = [
@@ -22,7 +23,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Sobre o Beijo da Rua</h3>
+            <img src={logo} alt="Beijo da Rua" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground mb-4">
               Beijo da Rua é um guia informativo sobre apps de namoro, criado para homens brasileiros.
             </p>

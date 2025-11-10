@@ -1,5 +1,6 @@
 import { Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
@@ -40,13 +41,13 @@ const Header = () => {
       {/* Main Navigation */}
       <nav className="bg-background border-b border-border py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-primary">
-            Beijo da Rua
-          </div>
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Beijo da Rua" className="h-12 w-auto" />
+          </a>
           <div className="hidden md:flex items-center gap-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Apps de Namoro</a>
-            <a href="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
+            <a href="/apps-de-namoro" className="text-foreground hover:text-primary transition-colors font-medium">Apps de Namoro</a>
+            <a href="/quiz" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Dicas</a>
             <a href="/sobre-nos" className="text-foreground hover:text-primary transition-colors font-medium">Sobre Nós</a>
             <a href="/contato" className="text-foreground hover:text-primary transition-colors font-medium">Contato</a>
