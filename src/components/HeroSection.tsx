@@ -25,7 +25,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image and Features */}
-          <div className="relative h-[600px] md:h-[700px]">
+          <div className="relative h-[500px] md:h-[550px]">
             <div className="relative h-full">
               <img 
                 src={heroImage} 
