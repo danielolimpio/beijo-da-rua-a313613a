@@ -21,6 +21,16 @@ import popularMember17 from "@/assets/popular-member17.jpg";
 import popularMember18 from "@/assets/popular-member18.jpg";
 import popularMember19 from "@/assets/popular-member19.jpg";
 import popularMember20 from "@/assets/popular-member20.jpg";
+import popularMember21 from "@/assets/popular-member21.jpg";
+import popularMember22 from "@/assets/popular-member22.jpg";
+import popularMember23 from "@/assets/popular-member23.jpg";
+import popularMember24 from "@/assets/popular-member24.jpg";
+import popularMember25 from "@/assets/popular-member25.jpg";
+import popularMember26 from "@/assets/popular-member26.jpg";
+import popularMember27 from "@/assets/popular-member27.jpg";
+import popularMember28 from "@/assets/popular-member28.jpg";
+import popularMember29 from "@/assets/popular-member29.jpg";
+import popularMember30 from "@/assets/popular-member30.jpg";
 
 const PopularMembers = () => {
   const [showAll, setShowAll] = useState(false);
@@ -46,6 +56,16 @@ const PopularMembers = () => {
     { name: "Mariana Rocha", status: "registrado há 4 semanas", online: true, image: popularMember18 },
     { name: "Vanessa Souza", status: "registrado há 3 dias", online: true, image: popularMember19 },
     { name: "Isabela Cardoso", status: "registrado há 1 mês", online: true, image: popularMember20 },
+    { name: "Letícia Moreira", status: "registrado há 2 semanas", online: true, image: popularMember21 },
+    { name: "Bruna Pereira", status: "registrado há 5 dias", online: true, image: popularMember22 },
+    { name: "Gabriela Nunes", status: "registrado há 3 meses", online: true, image: popularMember23 },
+    { name: "Vitória Mendes", status: "registrado há 1 semana", online: true, image: popularMember24 },
+    { name: "Carolina Dias", status: "registrado há 4 dias", online: true, image: popularMember25 },
+    { name: "Natália Correia", status: "registrado há 2 meses", online: true, image: popularMember26 },
+    { name: "Patrícia Teixeira", status: "registrado há 1 mês", online: true, image: popularMember27 },
+    { name: "Renata Campos", status: "registrado há 3 semanas", online: true, image: popularMember28 },
+    { name: "Luciana Freitas", status: "registrado há 6 dias", online: true, image: popularMember29 },
+    { name: "Daniela Monteiro", status: "registrado há 1 semana", online: true, image: popularMember30 },
   ];
 
   const displayedMembers = showAll ? allMembers : allMembers.slice(0, 10);
