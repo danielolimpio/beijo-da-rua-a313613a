@@ -1,18 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import popularMember1 from "@/assets/popular-member1.png";
+import popularMember2 from "@/assets/popular-member2.png";
+import popularMember3 from "@/assets/popular-member3.png";
+import popularMember4 from "@/assets/popular-member4.png";
+import popularMember5 from "@/assets/popular-member5.png";
+import popularMember6 from "@/assets/popular-member6.png";
+import popularMember7 from "@/assets/popular-member7.png";
+import popularMember8 from "@/assets/popular-member8.png";
+import popularMember9 from "@/assets/popular-member9.png";
+import popularMember10 from "@/assets/popular-member10.png";
 
 const PopularMembers = () => {
   const members = [
-    { name: "Fernando Souza", status: "registrado há 4 meses", online: true, seed: "Fernando1" },
-    { name: "Erika B. Carvalho", status: "registrado há 2 semanas", online: true, seed: "Erika1" },
-    { name: "William R. Soares", status: "registrado há 1 semana", online: false, seed: "William1" },
-    { name: "Kerolin Rosa", status: "registrado há 3 meses", online: true, seed: "Kerolin1" },
-    { name: "Tobias Wagner", status: "registrado há 5 dias", online: true, seed: "Tobias1" },
-    { name: "Amanda Silva", status: "registrado há 2 meses", online: false, seed: "Amanda1" },
-    { name: "Barros Pereira", status: "registrado há 6 meses", online: true, seed: "Barros1" },
-    { name: "Emily Fernandes", status: "registrado há 1 mês", online: true, seed: "Emily1" },
-    { name: "Alves Fernandes", status: "registrado há 3 semanas", online: false, seed: "Alves1" },
-    { name: "Sousa Carvalho", status: "registrado há 4 dias", online: true, seed: "Sousa1" },
+    { name: "Fernando Souza", status: "registrado há 4 meses", online: true, image: popularMember1 },
+    { name: "Erika B. Carvalho", status: "registrado há 2 semanas", online: true, image: popularMember2 },
+    { name: "Aline R. Soares", status: "registrado há 1 semana", online: false, image: popularMember3 },
+    { name: "Kerolin Rosa", status: "registrado há 3 meses", online: true, image: popularMember4 },
+    { name: "Tatiane Figueiredo", status: "registrado há 5 dias", online: true, image: popularMember5 },
+    { name: "Amanda Silva", status: "registrado há 2 meses", online: false, image: popularMember6 },
+    { name: "Gisele Barros", status: "registrado há 6 meses", online: true, image: popularMember7 },
+    { name: "Emily Fernandes", status: "registrado há 1 mês", online: true, image: popularMember8 },
+    { name: "Alves Fernandes", status: "registrado há 3 semanas", online: false, image: popularMember9 },
+    { name: "Kathy Carvalho", status: "registrado há 4 dias", online: true, image: popularMember10 },
   ];
 
   return (
@@ -40,12 +50,12 @@ const PopularMembers = () => {
             >
               <div className="relative inline-block mb-4">
                 <img 
-                  src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.seed}`}
+                  src={member.image}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto border-4 border-primary/20"
+                  className="w-24 h-24 rounded-full mx-auto border-4 border-primary/20 object-cover"
                 />
                 {member.online && (
-                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-success rounded-full border-4 border-background"></div>
+                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-success rounded-full border-4 border-background animate-pulse"></div>
                 )}
               </div>
               <h4 className="font-bold text-foreground mb-1">{member.name}</h4>
