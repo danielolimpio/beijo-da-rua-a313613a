@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 import popularMember1 from "@/assets/popular-member1.png";
 import popularMember2 from "@/assets/popular-member2.png";
 import popularMember3 from "@/assets/popular-member3.png";
@@ -10,9 +11,21 @@ import popularMember7 from "@/assets/popular-member7.png";
 import popularMember8 from "@/assets/popular-member8.png";
 import popularMember9 from "@/assets/popular-member9.png";
 import popularMember10 from "@/assets/popular-member10.png";
+import popularMember11 from "@/assets/popular-member11.jpg";
+import popularMember12 from "@/assets/popular-member12.jpg";
+import popularMember13 from "@/assets/popular-member13.jpg";
+import popularMember14 from "@/assets/popular-member14.jpg";
+import popularMember15 from "@/assets/popular-member15.jpg";
+import popularMember16 from "@/assets/popular-member16.jpg";
+import popularMember17 from "@/assets/popular-member17.jpg";
+import popularMember18 from "@/assets/popular-member18.jpg";
+import popularMember19 from "@/assets/popular-member19.jpg";
+import popularMember20 from "@/assets/popular-member20.jpg";
 
 const PopularMembers = () => {
-  const members = [
+  const [showAll, setShowAll] = useState(false);
+
+  const allMembers = [
     { name: "Fernando Souza", status: "registrado há 4 meses", online: true, image: popularMember1 },
     { name: "Erika B. Carvalho", status: "registrado há 2 semanas", online: true, image: popularMember2 },
     { name: "Aline R. Soares", status: "registrado há 1 semana", online: false, image: popularMember3 },
@@ -23,7 +36,19 @@ const PopularMembers = () => {
     { name: "Emily Fernandes", status: "registrado há 1 mês", online: true, image: popularMember8 },
     { name: "Alves Fernandes", status: "registrado há 3 semanas", online: false, image: popularMember9 },
     { name: "Kathy Carvalho", status: "registrado há 4 dias", online: true, image: popularMember10 },
+    { name: "Juliana Costa", status: "registrado há 2 semanas", online: true, image: popularMember11 },
+    { name: "Rafaela Oliveira", status: "registrado há 1 mês", online: true, image: popularMember12 },
+    { name: "Camila Ribeiro", status: "registrado há 5 dias", online: true, image: popularMember13 },
+    { name: "Beatriz Santos", status: "registrado há 3 meses", online: true, image: popularMember14 },
+    { name: "Larissa Martins", status: "registrado há 1 semana", online: true, image: popularMember15 },
+    { name: "Fernanda Lima", status: "registrado há 2 meses", online: false, image: popularMember16 },
+    { name: "Priscila Alves", status: "registrado há 6 dias", online: true, image: popularMember17 },
+    { name: "Mariana Rocha", status: "registrado há 4 semanas", online: true, image: popularMember18 },
+    { name: "Vanessa Souza", status: "registrado há 3 dias", online: true, image: popularMember19 },
+    { name: "Isabela Cardoso", status: "registrado há 1 mês", online: true, image: popularMember20 },
   ];
+
+  const displayedMembers = showAll ? allMembers : allMembers.slice(0, 10);
 
   return (
     <section className="py-20 bg-background">
@@ -43,7 +68,7 @@ const PopularMembers = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
-          {members.map((member, index) => (
+          {displayedMembers.map((member, index) => (
             <div 
               key={index}
               className="bg-card rounded-2xl p-6 shadow-custom-md text-center hover:shadow-custom-lg transition-shadow"
@@ -65,8 +90,13 @@ const PopularMembers = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" className="border-secondary text-secondary-foreground">
-            Ver Mais Populares
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-secondary text-secondary-foreground"
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? "Ver Menos" : "Ver Mais Populares"}
           </Button>
         </div>
       </div>
