@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Lock, CheckCircle, Heart } from "lucide-react";
-import heroImage from "@/assets/hero-woman.jpg";
+import heroImage from "@/assets/hero-woman-rose.png";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-hero py-20">
+    <section className="bg-gradient-hero py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-end">
           {/* Left Content */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
@@ -29,8 +29,8 @@ const HeroSection = () => {
             <div className="relative">
               <img 
                 src={heroImage} 
-                alt="Mulher sorridente segurando coração" 
-                className="rounded-2xl shadow-custom-lg w-full"
+                alt="Mulher sorridente segurando rosa vermelha" 
+                className="w-full h-auto object-cover object-bottom"
               />
               
               {/* Feature Tags */}
