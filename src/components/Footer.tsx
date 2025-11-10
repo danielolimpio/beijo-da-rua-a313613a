@@ -1,10 +1,13 @@
 import { MapPin, Phone, Globe } from "lucide-react";
+import footerMember1 from "@/assets/footer-member1.jpg";
+import footerMember2 from "@/assets/footer-member2.jpg";
+import footerMember3 from "@/assets/footer-member3.jpg";
 
 const Footer = () => {
   const featuredMembers = [
-    { name: "Samantha Moreno", status: "Ativo", seed: "Samantha" },
-    { name: "Pedro Miguel", status: "Ativo", seed: "Pedro" },
-    { name: "Fabiana Duarte", status: "Ativo", seed: "Fabiana" },
+    { name: "Samantha Moreno", status: "Ativo", image: footerMember1 },
+    { name: "Amanda Dantas", status: "Ativo", image: footerMember2 },
+    { name: "Fabiana Duarte", status: "Ativo", image: footerMember3 },
   ];
 
   const recentArticles = [
@@ -46,9 +49,9 @@ const Footer = () => {
               {featuredMembers.map((member, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <img 
-                    src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${member.seed}`}
+                    src={member.image}
                     alt={member.name}
-                    className="w-12 h-12 rounded-full"
+                    className="w-12 h-12 rounded-full object-cover"
                   />
                   <div>
                     <p className="font-medium text-sm">{member.name}</p>
