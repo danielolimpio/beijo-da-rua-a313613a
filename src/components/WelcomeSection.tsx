@@ -1,14 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import member1 from "@/assets/member1.png";
+import member2 from "@/assets/member2.png";
+import member3 from "@/assets/member3.png";
+import member4 from "@/assets/member4.png";
+import member5 from "@/assets/member5.png";
 
 const WelcomeSection = () => {
   const members = [
-    { id: 1, name: "Fernando S.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Fernando" },
-    { id: 2, name: "Erika B.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Erika" },
-    { id: 3, name: "William R.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=William" },
-    { id: 4, name: "Kerolin R.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Kerolin" },
-    { id: 5, name: "Tobias W.", avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tobias" },
+    { id: 1, name: "Ana M.", avatar: member1 },
+    { id: 2, name: "Carolina S.", avatar: member2 },
+    { id: 3, name: "Juliana R.", avatar: member3 },
+    { id: 4, name: "Patricia L.", avatar: member4 },
+    { id: 5, name: "Beatriz C.", avatar: member5 },
   ];
 
   return (
@@ -34,11 +39,11 @@ const WelcomeSection = () => {
               <div className="flex gap-4 flex-1 justify-center">
                 {members.map((member) => (
                   <div key={member.id} className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent p-1">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent p-1">
                       <img 
                         src={member.avatar} 
                         alt={member.name}
-                        className="w-full h-full rounded-full bg-background"
+                        className="w-full h-full rounded-full object-cover"
                       />
                     </div>
                     <span className="text-xs mt-2 font-medium">{member.name}</span>
