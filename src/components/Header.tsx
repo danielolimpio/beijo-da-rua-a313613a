@@ -44,9 +44,9 @@ const Header = () => {
             Beijo da Rua
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
+            <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Apps de Namoro</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
+            <a href="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Dicas</a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Sobre Nós</a>
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Contato</a>
