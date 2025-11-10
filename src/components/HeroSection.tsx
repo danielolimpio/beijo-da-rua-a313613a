@@ -4,11 +4,11 @@ import heroImage from "@/assets/hero-woman-rose.png";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-hero py-20 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-end">
+    <section className="bg-gradient-hero pt-20 pb-0 overflow-hidden">
+      <div className="container mx-auto px-4 h-full">
+        <div className="grid md:grid-cols-2 gap-12 items-end h-full">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 pb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
               Novos Lugares,
               <br />
@@ -25,12 +25,12 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image and Features */}
-          <div className="relative">
-            <div className="relative">
+          <div className="relative h-[600px] md:h-[700px]">
+            <div className="relative h-full">
               <img 
                 src={heroImage} 
                 alt="Mulher sorridente segurando rosa vermelha" 
-                className="w-full h-auto object-cover object-bottom"
+                className="w-full h-full object-cover object-bottom"
               />
               
               {/* Feature Tags */}
