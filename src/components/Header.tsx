@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
-    <header className="w-full">
+    <header className="w-full fixed top-0 left-0 right-0 z-50 bg-background shadow-sm">
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -39,16 +39,16 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-background border-b border-border py-4">
+      <nav className="bg-background border-b border-border py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="/" className="flex items-center">
-            <img src={logo} alt="Beijo da Rua" className="h-16 md:h-20 w-auto" />
+            <img src={logo} alt="Beijo da Rua" className="h-14 md:h-16 w-auto" />
           </a>
           <div className="hidden md:flex items-center gap-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
             <a href="/apps-de-namoro" className="text-foreground hover:text-primary transition-colors font-medium">Apps de Namoro</a>
             <a href="/quiz" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">Dicas</a>
+            <a href="/dicas" className="text-foreground hover:text-primary transition-colors font-medium">Dicas</a>
             <a href="/sobre-nos" className="text-foreground hover:text-primary transition-colors font-medium">Sobre Nós</a>
             <a href="/contato" className="text-foreground hover:text-primary transition-colors font-medium">Contato</a>
           </div>

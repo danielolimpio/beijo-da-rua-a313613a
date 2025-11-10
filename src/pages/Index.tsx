@@ -11,6 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <HeroSection />
       <WelcomeSection />
       <StatsSection />

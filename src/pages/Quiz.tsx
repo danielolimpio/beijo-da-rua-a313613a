@@ -57,6 +57,7 @@ const Quiz = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-accent text-primary-foreground py-20">

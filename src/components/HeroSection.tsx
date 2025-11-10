@@ -4,11 +4,11 @@ import heroImage from "@/assets/hero-woman-rose.png";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-hero pt-20 pb-0 overflow-hidden">
+    <section className="bg-gradient-hero pt-8 pb-0 overflow-hidden">
       <div className="container mx-auto px-4 h-full">
-        <div className="grid md:grid-cols-2 gap-12 items-end h-full">
+        <div className="grid md:grid-cols-2 gap-12 items-center h-full">
           {/* Left Content */}
-          <div className="space-y-6 pb-12">
+          <div className="space-y-6 pb-12 -mt-8">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
               Novos Lugares,
               <br />

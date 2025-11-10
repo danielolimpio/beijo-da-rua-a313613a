@@ -113,6 +113,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       
       <main className="flex-1 bg-background">
         {/* Hero Section */}
