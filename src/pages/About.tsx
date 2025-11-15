@@ -1,6 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Users, Heart, Target, Award } from "lucide-react";
+import { Users, Heart, Target, Award, Facebook, Twitter, Instagram, Linkedin, Globe } from "lucide-react";
+import teamDaniel from "@/assets/team-daniel.jpg";
+import teamMarina from "@/assets/team-marina.jpg";
+import teamRicardo from "@/assets/team-ricardo.jpg";
 
 const About = () => {
   const values = [
@@ -27,9 +30,45 @@ const About = () => {
   ];
 
   const team = [
-    { name: "Daniel Oliveira", role: "CEO & Fundador", experience: "10 anos em tecnologia de relacionamentos" },
-    { name: "Marina Santos", role: "Diretora de Conteúdo", experience: "8 anos como coach de relacionamentos" },
-    { name: "Ricardo Costa", role: "CTO", experience: "12 anos desenvolvendo plataformas sociais" }
+    { 
+      name: "Daniel Olimpio", 
+      role: "CEO & Fundador", 
+      experience: "20 anos em tecnologia de relacionamentos",
+      image: teamDaniel,
+      socials: {
+        facebook: "https://www.facebook.com/danielolimpio.com.br",
+        twitter: "https://x.com/danielolimpio_",
+        instagram: "https://www.instagram.com/danielolimpio_com/",
+        linkedin: "https://www.linkedin.com/in/danielolimpio-com/",
+        website: "https://danielolimpio.com/"
+      }
+    },
+    { 
+      name: "Marina Santos", 
+      role: "Diretora de Conteúdo", 
+      experience: "8 anos como coach de relacionamentos",
+      image: teamMarina,
+      socials: {
+        facebook: "",
+        twitter: "",
+        instagram: "",
+        linkedin: "",
+        website: ""
+      }
+    },
+    { 
+      name: "Ricardo Costa", 
+      role: "CTO", 
+      experience: "12 anos desenvolvendo plataformas sociais",
+      image: teamRicardo,
+      socials: {
+        facebook: "",
+        twitter: "",
+        instagram: "",
+        linkedin: "",
+        website: ""
+      }
+    }
   ];
 
   return (
@@ -114,10 +153,99 @@ const About = () => {
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {team.map((member, index) => (
                 <div key={index} className="bg-card p-6 rounded-2xl shadow-custom-md text-center">
-                  <div className="w-32 h-32 bg-primary/10 rounded-full mx-auto mb-4"></div>
+                  <div className="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-muted-foreground">{member.experience}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{member.experience}</p>
+                  
+                  {/* Social Media Icons */}
+                  <div className="flex justify-center gap-3">
+                    {member.socials.facebook && (
+                      <a 
+                        href={member.socials.facebook} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Facebook className="w-4 h-4 text-primary" />
+                      </a>
+                    )}
+                    {!member.socials.facebook && (
+                      <div className="w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
+                        <Facebook className="w-4 h-4 text-muted-foreground/50" />
+                      </div>
+                    )}
+                    
+                    {member.socials.twitter && (
+                      <a 
+                        href={member.socials.twitter} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Twitter className="w-4 h-4 text-primary" />
+                      </a>
+                    )}
+                    {!member.socials.twitter && (
+                      <div className="w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
+                        <Twitter className="w-4 h-4 text-muted-foreground/50" />
+                      </div>
+                    )}
+                    
+                    {member.socials.instagram && (
+                      <a 
+                        href={member.socials.instagram} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Instagram className="w-4 h-4 text-primary" />
+                      </a>
+                    )}
+                    {!member.socials.instagram && (
+                      <div className="w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
+                        <Instagram className="w-4 h-4 text-muted-foreground/50" />
+                      </div>
+                    )}
+                    
+                    {member.socials.linkedin && (
+                      <a 
+                        href={member.socials.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4 text-primary" />
+                      </a>
+                    )}
+                    {!member.socials.linkedin && (
+                      <div className="w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
+                        <Linkedin className="w-4 h-4 text-muted-foreground/50" />
+                      </div>
+                    )}
+                    
+                    {member.socials.website && (
+                      <a 
+                        href={member.socials.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                      >
+                        <Globe className="w-4 h-4 text-primary" />
+                      </a>
+                    )}
+                    {!member.socials.website && (
+                      <div className="w-8 h-8 rounded-full bg-muted/30 flex items-center justify-center">
+                        <Globe className="w-4 h-4 text-muted-foreground/50" />
+                      </div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
