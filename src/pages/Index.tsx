@@ -6,6 +6,7 @@ import SuccessStories from "@/components/SuccessStories";
 import PopularMembers from "@/components/PopularMembers";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
+import NewRegistrationPopup from "@/components/NewRegistrationPopup";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <PopularMembers />
       <WhyChooseUs />
       <Footer />
+      <NewRegistrationPopup />
     </div>
   );
 };
