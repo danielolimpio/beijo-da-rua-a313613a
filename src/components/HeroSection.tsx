@@ -36,7 +36,7 @@ const HeroSection = () => {
               />
               
               {/* Feature Tags */}
-              <div className="absolute right-8 top-20 space-y-6">
+              <div className="absolute right-16 top-20 space-y-6">
                 <img 
                   src={perfisValidados} 
                   alt="Perfis Validados" 
