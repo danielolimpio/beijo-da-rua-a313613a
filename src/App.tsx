@@ -16,6 +16,11 @@ import QuizPage2 from "./pages/quiz/QuizPage2";
 import QuizPage3 from "./pages/quiz/QuizPage3";
 import QuizPage4 from "./pages/quiz/QuizPage4";
 import QuizPage5 from "./pages/quiz/QuizPage5";
+import OQueTeFazSorrir from "./pages/quiz/OQueTeFazSorrir";
+import QualSeuEstiloDeNamoro from "./pages/quiz/QualSeuEstiloDeNamoro";
+import VoceEMaisSerioOuDescontraido from "./pages/quiz/VoceEMaisSerioOuDescontraido";
+import OndeVoceQuerChegar from "./pages/quiz/OndeVoceQuerChegar";
+import OQueNuncaFaltaNoSeuDia from "./pages/quiz/OQueNuncaFaltaNoSeuDia";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +43,11 @@ const App = () => (
           <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
           <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
           <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<QuizPage5 />} />
+          <Route path="/o-que-te-faz-sorrir" element={<OQueTeFazSorrir />} />
+          <Route path="/qual-seu-estilo-de-namoro" element={<QualSeuEstiloDeNamoro />} />
+          <Route path="/voce-e-mais-serio-ou-descontraido" element={<VoceEMaisSerioOuDescontraido />} />
+          <Route path="/onde-voce-quer-chegar-no-relacionamento" element={<OndeVoceQuerChegar />} />
+          <Route path="/o-que-nunca-falta-no-seu-dia" element={<OQueNuncaFaltaNoSeuDia />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
