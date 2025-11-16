@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Link } from "react-router-dom";
 import member1 from "@/assets/member1.png";
 import member2 from "@/assets/member2.png";
 import member3 from "@/assets/member3.png";
@@ -175,9 +176,11 @@ const WelcomeSection = () => {
                   </SelectContent>
                 </Select>
               </div>
-              <Button className="w-full bg-background text-primary hover:bg-background/90 mt-4">
-                Buscar Par
-              </Button>
+              <Link to="/o-que-te-faz-sorrir">
+                <Button className="w-full bg-background text-primary hover:bg-background/90 mt-4">
+                  Buscar Par
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
