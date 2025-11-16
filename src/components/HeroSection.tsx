@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Lock, CheckCircle, Heart } from "lucide-react";
 import heroImage from "@/assets/hero-woman-rose.png";
+import perfisValidados from "@/assets/perfis-validados.png";
+import maisMatches from "@/assets/mais-matches.png";
+import privado from "@/assets/privado.png";
 
 const HeroSection = () => {
   return (
@@ -34,19 +36,25 @@ const HeroSection = () => {
               />
               
               {/* Feature Tags */}
-              <div className="absolute -right-4 top-20 space-y-4">
-                <div className="bg-background rounded-full px-6 py-3 shadow-custom-md flex items-center gap-2 border-2 border-primary">
-                  <Lock className="w-5 h-5 text-primary" />
-                  <span className="font-semibold">100% Privacidade</span>
-                </div>
-                <div className="bg-background rounded-full px-6 py-3 shadow-custom-md flex items-center gap-2 border-2 border-success">
-                  <CheckCircle className="w-5 h-5 text-success" />
-                  <span className="font-semibold">Perfis Verificados</span>
-                </div>
-                <div className="bg-background rounded-full px-6 py-3 shadow-custom-md flex items-center gap-2 border-2 border-primary">
-                  <Heart className="w-5 h-5 text-primary" />
-                  <span className="font-semibold">Melhores Matches</span>
-                </div>
+              <div className="absolute right-4 top-20 space-y-6">
+                <img 
+                  src={perfisValidados} 
+                  alt="Perfis Validados" 
+                  className="w-[200px] h-auto animate-float"
+                  style={{ animationDelay: '0s' }}
+                />
+                <img 
+                  src={maisMatches} 
+                  alt="Mais Matches" 
+                  className="w-[200px] h-auto animate-float"
+                  style={{ animationDelay: '0.3s' }}
+                />
+                <img 
+                  src={privado} 
+                  alt="100% Privado" 
+                  className="w-[200px] h-auto animate-float"
+                  style={{ animationDelay: '0.6s' }}
+                />
               </div>
             </div>
           </div>
