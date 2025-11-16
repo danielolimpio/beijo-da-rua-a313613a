@@ -5,9 +5,36 @@ import maisMatches from "@/assets/mais-matches.png";
 import privado from "@/assets/privado.png";
 
 const HeroSection = () => {
+  // Generate hearts with random positions and delays
+  const hearts = Array.from({ length: 15 }, (_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    delay: Math.random() * 8,
+    size: 20 + Math.random() * 30,
+    animation: ['animate-float-up', 'animate-float-up-slow', 'animate-float-up-fast'][Math.floor(Math.random() * 3)]
+  }));
+
   return (
-    <section className="bg-gradient-hero pt-8 pb-0 overflow-hidden">
-      <div className="container mx-auto px-4 h-full">
+    <section className="bg-gradient-hero pt-8 pb-0 overflow-hidden relative">
+      {/* Floating Hearts */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {hearts.map((heart) => (
+          <div
+            key={heart.id}
+            className={`absolute ${heart.animation}`}
+            style={{
+              left: `${heart.left}%`,
+              bottom: '-10%',
+              animationDelay: `${heart.delay}s`,
+              fontSize: `${heart.size}px`,
+            }}
+          >
+            ❤️
+          </div>
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 h-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center h-full">
           {/* Left Content */}
           <div className="space-y-6 pb-12 -mt-8">

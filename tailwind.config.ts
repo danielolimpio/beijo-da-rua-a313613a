@@ -92,11 +92,30 @@ export default {
             height: "0",
           },
         },
+        "float-up": {
+          "0%": {
+            transform: "translateY(0) rotate(0deg)",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "0.6",
+          },
+          "90%": {
+            opacity: "0.4",
+          },
+          "100%": {
+            transform: "translateY(-100vh) rotate(360deg)",
+            opacity: "0",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 3s ease-in-out infinite",
+        "float-up": "float-up 8s linear infinite",
+        "float-up-slow": "float-up 10s linear infinite",
+        "float-up-fast": "float-up 6s linear infinite",
       },
     },
   },
