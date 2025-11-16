@@ -36,23 +36,23 @@ const HeroSection = () => {
               />
               
               {/* Feature Tags */}
-              <div className="absolute right-4 top-20 space-y-6">
+              <div className="absolute right-8 top-20 space-y-6">
                 <img 
                   src={perfisValidados} 
                   alt="Perfis Validados" 
-                  className="w-[200px] h-auto animate-float"
+                  className="w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0s' }}
                 />
                 <img 
                   src={maisMatches} 
                   alt="Mais Matches" 
-                  className="w-[200px] h-auto animate-float"
+                  className="w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.3s' }}
                 />
                 <img 
                   src={privado} 
                   alt="100% Privado" 
-                  className="w-[200px] h-auto animate-float"
+                  className="w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.6s' }}
                 />
               </div>
