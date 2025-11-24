@@ -1,6 +1,7 @@
 import coupleCafe from "@/assets/couple-cafe.jpg";
 import couplePark from "@/assets/couple-park.jpg";
 import coupleParty from "@/assets/couple-party.jpg";
+import authorImage from "@/assets/team-daniel.jpg";
 import { Badge } from "@/components/ui/badge";
 
 const SuccessStories = () => {
@@ -8,29 +9,30 @@ const SuccessStories = () => {
     {
       id: 1,
       image: coupleCafe,
-      category: "Namoro Sério",
-      title: "Sonhos se tornam realidade quando você escolhe o app certo",
-      author: "Hester Reves",
-      date: "16 de abril de 2025",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Hester"
+      category: "Conquista",
+      title: "Como Abordar uma Mulher com Confiança e Naturalidade",
+      author: "Daniel Olimpio",
+      date: "21 de novembro de 2025",
+      avatar: authorImage,
+      link: "/blog/posts/como-abordar-uma-mulher-com-confianca"
     },
     {
       id: 2,
       image: couplePark,
-      category: "Amizade",
-      title: "Como encontrar amizades verdadeiras através de apps",
-      author: "Ana Carolina Silva",
-      date: "10 de março de 2025",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana"
+      category: "Relacionamento Sério",
+      title: "Como o Beijo da Rua mudou nossa vida",
+      author: "Marina & Ricardo",
+      date: "15 de novembro de 2024",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marina"
     },
     {
       id: 3,
       image: coupleParty,
-      category: "Relacionamento Casual",
-      title: "Conheci alguém especial sem compromisso nas festas de SP",
-      author: "Pedro Miguel Santos",
-      date: "25 de fevereiro de 2025",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Pedro"
+      category: "Encontro Casual",
+      title: "Do match ao primeiro encontro real",
+      author: "Ana & Carlos",
+      date: "10 de novembro de 2024",
+      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana"
     }
   ];
 
@@ -47,39 +49,48 @@ const SuccessStories = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {stories.map((story) => (
-            <div 
-              key={story.id}
-              className="bg-card rounded-2xl overflow-hidden shadow-custom-md hover:shadow-custom-lg transition-shadow"
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={story.image} 
-                  alt={story.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
-                  {story.category}
-                </Badge>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">
-                  {story.title}
-                </h3>
-                <div className="flex items-center gap-3">
+          {stories.map((story) => {
+            const CardContent = (
+              <div className="bg-card rounded-2xl overflow-hidden shadow-custom-md hover:shadow-custom-lg transition-shadow">
+                <div className="relative h-48 overflow-hidden">
                   <img 
-                    src={story.avatar} 
-                    alt={story.author}
-                    className="w-10 h-10 rounded-full"
+                    src={story.image} 
+                    alt={story.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
-                  <div>
-                    <p className="font-medium text-sm">{story.author}</p>
-                    <p className="text-xs text-muted-foreground">{story.date}</p>
+                  <Badge className="absolute top-4 left-4 bg-primary text-primary-foreground">
+                    {story.category}
+                  </Badge>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">
+                    {story.title}
+                  </h3>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={story.avatar} 
+                      alt={story.author}
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-medium text-sm">{story.author}</p>
+                      <p className="text-xs text-muted-foreground">{story.date}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+
+            return story.link ? (
+              <a key={story.id} href={story.link} className="block">
+                {CardContent}
+              </a>
+            ) : (
+              <div key={story.id}>
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
