@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom";
 import { Heart, Users, MessageCircle, Smartphone, Sparkles } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import BlogSidebar from "@/components/BlogSidebar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import authorImage from "@/assets/team-daniel.jpg";
+import articleCover from "@/assets/couple-cafe.jpg";
 
 const categories = {
   conquista: {
@@ -38,6 +41,25 @@ const categories = {
   }
 };
 
+const articlesByCategory = {
+  conquista: [
+    {
+      id: 1,
+      title: "Como Abordar uma Mulher com Confiança e Naturalidade",
+      excerpt: "Aprenda técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade. Dicas que funcionam na rua, em eventos e até online.",
+      image: articleCover,
+      author: "Daniel Olimpio",
+      authorImage: authorImage,
+      date: "21 de novembro de 2025",
+      link: "/blog/posts/como-abordar-uma-mulher-com-confianca"
+    }
+  ],
+  relacionamento: [],
+  paquera: [],
+  aplicativos: [],
+  autoestima: []
+};
+
 const Category = () => {
   const { category } = useParams<{ category: string }>();
   const categoryData = category ? categories[category as keyof typeof categories] : null;
@@ -60,6 +82,7 @@ const Category = () => {
   }
 
   const IconComponent = categoryData.icon;
+  const articles = category ? articlesByCategory[category as keyof typeof articlesByCategory] : [];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -81,20 +104,64 @@ const Category = () => {
 
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="flex-1">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Artigos em breve</CardTitle>
-                  <CardDescription>
-                    Estamos preparando conteúdos incríveis sobre {categoryData.title.toLowerCase()} para você. 
-                    Em breve você encontrará artigos completos, dicas práticas e insights exclusivos aqui.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Enquanto isso, confira nossas outras categorias ou explore nossos apps de namoro recomendados.
-                  </p>
-                </CardContent>
-              </Card>
+              {articles.length > 0 ? (
+                <div className="space-y-8">
+                  {articles.map((article) => (
+                    <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="md:flex">
+                        <div className="md:w-1/3">
+                          <img 
+                            src={article.image} 
+                            alt={article.title}
+                            className="w-full h-full object-cover min-h-[200px]"
+                          />
+                        </div>
+                        <div className="md:w-2/3 p-6">
+                          <CardHeader className="p-0 mb-4">
+                            <CardTitle className="text-2xl mb-2 hover:text-primary transition-colors">
+                              <a href={article.link}>{article.title}</a>
+                            </CardTitle>
+                            <CardDescription className="text-base">
+                              {article.excerpt}
+                            </CardDescription>
+                          </CardHeader>
+                          <CardContent className="p-0">
+                            <div className="flex items-center gap-3 mb-4">
+                              <img 
+                                src={article.authorImage} 
+                                alt={article.author}
+                                className="w-10 h-10 rounded-full object-cover"
+                              />
+                              <div>
+                                <p className="font-medium text-sm">{article.author}</p>
+                                <p className="text-xs text-muted-foreground">{article.date}</p>
+                              </div>
+                            </div>
+                            <Button asChild>
+                              <a href={article.link}>Ler artigo completo</a>
+                            </Button>
+                          </CardContent>
+                        </div>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              ) : (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Artigos em breve</CardTitle>
+                    <CardDescription>
+                      Estamos preparando conteúdos incríveis sobre {categoryData.title.toLowerCase()} para você. 
+                      Em breve você encontrará artigos completos, dicas práticas e insights exclusivos aqui.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Enquanto isso, confira nossas outras categorias ou explore nossos apps de namoro recomendados.
+                    </p>
+                  </CardContent>
+                </Card>
+              )}
             </div>
 
             <aside className="lg:w-80">
