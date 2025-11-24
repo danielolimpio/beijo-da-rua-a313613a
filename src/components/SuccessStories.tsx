@@ -1,6 +1,6 @@
 import articleAbordar from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
-import coupleParty from "@/assets/couple-party.jpg";
+import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
 import { Badge } from "@/components/ui/badge";
 
@@ -28,12 +28,13 @@ const SuccessStories = () => {
     },
     {
       id: 3,
-      image: coupleParty,
-      category: "Encontro Casual",
-      title: "Do match ao primeiro encontro real",
-      author: "Ana & Carlos",
-      date: "10 de novembro de 2024",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana"
+      image: articleCantadas,
+      category: "Conquista",
+      title: "Cantadas Irresistíveis que Realmente Funcionam em 2025",
+      author: "Daniel Olimpio",
+      date: "23 de novembro de 2025",
+      avatar: authorImage,
+      link: "/blog/posts/cantadas-irresistiveis-que-funcionam"
     }
   ];
 
