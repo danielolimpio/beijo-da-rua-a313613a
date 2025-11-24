@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, MapPin, Clock } from "lucide-react";
 import happnLogo from "@/assets/happn-logo.jpg";
+import { trackAppClick } from "@/lib/analytics";
 
 const Happn = () => {
   return (
@@ -362,7 +363,12 @@ const Happn = () => {
             className="bg-white text-[#F94877] hover:bg-white/90"
             asChild
           >
-            <a href="https://www.happn.com/pt/" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://www.happn.com/pt/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackAppClick('Happn', 'bottom_cta')}
+            >
               Cadastrar no Happn
             </a>
           </Button>
