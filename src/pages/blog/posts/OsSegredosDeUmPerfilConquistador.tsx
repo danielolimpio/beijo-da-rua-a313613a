@@ -898,16 +898,6 @@ const OsSegredosDeUmPerfilConquistador = () => {
                   </Accordion>
                 </section>
 
-                {/* References */}
-                <section className="mt-12 p-6 bg-muted/30 rounded-lg">
-                  <h3 className="text-xl font-bold mb-4">Referências</h3>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Instituto Locomotiva – Pesquisa "Comportamento Digital e Relacionamentos no Brasil", 2024.</li>
-                    <li>• Conselho Federal de Psicologia – Nota Técnica sobre Identidade Digital e Relacionamentos, 2023.</li>
-                    <li>• Dados do Google Trends Brasil (2024–2025) sobre buscas por "perfil conquistador", "como melhorar perfil Tinder" e "bio para Instagram namoro".</li>
-                  </ul>
-                </section>
-
                 {/* Social Share Buttons */}
                 <div className="my-12 p-6 bg-muted rounded-lg">
                   <div className="flex items-center gap-3 mb-4">
@@ -956,6 +946,78 @@ const OsSegredosDeUmPerfilConquistador = () => {
                       WhatsApp
                     </Button>
                   </div>
+                </div>
+
+                {/* FAQ moved after social share */}
+                <h2 className="text-3xl font-bold mt-12 mb-6">
+                  Perguntas Frequentes (FAQ)
+                </h2>
+                
+                <Accordion type="single" collapsible className="my-8">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-left">
+                      <h3 className="text-lg font-semibold">Quantas fotos devo ter no meu perfil de namoro?</h3>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">
+                        O ideal é entre 4 e 6 fotos variadas: uma de rosto nítida, uma de corpo inteiro (natural, não pose de academia), uma em atividade (viagem, hobby), uma social (com amigos, mas você identificável) e, se possível, uma que gere curiosidade (livro, animal de estimação, lugar incomum).
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-left">
+                      <h3 className="text-lg font-semibold">Posso usar fotos antigas se estou com melhor aparência nelas?</h3>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Evite. Fotos devem representar como você está hoje. Mulheres valorizam honestidade mais do que perfeição. Se mudou o corte de cabelo ou ganhou peso, atualize — isso mostra autoconfiança.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-left">
+                      <h3 className="text-lg font-semibold">Bio longa ou curta é melhor?</h3>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Depende da plataforma. Em apps de namoro (Tinder, Bumble), prefira bio curta (até 150 caracteres) com um gancho. No Instagram, legendas mais elaboradas funcionam bem, desde que não sejam ensaios.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="text-left">
+                      <h3 className="text-lg font-semibold">Devo mencionar que estou procurando algo sério na bio?</h3>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Não é necessário — e pode afastar quem gosta de conhecer devagar. Melhor mostrar sua intenção pela energia do perfil: fotos de momentos reais, valores claros e linguagem madura já transmitem seriedade.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-5">
+                    <AccordionTrigger className="text-left">
+                      <h3 className="text-lg font-semibold">Como saber se meu perfil está funcionando?</h3>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Observe: você recebe mensagens variadas e com perguntas reais? As conversas evoluem para encontros? Se sim, está no caminho certo. Se recebe só "oi" e conversas morrem, revise fotos e bio.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+
+                {/* References */}
+                <div className="my-12 p-6 bg-muted rounded-lg">
+                  <h3 className="text-xl font-bold mb-4">Referências:</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Instituto Locomotiva – Pesquisa "Comportamento Digital e Relacionamentos no Brasil", 2024.</li>
+                    <li>Conselho Federal de Psicologia – Nota Técnica sobre Identidade Digital e Relacionamentos, 2023.</li>
+                    <li>Dados do Google Trends Brasil (2024–2025) sobre buscas por "perfil conquistador", "como melhorar perfil Tinder" e "bio para Instagram namoro".</li>
+                  </ul>
                 </div>
               </div>
 

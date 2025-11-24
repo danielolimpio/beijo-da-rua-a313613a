@@ -634,101 +634,117 @@ const CantadasIrresistiveisQueFuncionam = () => {
               </Accordion>
             </section>
 
-            {/* Referências */}
-            <section className="mt-12 p-6 bg-muted/30 rounded-lg">
-              <h3 className="font-bold mb-4">Referências:</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Instituto Locomotiva – "Relacionamentos e Cultura de Abordagem no Brasil", 2024.</li>
-                <li>• Conselho Federal de Psicologia – Diretrizes sobre Relacionamentos Saudáveis e Respeito Mútuo, 2023.</li>
-                <li>• Universidade de São Paulo (USP) – Laboratório de Psicologia Social: Estudos sobre Atração Interpessoal, 2022–2024.</li>
-                <li>• Google Trends Brasil (2024–2025): buscas por "cantadas que funcionam", "como flertar em 2025", "frases para quebrar o gelo".</li>
-              </ul>
-            </section>
-
-            {/* Links internos relacionados */}
-            <section className="mt-12">
-              <h3 className="text-2xl font-bold mb-6">Artigos Relacionados</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <h4 className="font-bold mb-2">
-                      <a href="/blog/posts/como-abordar-uma-mulher-com-confianca" className="hover:text-primary transition-colors">
-                        Como abordar uma mulher com confiança e naturalidade
-                      </a>
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <h4 className="font-bold mb-2">
-                      <a href="/blog/posts/os-segredos-de-um-perfil-conquistador" className="hover:text-primary transition-colors">
-                        Os segredos de um perfil conquistador nas redes sociais
-                      </a>
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Descubra como criar uma presença digital que atrai olhares e desperta interesse real.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <h4 className="font-bold mb-2">
-                      <a href="/apps-de-namoro" className="hover:text-primary transition-colors">
-                        Os melhores apps de namoro para 2025
-                      </a>
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Encontre o app ideal para seu estilo e comece a conhecer pessoas novas hoje.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <h4 className="font-bold mb-2">
-                      <a href="/dicas" className="hover:text-primary transition-colors">
-                        Dicas de conquista e relacionamento
-                      </a>
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Explore nosso guia completo com estratégias práticas para melhorar sua vida amorosa.
-                    </p>
-                  </CardContent>
-                </Card>
+            {/* Social Share Buttons */}
+            <div className="my-12 p-6 bg-muted rounded-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <Share2 className="w-5 h-5" />
+                <h3 className="text-lg font-bold">Compartilhe este artigo</h3>
               </div>
-            </section>
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShare('facebook')}
+                  className="flex items-center gap-2"
+                >
+                  <Facebook className="w-4 h-4" />
+                  Facebook
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShare('pinterest')}
+                  className="flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.690 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.350-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                  </svg>
+                  Pinterest
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShare('twitter')}
+                  className="flex items-center gap-2"
+                >
+                  <Twitter className="w-4 h-4" />
+                  X (Twitter)
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => handleShare('whatsapp')}
+                  className="flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                  </svg>
+                  WhatsApp
+                </Button>
+              </div>
+            </div>
 
-            {/* CTA Final */}
-            <Card className="mt-12 bg-gradient-to-r from-primary to-secondary text-white">
-              <CardContent className="pt-8 pb-8 text-center">
-                <Sparkles className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">
-                  Pronto para flertar com inteligência e respeito?
-                </h3>
-                <p className="mb-6 text-white/90">
-                  No Beijo da Rua, ajudamos você a criar conexões reais — não só frases de efeito.
-                </p>
-                <div className="flex gap-4 justify-center flex-wrap">
-                  <a 
-                    href="/blog" 
-                    className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors"
-                  >
-                    Explore Mais Artigos
-                  </a>
-                  <a 
-                    href="/apps-de-namoro" 
-                    className="bg-white/10 text-white border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-                  >
-                    Conheça os Apps
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+            <h2 className="text-3xl font-bold mt-12 mb-6">
+              Perguntas Frequentes (FAQ)
+            </h2>
+
+            <Accordion type="single" collapsible className="my-8">
+              <AccordionItem value="item-1" className="border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                  Qual a melhor cantada para usar em 2025?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Não existe uma "melhor" cantada universal. A mais eficaz é aquela que surge do contexto real e mostra curiosidade genuína — como "Adorei seu comentário naquela mesa. Você sempre tem respostas tão afiadas?".
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                  Cantadas funcionam mesmo, ou são coisa do passado?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Funcionam — desde que sejam respeitosas, leves e adaptadas ao momento. O flerte verbal ainda é uma forma poderosa de quebrar o gelo, mas precisa evoluir com a cultura.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                  Como saber se a cantada foi bem recebida?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Observe a linguagem corporal: contato visual, sorriso espontâneo, respostas elaboradas, perguntas de volta e postura aberta (corpo voltado para você). Se ela dá respostas curtas ou desvia o olhar, recue com elegância.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                  Posso usar uma cantada em um app de namoro?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Sim, mas adapte. Em vez de frases genéricas, use algo baseado no perfil dela: "Vi que você adora trilhas — qual foi a mais desafiadora que você fez?".
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border rounded-lg px-6">
+                <AccordionTrigger className="text-left font-semibold hover:text-primary">
+                  E se eu não for bom com palavras?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Não precisa ser. Um "oi, tudo bem?" com um sorriso sincero e uma pergunta simples ("você vem aqui sempre?") já é mais eficaz que uma cantada decorada dita com rigidez.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
+            {/* Referências */}
+            <div className="my-12 p-6 bg-muted rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Referências:</h3>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>Instituto Locomotiva – "Relacionamentos e Cultura de Abordagem no Brasil", 2024.</li>
+                <li>Conselho Federal de Psicologia – Diretrizes sobre Relacionamentos Saudáveis e Respeito Mútuo, 2023.</li>
+                <li>Universidade de São Paulo (USP) – Laboratório de Psicologia Social: Estudos sobre Atração Interpessoal, 2022–2024.</li>
+                <li>Google Trends Brasil (2024–2025): buscas por "cantadas que funcionam", "como flertar em 2025", "frases para quebrar o gelo".</li>
+              </ul>
+            </div>
           </div>
 
           {/* Author Bio */}
