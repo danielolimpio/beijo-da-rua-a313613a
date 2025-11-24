@@ -48,6 +48,7 @@ const Header = () => {
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium">Home</a>
             <a href="/apps-de-namoro" className="text-foreground hover:text-primary transition-colors font-medium">Apps de Namoro</a>
             <a href="/quiz" className="text-foreground hover:text-primary transition-colors font-medium">Quiz</a>
+            <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium">Blog</a>
             <a href="/dicas" className="text-foreground hover:text-primary transition-colors font-medium">Dicas</a>
             <a href="/sobre-nos" className="text-foreground hover:text-primary transition-colors font-medium">Sobre Nós</a>
             <a href="/contato" className="text-foreground hover:text-primary transition-colors font-medium">Contato</a>
