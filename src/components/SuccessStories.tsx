@@ -1,4 +1,4 @@
-import coupleCafe from "@/assets/couple-cafe.jpg";
+import articleAbordar from "@/assets/article-abordar-mulher.jpg";
 import couplePark from "@/assets/couple-park.jpg";
 import coupleParty from "@/assets/couple-party.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -8,7 +8,7 @@ const SuccessStories = () => {
   const stories = [
     {
       id: 1,
-      image: coupleCafe,
+      image: articleAbordar,
       category: "Conquista",
       title: "Como Abordar uma Mulher com Confiança e Naturalidade",
       author: "Daniel Olimpio",
