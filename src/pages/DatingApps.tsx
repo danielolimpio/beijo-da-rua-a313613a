@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Heart, TrendingUp, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import bumbleLogo from "@/assets/bumble-logo.webp";
 
 const DatingApps = () => {
   const apps = [

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp } from "lucide-react";
-import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import bumbleLogo from "@/assets/bumble-logo.webp";
 
 const Bumble = () => {
   return (
@@ -19,7 +19,7 @@ const Bumble = () => {
             <img 
               src={bumbleLogo} 
               alt="Bumble Logo" 
-              className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-lg bg-white p-4"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-lg bg-[#FFC629] p-4"
             />
             <div className="text-center md:text-left">
               <h1 className="text-5xl font-bold mb-4">
