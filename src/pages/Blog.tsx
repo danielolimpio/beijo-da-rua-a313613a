@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
+import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
 
 const categories = [
   {
@@ -47,6 +48,18 @@ const categories = [
 ];
 
 const recentArticles = [
+  {
+    id: 3,
+    title: "Cantadas Irresistíveis que Realmente Funcionam em 2025",
+    excerpt: "Frases criativas, respeitosas e eficazes para quebrar o gelo e causar boa impressão. Testadas e aprovadas por especialistas em conquista.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleCantadas,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "23 de novembro de 2025",
+    link: "/blog/posts/cantadas-irresistiveis-que-funcionam"
+  },
   {
     id: 2,
     title: "Os Segredos de um Perfil Conquistador nas Redes Sociais",

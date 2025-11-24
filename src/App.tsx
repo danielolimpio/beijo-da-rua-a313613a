@@ -18,6 +18,7 @@ import Blog from "./pages/Blog";
 import Category from "./pages/blog/Category";
 import ComoAbordarUmaMulherComConfianca from "./pages/blog/posts/ComoAbordarUmaMulherComConfianca";
 import OsSegredosDeUmPerfilConquistador from "./pages/blog/posts/OsSegredosDeUmPerfilConquistador";
+import CantadasIrresistiveisQueFuncionam from "./pages/blog/posts/CantadasIrresistiveisQueFuncionam";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/blog/:category" element={<Category />} />
           <Route path="/blog/posts/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
           <Route path="/blog/posts/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
+          <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<QuizPage2 />} />
