@@ -1,5 +1,5 @@
 import articleAbordar from "@/assets/article-abordar-mulher.jpg";
-import couplePark from "@/assets/couple-park.jpg";
+import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 import coupleParty from "@/assets/couple-party.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
 import { Badge } from "@/components/ui/badge";
@@ -18,12 +18,13 @@ const SuccessStories = () => {
     },
     {
       id: 2,
-      image: couplePark,
-      category: "Relacionamento Sério",
-      title: "Como o Beijo da Rua mudou nossa vida",
-      author: "Marina & Ricardo",
-      date: "15 de novembro de 2024",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marina"
+      image: articlePerfilConquistador,
+      category: "Conquista",
+      title: "Os Segredos de um Perfil Conquistador nas Redes Sociais",
+      author: "Daniel Olimpio",
+      date: "22 de novembro de 2025",
+      avatar: authorImage,
+      link: "/blog/posts/os-segredos-de-um-perfil-conquistador"
     },
     {
       id: 3,

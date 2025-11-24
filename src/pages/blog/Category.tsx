@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
+import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 
 const categories = {
   conquista: {
@@ -43,6 +44,16 @@ const categories = {
 
 const articlesByCategory = {
   conquista: [
+    {
+      id: 2,
+      title: "Os Segredos de um Perfil Conquistador nas Redes Sociais",
+      excerpt: "Descubra como criar uma presença digital que atrai olhares e desperta interesse real. Fotos, bio e atitude: tudo revelado aqui.",
+      image: articlePerfilConquistador,
+      author: "Daniel Olimpio",
+      authorImage: authorImage,
+      date: "22 de novembro de 2025",
+      link: "/blog/posts/os-segredos-de-um-perfil-conquistador"
+    },
     {
       id: 1,
       title: "Como Abordar uma Mulher com Confiança e Naturalidade",
