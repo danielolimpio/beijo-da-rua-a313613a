@@ -74,6 +74,65 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog -->
+  <url>
+    <loc>https://beijodarua.com.br/blog</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Categorias do Blog -->
+  <url>
+    <loc>https://beijodarua.com.br/blog/conquista</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://beijodarua.com.br/blog/relacionamento</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://beijodarua.com.br/blog/paquera</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://beijodarua.com.br/blog/aplicativos</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://beijodarua.com.br/blog/autoestima</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Artigos do Blog -->
+  <url>
+    <loc>https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca</loc>
+    <lastmod>2025-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <!-- Quiz Principal -->
   <url>
     <loc>https://beijodarua.com.br/quiz</loc>
