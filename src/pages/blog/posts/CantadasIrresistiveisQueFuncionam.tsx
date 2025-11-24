@@ -1,16 +1,29 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Heart, MessageCircle, Lightbulb, CheckCircle2, XCircle, Sparkles, Users, MapPin } from "lucide-react";
+import { Heart, MessageCircle, Lightbulb, CheckCircle2, XCircle, Sparkles, Users, MapPin, Share2, Facebook, Twitter, Globe, Instagram, Linkedin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleImage from "@/assets/article-cantadas-irresistiveis.jpg";
 
 const CantadasIrresistiveisQueFuncionam = () => {
+  const [showFullBio, setShowFullBio] = useState(false);
   const articleUrl = "https://beijodarua.com.br/blog/posts/cantadas-irresistiveis-que-funcionam";
   const articleTitle = "Cantadas Irresistíveis que Realmente Funcionam em 2025";
+  
+  const handleShare = (platform: string) => {
+    const urls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(articleTitle)}`,
+      pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(articleUrl)}&description=${encodeURIComponent(articleTitle)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(articleTitle + ' ' + articleUrl)}`
+    };
+    
+    window.open(urls[platform as keyof typeof urls], '_blank', 'width=600,height=400');
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -73,34 +86,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
             />
           </header>
 
-          {/* Compartilhamento */}
-          <div className="flex gap-4 mb-8 pb-8 border-b">
-            <a 
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(articleUrl)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Compartilhar no Facebook
-            </a>
-            <a 
-              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(articleUrl)}&text=${encodeURIComponent(articleTitle)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Compartilhar no Twitter
-            </a>
-            <a 
-              href={`https://wa.me/?text=${encodeURIComponent(articleTitle + ' ' + articleUrl)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Compartilhar no WhatsApp
-            </a>
-          </div>
-
           {/* Conteúdo do artigo */}
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -122,8 +107,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
             <p className="mb-8">
               Esqueça fórmulas ultrapassadas. O que você verá aqui é um guia prático, atual e sensível — feito para quem quer atrair com inteligência, não com truques.
             </p>
-
-            <AdSenseBlock />
 
             <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
               <XCircle className="h-8 w-8 text-rose-500" />
@@ -278,8 +261,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
               Quer dominar a arte da abordagem antes mesmo da cantada? Leia nosso guia completo sobre <a href="/blog/posts/como-abordar-uma-mulher-com-confianca" className="text-primary hover:underline font-medium">como abordar uma mulher com confiança e naturalidade</a>.
             </p>
 
-            <AdSenseBlock />
-
             <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
               <Sparkles className="h-8 w-8 text-amber-500" />
               Cantadas com Humor Inteligente (Sem Ser Cafona)
@@ -392,8 +373,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
                 </p>
               </CardContent>
             </Card>
-
-            <AdSenseBlock />
 
             <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
               <MapPin className="h-8 w-8 text-purple-500" />
@@ -544,8 +523,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
                 </p>
               </CardContent>
             </Card>
-
-            <AdSenseBlock />
 
             <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
               <Heart className="h-8 w-8 text-rose-500" />
@@ -726,8 +703,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
               </div>
             </section>
 
-            <AdSenseBlock />
-
             {/* CTA Final */}
             <Card className="mt-12 bg-gradient-to-r from-primary to-secondary text-white">
               <CardContent className="pt-8 pb-8 text-center">
@@ -755,6 +730,115 @@ const CantadasIrresistiveisQueFuncionam = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Author Bio */}
+          <Card className="my-12 bg-gradient-to-br from-primary/5 to-secondary/5">
+            <CardContent className="pt-6">
+              <div className="flex flex-col md:flex-row gap-6">
+                <img 
+                  src={authorImage} 
+                  alt="Daniel Olimpio" 
+                  className="w-32 h-32 rounded-full object-cover border-4 border-background shadow-lg"
+                />
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2">Daniel Olimpio</h3>
+                  <p className="text-muted-foreground mb-4">Desenvolvedor Web</p>
+                  
+                  <h4 className="font-semibold mb-2">Sobre Mim</h4>
+                  <p className="text-sm mb-4">
+                    Combinando tecnologia e criatividade para criar soluções digitais impactantes
+                  </p>
+
+                  {!showFullBio && (
+                    <Button
+                      variant="link"
+                      onClick={() => setShowFullBio(true)}
+                      className="p-0 h-auto text-primary"
+                    >
+                      Ver Mais
+                    </Button>
+                  )}
+
+                  {showFullBio && (
+                    <>
+                      <h4 className="font-semibold mb-2">Minha Jornada</h4>
+                      <p className="text-sm mb-4">
+                        Com mais de 20 anos de atuação no mercado digital, sou especializado em desenvolvimento web e design de interfaces, unindo performance, usabilidade e identidade visual em cada projeto.
+                      </p>
+                      
+                      <p className="text-sm mb-4">
+                        Minha expertise está em transformar ideias complexas em soluções digitais funcionais, escaláveis e visualmente marcantes. Trabalho com foco na harmonia entre código limpo, arquitetura eficiente e design responsivo, sempre priorizando a experiência do usuário e os objetivos do negócio.
+                      </p>
+
+                      <p className="text-sm mb-4">
+                        Do front-end moderno ao back-end robusto, da prototipagem à entrega final, meu compromisso é construir produtos digitais que unem forma, função e tecnologia.
+                      </p>
+                    </>
+                  )}
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                      Full Stack Development
+                    </span>
+                    <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                      UI/UX Design
+                    </span>
+                    <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                      Brand Identity
+                    </span>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <a 
+                      href="https://danielolimpio.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Website"
+                    >
+                      <Globe className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://www.facebook.com/danielolimpio.com.br" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://x.com/danielolimpio_" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Twitter"
+                    >
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/danielolimpio_com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href="https://www.linkedin.com/in/danielolimpio-com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </article>
       </main>
 
