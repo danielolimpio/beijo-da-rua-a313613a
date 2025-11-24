@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Heart, TrendingUp, Shield, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
+import bumbleLogo from "@/assets/bumble-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -18,12 +20,14 @@ const DatingApps = () => {
     },
     {
       name: "Bumble",
-      description: "App onde as mulheres dão o primeiro passo",
+      description: "Onde as conexões começam com respeito, segurança e intenção",
       rating: 4.5,
-      users: "5M+",
-      pros: ["Menos spam", "Mulheres mais engajadas", "Opções de amizade e networking"],
-      cons: ["24h para responder", "Menos usuários que Tinder"],
-      category: "Recomendado"
+      users: "70M+",
+      logo: bumbleLogo,
+      pros: ["Mulheres fazem o primeiro movimento", "Verificação de identidade obrigatória", "Três modos: Date, BFF e Bizz"],
+      cons: ["24h para responder ao match", "Maioria masculina (60%)"],
+      category: "Recomendado",
+      slug: "/apps/bumble"
     },
     {
       name: "Happn",
@@ -137,8 +141,13 @@ const DatingApps = () => {
             {apps.map((app, index) => (
               <Card key={index} className="hover:shadow-custom-lg transition-shadow">
                 <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <CardTitle className="text-2xl">{app.name}</CardTitle>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      {app.logo && (
+                        <img src={app.logo} alt={`${app.name} logo`} className="w-12 h-12 rounded-lg" />
+                      )}
+                      <CardTitle className="text-2xl">{app.name}</CardTitle>
+                    </div>
                     <Badge variant="secondary">{app.category}</Badge>
                   </div>
                   <CardDescription>{app.description}</CardDescription>
@@ -179,9 +188,17 @@ const DatingApps = () => {
                     </ul>
                   </div>
 
-                  <Button className="w-full" variant="outline">
-                    Ver Análise Completa
-                  </Button>
+                  {app.slug ? (
+                    <Link to={app.slug}>
+                      <Button className="w-full" variant="outline">
+                        Ver Análise Completa
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button className="w-full" variant="outline">
+                      Ver Análise Completa
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
