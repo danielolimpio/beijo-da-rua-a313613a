@@ -7,6 +7,7 @@ import { Star, Users, Heart, TrendingUp, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import tinderLogo from "@/assets/tinder-logo.jpeg";
+import happnLogo from "@/assets/happn-logo.jpg";
 
 const DatingApps = () => {
   const apps = [
@@ -34,12 +35,14 @@ const DatingApps = () => {
     },
     {
       name: "Happn",
-      description: "Conecta você com pessoas que cruzaram seu caminho",
+      description: "Conecta você com pessoas que cruzaram seu caminho na vida real",
       rating: 4.0,
-      users: "2M+",
-      pros: ["Encontros baseados em localização real", "Mais chances em cidades grandes"],
+      users: "155M+",
+      logo: happnLogo,
+      pros: ["Encontros baseados em cruzamentos reais", "Spots favoritos em comum", "Mais chances em cidades grandes"],
       cons: ["Poucos usuários no interior", "Requer localização ativa"],
-      category: "Inovador"
+      category: "Inovador",
+      slug: "/apps/happn"
     },
     {
       name: "Par Perfeito",
