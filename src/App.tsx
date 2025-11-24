@@ -14,6 +14,8 @@ import Tinder from "./pages/apps/Tinder";
 import Happn from "./pages/apps/Happn";
 import OkCupid from "./pages/apps/OkCupid";
 import Dicas from "./pages/Dicas";
+import Blog from "./pages/Blog";
+import Category from "./pages/blog/Category";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -45,6 +47,8 @@ const App = () => (
           <Route path="/apps/happn" element={<Happn />} />
           <Route path="/apps/okcupid" element={<OkCupid />} />
           <Route path="/dicas" element={<Dicas />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:category" element={<Category />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<QuizPage2 />} />
