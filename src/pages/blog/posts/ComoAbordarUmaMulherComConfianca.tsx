@@ -1,14 +1,33 @@
-import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle } from "lucide-react";
+import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle, Globe, Share2 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
+import articleCover from "@/assets/couple-cafe.jpg";
+import { useState } from "react";
 
 const ComoAbordarUmaMulherComConfianca = () => {
+  const [showFullBio, setShowFullBio] = useState(false);
+  
+  const shareUrl = window.location.href;
+  const shareTitle = "Como Abordar uma Mulher com Confiança e Naturalidade";
+  
+  const handleShare = (platform: string) => {
+    const urls = {
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`,
+      pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&description=${encodeURIComponent(shareTitle)}`,
+      whatsapp: `https://wa.me/?text=${encodeURIComponent(shareTitle + ' ' + shareUrl)}`
+    };
+    
+    window.open(urls[platform as keyof typeof urls], '_blank', 'width=600,height=400');
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -57,18 +76,39 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </div>
               </header>
 
+              {/* Article Cover Image */}
+              <div className="mb-8 rounded-lg overflow-hidden">
+                <img 
+                  src={articleCover} 
+                  alt="Como Abordar uma Mulher com Confiança e Naturalidade"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
               {/* Article Content */}
               <div className="prose prose-lg max-w-none">
-                <p>
-                  Você já sentiu aquele nó no estômago ao ver alguém que te atrai — seja na fila do café, em uma festa ou até mesmo em um parque — e, mesmo com o coração acelerado, não conseguiu dar o primeiro passo? Não está sozinho. Milhões de homens, independentemente da idade ou experiência, enfrentam o mesmo bloqueio: o medo de ser rejeitado, de parecer inadequado ou de "atrapalhar" o momento dela.
+                <p className="mb-6">
+                  Você já sentiu aquele nó no estômago ao ver alguém que te atrai — seja na fila do café, em uma festa ou até mesmo em um parque — e, mesmo com o coração acelerado, não conseguiu dar o primeiro passo?
+                </p>
+                
+                <p className="mb-6">
+                  Não está sozinho. Milhões de homens, independentemente da idade ou experiência, enfrentam o mesmo bloqueio: o medo de ser rejeitado, de parecer inadequado ou de "atrapalhar" o momento dela.
                 </p>
 
-                <p>
-                  Mas e se você soubesse que abordar uma mulher com confiança e naturalidade não depende de frases ensaiadas, aparência perfeita ou sorte? Que é, na verdade, uma habilidade que pode ser aprendida, treinada e aprimorada — como andar de bicicleta ou cozinhar um bom prato?
+                <p className="mb-6">
+                  Mas e se você soubesse que abordar uma mulher com confiança e naturalidade não depende de frases ensaiadas, aparência perfeita ou sorte?
+                </p>
+                
+                <p className="mb-6">
+                  Que é, na verdade, uma habilidade que pode ser aprendida, treinada e aprimorada — como andar de bicicleta ou cozinhar um bom prato?
                 </p>
 
-                <p>
-                  Neste artigo, você vai descobrir técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade. Mostraremos como isso funciona na rua, em eventos sociais, e até em ambientes digitais. Mais do que um manual de "cantadas", este é um guia de conexão humana — baseado em empatia, presença e respeito.
+                <p className="mb-6">
+                  Neste artigo, você vai descobrir técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade. Mostraremos como isso funciona na rua, em eventos sociais, e até em ambientes digitais.
+                </p>
+                
+                <p className="mb-6">
+                  Mais do que um manual de "cantadas", este é um guia de conexão humana — baseado em empatia, presença e respeito.
                 </p>
 
                 <p className="font-semibold text-primary">
@@ -110,15 +150,15 @@ const ComoAbordarUmaMulherComConfianca = () => {
                   O Que Realmente Funciona: Confiança ≠ Perfeição
                 </h2>
 
-                <p>
+                <p className="mb-6">
                   Muitos confundem confiança com arrogância, postura fria ou discurso de "pegador". Nada mais equivocado.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   Confiança verdadeira é a capacidade de estar presente, mesmo quando está desconfortável. É dizer "oi" sabendo que pode ouvir um "não", e estar em paz com isso. É olhar nos olhos sem pressionar. É sorrir sem esperar uma recompensa.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   Naturalidade, por sua vez, é não tentar ser quem você não é. Não é preciso fingir que ama ioga se você prefere futebol. Não é preciso citar poesia se sua referência é o cinema. A autenticidade gera relaxamento — e relaxamento atrai.
                 </p>
 
@@ -360,19 +400,19 @@ const ComoAbordarUmaMulherComConfianca = () => {
                   A Conexão Vem Antes da Conquista
                 </h2>
 
-                <p>
+                <p className="mb-6">
                   Muitos confundem "conquistar" com "ganhar". Mas ninguém é um prêmio. O objetivo não é "levar para casa", mas estabelecer uma ponte humana.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   Quando você aborda pensando em compartilhar um momento, e não em extrair algo dela (atenção, número, afeto), sua energia muda. Você deixa de ser um "caçador" e passa a ser um parceiro em potencial.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   E é essa postura que, ironicamente, torna a conquista mais provável — porque as pessoas são atraídas por quem as faz sentir vistas, ouvidas e valorizadas.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   Se você quer se aprofundar nesse mindset, leia também nosso artigo sobre <Link to="/blog" className="text-primary hover:underline">como ser autêntico e atraente ao mesmo tempo</Link>.
                 </p>
 
@@ -380,17 +420,67 @@ const ComoAbordarUmaMulherComConfianca = () => {
                   Conclusão: Confiança Nasce da Prática, Não da Perfeição
                 </h2>
 
-                <p>
+                <p className="mb-6">
                   Como abordar uma mulher com confiança e naturalidade não é sobre ter todas as respostas. É sobre ter a coragem de fazer a pergunta.
                 </p>
 
-                <p>
+                <p className="mb-6">
                   Não se trata de transformar-se em outra pessoa, mas de reconectar-se com sua autenticidade, sua empatia e sua humanidade. Cada interação — bem-sucedida ou não — é um passo rumo a um homem mais presente, mais seguro e, sobretudo, mais respeitoso.
                 </p>
 
-                <p className="font-semibold">
+                <p className="font-semibold mb-6">
                   Se este artigo te ajudou, compartilhe com um amigo que também merece viver conexões reais. E se quiser descobrir qual tipo de site ou app de relacionamento combina com seu estilo, faça nosso <Link to="/quiz" className="text-primary hover:underline">questionário exclusivo no Beijo da Rua</Link> — porque o amor começa com o autoconhecimento.
                 </p>
+
+                {/* Social Share Buttons */}
+                <div className="my-12 p-6 bg-muted rounded-lg">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Share2 className="w-5 h-5" />
+                    <h3 className="text-lg font-bold">Compartilhe este artigo</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleShare('facebook')}
+                      className="flex items-center gap-2"
+                    >
+                      <Facebook className="w-4 h-4" />
+                      Facebook
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleShare('pinterest')}
+                      className="flex items-center gap-2"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.690 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.350-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                      </svg>
+                      Pinterest
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleShare('twitter')}
+                      className="flex items-center gap-2"
+                    >
+                      <Twitter className="w-4 h-4" />
+                      X (Twitter)
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleShare('whatsapp')}
+                      className="flex items-center gap-2"
+                    >
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                      </svg>
+                      WhatsApp
+                    </Button>
+                  </div>
+                </div>
 
                 <h2 className="text-3xl font-bold mt-12 mb-6">
                   Perguntas Frequentes (FAQ)
@@ -471,26 +561,55 @@ const ComoAbordarUmaMulherComConfianca = () => {
                         Combinando tecnologia e criatividade para criar soluções digitais impactantes
                       </p>
 
-                      <h4 className="font-semibold mb-2">Minha Jornada</h4>
-                      <p className="text-sm mb-4">
-                        Com mais de 20 anos de atuação no mercado digital, sou especializado em desenvolvimento web e design de interfaces, unindo performance, usabilidade e identidade visual em cada projeto.
-                      </p>
-                      
-                      <p className="text-sm mb-4">
-                        Minha expertise está em transformar ideias complexas em soluções digitais funcionais, escaláveis e visualmente marcantes. Trabalho com foco na harmonia entre código limpo, arquitetura eficiente e design responsivo, sempre priorizando a experiência do usuário e os objetivos do negócio.
-                      </p>
+                      {!showFullBio && (
+                        <Button
+                          variant="link"
+                          onClick={() => setShowFullBio(true)}
+                          className="p-0 h-auto text-primary"
+                        >
+                          Ver Mais
+                        </Button>
+                      )}
 
-                      <p className="text-sm mb-4">
-                        Do front-end moderno ao back-end robusto, da prototipagem à entrega final, meu compromisso é construir produtos digitais que unem forma, função e tecnologia.
-                      </p>
+                      {showFullBio && (
+                        <>
+                          <h4 className="font-semibold mb-2">Minha Jornada</h4>
+                          <p className="text-sm mb-4">
+                            Com mais de 20 anos de atuação no mercado digital, sou especializado em desenvolvimento web e design de interfaces, unindo performance, usabilidade e identidade visual em cada projeto.
+                          </p>
+                          
+                          <p className="text-sm mb-4">
+                            Minha expertise está em transformar ideias complexas em soluções digitais funcionais, escaláveis e visualmente marcantes. Trabalho com foco na harmonia entre código limpo, arquitetura eficiente e design responsivo, sempre priorizando a experiência do usuário e os objetivos do negócio.
+                          </p>
+
+                          <p className="text-sm mb-4">
+                            Do front-end moderno ao back-end robusto, da prototipagem à entrega final, meu compromisso é construir produtos digitais que unem forma, função e tecnologia.
+                          </p>
+                        </>
+                      )}
 
                       <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Full Stack Development</span>
-                        <span className="px-3 py-1 bg-secondary/10 text-secondary-foreground rounded-full text-sm">UI/UX Design</span>
-                        <span className="px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-sm">Brand Identity</span>
+                        <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                          Full Stack Development
+                        </span>
+                        <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                          UI/UX Design
+                        </span>
+                        <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium">
+                          Brand Identity
+                        </span>
                       </div>
 
                       <div className="flex gap-4">
+                        <a 
+                          href="https://danielolimpio.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                          aria-label="Website"
+                        >
+                          <Globe className="w-5 h-5" />
+                        </a>
                         <a 
                           href="https://www.facebook.com/danielolimpio.com.br" 
                           target="_blank" 
