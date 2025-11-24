@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp } from "lucide-react";
 import bumbleLogo from "@/assets/bumble-logo.webp";
+import { trackAppClick } from "@/lib/analytics";
 
 const Bumble = () => {
   return (
@@ -367,7 +368,12 @@ const Bumble = () => {
             className="bg-background text-primary hover:bg-background/90"
             asChild
           >
-            <a href="https://bumble.com/pt/" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://bumble.com/pt/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackAppClick('Bumble', 'bottom_cta')}
+            >
               Cadastrar no Bumble
             </a>
           </Button>

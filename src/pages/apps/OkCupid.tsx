@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, MessageCircle, Brain } from "lucide-react";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
+import { trackAppClick } from "@/lib/analytics";
 
 const OkCupid = () => {
   return (
@@ -367,7 +368,12 @@ const OkCupid = () => {
             className="bg-background text-primary hover:bg-background/90"
             asChild
           >
-            <a href="https://www.okcupid.com/" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://www.okcupid.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackAppClick('OkCupid', 'bottom_cta')}
+            >
               Cadastrar no OkCupid
             </a>
           </Button>
