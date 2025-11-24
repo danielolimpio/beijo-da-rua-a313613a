@@ -6,17 +6,20 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Users, Heart, TrendingUp, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import bumbleLogo from "@/assets/bumble-logo.webp";
+import tinderLogo from "@/assets/tinder-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
     {
       name: "Tinder",
-      description: "O app mais popular do Brasil com milhões de usuários ativos",
+      description: "O app que revolucionou o namoro online — rápido, direto e com milhões de matches",
       rating: 4.2,
       users: "10M+",
-      pros: ["Grande base de usuários", "Interface intuitiva", "Match rápido"],
-      cons: ["Muito competitivo", "Requer fotos de qualidade"],
-      category: "Popular"
+      logo: tinderLogo,
+      pros: ["Grande base de usuários", "Interface intuitiva", "Match rápido", "Inclusivo para LGBTQIA+"],
+      cons: ["Muito competitivo", "Requer fotos de qualidade", "Maioria masculina (64%)"],
+      category: "Popular",
+      slug: "/apps/tinder"
     },
     {
       name: "Bumble",

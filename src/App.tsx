@@ -10,6 +10,7 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import DatingApps from "./pages/DatingApps";
 import Bumble from "./pages/apps/Bumble";
+import Tinder from "./pages/apps/Tinder";
 import Dicas from "./pages/Dicas";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/apps-de-namoro" element={<DatingApps />} />
           <Route path="/apps/bumble" element={<Bumble />} />
+          <Route path="/apps/tinder" element={<Tinder />} />
           <Route path="/dicas" element={<Dicas />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
