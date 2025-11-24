@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import tinderLogo from "@/assets/tinder-logo.jpeg";
 import happnLogo from "@/assets/happn-logo.jpg";
+import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -64,12 +65,14 @@ const DatingApps = () => {
     },
     {
       name: "OkCupid",
-      description: "Match baseado em compatibilidade de valores e interesses",
+      description: "O app de relacionamento onde a compatibilidade começa com perguntas inteligentes",
       rating: 4.1,
-      users: "1M+",
-      pros: ["Algoritmo de compatibilidade", "Gratuito com bons recursos", "Diverso"],
-      cons: ["Interface carregada", "Menos popular no Brasil"],
-      category: "Compatibilidade"
+      users: "91M+",
+      logo: okcupidLogo,
+      pros: ["Algoritmo de compatibilidade porcentual", "22 opções de gênero", "Perfis ricos em texto", "Gratuito com recursos avançados"],
+      cons: ["Menos popular no Brasil", "Requer tempo para preencher perfil"],
+      category: "Compatibilidade",
+      slug: "/apps/okcupid"
     }
   ];
 
