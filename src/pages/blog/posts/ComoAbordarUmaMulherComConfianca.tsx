@@ -8,7 +8,7 @@ import BlogSidebar from "@/components/BlogSidebar";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
-import articleCover from "@/assets/couple-cafe.jpg";
+import articleCover from "@/assets/article-abordar-mulher.jpg";
 import { useState } from "react";
 
 const ComoAbordarUmaMulherComConfianca = () => {

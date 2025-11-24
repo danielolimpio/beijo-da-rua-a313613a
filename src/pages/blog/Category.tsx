@@ -6,7 +6,7 @@ import BlogSidebar from "@/components/BlogSidebar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import authorImage from "@/assets/team-daniel.jpg";
-import articleCover from "@/assets/couple-cafe.jpg";
+import articleCover from "@/assets/article-abordar-mulher.jpg";
 
 const categories = {
   conquista: {
