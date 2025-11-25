@@ -104,122 +104,134 @@ const Bumble = () => {
 
       {/* Dados e Estatísticas */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Dados e Perfil do Público (2024–2025)</h2>
-          </div>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-8">Dados e Perfil do Público (2024–2025)</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">70M+</div>
-                <p className="text-muted-foreground">Usuários ativos worldwide</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">22-28M</div>
-                <p className="text-muted-foreground">Visitas mensais ao site</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">150+</div>
-                <p className="text-muted-foreground">Países disponíveis</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Star className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">25-34</div>
-                <p className="text-muted-foreground">Faixa etária predominante</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <Card>
-              <CardHeader>
-                <CardTitle>Principais Países por Uso</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Estados Unidos: ~24% do tráfego global</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Reino Unido: ~6%</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Alemanha: ~5%</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Canadá e Austrália também entre os top 5</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Brasil: entre os 10-15 países com mais downloads na América Latina</span>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Alcance Global</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Com mais de <strong className="text-foreground">70 milhões de usuários ativos</strong> worldwide, o Bumble está presente em mais de <strong className="text-foreground">150 países</strong>.
+                </p>
+                <div className="bg-muted p-4 rounded-lg">
+                  <p className="text-sm font-semibold mb-2">Tráfego Online</p>
+                  <p className="text-sm text-muted-foreground">
+                    22 a 28 milhões de visitas mensais ao site bumble.com (out/2024)
+                  </p>
+                </div>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Distribuição por Faixa Etária</CardTitle>
-              </CardHeader>
-              <CardContent>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Principais Países</h3>
+                </div>
                 <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>25 a 34 anos</span>
-                    <Badge>32% dos usuários</Badge>
+                  <li className="flex items-center gap-2">
+                    <Badge variant="secondary" className="bg-success/20 text-success">1º</Badge>
+                    <span><strong>Estados Unidos</strong> (~24% do tráfego global)</span>
                   </li>
-                  <li className="flex items-center justify-between">
-                    <span>18 a 24 anos</span>
-                    <Badge>28% dos usuários</Badge>
+                  <li className="flex items-center gap-2">
+                    <Badge variant="secondary">2º</Badge>
+                    <span>Reino Unido (~6%)</span>
                   </li>
-                  <li className="flex items-center justify-between">
-                    <span>35 a 44 anos</span>
-                    <Badge>20% dos usuários</Badge>
+                  <li className="flex items-center gap-2">
+                    <Badge variant="secondary">3º</Badge>
+                    <span>Alemanha (~5%)</span>
+                  </li>
+                  <li className="text-sm text-muted-foreground">
+                    Canadá e Austrália também entre os top 5
                   </li>
                 </ul>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Isso faz do Bumble uma ótima opção para jovens adultos e profissionais em fase de estabelecimento pessoal e carreira.
+                <p className="text-sm text-success font-semibold mt-4">
+                  ✓ Brasil entre os 10-15 países com mais downloads na América Latina
                 </p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Gênero dos Usuários</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>Homens</span>
-                    <Badge>~60%</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Mulheres</span>
-                    <Badge>~39%</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Não-binários/LGBTQIA+</span>
-                    <Badge variant="secondary">Crescente</Badge>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Faixa Etária</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">25 a 34 anos</span>
+                      <span className="text-sm text-muted-foreground">32%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '32%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">18 a 24 anos</span>
+                      <span className="text-sm text-muted-foreground">28%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '28%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">35 a 44 anos</span>
+                      <span className="text-sm text-muted-foreground">20%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '20%'}}></div>
+                    </div>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  Apesar de a maioria ser masculina, o controle inicial da conversa pelas mulheres ajuda a equilibrar a experiência e reduzir mensagens indesejadas.
+                  Ótima opção para jovens adultos e profissionais em fase de estabelecimento
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Distribuição por Gênero</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Homens</span>
+                      <span className="text-sm text-muted-foreground">60%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '60%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Mulheres</span>
+                      <span className="text-sm text-muted-foreground">40%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '40%'}}></div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground mt-4">
+                  Maior equilíbrio comparado a outros apps, graças ao modelo de "mulheres iniciam"
                 </p>
               </CardContent>
             </Card>

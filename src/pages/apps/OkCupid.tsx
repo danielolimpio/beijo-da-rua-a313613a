@@ -104,122 +104,135 @@ const OkCupid = () => {
 
       {/* Dados e Estatísticas */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Dados e Perfil do Público (2024–2025)</h2>
-          </div>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-8">Dados e Perfil do Público (2024–2025)</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Globe className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">91M+</div>
-                <p className="text-muted-foreground">Usuários registrados</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">14-18M</div>
-                <p className="text-muted-foreground">Visitas mensais ao site</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <TrendingUp className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">110+</div>
-                <p className="text-muted-foreground">Países disponíveis</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Star className="w-12 h-12 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">25-34</div>
-                <p className="text-muted-foreground">Faixa etária predominante</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <Card>
-              <CardHeader>
-                <CardTitle>Principais Países por Uso</CardTitle>
-              </CardHeader>
-              <CardContent>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Alcance Global</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Com mais de <strong className="text-foreground">91 milhões de usuários registrados</strong>, o OkCupid está presente em mais de <strong className="text-foreground">110 países</strong>.
+                </p>
+                <div className="bg-muted p-4 rounded-lg">
+                  <p className="text-sm font-semibold mb-2">Tráfego Online</p>
+                  <p className="text-sm text-muted-foreground">
+                    14 a 18 milhões de visitas mensais ao site okcupid.com (out/2024)
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Principais Países</h3>
+                </div>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Estados Unidos: ~30% do tráfego global</span>
+                    <Badge variant="secondary" className="bg-success/20 text-success">1º</Badge>
+                    <span><strong>Estados Unidos</strong> (~30% do tráfego global)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Reino Unido: ~8%</span>
+                    <Badge variant="secondary">2º</Badge>
+                    <span>Reino Unido (~8%)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Canadá: ~6%</span>
+                    <Badge variant="secondary">3º</Badge>
+                    <span>Canadá (~6%)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Brasil: ~5% — um dos maiores mercados da América Latina</span>
+                    <Badge variant="secondary">4º</Badge>
+                    <span><strong>Brasil</strong> (~5%)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                    <span>Índia e Austrália também com crescimento consistente</span>
+                  <li className="text-sm text-muted-foreground">
+                    Índia e Austrália também com crescimento consistente
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Distribuição por Faixa Etária</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>25 a 34 anos</span>
-                    <Badge>35% dos usuários</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>35 a 44 anos</span>
-                    <Badge>22% dos usuários</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>18 a 24 anos</span>
-                    <Badge>18% dos usuários</Badge>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Faixa Etária</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">25 a 34 anos</span>
+                      <span className="text-sm text-muted-foreground">35%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '35%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">35 a 44 anos</span>
+                      <span className="text-sm text-muted-foreground">22%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '22%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">18 a 24 anos</span>
+                      <span className="text-sm text-muted-foreground">18%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '18%'}}></div>
+                    </div>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  Um público mais maduro, que valoriza diálogo, ideias e alinhamento de valores.
+                  Público mais maduro que valoriza diálogo e alinhamento de valores
                 </p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Gênero dos Usuários</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>Homens</span>
-                    <Badge>~52%</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Mulheres</span>
-                    <Badge>~45%</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Não-binários / outros gêneros</span>
-                    <Badge variant="secondary">~3%</Badge>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-primary/10">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold">Distribuição por Gênero</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Homens</span>
+                      <span className="text-sm text-muted-foreground">58%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '58%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Mulheres</span>
+                      <span className="text-sm text-muted-foreground">42%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-primary h-2 rounded-full" style={{width: '42%'}}></div>
+                    </div>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  Uma das plataformas mais equilibradas e inclusivas em termos de representação de gênero e diversidade.
+                  Equilíbrio razoável com foco em compatibilidade profunda
                 </p>
               </CardContent>
             </Card>
