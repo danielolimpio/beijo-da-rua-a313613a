@@ -43,7 +43,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-2 sm:px-4 h-full relative z-10 max-w-full">
+      <div className="container mx-auto px-2 sm:px-4 h-full relative z-10 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center h-full">
           {/* Left Content */}
           <div className="space-y-3 sm:space-y-4 md:space-y-6 pb-6 sm:pb-8 md:pb-12 md:-mt-8 px-2 sm:px-0">

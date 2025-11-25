@@ -10,7 +10,7 @@ const Header = () => {
     <header className="w-full fixed top-0 left-0 right-0 z-50 bg-background shadow-sm overflow-x-hidden">
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 overflow-x-hidden">
-        <div className="container mx-auto px-2 sm:px-4 flex justify-between items-center text-xs sm:text-sm max-w-full">
+        <div className="container mx-auto px-2 sm:px-4 flex justify-between items-center text-xs sm:text-sm max-w-7xl">
           <div className="flex items-center gap-3 sm:gap-6">
             <a href="/politica-de-privacidade" className="flex items-center gap-1 sm:gap-2 hover:opacity-80 transition-opacity">
               <FileText size={14} className="hidden sm:block" />
@@ -43,7 +43,7 @@ const Header = () => {
 
       {/* Main Navigation */}
       <nav className="bg-background border-b border-border py-2 overflow-x-hidden">
-        <div className="container mx-auto px-2 sm:px-4 flex justify-between items-center max-w-full">
+        <div className="container mx-auto px-2 sm:px-4 flex justify-between items-center max-w-7xl">
           <a href="/" className="flex items-center flex-shrink-0">
             <img src={logo} alt="Beijo da Rua" className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto" />
           </a>
@@ -79,7 +79,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-border bg-background overflow-x-hidden">
-            <div className="container mx-auto px-2 sm:px-4 py-4 space-y-2 max-w-full">
+            <div className="container mx-auto px-2 sm:px-4 py-4 space-y-2 max-w-7xl">
               <a href="/" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Home</a>
               <a href="/sobre-nos" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Sobre Nós</a>
               <a href="/apps-de-namoro" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Apps de Namoro</a>

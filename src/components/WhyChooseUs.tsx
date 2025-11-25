@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-trust overflow-x-hidden">
-      <div className="container mx-auto px-2 sm:px-4 max-w-full">
+      <div className="container mx-auto px-2 sm:px-4 max-w-7xl">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 px-4">
             Por Que Escolher o Beijo da Rua?
