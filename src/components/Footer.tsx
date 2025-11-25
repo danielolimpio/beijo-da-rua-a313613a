@@ -1,4 +1,4 @@
-import { MapPin, Phone, Globe } from "lucide-react";
+import { MapPin, Phone, Globe, Home, Info, HelpCircle, Lightbulb, BookOpen, Mail } from "lucide-react";
 import footerMember1 from "@/assets/footer-member1.jpg";
 import footerMember2 from "@/assets/footer-member2.jpg";
 import footerMember3 from "@/assets/footer-member3.jpg";
@@ -62,13 +62,48 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-foreground">Contatos & Suporte</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="/" className="hover:text-primary transition-colors">Home</a></li>
-              <li><a href="/quiz" className="hover:text-primary transition-colors">Quiz</a></li>
-              <li><a href="/dicas" className="hover:text-primary transition-colors">Dicas</a></li>
-              <li><a href="/sobre-nos" className="hover:text-primary transition-colors">Sobre Nós</a></li>
-              <li><a href="/blog" className="hover:text-primary transition-colors">Blog</a></li>
-              <li><a href="/contato" className="hover:text-primary transition-colors">Entre em Contato</a></li>
-              <li><a href="/faq" className="hover:text-primary transition-colors">FAQ</a></li>
+              <li>
+                <a href="/" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Home size={16} />
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="/sobre-nos" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Info size={16} />
+                  <span>Sobre Nós</span>
+                </a>
+              </li>
+              <li>
+                <a href="/quiz" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <HelpCircle size={16} />
+                  <span>Quiz</span>
+                </a>
+              </li>
+              <li>
+                <a href="/dicas" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Lightbulb size={16} />
+                  <span>Dicas</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <BookOpen size={16} />
+                  <span>Blog</span>
+                </a>
+              </li>
+              <li>
+                <a href="/contato" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Mail size={16} />
+                  <span>Contato</span>
+                </a>
+              </li>
+              <li>
+                <a href="/faq" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <HelpCircle size={16} />
+                  <span>FAQ</span>
+                </a>
+              </li>
             </ul>
           </div>
 
