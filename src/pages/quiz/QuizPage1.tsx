@@ -68,28 +68,28 @@ const QuizPage1 = () => {
             <QuizOption
               title="Encontros casuais"
               description="Quero me divertir, sem pressão de compromisso"
-              href="/apps-para-ficar-sem-compromisso-homem"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
               icon={<Heart size={24} />}
             />
             
             <QuizOption
               title="Namoro sério"
               description="Busco uma parceira para relacionamento estável"
-              href="/melhores-apps-para-namoro-serio-homens"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
               icon={<Users size={24} />}
             />
             
             <QuizOption
               title="Casamento"
               description="Quero encontrar alguém para construir uma vida junto"
-              href="/apps-para-casamento-homens-brasil"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
               icon={<Home size={24} />}
             />
             
             <QuizOption
               title="Só conhecer gente"
               description="Expandir círculo social, amizades e depois vejo"
-              href="/apps-para-conhecer-pessoas-homem"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
               icon={<MessageCircle size={24} />}
             />
           </div>
