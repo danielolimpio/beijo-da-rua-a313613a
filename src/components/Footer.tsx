@@ -3,18 +3,13 @@ import footerMember1 from "@/assets/footer-member1.jpg";
 import footerMember2 from "@/assets/footer-member2.jpg";
 import footerMember3 from "@/assets/footer-member3.jpg";
 import logo from "@/assets/logo.png";
+import { recentArticles } from "@/data/blogArticles";
 
 const Footer = () => {
   const featuredMembers = [
     { name: "Samantha Moreno", status: "Ativo", image: footerMember1 },
     { name: "Amanda Dantas", status: "Ativo", image: footerMember2 },
     { name: "Fabiana Duarte", status: "Ativo", image: footerMember3 },
-  ];
-
-  const recentArticles = [
-    { title: "Onde Encontrar um Bom Match em 2025", date: "09 de novembro de 2025" },
-    { title: "Como Montar um Perfil que Atrai Mulheres", date: "09 de novembro de 2025" },
-    { title: "App de Namoro que Funciona Fora das Capitais", date: "09 de novembro de 2025" },
   ];
 
   return (
@@ -80,16 +75,26 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-foreground">Atividades Recentes</h3>
             <div className="space-y-3">
-              {recentArticles.map((article, index) => (
-                <div key={index} className="flex gap-3">
-                  <div className="w-16 h-16 bg-primary/10 rounded-lg flex-shrink-0"></div>
+              {recentArticles.slice(0, 3).map((article) => (
+                <a 
+                  key={article.id} 
+                  href={article.link}
+                  className="flex gap-3 group"
+                >
+                  <div className="w-16 h-16 rounded-lg flex-shrink-0 overflow-hidden">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
                   <div>
-                    <p className="text-sm font-medium hover:text-primary transition-colors cursor-pointer line-clamp-2">
+                    <p className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
                       {article.title}
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">{article.date}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
