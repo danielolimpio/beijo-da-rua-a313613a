@@ -104,117 +104,134 @@ const Happn = () => {
 
       {/* Dados e Estatísticas */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Dados e Perfil do Público (2024–2025)</h2>
-          </div>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl font-bold mb-8">Dados e Perfil do Público (2024–2025)</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Globe className="w-12 h-12 text-[#F94877] mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">155M+</div>
-                <p className="text-muted-foreground">Usuários globais</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Users className="w-12 h-12 text-[#F94877] mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">8-12M</div>
-                <p className="text-muted-foreground">Visitas mensais ao site</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <TrendingUp className="w-12 h-12 text-[#F94877] mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">190+</div>
-                <p className="text-muted-foreground">Países disponíveis</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Star className="w-12 h-12 text-[#F94877] mx-auto mb-4" />
-                <div className="text-3xl font-bold mb-2">25-34</div>
-                <p className="text-muted-foreground">Faixa etária predominante</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <Card>
-              <CardHeader>
-                <CardTitle>Principais Países por Uso</CardTitle>
-              </CardHeader>
-              <CardContent>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#F94877]/10">
+                    <Globe className="w-6 h-6 text-[#F94877]" />
+                  </div>
+                  <h3 className="text-xl font-bold">Alcance Global</h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  Com mais de <strong className="text-foreground">155 milhões de usuários</strong> globais, o Happn está presente em mais de <strong className="text-foreground">190 países</strong>.
+                </p>
+                <div className="bg-muted p-4 rounded-lg">
+                  <p className="text-sm font-semibold mb-2">Tráfego Online</p>
+                  <p className="text-sm text-muted-foreground">
+                    8 a 12 milhões de visitas mensais ao site happn.com (out/2024)
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#F94877]/10">
+                    <TrendingUp className="w-6 h-6 text-[#F94877]" />
+                  </div>
+                  <h3 className="text-xl font-bold">Principais Países</h3>
+                </div>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#F94877]" />
-                    <span>França: ~23% do tráfego global — país de origem e mercado líder</span>
+                    <Badge variant="secondary" className="bg-success/20 text-success">1º</Badge>
+                    <span><strong>França</strong> (~23% do tráfego global)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#F94877]" />
-                    <span>Brasil: ~18% — segundo maior mercado global</span>
+                    <Badge variant="secondary">2º</Badge>
+                    <span><strong>Brasil</strong> (~18%)</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#F94877]" />
-                    <span>Índia: ~9% — mercado emergente em expansão</span>
+                    <Badge variant="secondary">3º</Badge>
+                    <span>Índia (~9%)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-[#F94877]" />
-                    <span>Turquia e Argentina também entre os top 5</span>
+                  <li className="text-sm text-muted-foreground">
+                    Turquia e Argentina também entre os top 5
                   </li>
                 </ul>
-                <p className="text-sm text-muted-foreground mt-4">
-                  → O Brasil é o segundo maior mercado global do Happn, o que significa que há muitas oportunidades de conexão local.
+                <p className="text-sm text-success font-semibold mt-4">
+                  ✓ Brasil é o segundo maior mercado global do Happn
                 </p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Distribuição por Faixa Etária</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>25 a 34 anos</span>
-                    <Badge>30% dos usuários</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>18 a 24 anos</span>
-                    <Badge>25% dos usuários</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>35 a 44 anos</span>
-                    <Badge>20% dos usuários</Badge>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#F94877]/10">
+                    <Users className="w-6 h-6 text-[#F94877]" />
+                  </div>
+                  <h3 className="text-xl font-bold">Faixa Etária</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">25 a 34 anos</span>
+                      <span className="text-sm text-muted-foreground">30%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-[#F94877] h-2 rounded-full" style={{width: '30%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">18 a 24 anos</span>
+                      <span className="text-sm text-muted-foreground">25%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-[#F94877] h-2 rounded-full" style={{width: '25%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">35 a 44 anos</span>
+                      <span className="text-sm text-muted-foreground">20%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-[#F94877] h-2 rounded-full" style={{width: '20%'}}></div>
+                    </div>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  O público é jovem, urbano e ativo, com foco em experiências reais e imediatas.
+                  Público jovem, urbano e ativo, com foco em experiências reais
                 </p>
               </CardContent>
             </Card>
 
             <Card>
-              <CardHeader>
-                <CardTitle>Gênero dos Usuários</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-center justify-between">
-                    <span>Homens</span>
-                    <Badge>~55%</Badge>
-                  </li>
-                  <li className="flex items-center justify-between">
-                    <span>Mulheres</span>
-                    <Badge>~45%</Badge>
-                  </li>
-                </ul>
+              <CardContent className="pt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-3 rounded-lg bg-[#F94877]/10">
+                    <Heart className="w-6 h-6 text-[#F94877]" />
+                  </div>
+                  <h3 className="text-xl font-bold">Distribuição por Gênero</h3>
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Homens</span>
+                      <span className="text-sm text-muted-foreground">55%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-[#F94877] h-2 rounded-full" style={{width: '55%'}}></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-1">
+                      <span className="text-sm font-medium">Mulheres</span>
+                      <span className="text-sm text-muted-foreground">45%</span>
+                    </div>
+                    <div className="w-full bg-muted rounded-full h-2">
+                      <div className="bg-[#F94877] h-2 rounded-full" style={{width: '45%'}}></div>
+                    </div>
+                  </div>
+                </div>
                 <p className="text-sm text-muted-foreground mt-4">
-                  Mais equilibrado do que outros apps, o Happn atrai um público que valoriza encontros baseados em coincidência, não apenas em seleção.
+                  Mais equilibrado que outros apps, com foco em cruzamentos reais
                 </p>
               </CardContent>
             </Card>
