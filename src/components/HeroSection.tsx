@@ -15,7 +15,7 @@ const HeroSection = () => {
   }));
 
   return (
-    <section className="bg-gradient-hero pt-6 sm:pt-8 pb-0 overflow-hidden relative">
+    <section className="bg-gradient-hero pt-[140px] sm:pt-[148px] pb-0 overflow-hidden relative">
       {/* Floating Hearts */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {hearts.map((heart) => (
