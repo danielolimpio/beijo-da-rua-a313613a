@@ -253,11 +253,13 @@ const Hinge = () => {
               Com frases como "Isso me fez rir" e "Quero saber mais sobre isso", o Hinge transforma o namoro online em uma experiência mais humana, inteligente e conectada.
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" className="bg-background text-primary hover:bg-background/90">
-                Baixar Hinge
-              </Button>
+              <a href="https://hinge.co/pt-br" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+                  Baixar Hinge
+                </Button>
+              </a>
               <Link to="/apps-de-namoro">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" className="bg-background/20 text-primary-foreground hover:bg-background/30 border-0">
                   Comparar Apps
                 </Button>
               </Link>
