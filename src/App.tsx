@@ -38,6 +38,11 @@ import ComoIniciarConversasApps from "./pages/quiz/ComoIniciarConversasApps";
 import QualTipoFotoPerfilFunciona from "./pages/quiz/QualTipoFotoPerfilFunciona";
 import QuantoTempoDedicarApps from "./pages/quiz/QuantoTempoDedicarApps";
 import ResultadoAppIdeal from "./pages/quiz/ResultadoAppIdeal";
+import ComoHomensTimidosUsarApps from "./pages/quiz/ComoHomensTimidosUsarApps";
+import MelhorHorarioUsarApps from "./pages/quiz/MelhorHorarioUsarApps";
+import FrequenciaIdealUsarApps from "./pages/quiz/FrequenciaIdealUsarApps";
+import TipoMensagemEnviarPrimeiro from "./pages/quiz/TipoMensagemEnviarPrimeiro";
+import AppIdealHomensTimidos from "./pages/quiz/AppIdealHomensTimidos";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosUso from "./pages/TermosUso";
 
@@ -71,7 +76,11 @@ const App = () => (
           <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
-          <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<QuizPage2 />} />
+          <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
+          <Route path="/melhor-horario-usar-apps-namoro" element={<MelhorHorarioUsarApps />} />
+          <Route path="/frequencia-ideal-usar-apps" element={<FrequenciaIdealUsarApps />} />
+          <Route path="/tipo-mensagem-enviar-primeiro" element={<TipoMensagemEnviarPrimeiro />} />
+          <Route path="/app-ideal-homens-timidos" element={<AppIdealHomensTimidos />} />
           <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
           <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
           <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<QuizPage5 />} />
