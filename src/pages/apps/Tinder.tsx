@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import tinderLogo from "@/assets/tinder-logo.jpeg";
 import { trackAppClick } from "@/lib/analytics";
 
@@ -348,16 +349,23 @@ const Tinder = () => {
               Com sua interface intuitiva, alcance global e cultura de "match rápido", o Tinder continua sendo 
               a referência para quem quer começar uma conversa com apenas um deslize.
             </p>
-            <a 
-              href="https://tinder.com/pt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackAppClick('Tinder', 'bottom_cta')}
-            >
-              <Button size="lg" className="bg-white text-[#FF5864] hover:bg-white/90 font-bold">
-                Cadastrar-se no Tinder
-              </Button>
-            </a>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://tinder.com/pt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackAppClick('Tinder', 'bottom_cta')}
+              >
+                <Button size="lg" className="bg-white text-[#FF5864] hover:bg-white/90 font-bold">
+                  Cadastrar-se no Tinder
+                </Button>
+              </a>
+              <Link to="/quiz">
+                <Button size="lg" className="bg-white/20 text-white hover:bg-white/30 border-0">
+                  Fazer Quiz
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

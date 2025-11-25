@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, Zap, Eye, MessageCircle } from "lucide-react";
 import badooLogo from "@/assets/badoo-logo.jpeg";
 import { trackAppClick } from "@/lib/analytics";
+import { Link } from "react-router-dom";
 
 const Badoo = () => {
   return (
@@ -372,16 +373,23 @@ const Badoo = () => {
               Com mais de 15 anos de experiência no mercado, o Badoo prova que a combinação de acessibilidade, 
               segurança e foco em pessoas reais continua sendo sua maior força.
             </p>
-            <a 
-              href="https://badoo.com/pt/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => trackAppClick('Badoo', 'bottom_cta')}
-            >
-              <Button size="lg" className="bg-white text-[#6C5CE7] hover:bg-white/90 font-bold">
-                Cadastrar-se no Badoo
-              </Button>
-            </a>
+            <div className="flex justify-center gap-4">
+              <a 
+                href="https://badoo.com/pt/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackAppClick('Badoo', 'bottom_cta')}
+              >
+                <Button size="lg" className="bg-white text-[#6C5CE7] hover:bg-white/90 font-bold">
+                  Cadastrar-se no Badoo
+                </Button>
+              </a>
+              <Link to="/quiz">
+                <Button size="lg" className="bg-white/20 text-white hover:bg-white/30 border-0">
+                  Fazer Quiz
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
