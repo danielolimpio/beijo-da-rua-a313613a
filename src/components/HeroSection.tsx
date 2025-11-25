@@ -75,7 +75,7 @@ const HeroSection = () => {
               />
               
               {/* Feature Tags - Hidden on very small screens, visible on sm+ */}
-              <div className="hidden sm:block absolute right-0 md:-right-8 top-10 sm:top-20 space-y-3 sm:space-y-6">
+              <div className="hidden sm:block absolute right-0 md:-right-16 lg:-right-24 xl:-right-32 top-10 sm:top-20 space-y-3 sm:space-y-6">
                 <img 
                   src={perfisValidados} 
                   alt="Perfis Validados" 
