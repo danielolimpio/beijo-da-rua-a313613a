@@ -34,6 +34,10 @@ import QualSeuEstiloDeNamoro from "./pages/quiz/QualSeuEstiloDeNamoro";
 import VoceEMaisSerioOuDescontraido from "./pages/quiz/VoceEMaisSerioOuDescontraido";
 import OndeVoceQuerChegar from "./pages/quiz/OndeVoceQuerChegar";
 import OQueNuncaFaltaNoSeuDia from "./pages/quiz/OQueNuncaFaltaNoSeuDia";
+import ComoIniciarConversasApps from "./pages/quiz/ComoIniciarConversasApps";
+import QualTipoFotoPerfilFunciona from "./pages/quiz/QualTipoFotoPerfilFunciona";
+import QuantoTempoDedicarApps from "./pages/quiz/QuantoTempoDedicarApps";
+import ResultadoAppIdeal from "./pages/quiz/ResultadoAppIdeal";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosUso from "./pages/TermosUso";
 
@@ -76,6 +80,10 @@ const App = () => (
           <Route path="/voce-e-mais-serio-ou-descontraido" element={<VoceEMaisSerioOuDescontraido />} />
           <Route path="/onde-voce-quer-chegar-no-relacionamento" element={<OndeVoceQuerChegar />} />
           <Route path="/o-que-nunca-falta-no-seu-dia" element={<OQueNuncaFaltaNoSeuDia />} />
+          <Route path="/como-iniciar-conversas-apps-namoro-que-geram-respostas" element={<ComoIniciarConversasApps />} />
+          <Route path="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem" element={<QualTipoFotoPerfilFunciona />} />
+          <Route path="/quanto-tempo-dedicar-apps-namoro-por-dia-homem" element={<QuantoTempoDedicarApps />} />
+          <Route path="/seu-app-de-namoro-ideal-resultado" element={<ResultadoAppIdeal />} />
           <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
           <Route path="/termos-de-uso" element={<TermosUso />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
