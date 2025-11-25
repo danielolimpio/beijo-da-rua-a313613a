@@ -9,6 +9,7 @@ import bumbleLogo from "@/assets/bumble-logo.webp";
 import tinderLogo from "@/assets/tinder-logo.jpeg";
 import happnLogo from "@/assets/happn-logo.jpg";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
+import badooLogo from "@/assets/badoo-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -46,13 +47,15 @@ const DatingApps = () => {
       slug: "/apps/happn"
     },
     {
-      name: "Par Perfeito",
-      description: "Focado em relacionamentos sérios e duradouros",
+      name: "Badoo",
+      description: "O app que conecta milhões de pessoas reais todos os dias",
       rating: 4.3,
-      users: "3M+",
-      pros: ["Usuários buscam relacionamento sério", "Perfis detalhados", "Brasileiro"],
-      cons: ["Versão gratuita limitada", "Menos jovens"],
-      category: "Relacionamento Sério"
+      users: "100M+",
+      logo: badooLogo,
+      pros: ["Conversa sem precisar de match", "Verificação por selfie", "Modo 'Encounters' por localização", "Centro de Segurança 24/7"],
+      cons: ["Mais homens que mulheres (58%)", "Anúncios na versão gratuita"],
+      category: "Popular",
+      slug: "/apps/badoo"
     },
     {
       name: "Inner Circle",
