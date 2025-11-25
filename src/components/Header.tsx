@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react";
+import { FileText, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -9,14 +9,14 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Phone size={14} />
-              <span>+55 12 98251-9116</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin size={14} />
-              <span>João Pessoa, Brasil</span>
-            </div>
+            <a href="/politica-de-privacidade" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <FileText size={14} />
+              <span>Políticas de Privacidade</span>
+            </a>
+            <a href="/termos-de-uso" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Scale size={14} />
+              <span>Termos de Uso</span>
+            </a>
           </div>
           <div className="flex items-center gap-3">
             <a href="#" className="hover:opacity-80 transition-opacity">
