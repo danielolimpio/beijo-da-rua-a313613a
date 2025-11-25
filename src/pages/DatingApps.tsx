@@ -111,31 +111,31 @@ const DatingApps = () => {
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-accent text-primary-foreground py-20">
+      <section className="bg-gradient-to-br from-primary to-accent text-primary-foreground py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Melhores Apps de Namoro no Brasil
           </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 sm:mb-8">
             Descubra qual app de namoro é perfeito para você. Análises detalhadas, comparações e dicas para encontrar matches reais.
           </p>
-          <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+          <Button size="lg" className="bg-background text-primary hover:bg-background/90 w-full sm:w-auto px-6 sm:px-8">
             Faça o Quiz e Descubra Seu App Ideal
           </Button>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 sm:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                  <feature.icon className="w-8 h-8 text-primary" />
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-primary/10 mb-3 sm:mb-4">
+                  <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <h3 className="font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -143,11 +143,11 @@ const DatingApps = () => {
       </section>
 
       {/* Apps Grid */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Apps de Namoro Avaliados</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Apps de Namoro Avaliados</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
               Análise completa dos principais apps disponíveis no Brasil
             </p>
           </div>
@@ -222,16 +222,16 @@ const DatingApps = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <TrendingUp className="w-16 h-16 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold mb-6">
+          <TrendingUp className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Pronto Para Encontrar Seu Match Perfeito?
           </h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8">
+          <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-8">
             Faça nosso quiz personalizado e descubra qual app é ideal para seu perfil e objetivos.
           </p>
-          <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+          <Button size="lg" className="bg-background text-primary hover:bg-background/90 w-full sm:w-auto px-6 sm:px-8">
             Começar Quiz Agora
           </Button>
         </div>

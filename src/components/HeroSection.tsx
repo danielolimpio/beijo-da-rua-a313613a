@@ -44,26 +44,26 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 h-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center h-full">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
           {/* Left Content */}
-          <div className="space-y-6 pb-12 -mt-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+          <div className="space-y-4 sm:space-y-6 pb-8 sm:pb-12 md:-mt-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Novos Lugares,
               <br />
               Relacionamentos
               <br />
               Inesquecíveis
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground">
               Junte-se à nossa comunidade hoje! Conheça os melhores apps de namoro para homens brasileiros.
             </p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
               Comece Agora
             </Button>
           </div>
 
           {/* Right Content - Image and Features */}
-          <div className="relative h-[500px] md:h-[550px]">
+          <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
             <div className="relative h-full">
               <img 
                 src={heroImage} 
@@ -71,24 +71,24 @@ const HeroSection = () => {
                 className="w-full h-full object-cover object-bottom"
               />
               
-              {/* Feature Tags */}
-              <div className="absolute -right-8 top-20 space-y-6">
+              {/* Feature Tags - Hidden on very small screens, visible on sm+ */}
+              <div className="hidden sm:block absolute right-0 md:-right-8 top-10 sm:top-20 space-y-3 sm:space-y-6">
                 <img 
                   src={perfisValidados} 
                   alt="Perfis Validados" 
-                  className="w-[260px] h-auto animate-float"
+                  className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0s' }}
                 />
                 <img 
                   src={maisMatches} 
                   alt="Mais Matches" 
-                  className="w-[260px] h-auto animate-float"
+                  className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.3s' }}
                 />
                 <img 
                   src={privado} 
                   alt="100% Privado" 
-                  className="w-[260px] h-auto animate-float"
+                  className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.6s' }}
                 />
               </div>
