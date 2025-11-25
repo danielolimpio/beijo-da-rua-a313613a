@@ -81,11 +81,11 @@ const Footer = () => {
                   href={article.link}
                   className="flex gap-3 group"
                 >
-                  <div className="w-16 h-16 rounded-lg flex-shrink-0 overflow-hidden">
+                  <div className="w-16 h-16 rounded-lg flex-shrink-0 overflow-hidden bg-muted/50">
                     <img 
                       src={article.image} 
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-hover:rotate-2"
                     />
                   </div>
                   <div>
