@@ -3,7 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, X, Heart, MessageCircle, Users, Shield, Star, TrendingUp } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Check, X, Heart, MessageCircle, Users, Shield, Star, TrendingUp, Globe, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import hingeLogo from "@/assets/hinge-logo.jpeg";
 
@@ -48,10 +49,10 @@ const Hinge = () => {
   ];
 
   const stats = [
-    { label: "Visitas Mensais", value: "12-16M" },
-    { label: "Principais Países", value: "EUA, UK, Brasil" },
-    { label: "Faixa Etária", value: "25-34 anos (40%)" },
-    { label: "Equilíbrio", value: "53% homens / 47% mulheres" }
+    { label: "Visitas Mensais", value: "12-16M", icon: Globe },
+    { label: "Principais Países", value: "EUA, UK, Brasil", icon: TrendingUp },
+    { label: "Faixa Etária", value: "25-34 anos", percentage: "40%", icon: Users },
+    { label: "Equilíbrio", value: "53% / 47%", description: "homens / mulheres", icon: Heart }
   ];
 
   return (
@@ -101,34 +102,152 @@ const Hinge = () => {
 
         {/* Overview */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">O App que Quer Te Tirar do App</h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  O Hinge nasceu com uma missão diferente: criar relacionamentos reais que vão além do primeiro match. Seu slogan, "feito para ser deletado", resume perfeitamente sua filosofia: o app existe para te ajudar a encontrar alguém com quem você queira passar tempo de verdade — não só trocar mensagens infinitas.
-                </p>
-                <p>
-                  Lançado em 2012 e relançado com nova identidade em 2019, o Hinge se afasta dos "swipes" tradicionais e prioriza perfis ricos, interações autênticas e compatibilidade emocional. Em vez de apenas curtir fotos, você interage com respostas específicas, prompts criativos e vídeos curtos, o que estimula conversas mais profundas desde o início.
-                </p>
-              </div>
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold mb-6">O App que Quer Te Tirar do App</h2>
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                O Hinge nasceu com uma missão diferente: criar relacionamentos reais que vão além do primeiro match. Seu slogan, "feito para ser deletado", resume perfeitamente sua filosofia: o app existe para te ajudar a encontrar alguém com quem você queira passar tempo de verdade — não só trocar mensagens infinitas.
+              </p>
+              <p>
+                Lançado em 2012 e relançado com nova identidade em 2019, o Hinge se afasta dos "swipes" tradicionais e prioriza perfis ricos, interações autênticas e compatibilidade emocional. Em vez de apenas curtir fotos, você interage com respostas específicas, prompts criativos e vídeos curtos, o que estimula conversas mais profundas desde o início.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Stats */}
+        {/* Dados e Perfil */}
         <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Dados do Hinge (2024-2025)</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {stats.map((stat, index) => (
-                <Card key={index} className="text-center">
-                  <CardContent className="pt-6">
-                    <div className="text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                    <div className="text-muted-foreground">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              ))}
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-3xl font-bold mb-8">Dados e Perfil do Público (2024–2025)</h2>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <Globe className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Alcance Global</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Presente em mais de <strong className="text-foreground">50 países</strong>, com foco nos EUA, Canadá, Reino Unido, Austrália e, mais recentemente, Brasil e México.
+                  </p>
+                  <div className="bg-muted p-4 rounded-lg">
+                    <p className="text-sm font-semibold mb-2">Tráfego Online</p>
+                    <p className="text-sm text-muted-foreground">
+                      12 a 16 milhões de visitas mensais no site hinge.co (out/2024)
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <TrendingUp className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Principais Países</h3>
+                  </div>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2">
+                      <Badge variant="secondary" className="bg-success/20 text-success">1º</Badge>
+                      <span><strong>Estados Unidos</strong> (~58% do tráfego global)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Badge variant="secondary">2º</Badge>
+                      <span>Reino Unido (~8%)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Badge variant="secondary">3º</Badge>
+                      <span>Canadá (~6%)</span>
+                    </li>
+                    <li className="text-sm text-muted-foreground">
+                      Austrália e Brasil também estão entre os top 5
+                    </li>
+                  </ul>
+                  <p className="text-sm text-success font-semibold mt-4">
+                    ✓ Crescendo rapidamente no Brasil desde 2023
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <Users className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Faixa Etária</h3>
+                  </div>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium">25 a 34 anos</span>
+                        <span className="text-sm text-muted-foreground">40%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{width: '40%'}}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium">35 a 44 anos</span>
+                        <span className="text-sm text-muted-foreground">25%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{width: '25%'}}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium">18 a 24 anos</span>
+                        <span className="text-sm text-muted-foreground">18%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{width: '18%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-4">
+                    Público mais maduro e intencional, em busca de relacionamentos sérios
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <Heart className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">Distribuição por Gênero</h3>
+                  </div>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium">Homens</span>
+                        <span className="text-sm text-muted-foreground">53%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{width: '53%'}}></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm font-medium">Mulheres</span>
+                        <span className="text-sm text-muted-foreground">47%</span>
+                      </div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{width: '47%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-4">
+                    Um dos apps com maior equilíbrio de gênero no mercado
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
