@@ -25,7 +25,7 @@ const QuizLayout = ({ children, title, description, progress }: QuizLayoutProps)
       )}
 
       {/* Hero Section */}
-      <section className="bg-gradient-hero py-16">
+      <section className="bg-gradient-hero pt-[156px] sm:pt-[164px] pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
