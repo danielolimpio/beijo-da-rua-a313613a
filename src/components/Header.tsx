@@ -61,9 +61,11 @@ const Header = () => {
 
           {/* Mobile & Tablet Actions */}
           <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 whitespace-nowrap">
-              Minha Conta
-            </Button>
+            <a href="/quiz">
+              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 whitespace-nowrap">
+                QUIZ
+              </Button>
+            </a>
             
             {/* Mobile Menu Button */}
             <button
