@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, MapPin, Clock } from "lucide-react";
 import happnLogo from "@/assets/happn-logo.jpg";
 import { trackAppClick } from "@/lib/analytics";
+import { Link } from "react-router-dom";
 
 const Happn = () => {
   return (
@@ -375,20 +376,23 @@ const Happn = () => {
           <p className="text-xl max-w-2xl mx-auto mb-8">
             Cadastre-se agora e comece a encontrar pessoas que cruzaram seu caminho.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-white text-[#F94877] hover:bg-white/90"
-            asChild
-          >
+          <div className="flex justify-center gap-4">
             <a 
               href="https://www.happn.com/pt/" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackAppClick('Happn', 'bottom_cta')}
             >
-              Cadastrar no Happn
+              <Button size="lg" className="bg-white text-[#F94877] hover:bg-white/90">
+                Cadastrar no Happn
+              </Button>
             </a>
-          </Button>
+            <Link to="/quiz">
+              <Button size="lg" className="bg-white/20 text-white hover:bg-white/30 border-0">
+                Fazer Quiz
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp, MessageCircle, Brain } from "lucide-react";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 import { trackAppClick } from "@/lib/analytics";
+import { Link } from "react-router-dom";
 
 const OkCupid = () => {
   return (
@@ -376,20 +377,23 @@ const OkCupid = () => {
           <p className="text-xl max-w-2xl mx-auto mb-8">
             Cadastre-se agora e comece a fazer conexões baseadas em compatibilidade real.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-background text-primary hover:bg-background/90"
-            asChild
-          >
+          <div className="flex justify-center gap-4">
             <a 
               href="https://www.okcupid.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackAppClick('OkCupid', 'bottom_cta')}
             >
-              Cadastrar no OkCupid
+              <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+                Cadastrar no OkCupid
+              </Button>
             </a>
-          </Button>
+            <Link to="/quiz">
+              <Button size="lg" className="bg-background/20 text-primary-foreground hover:bg-background/30 border-0">
+                Fazer Quiz
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

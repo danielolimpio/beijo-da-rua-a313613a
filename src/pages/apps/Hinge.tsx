@@ -88,11 +88,13 @@ const Hinge = () => {
               Desenvolvido para ser apagado — porque o objetivo é te tirar do app
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" className="bg-background text-primary hover:bg-background/90">
-                Baixar App
-              </Button>
+              <a href="https://hinge.co/pt-br" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+                  Baixar Hinge
+                </Button>
+              </a>
               <Link to="/quiz">
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" className="bg-background/20 text-primary-foreground hover:bg-background/30 border-0">
                   Fazer Quiz
                 </Button>
               </Link>
@@ -377,9 +379,9 @@ const Hinge = () => {
                   Baixar Hinge
                 </Button>
               </a>
-              <Link to="/apps-de-namoro">
+              <Link to="/quiz">
                 <Button size="lg" className="bg-background/20 text-primary-foreground hover:bg-background/30 border-0">
-                  Comparar Apps
+                  Fazer Quiz
                 </Button>
               </Link>
             </div>

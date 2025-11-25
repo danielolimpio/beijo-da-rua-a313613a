@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Users, Shield, Heart, CheckCircle, Globe, TrendingUp } from "lucide-react";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import { trackAppClick } from "@/lib/analytics";
+import { Link } from "react-router-dom";
 
 const Bumble = () => {
   return (
@@ -375,20 +376,23 @@ const Bumble = () => {
           <p className="text-xl max-w-2xl mx-auto mb-8">
             Cadastre-se agora e comece a fazer conexões baseadas em respeito, segurança e intenção.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-background text-primary hover:bg-background/90"
-            asChild
-          >
+          <div className="flex justify-center gap-4">
             <a 
               href="https://bumble.com/pt/" 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackAppClick('Bumble', 'bottom_cta')}
             >
-              Cadastrar no Bumble
+              <Button size="lg" className="bg-background text-primary hover:bg-background/90">
+                Cadastrar no Bumble
+              </Button>
             </a>
-          </Button>
+            <Link to="/quiz">
+              <Button size="lg" className="bg-background/20 text-primary-foreground hover:bg-background/30 border-0">
+                Fazer Quiz
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
