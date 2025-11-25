@@ -148,58 +148,61 @@ const PopularMembers = () => {
   const displayedMembers = showAll ? filteredMembers : filteredMembers.slice(0, 10);
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-background overflow-x-hidden">
+      <div className="container mx-auto px-2 sm:px-4 max-w-full">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 px-4">
             Membros Mais Populares
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto mb-4 sm:mb-6 px-4">
             Inspire-se neles. Aprenda como construir um perfil que atrai matches reais.
           </p>
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-6 sm:mb-8 px-2">
             <Button 
               variant={filter === "novos" ? "default" : "outline"}
               onClick={() => setFilter("novos")}
+              className="text-xs sm:text-sm px-3 sm:px-4 h-8 sm:h-10"
             >
               Novos Membros
             </Button>
             <Button 
               variant={filter === "ativos" ? "default" : "outline"}
               onClick={() => setFilter("ativos")}
+              className="text-xs sm:text-sm px-3 sm:px-4 h-8 sm:h-10"
             >
               Membros Ativos
             </Button>
             <Button 
               variant={filter === "populares" ? "default" : "outline"}
               onClick={() => setFilter("populares")}
+              className="text-xs sm:text-sm px-3 sm:px-4 h-8 sm:h-10"
             >
               Membros Populares
             </Button>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8">
           {displayedMembers.map((member, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-6 shadow-custom-md text-center hover:shadow-custom-lg transition-shadow"
+              className="bg-card rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 shadow-custom-md text-center hover:shadow-custom-lg transition-shadow"
             >
-              <div className="relative inline-block mb-4">
+              <div className="relative inline-block mb-2 sm:mb-4">
                 <img 
                   src={member.image}
                   alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto border-4 border-primary/20 object-cover"
+                  className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full mx-auto border-2 sm:border-4 border-primary/20 object-cover"
                 />
-                <div className={`absolute bottom-0 right-0 w-6 h-6 rounded-full border-4 border-background ${
+                <div className={`absolute bottom-0 right-0 w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded-full border-2 sm:border-4 border-background ${
                   member.online 
                     ? 'bg-success animate-pulse' 
                     : 'bg-muted-foreground/40'
                 }`}></div>
               </div>
-              <h4 className="font-bold text-foreground mb-1">{member.name}</h4>
-              <p className="text-xs text-muted-foreground">{member.status}</p>
-              <p className="text-xs text-muted-foreground font-medium mt-1">{member.city}</p>
+              <h4 className="text-xs sm:text-sm lg:text-base font-bold text-foreground mb-1 truncate">{member.name}</h4>
+              <p className="text-[10px] sm:text-xs text-muted-foreground truncate">{member.status}</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground font-medium mt-1 truncate">{member.city}</p>
             </div>
           ))}
         </div>
