@@ -1,4 +1,4 @@
-import { Heart, Users, MessageCircle, Smartphone, Sparkles } from "lucide-react";
+import { Heart, Users, MessageCircle, Smartphone, Sparkles, BookOpen } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import BlogSidebar from "@/components/BlogSidebar";
@@ -93,10 +93,18 @@ const Blog = () => {
       <div className="flex-1 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-xl opacity-30 animate-pulse"></div>
+                <div className="relative bg-gradient-to-br from-primary to-secondary p-4 rounded-full">
+                  <BookOpen className="w-12 h-12 text-primary-foreground" strokeWidth={2.5} />
+                </div>
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent pb-2">
               Blog Beijo da Rua
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Conquista, relacionamentos e autoconfiança: tudo que você precisa para se destacar no mundo dos apps de namoro
             </p>
           </div>
