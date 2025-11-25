@@ -13,16 +13,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-footer pt-16 pb-8">
+    <footer className="bg-gradient-footer pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           {/* About */}
           <div>
-            <img src={logo} alt="Beijo da Rua" className="h-16 w-auto mb-4" />
-            <p className="text-muted-foreground mb-4">
+            <img src={logo} alt="Beijo da Rua" className="h-12 sm:h-16 w-auto mb-4" />
+            <p className="text-muted-foreground mb-4 text-sm sm:text-base">
               Beijo da Rua é um guia informativo sobre apps de namoro, criado para homens brasileiros.
             </p>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                 <span>Av. Julia Freire, 1200 – João Pessoa, PB</span>
@@ -40,17 +40,17 @@ const Footer = () => {
 
           {/* Featured Members */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Membros Destacados</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Membros Destacados</h3>
             <div className="space-y-3">
               {featuredMembers.map((member, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <img 
                     src={member.image}
                     alt={member.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                   />
                   <div>
-                    <p className="font-medium text-sm">{member.name}</p>
+                    <p className="font-medium text-xs sm:text-sm">{member.name}</p>
                     <p className="text-xs text-success">{member.status}</p>
                   </div>
                 </div>
@@ -60,8 +60,8 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Contatos & Suporte</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Contatos & Suporte</h3>
+            <ul className="space-y-2 text-muted-foreground text-sm">
               <li>
                 <a href="/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Home size={16} />
@@ -109,7 +109,7 @@ const Footer = () => {
 
           {/* Recent Activity */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-foreground">Atividades Recentes</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Atividades Recentes</h3>
             <div className="space-y-3">
               {recentArticles.slice(0, 3).map((article) => (
                 <a 
@@ -117,15 +117,15 @@ const Footer = () => {
                   href={article.link}
                   className="flex gap-3 group"
                 >
-                  <div className="w-16 h-16 rounded-lg flex-shrink-0 overflow-hidden bg-muted/50">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg flex-shrink-0 overflow-hidden bg-muted/50">
                     <img 
                       src={article.image} 
                       alt={article.title}
                       className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-hover:rotate-2"
                     />
                   </div>
-                  <div>
-                    <p className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs sm:text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
                       {article.title}
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">{article.date}</p>
@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
           <p>Todos os direitos reservados © Beijo da Rua | Design por: <a href="https://danielolimpio.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">DanielOlimpio</a></p>
         </div>
       </div>
