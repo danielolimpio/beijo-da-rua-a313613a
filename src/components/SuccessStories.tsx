@@ -39,22 +39,22 @@ const SuccessStories = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-success">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-success overflow-x-hidden">
+      <div className="container mx-auto px-2 sm:px-4 max-w-full">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 px-4">
             Histórias de Sucesso do Beijo da Rua
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Conheça histórias reais de homens que encontraram amor, amizade ou parceria através dos apps certos.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {stories.map((story) => {
             const CardContent = (
-              <div className="bg-card rounded-2xl overflow-hidden shadow-custom-md hover:shadow-custom-lg transition-shadow">
-                <div className="relative h-48 overflow-hidden">
+              <div className="bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-custom-md hover:shadow-custom-lg transition-shadow">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <img 
                     src={story.image} 
                     alt={story.title}
@@ -64,8 +64,8 @@ const SuccessStories = () => {
                     {story.category}
                   </Badge>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">
                     {story.title}
                   </h3>
                   <div className="flex items-center gap-3">

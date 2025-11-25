@@ -15,7 +15,7 @@ const HeroSection = () => {
   }));
 
   return (
-    <section className="bg-gradient-hero pt-8 pb-0 overflow-hidden relative">
+    <section className="bg-gradient-hero pt-6 sm:pt-8 pb-0 overflow-hidden relative">
       {/* Floating Hearts */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {hearts.map((heart) => (
@@ -43,27 +43,30 @@ const HeroSection = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 h-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
+      <div className="container mx-auto px-2 sm:px-4 h-full relative z-10 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center h-full">
           {/* Left Content */}
-          <div className="space-y-4 sm:space-y-6 pb-8 sm:pb-12 md:-mt-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+          <div className="space-y-3 sm:space-y-4 md:space-y-6 pb-6 sm:pb-8 md:pb-12 md:-mt-8 px-2 sm:px-0">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
               Novos Lugares,
               <br />
               Relacionamentos
               <br />
               Inesquecíveis
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
               Junte-se à nossa comunidade hoje! Conheça os melhores apps de namoro para homens brasileiros.
             </p>
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
+            <Button 
+              size="lg" 
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg w-full sm:w-auto"
+            >
               Comece Agora
             </Button>
           </div>
 
           {/* Right Content - Image and Features */}
-          <div className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px]">
+          <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[550px]">
             <div className="relative h-full">
               <img 
                 src={heroImage} 

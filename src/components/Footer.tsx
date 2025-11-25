@@ -13,12 +13,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-footer pt-12 sm:pt-16 pb-6 sm:pb-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
+    <footer className="bg-gradient-footer pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 lg:pb-8 overflow-x-hidden">
+      <div className="container mx-auto px-2 sm:px-4 max-w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* About */}
           <div>
-            <img src={logo} alt="Beijo da Rua" className="h-12 sm:h-16 w-auto mb-4" />
+            <img src={logo} alt="Beijo da Rua" className="h-10 sm:h-12 lg:h-16 w-auto mb-3 sm:mb-4" />
             <p className="text-muted-foreground mb-4 text-sm sm:text-base">
               Beijo da Rua é um guia informativo sobre apps de namoro, criado para homens brasileiros.
             </p>
@@ -40,8 +40,8 @@ const Footer = () => {
 
           {/* Featured Members */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Membros Destacados</h3>
-            <div className="space-y-3">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 sm:mb-4 text-foreground">Membros Destacados</h3>
+            <div className="space-y-2 sm:space-y-3">
               {featuredMembers.map((member, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <img 
@@ -60,8 +60,8 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Contatos & Suporte</h3>
-            <ul className="space-y-2 text-muted-foreground text-sm">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 sm:mb-4 text-foreground">Contatos & Suporte</h3>
+            <ul className="space-y-1.5 sm:space-y-2 text-muted-foreground text-xs sm:text-sm">
               <li>
                 <a href="/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Home size={16} />
@@ -109,8 +109,8 @@ const Footer = () => {
 
           {/* Recent Activity */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground">Atividades Recentes</h3>
-            <div className="space-y-3">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 sm:mb-4 text-foreground">Atividades Recentes</h3>
+            <div className="space-y-2 sm:space-y-3">
               {recentArticles.slice(0, 3).map((article) => (
                 <a 
                   key={article.id} 
@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
+        <div className="border-t border-border pt-4 sm:pt-6 lg:pt-8 text-center text-[10px] sm:text-xs lg:text-sm text-muted-foreground px-2">
           <p>Todos os direitos reservados © Beijo da Rua | Design por: <a href="https://danielolimpio.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">DanielOlimpio</a></p>
         </div>
       </div>
