@@ -14,6 +14,7 @@ import Tinder from "./pages/apps/Tinder";
 import Happn from "./pages/apps/Happn";
 import OkCupid from "./pages/apps/OkCupid";
 import Badoo from "./pages/apps/Badoo";
+import Hinge from "./pages/apps/Hinge";
 import Dicas from "./pages/Dicas";
 import Blog from "./pages/Blog";
 import Category from "./pages/blog/Category";
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/apps/happn" element={<Happn />} />
           <Route path="/apps/okcupid" element={<OkCupid />} />
           <Route path="/apps/badoo" element={<Badoo />} />
+          <Route path="/apps/hinge" element={<Hinge />} />
           <Route path="/dicas" element={<Dicas />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:category" element={<Category />} />

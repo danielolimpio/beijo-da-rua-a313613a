@@ -10,6 +10,7 @@ import tinderLogo from "@/assets/tinder-logo.jpeg";
 import happnLogo from "@/assets/happn-logo.jpg";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 import badooLogo from "@/assets/badoo-logo.jpeg";
+import hingeLogo from "@/assets/hinge-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -58,13 +59,15 @@ const DatingApps = () => {
       slug: "/apps/badoo"
     },
     {
-      name: "Inner Circle",
-      description: "App exclusivo para profissionais",
+      name: "Hinge",
+      description: "Desenvolvido para ser apagado — porque o objetivo é te tirar do app",
       rating: 4.6,
-      users: "500K+",
-      pros: ["Perfis verificados", "Eventos exclusivos", "Usuários qualificados"],
-      cons: ["Processo de aprovação", "Menos usuários"],
-      category: "Premium"
+      users: "16M+",
+      logo: hingeLogo,
+      pros: ["Foco em relacionamentos sérios", "Prompts criativos e vídeos", "Algoritmo 'Most Compatible'", "Equilíbrio de gênero (53% homens)"],
+      cons: ["Menos popular no Brasil", "Requer perfil detalhado"],
+      category: "Relacionamento Sério",
+      slug: "/apps/hinge"
     },
     {
       name: "OkCupid",
