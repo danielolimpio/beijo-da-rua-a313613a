@@ -1,4 +1,4 @@
-import { MapPin, Phone, Globe, Home, Info, HelpCircle, Lightbulb, BookOpen, Mail } from "lucide-react";
+import { MapPin, Phone, Globe, Home, Info, HelpCircle, Lightbulb, BookOpen, Mail, Map } from "lucide-react";
 import footerMember1 from "@/assets/footer-member1.jpg";
 import footerMember2 from "@/assets/footer-member2.jpg";
 import footerMember3 from "@/assets/footer-member3.jpg";
@@ -102,6 +102,12 @@ const Footer = () => {
                 <a href="/faq" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>FAQ</span>
+                </a>
+              </li>
+              <li>
+                <a href="/sitemap" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Map size={16} />
+                  <span>Mapa do Site</span>
                 </a>
               </li>
             </ul>
