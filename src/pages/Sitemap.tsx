@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Home, Users, MessageSquare, Lightbulb, BookOpen, HelpCircle, FileText, Shield } from "lucide-react";
 
 const Sitemap = () => {
@@ -16,8 +17,10 @@ const Sitemap = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+        <DynamicBreadcrumb />
         
-        <main className="container mx-auto px-4 py-16 max-w-6xl">
+        <main className="container mx-auto px-4 pb-16 max-w-6xl">
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold mb-4 text-foreground">Mapa do Site</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

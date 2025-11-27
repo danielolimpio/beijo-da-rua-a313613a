@@ -1,21 +1,15 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import StructuredData from "@/components/StructuredData";
-import { getBreadcrumbSchema } from "@/lib/structuredData";
 
 const Contact = () => {
   const { toast } = useToast();
-  
-  const breadcrumbData = getBreadcrumbSchema([
-    { name: "Home", url: "https://beijodarua.com.br/" },
-    { name: "Contato", url: "https://beijodarua.com.br/contato" }
-  ]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,9 +28,9 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <StructuredData data={breadcrumbData} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+      <DynamicBreadcrumb />
       
       <main className="flex-1 bg-background">
         {/* Hero Section */}

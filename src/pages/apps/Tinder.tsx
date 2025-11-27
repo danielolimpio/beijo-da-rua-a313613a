@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,7 @@ const Tinder = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+      <DynamicBreadcrumb />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#FF6B6B] via-[#FF5864] to-[#FD297B] text-white py-20">

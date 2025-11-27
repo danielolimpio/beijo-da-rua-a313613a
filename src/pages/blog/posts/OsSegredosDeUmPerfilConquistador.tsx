@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -27,19 +28,12 @@ import {
 import articleCover from "@/assets/article-perfil-conquistador.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
 import StructuredData from "@/components/StructuredData";
-import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
+import { getArticleSchema } from "@/lib/structuredData";
 
 const OsSegredosDeUmPerfilConquistador = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador";
   const shareTitle = "Os Segredos de um Perfil Conquistador nas Redes Sociais";
-
-  const breadcrumbData = getBreadcrumbSchema([
-    { name: "Home", url: "https://beijodarua.com.br/" },
-    { name: "Blog", url: "https://beijodarua.com.br/blog" },
-    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
-    { name: shareTitle, url: shareUrl }
-  ]);
 
   const articleData = getArticleSchema({
     title: shareTitle,
@@ -70,7 +64,6 @@ const OsSegredosDeUmPerfilConquistador = () => {
 
   return (
     <>
-      <StructuredData data={breadcrumbData} />
       <StructuredData data={articleData} />
       <Helmet>
         <title>Os Segredos de um Perfil Conquistador nas Redes Sociais | Beijo da Rua</title>
@@ -107,21 +100,12 @@ const OsSegredosDeUmPerfilConquistador = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+        <DynamicBreadcrumb />
         
-        <main className="container mx-auto px-4 py-8 pt-32">
+        <main className="container mx-auto px-4 pb-8">
           <div className="flex flex-col lg:flex-row gap-8">
             <article className="flex-1 max-w-4xl">
-              {/* Breadcrumbs */}
-              <nav className="mb-6 text-sm text-muted-foreground">
-                <Link to="/" className="hover:text-primary">Home</Link>
-                {" > "}
-                <Link to="/blog" className="hover:text-primary">Blog</Link>
-                {" > "}
-                <Link to="/blog/conquista" className="hover:text-primary">Conquista</Link>
-                {" > "}
-                <span className="text-foreground">Os Segredos de um Perfil Conquistador</span>
-              </nav>
-
               {/* Article Header */}
               <header className="mb-8">
                 <Badge className="mb-4 bg-rose-100 text-rose-700 hover:bg-rose-200">

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
@@ -97,6 +98,7 @@ const Dicas = () => {
         <StructuredData data={getWebSiteSchema()} />
         <Header />
         <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+        <DynamicBreadcrumb />
 
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-br from-secondary/30 via-accent/20 to-background">

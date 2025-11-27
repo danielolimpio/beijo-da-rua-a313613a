@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Users, Heart, Target, Award, Facebook, Twitter, Instagram, Linkedin, Globe } from "lucide-react";
@@ -78,6 +79,7 @@ const About = () => {
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+      <DynamicBreadcrumb />
       
       <main className="flex-1 bg-background">
         {/* Hero Section */}
