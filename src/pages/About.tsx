@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import { getWebSiteSchema } from "@/lib/structuredData";
 import { Users, Heart, Target, Award, Facebook, Twitter, Instagram, Linkedin, Globe } from "lucide-react";
 import teamDaniel from "@/assets/team-daniel.jpg";
 import teamMarina from "@/assets/team-marina.jpg";
@@ -73,6 +75,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       

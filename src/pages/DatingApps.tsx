@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -107,6 +109,7 @@ const DatingApps = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       

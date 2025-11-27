@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import BlogSidebar from "@/components/BlogSidebar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import { getWebSiteSchema } from "@/lib/structuredData";
 import { recentArticles } from "@/data/blogArticles";
 
 const categories = [
@@ -47,6 +49,7 @@ const categories = [
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="flex-1 pt-32 pb-16">
         <div className="container mx-auto px-4">
