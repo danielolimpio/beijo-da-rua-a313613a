@@ -10,12 +10,32 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import { useState } from "react";
+import StructuredData from "@/components/StructuredData";
+import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
 
 const ComoAbordarUmaMulherComConfianca = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   
   const shareUrl = window.location.href;
   const shareTitle = "Como Abordar uma Mulher com Confiança e Naturalidade";
+  
+  const breadcrumbData = getBreadcrumbSchema([
+    { name: "Home", url: "https://beijodarua.com.br/" },
+    { name: "Blog", url: "https://beijodarua.com.br/blog" },
+    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
+    { name: "Como Abordar uma Mulher com Confiança", url: "https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca" }
+  ]);
+
+  const articleData = getArticleSchema({
+    title: "Como Abordar uma Mulher com Confiança e Naturalidade",
+    description: "Aprenda técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade. Dicas que funcionam na rua, em eventos e até online.",
+    author: "Daniel Olimpio",
+    datePublished: "2025-11-21",
+    dateModified: "2025-11-21",
+    image: "https://beijodarua.com.br" + articleCover,
+    url: "https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca",
+    category: "Conquista"
+  });
   
   const handleShare = (platform: string) => {
     const urls = {
@@ -30,6 +50,8 @@ const ComoAbordarUmaMulherComConfianca = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData data={breadcrumbData} />
+      <StructuredData data={articleData} />
       <Header />
       
       <article className="flex-1 pt-32 pb-16">
