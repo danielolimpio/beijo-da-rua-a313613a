@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
+import { getWebSiteSchema } from "@/lib/structuredData";
 import {
   Accordion,
   AccordionContent,
@@ -112,6 +114,7 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       
