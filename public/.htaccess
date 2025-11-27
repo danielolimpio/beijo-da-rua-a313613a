@@ -2,6 +2,17 @@
   RewriteEngine On
   RewriteBase /
   
+  # Permitir acesso direto a arquivos estáticos essenciais (SEO, Verificação, Monetização)
+  RewriteCond %{REQUEST_URI} ^/sitemap\.xml$ [OR]
+  RewriteCond %{REQUEST_URI} ^/robots\.txt$ [OR]
+  RewriteCond %{REQUEST_URI} ^/ads\.txt$ [OR]
+  RewriteCond %{REQUEST_URI} ^/favicon\.(ico|png)$ [OR]
+  RewriteCond %{REQUEST_URI} ^/apple-touch-icon.*\.png$ [OR]
+  RewriteCond %{REQUEST_URI} ^/og-image\.(jpg|png)$ [OR]
+  RewriteCond %{REQUEST_URI} ^/\.well-known/ [OR]
+  RewriteCond %{REQUEST_URI} ^/google.*\.html$
+  RewriteRule ^ - [L]
+  
   # Se não for arquivo nem diretório, redireciona para index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
