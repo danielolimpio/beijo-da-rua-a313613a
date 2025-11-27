@@ -1,33 +1,21 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
-  
-  # Permitir acesso direto a arquivos estáticos essenciais (SEO, Verificação, Monetização)
-  RewriteCond %{REQUEST_URI} ^/sitemap\.xml$ [OR]
-  RewriteCond %{REQUEST_URI} ^/robots\.txt$ [OR]
-  RewriteCond %{REQUEST_URI} ^/ads\.txt$ [OR]
-  RewriteCond %{REQUEST_URI} ^/favicon\.(ico|png)$ [OR]
-  RewriteCond %{REQUEST_URI} ^/apple-touch-icon.*\.png$ [OR]
-  RewriteCond %{REQUEST_URI} ^/og-image\.(jpg|png)$ [OR]
-  RewriteCond %{REQUEST_URI} ^/\.well-known/ [OR]
-  RewriteCond %{REQUEST_URI} ^/google.*\.html$
+
+  # ———————————————————————
+  # ✅ Não redirecionar arquivos ou diretórios reais
+  # ———————————————————————
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
-  
-  # Se não for arquivo nem diretório, redireciona para index.html
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
 
-# Segurança
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
+  # ———————————————————————
+  # ✅ Proteger arquivos estáticos essenciais de redirecionamento
+  # ———————————————————————
+  RewriteRule ^(ads\.txt|robots\.txt|sitemap\.xml|favicon\.ico|apple-touch-icon\.png|og-image\.(jpg|png)|\.well-known/|google.+\.html)$ - [L]
 
-# Compressão Gzip
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+  # ———————————————————————
+  # 🌐 Redirecionar todas as demais rotas para index.html (SPA)
+  # ———————————————————————
+  RewriteRule ^ index.html [L]
 </IfModule>
