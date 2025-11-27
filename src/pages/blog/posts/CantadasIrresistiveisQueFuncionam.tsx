@@ -3,25 +3,19 @@ import { Helmet } from "react-helmet";
 import { Heart, MessageCircle, Lightbulb, CheckCircle2, XCircle, Sparkles, Users, MapPin, Share2, Facebook, Twitter, Globe, Instagram, Linkedin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleImage from "@/assets/article-cantadas-irresistiveis.jpg";
 import StructuredData from "@/components/StructuredData";
-import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
+import { getArticleSchema } from "@/lib/structuredData";
 
 const CantadasIrresistiveisQueFuncionam = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   const articleUrl = "https://beijodarua.com.br/blog/posts/cantadas-irresistiveis-que-funcionam";
   const articleTitle = "Cantadas Irresistíveis que Realmente Funcionam em 2025";
-  
-  const breadcrumbData = getBreadcrumbSchema([
-    { name: "Home", url: "https://beijodarua.com.br/" },
-    { name: "Blog", url: "https://beijodarua.com.br/blog" },
-    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
-    { name: articleTitle, url: articleUrl }
-  ]);
 
   const articleData = getArticleSchema({
     title: articleTitle,
@@ -47,7 +41,6 @@ const CantadasIrresistiveisQueFuncionam = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <StructuredData data={breadcrumbData} />
       <StructuredData data={articleData} />
       <Helmet>
         <title>{articleTitle} | Beijo da Rua</title>
@@ -65,19 +58,11 @@ const CantadasIrresistiveisQueFuncionam = () => {
       </Helmet>
 
       <Header />
+      <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+      <DynamicBreadcrumb />
       
-      <main className="flex-1 pt-32 pb-16">
+      <main className="flex-1 pb-16">
         <article className="container mx-auto px-4 max-w-4xl">
-          {/* Breadcrumbs */}
-          <nav className="mb-8 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-primary transition-colors">Início</a>
-            <span className="mx-2">›</span>
-            <a href="/blog" className="hover:text-primary transition-colors">Blog</a>
-            <span className="mx-2">›</span>
-            <a href="/blog/conquista" className="hover:text-primary transition-colors">Conquista</a>
-            <span className="mx-2">›</span>
-            <span className="text-foreground">Cantadas Irresistíveis</span>
-          </nav>
 
           {/* Header */}
           <header className="mb-8">

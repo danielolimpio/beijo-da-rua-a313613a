@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from "lucide-react";
 
 const PoliticaPrivacidade = () => {
@@ -15,8 +16,10 @@ const PoliticaPrivacidade = () => {
 
       <div className="min-h-screen bg-background">
         <Header />
+        <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+        <DynamicBreadcrumb />
         
-        <main className="pt-32 pb-16">
+        <main className="pb-16">
           <div className="container mx-auto px-4 max-w-4xl">
             {/* Hero Section */}
             <div className="text-center mb-12">

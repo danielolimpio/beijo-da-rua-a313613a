@@ -5,26 +5,20 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
-import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
+import { getArticleSchema } from "@/lib/structuredData";
 
 const ComoAbordarUmaMulherComConfianca = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   
   const shareUrl = window.location.href;
   const shareTitle = "Como Abordar uma Mulher com Confiança e Naturalidade";
-  
-  const breadcrumbData = getBreadcrumbSchema([
-    { name: "Home", url: "https://beijodarua.com.br/" },
-    { name: "Blog", url: "https://beijodarua.com.br/blog" },
-    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
-    { name: "Como Abordar uma Mulher com Confiança", url: "https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca" }
-  ]);
 
   const articleData = getArticleSchema({
     title: "Como Abordar uma Mulher com Confiança e Naturalidade",
@@ -50,26 +44,16 @@ const ComoAbordarUmaMulherComConfianca = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <StructuredData data={breadcrumbData} />
       <StructuredData data={articleData} />
       <Header />
+      <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
+      <DynamicBreadcrumb />
       
-      <article className="flex-1 pt-32 pb-16">
+      <article className="flex-1 pb-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
             <div className="flex-1 max-w-4xl">
-              {/* Breadcrumb */}
-              <nav className="mb-6 text-sm text-muted-foreground">
-                <Link to="/" className="hover:text-primary">Home</Link>
-                {" > "}
-                <Link to="/blog" className="hover:text-primary">Blog</Link>
-                {" > "}
-                <Link to="/blog/conquista" className="hover:text-primary">Conquista</Link>
-                {" > "}
-                <span className="text-foreground">Como Abordar uma Mulher com Confiança</span>
-              </nav>
-
               {/* Article Header */}
               <header className="mb-8">
                 <div className="inline-block px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-medium mb-4">

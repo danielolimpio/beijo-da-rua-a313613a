@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { ReactNode } from "react";
 
 interface QuizLayoutProps {
@@ -13,6 +14,7 @@ const QuizLayout = ({ children, title, description, progress }: QuizLayoutProps)
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
+      <DynamicBreadcrumb />
       
       {/* Progress Bar */}
       {progress !== undefined && (
