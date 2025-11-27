@@ -26,11 +26,31 @@ import {
 } from "lucide-react";
 import articleCover from "@/assets/article-perfil-conquistador.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
+import StructuredData from "@/components/StructuredData";
+import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
 
 const OsSegredosDeUmPerfilConquistador = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador";
   const shareTitle = "Os Segredos de um Perfil Conquistador nas Redes Sociais";
+
+  const breadcrumbData = getBreadcrumbSchema([
+    { name: "Home", url: "https://beijodarua.com.br/" },
+    { name: "Blog", url: "https://beijodarua.com.br/blog" },
+    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
+    { name: shareTitle, url: shareUrl }
+  ]);
+
+  const articleData = getArticleSchema({
+    title: shareTitle,
+    description: "Descubra como criar uma presença digital que atrai olhares e desperta interesse real. Fotos, bio e atitude: tudo revelado aqui.",
+    author: "Daniel Olimpio",
+    datePublished: "2025-11-22",
+    dateModified: "2025-11-22",
+    image: "https://beijodarua.com.br" + articleCover,
+    url: shareUrl,
+    category: "Conquista"
+  });
 
   const handleShare = (platform: string) => {
     const encodedUrl = encodeURIComponent(shareUrl);
@@ -50,6 +70,8 @@ const OsSegredosDeUmPerfilConquistador = () => {
 
   return (
     <>
+      <StructuredData data={breadcrumbData} />
+      <StructuredData data={articleData} />
       <Helmet>
         <title>Os Segredos de um Perfil Conquistador nas Redes Sociais | Beijo da Rua</title>
         <meta name="description" content="Descubra como criar uma presença digital que atrai olhares e desperta interesse real. Fotos, bio e atitude: tudo revelado aqui." />

@@ -8,11 +8,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleImage from "@/assets/article-cantadas-irresistiveis.jpg";
+import StructuredData from "@/components/StructuredData";
+import { getBreadcrumbSchema, getArticleSchema } from "@/lib/structuredData";
 
 const CantadasIrresistiveisQueFuncionam = () => {
   const [showFullBio, setShowFullBio] = useState(false);
   const articleUrl = "https://beijodarua.com.br/blog/posts/cantadas-irresistiveis-que-funcionam";
   const articleTitle = "Cantadas Irresistíveis que Realmente Funcionam em 2025";
+  
+  const breadcrumbData = getBreadcrumbSchema([
+    { name: "Home", url: "https://beijodarua.com.br/" },
+    { name: "Blog", url: "https://beijodarua.com.br/blog" },
+    { name: "Conquista", url: "https://beijodarua.com.br/blog/conquista" },
+    { name: articleTitle, url: articleUrl }
+  ]);
+
+  const articleData = getArticleSchema({
+    title: articleTitle,
+    description: "Frases criativas, respeitosas e eficazes para quebrar o gelo e causar boa impressão. Testadas e aprovadas por especialistas em conquista.",
+    author: "Daniel Olimpio",
+    datePublished: "2025-11-23",
+    dateModified: "2025-11-23",
+    image: "https://beijodarua.com.br" + articleImage,
+    url: articleUrl,
+    category: "Conquista"
+  });
   
   const handleShare = (platform: string) => {
     const urls = {
@@ -27,6 +47,8 @@ const CantadasIrresistiveisQueFuncionam = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <StructuredData data={breadcrumbData} />
+      <StructuredData data={articleData} />
       <Helmet>
         <title>{articleTitle} | Beijo da Rua</title>
         <meta name="description" content="Frases criativas, respeitosas e eficazes para quebrar o gelo e causar boa impressão. Testadas e aprovadas por especialistas em conquista." />
