@@ -48,21 +48,33 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="space-y-3 sm:space-y-4 md:space-y-6 pb-6 sm:pb-8 md:pb-12 md:-mt-8 px-2 sm:px-0">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-              Novos Lugares,
-              <br />
-              Relacionamentos
-              <br />
-              Inesquecíveis
+              Encontre o Melhor App de Namoro Para Você
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
-              Junte-se à nossa comunidade hoje! Conheça os melhores apps de namoro para homens brasileiros.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg w-full sm:w-auto"
-            >
-              Comece Agora
-            </Button>
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-sm sm:text-base md:text-lg text-foreground font-medium leading-relaxed">
+                O <strong>Beijo da Rua</strong> é um portal independente que testa e recomenda os <strong>melhores apps e sites de relacionamento</strong> do Brasil e do mundo. 
+              </p>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                Através de um <strong>quiz gratuito personalizado</strong>, identificamos seu perfil amoroso e indicamos a plataforma ideal — além de conectar você a <strong>grupos reais de solteiros</strong> com os mesmos interesses. Não somos um app de namoro, somos o <strong>guia definitivo</strong> para você escolher com inteligência.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button 
+                size="lg" 
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
+                onClick={() => window.location.href = '/quiz'}
+              >
+                Fazer Quiz Grátis
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
+                onClick={() => window.location.href = '/apps-de-namoro'}
+              >
+                Ver Avaliações de Apps
+              </Button>
+            </div>
           </div>
 
           {/* Right Content - Image and Features */}
