@@ -1,6 +1,6 @@
 const IntroTextSection = () => {
   return (
-    <section className="pt-4 sm:pt-6 pb-8 sm:pb-12 bg-background">
+    <section className="pt-0 pb-8 sm:pb-12 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="relative p-6 sm:p-8 rounded-2xl border-4 border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg">
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-background px-4">
