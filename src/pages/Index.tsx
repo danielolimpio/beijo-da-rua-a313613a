@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import AboutUsSection from "@/components/AboutUsSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import StatsSection from "@/components/StatsSection";
 import SuccessStories from "@/components/SuccessStories";
@@ -18,7 +17,6 @@ const Index = () => {
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <HeroSection />
-      <AboutUsSection />
       <StatsSection />
       <WelcomeSection />
       <SuccessStories />

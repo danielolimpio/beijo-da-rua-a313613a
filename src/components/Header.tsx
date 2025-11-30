@@ -51,6 +51,7 @@ const Header = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Home</a>
+            <a href="/como-funciona" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Como Funciona</a>
             <a href="/sobre-nos" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Sobre Nós</a>
             <a href="/apps-de-namoro" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Apps de Namoro</a>
             <a href="/quiz" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Quiz</a>
@@ -83,6 +84,7 @@ const Header = () => {
           <div className="lg:hidden border-t border-border bg-background overflow-x-hidden">
             <div className="container mx-auto px-2 sm:px-4 py-4 space-y-2 max-w-7xl">
               <a href="/" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Home</a>
+              <a href="/como-funciona" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Como Funciona</a>
               <a href="/sobre-nos" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Sobre Nós</a>
               <a href="/apps-de-namoro" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Apps de Namoro</a>
               <a href="/quiz" className="block py-3 px-4 text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors font-medium">Quiz</a>
