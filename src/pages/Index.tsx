@@ -6,6 +6,7 @@ import StatsSection from "@/components/StatsSection";
 import SuccessStories from "@/components/SuccessStories";
 import PopularMembers from "@/components/PopularMembers";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import AboutPlatform from "@/components/AboutPlatform";
 import Footer from "@/components/Footer";
 import NewRegistrationPopup from "@/components/NewRegistrationPopup";
 import StructuredData from "@/components/StructuredData";
@@ -24,6 +25,7 @@ const Index = () => {
       <StatsSection />
       <PopularMembers />
       <WhyChooseUs />
+      <AboutPlatform />
       <Footer />
       <NewRegistrationPopup />
     </div>
