@@ -46,6 +46,7 @@ import AppIdealHomensTimidos from "./pages/quiz/AppIdealHomensTimidos";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosUso from "./pages/TermosUso";
 import Sitemap from "./pages/Sitemap";
+import ComoFunciona from "./pages/ComoFunciona";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
         <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/como-funciona" element={<ComoFunciona />} />
           <Route path="/contato" element={<Contact />} />
           <Route path="/sobre-nos" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
