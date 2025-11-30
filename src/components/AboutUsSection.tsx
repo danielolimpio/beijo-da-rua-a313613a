@@ -30,11 +30,9 @@ const AboutUsSection = () => {
                 <CardTitle className="text-2xl">Nossas Avaliações de Apps</CardTitle>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Analisamos dezenas de apps de namoro com base em critérios reais: <strong>segurança de dados</strong>, <strong>diversidade de perfis</strong>, 
-                <strong>eficácia para matches</strong> e <strong>custo-benefício</strong>. Cada plataforma é testada por nossa equipe durante semanas, 
-                e você acessa reviews completos com prós, contras e para quem cada app funciona melhor. Se você busca relacionamento sério, 
-                encontros casuais ou conexões LGBTQIA+, temos a recomendação certa. Nosso objetivo é economizar seu tempo e dinheiro, 
-                indicando exatamente onde investir sua energia para <strong>resultados reais em 2025</strong>.
+                Analisamos dezenas de apps com base em <strong>segurança, diversidade, eficácia e custo-benefício</strong>. 
+                Cada plataforma é testada durante semanas, e você acessa reviews completos com prós, contras e para quem funciona melhor. 
+                Relacionamento sério, casual ou LGBTQIA+ — temos a recomendação certa para economizar seu tempo e dinheiro.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -62,11 +60,10 @@ const AboutUsSection = () => {
                 <CardTitle className="text-2xl">Quiz de Perfil Amoroso</CardTitle>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Responda apenas <strong>5 perguntas estratégicas</strong> e descubra qual app combina com seu estilo de relacionamento, 
-                faixa etária e objetivos reais. Nosso quiz foi desenvolvido com base em <strong>dados comportamentais de milhares de usuários brasileiros</strong> 
-                e considera fatores como personalidade (tímido ou extrovertido), disponibilidade de tempo e tipo de conexão buscada. 
-                O resultado não é genérico: você recebe uma recomendação específica, com dicas práticas de como otimizar seu perfil 
-                para <strong>aumentar suas chances de match em até 3x</strong>. Funciona para quem busca desde namoro sério até amizades e encontros casuais.
+                Responda <strong>5 perguntas estratégicas</strong> e descubra qual app combina com seu estilo de relacionamento, 
+                faixa etária e objetivos. Desenvolvido com base em <strong>dados de milhares de usuários brasileiros</strong>, 
+                considera personalidade, tempo disponível e tipo de conexão. Resultado personalizado com dicas práticas 
+                para <strong>aumentar suas chances de match em até 3x</strong>.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -95,12 +92,10 @@ const AboutUsSection = () => {
                 <CardTitle className="text-2xl">Grupos Reais de Relacionamento</CardTitle>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Acesso exclusivo a <strong>comunidades verificadas de solteiros</strong> no WhatsApp e Telegram — sem bots, sem golpes, 
-                sem perfis falsos. Diferente dos apps tradicionais, nossos grupos conectam pessoas reais com interesses genuínos: 
-                namoro, amizade, encontros casuais, casais liberais e muito mais. Cada grupo passa por <strong>moderação ativa</strong> 
-                para garantir um ambiente respeitoso e seguro. É a forma mais autêntica de conhecer pessoas na sua cidade ou região, 
-                com conversas que fluem naturalmente. Milhares de brasileiros já fizeram conexões reais através dos nossos grupos — 
-                alguns até encontraram relacionamentos sérios que duraram anos.
+                Acesso exclusivo a <strong>comunidades verificadas</strong> no WhatsApp e Telegram — sem bots, sem golpes. 
+                Nossos grupos conectam pessoas reais: namoro, amizade, encontros casuais e mais. 
+                Cada grupo tem <strong>moderação ativa</strong> para garantir ambiente seguro. 
+                Milhares de brasileiros já fizeram conexões reais através dos nossos grupos.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -153,12 +148,10 @@ const AboutUsSection = () => {
                 <CardTitle className="text-2xl">Blog: Dicas Baseadas em Ciência</CardTitle>
               </div>
               <CardDescription className="text-base leading-relaxed">
-                Conteúdo editorial de alta qualidade, escrito por especialistas e baseado em <strong>pesquisas reais de psicologia e comportamento</strong>. 
-                Nossos artigos abordam desde <strong>cantadas que realmente funcionam</strong> até estratégias para construir um perfil irresistível, 
-                passando por técnicas de conversação, linguagem corporal e gerenciamento de expectativas. Citamos estudos de instituições como 
-                <strong>USP, Harvard e APA (American Psychological Association)</strong> para garantir informação confiável. 
-                Se você quer namorar com inteligência, nosso blog é o seu guia definitivo. Publicamos semanalmente novos artigos que ajudam 
-                milhares de homens a melhorarem suas habilidades sociais e amorosas.
+                Conteúdo baseado em <strong>pesquisas de psicologia e comportamento</strong> escritos por especialistas. 
+                Artigos sobre cantadas eficazes, perfis vencedores, técnicas de conversação e linguagem corporal. 
+                Citamos estudos de <strong>USP, Harvard e APA</strong> para informação confiável. 
+                Publicamos semanalmente artigos que ajudam milhares de homens a melhorarem suas habilidades sociais.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -188,10 +181,10 @@ const AboutUsSection = () => {
             O Que Você Encontra Aqui
           </h3>
           <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6">
-            Somos referência em <strong>melhores apps de namoro 2025</strong>, oferecendo <strong>site de relacionamento confiável</strong> 
-            com <strong>avaliação de apps de relacionamento</strong> baseada em dados reais. Nosso <strong>quiz de perfil amoroso</strong> já ajudou 
-            mais de 50 mil homens a encontrarem matches de qualidade. Conecte-se a <strong>grupos reais de solteiros</strong> moderados e seguros, 
-            e aprenda com artigos escritos por especialistas. Não somos apenas mais um site — somos o guia completo para você namorar melhor.
+            Referência em <strong>melhores apps de namoro 2025</strong> com <strong>avaliações baseadas em dados reais</strong>. 
+            Nosso <strong>quiz de perfil amoroso</strong> já ajudou +50 mil homens a encontrarem matches de qualidade. 
+            Conecte-se a <strong>grupos reais de solteiros</strong> moderados e aprenda com artigos especializados. 
+            O guia completo para namorar melhor.
           </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             <span className="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">Apps de Namoro 2025</span>
