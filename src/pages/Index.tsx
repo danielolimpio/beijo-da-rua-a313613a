@@ -18,10 +18,10 @@ const Index = () => {
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <HeroSection />
-      <StatsSection />
       <WelcomeSection />
       <IntroTextSection />
       <SuccessStories />
+      <StatsSection />
       <PopularMembers />
       <WhyChooseUs />
       <Footer />

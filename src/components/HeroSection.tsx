@@ -50,14 +50,9 @@ const HeroSection = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
               Encontre o Melhor App de Namoro Para Você
             </h1>
-            <div className="space-y-3 sm:space-y-4">
-              <p className="text-sm sm:text-base md:text-lg text-foreground font-medium leading-relaxed">
-                O <strong>Beijo da Rua</strong> é um portal independente que testa e recomenda os <strong>melhores apps e sites de relacionamento</strong> do Brasil e do mundo. 
-              </p>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-                Através de um <strong>quiz gratuito personalizado</strong>, identificamos seu perfil amoroso e indicamos a plataforma ideal — além de conectar você a <strong>grupos reais de solteiros</strong> com os mesmos interesses. Não somos um app de namoro, somos o <strong>guia definitivo</strong> para você escolher com inteligência.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base md:text-lg text-foreground font-medium leading-relaxed">
+              O <strong>Beijo da Rua</strong> é um portal independente que testa e recomenda os <strong>melhores apps e sites de relacionamento</strong> do Brasil e do mundo. 
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button 
                 size="lg" 
