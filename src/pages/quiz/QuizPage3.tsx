@@ -111,28 +111,28 @@ const QuizPage3 = () => {
             <QuizOption
               title="Quase nunca"
               description="0-2 encontros por mês, preciso de apps seletivos"
-              href="/apps-para-homens-que-so-saiem-aos-finais-de-semana"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
               icon={<CalendarX2 size={24} />}
             />
             
             <QuizOption
               title="De vez em quando"
               description="3-5 encontros por mês, equilíbrio é importante"
-              href="/como-agendar-encontros-sem-desperdicar-tempo-homem"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
               icon={<Calendar size={24} />}
             />
             
             <QuizOption
               title="Frequentemente"
               description="6-10 encontros por mês, tenho bastante tempo"
-              href="/apps-para-homens-ativos-socialmente"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
               icon={<CalendarDays size={24} />}
             />
             
             <QuizOption
               title="Sempre"
               description="10+ encontros por mês, preciso otimizar"
-              href="/como-evitar-burnout-em-apps-de-namoro"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
               icon={<CalendarCheck size={24} />}
             />
           </div>
