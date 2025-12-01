@@ -2,6 +2,7 @@ import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
+import articleSiteRelacionamento from "@/assets/article-site-relacionamento.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -17,6 +18,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 4,
+    title: "Descubra Qual Site de Relacionamento Combina com Você",
+    excerpt: "Responda nosso questionário exclusivo e encontre o app ou site ideal para seu estilo, objetivo e personalidade amorosa.",
+    category: "Apps de Namoro",
+    categoryId: "apps-de-namoro",
+    image: articleSiteRelacionamento,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "1 de dezembro de 2025",
+    link: "/blog/posts/descubra-qual-site-relacionamento-combina"
+  },
   {
     id: 3,
     title: "Cantadas Irresistíveis que Realmente Funcionam em 2025",
