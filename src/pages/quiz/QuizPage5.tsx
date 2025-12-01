@@ -3,6 +3,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Building2, Home, MapPin, AlertTriangle, CheckCircle2, XCircle, Lightbulb, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const QuizPage5 = () => {
   return (
@@ -152,8 +153,8 @@ const QuizPage5 = () => {
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Agora você sabe exatamente qual app de namoro funciona melhor para seu perfil, idade, localização e objetivos.
             </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Ver Resultado Personalizado
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link to="/seu-app-de-namoro-ideal-resultado">Ver Resultado Personalizado</Link>
             </Button>
           </div>
         </article>
@@ -170,19 +171,19 @@ const QuizPage5 = () => {
               title="Capital"
               description="São Paulo, Rio, capitais e regiões metropolitanas"
               icon={<Building2 className="w-6 h-6" />}
-              href="/apps-de-namoro"
+              href="/seu-app-de-namoro-ideal-resultado"
             />
             <QuizOption
               title="Cidade média"
               description="100k–500k habitantes, cidades do interior desenvolvidas"
               icon={<Home className="w-6 h-6" />}
-              href="/apps-de-namoro"
+              href="/seu-app-de-namoro-ideal-resultado"
             />
             <QuizOption
               title="Interior"
               description="Cidades pequenas, menos de 100k habitantes"
               icon={<MapPin className="w-6 h-6" />}
-              href="/apps-de-namoro"
+              href="/seu-app-de-namoro-ideal-resultado"
             />
           </div>
         </div>

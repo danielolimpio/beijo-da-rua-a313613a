@@ -125,28 +125,28 @@ const QuizPage4 = () => {
             <QuizOption
               title="18-24 anos"
               description="Apps populares funcionam muito bem nessa idade"
-              href="/apps-para-jovens-homens-brasil"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
               icon={<Baby size={24} />}
             />
             
             <QuizOption
               title="25-34 anos"
               description="Equilíbrio entre casual e sério"
-              href="/apps-para-homens-25-34-que-querem-casamento"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
               icon={<GraduationCap size={24} />}
             />
             
             <QuizOption
               title="35-44 anos"
               description="Foco em apps que valorizam maturidade"
-              href="/apps-para-homens-apos-35-brasil"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
               icon={<Briefcase size={24} />}
             />
             
             <QuizOption
               title="45+ anos"
               description="Apps especializados em relacionamentos maduros"
-              href="/como-usar-apps-de-namoro-apos-45-anos"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
               icon={<Users2 size={24} />}
             />
           </div>
