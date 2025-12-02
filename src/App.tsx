@@ -31,6 +31,12 @@ import QuizPage2 from "./pages/quiz/QuizPage2";
 import QuizPage3 from "./pages/quiz/QuizPage3";
 import QuizPage4 from "./pages/quiz/QuizPage4";
 import QuizPage5 from "./pages/quiz/QuizPage5";
+import InteriorQuiz1 from "./pages/quiz/InteriorQuiz1";
+import InteriorQuiz2 from "./pages/quiz/InteriorQuiz2";
+import InteriorQuiz3 from "./pages/quiz/InteriorQuiz3";
+import InteriorQuiz4 from "./pages/quiz/InteriorQuiz4";
+import InteriorQuiz5 from "./pages/quiz/InteriorQuiz5";
+import InteriorQuizResultado from "./pages/quiz/InteriorQuizResultado";
 import OQueTeFazSorrir from "./pages/quiz/OQueTeFazSorrir";
 import QualSeuEstiloDeNamoro from "./pages/quiz/QualSeuEstiloDeNamoro";
 import VoceEMaisSerioOuDescontraido from "./pages/quiz/VoceEMaisSerioOuDescontraido";
@@ -90,7 +96,12 @@ const App = () => (
           <Route path="/app-ideal-homens-timidos" element={<AppIdealHomensTimidos />} />
           <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
           <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
-          <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<QuizPage5 />} />
+          <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
+          <Route path="/interior-quiz-2" element={<InteriorQuiz2 />} />
+          <Route path="/interior-quiz-3" element={<InteriorQuiz3 />} />
+          <Route path="/interior-quiz-4" element={<InteriorQuiz4 />} />
+          <Route path="/interior-quiz-5" element={<InteriorQuiz5 />} />
+          <Route path="/interior-quiz-resultado" element={<InteriorQuizResultado />} />
           <Route path="/o-que-te-faz-sorrir" element={<OQueTeFazSorrir />} />
           <Route path="/qual-seu-estilo-de-namoro" element={<QualSeuEstiloDeNamoro />} />
           <Route path="/voce-e-mais-serio-ou-descontraido" element={<VoceEMaisSerioOuDescontraido />} />
