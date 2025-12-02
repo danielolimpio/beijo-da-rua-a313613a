@@ -3,6 +3,7 @@ import articleCover from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
 import articleSiteRelacionamento from "@/assets/article-site-relacionamento.jpg";
+import articleConvidarMulher from "@/assets/article-convidar-mulher.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -18,6 +19,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 5,
+    title: "Como Convidar uma Mulher para Sair Sem Parecer Desesperado",
+    excerpt: "Estratégias sutis e confiantes para transformar uma conversa em encontro real. Aprenda o timing perfeito e as palavras certas.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleConvidarMulher,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "2 de dezembro de 2025",
+    link: "/blog/posts/como-convidar-mulher-sair-sem-parecer-desesperado"
+  },
   {
     id: 4,
     title: "Descubra Qual Site de Relacionamento Combina com Você",
