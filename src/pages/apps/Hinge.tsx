@@ -82,9 +82,15 @@ const Hinge = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-accent text-primary-foreground py-20">
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <img src={hingeLogo} alt="Hinge logo" className="w-20 h-20 rounded-2xl" />
-              <h1 className="text-5xl font-bold">Hinge</h1>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+              <img 
+                src={hingeLogo} 
+                alt="Hinge Logo" 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-lg bg-white p-4"
+              />
+              <div className="text-center md:text-left">
+                <h1 className="text-5xl font-bold mb-4">Hinge</h1>
+              </div>
             </div>
             <p className="text-2xl text-center max-w-3xl mx-auto mb-8">
               Desenvolvido para ser apagado — porque o objetivo é te tirar do app
