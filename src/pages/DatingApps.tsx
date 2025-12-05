@@ -14,6 +14,9 @@ import happnLogo from "@/assets/happn-logo.jpg";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 import badooLogo from "@/assets/badoo-logo.jpeg";
 import hingeLogo from "@/assets/hinge-logo.jpeg";
+import pofLogo from "@/assets/pof-logo.jpeg";
+import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
+import parperfeitoLogo from "@/assets/parperfeito-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -82,6 +85,39 @@ const DatingApps = () => {
       cons: ["Menos popular no Brasil", "Requer tempo para preencher perfil"],
       category: "Compatibilidade",
       slug: "/apps/okcupid"
+    },
+    {
+      name: "POF (Plenty of Fish)",
+      description: "O app de namoro gratuito mais popular do mundo com recursos completos sem pagar",
+      rating: 4.0,
+      users: "150M+",
+      logo: pofLogo,
+      pros: ["Mensagens ilimitadas grátis", "Teste de compatibilidade", "Perfis detalhados", "Público mais maduro"],
+      cons: ["Interface menos moderna", "Menos popular no Brasil"],
+      category: "Gratuito",
+      slug: "/apps/pof"
+    },
+    {
+      name: "Facebook Dating",
+      description: "Encontros baseados em interesses e conexões reais do seu Facebook",
+      rating: 4.1,
+      users: "Integrado ao FB",
+      logo: facebookDatingLogo,
+      pros: ["100% gratuito", "Ótimo para o interior", "Interesses em comum", "Secret Crush"],
+      cons: ["Requer conta no Facebook", "Menos usuários jovens"],
+      category: "Interior",
+      slug: "/apps/facebook-dating"
+    },
+    {
+      name: "ParPerfeito",
+      description: "O site de namoro brasileiro focado em relacionamentos sérios e duradouros",
+      rating: 4.2,
+      users: "16M+",
+      logo: parperfeitoLogo,
+      pros: ["Foco em relacionamento sério", "Sistema de compatibilidade", "Maioria feminina", "20+ anos no Brasil"],
+      cons: ["Recursos premium pagos", "Interface tradicional"],
+      category: "Relacionamento Sério",
+      slug: "/apps/parperfeito"
     }
   ];
 
