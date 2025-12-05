@@ -17,6 +17,9 @@ import Happn from "./pages/apps/Happn";
 import OkCupid from "./pages/apps/OkCupid";
 import Badoo from "./pages/apps/Badoo";
 import Hinge from "./pages/apps/Hinge";
+import POF from "./pages/apps/POF";
+import FacebookDating from "./pages/apps/FacebookDating";
+import ParPerfeito from "./pages/apps/ParPerfeito";
 import Dicas from "./pages/Dicas";
 import Blog from "./pages/Blog";
 import Category from "./pages/blog/Category";
@@ -79,6 +82,9 @@ const App = () => (
           <Route path="/apps/okcupid" element={<OkCupid />} />
           <Route path="/apps/badoo" element={<Badoo />} />
           <Route path="/apps/hinge" element={<Hinge />} />
+          <Route path="/apps/pof" element={<POF />} />
+          <Route path="/apps/facebook-dating" element={<FacebookDating />} />
+          <Route path="/apps/parperfeito" element={<ParPerfeito />} />
           <Route path="/dicas" element={<Dicas />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:category" element={<Category />} />
