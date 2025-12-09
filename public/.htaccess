@@ -3,6 +3,11 @@
   RewriteBase /
 
   # ———————————————————————
+  # 🔄 Redirecionamento 301 do ads.txt para Ezoic
+  # ———————————————————————
+  RewriteRule ^ads\.txt$ https://srv.adstxtmanager.com/19390/beijodarua.com.br [R=301,L]
+
+  # ———————————————————————
   # ✅ Não redirecionar arquivos ou diretórios reais
   # ———————————————————————
   RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -12,7 +17,7 @@
   # ———————————————————————
   # ✅ Proteger arquivos estáticos essenciais de redirecionamento
   # ———————————————————————
-  RewriteRule ^(ads\.txt|robots\.txt|sitemap\.xml|favicon\.ico|apple-touch-icon\.png|og-image\.(jpg|png)|\.well-known/|google.+\.html)$ - [L]
+  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|apple-touch-icon\.png|og-image\.(jpg|png)|\.well-known/|google.+\.html)$ - [L]
 
   # ———————————————————————
   # 🌐 Redirecionar todas as demais rotas para index.html (SPA)
