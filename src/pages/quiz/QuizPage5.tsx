@@ -4,6 +4,7 @@ import QuizOption from "@/components/QuizOption";
 import { Building2, Home, MapPin, AlertTriangle, CheckCircle2, XCircle, Lightbulb, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QuizPage5 = () => {
   return (
@@ -29,6 +30,9 @@ const QuizPage5 = () => {
               Mas isso não significa que não funciona.
             </p>
           </section>
+
+          {/* Under First Paragraph Ad */}
+          <UnderFirstParagraphAd />
 
           {/* Highlight Box */}
           <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
@@ -63,6 +67,9 @@ const QuizPage5 = () => {
               </div>
             </div>
 
+            {/* Mid Content Ad */}
+            <MidContentAd />
+
             {/* Cidades Médias */}
             <div className="bg-purple-50 p-6 rounded-lg mb-6">
               <div className="flex items-start gap-3 mb-3">
@@ -75,6 +82,9 @@ const QuizPage5 = () => {
                 <p><strong className="text-foreground">Estratégia vencedora:</strong> Expanda raio para 50–80km. Cidades vizinhas aumentam matches em 200%. Mulheres de cidades médias aceitam deslocamento curto.</p>
               </div>
             </div>
+
+            {/* Long Content Ad */}
+            <LongContentAd />
 
             {/* Interior */}
             <div className="bg-amber-50 p-6 rounded-lg">
@@ -113,6 +123,9 @@ const QuizPage5 = () => {
               </div>
             </div>
           </div>
+
+          {/* InContent 5 Ad */}
+          <InContent5Ad />
 
           {/* Section 3 - Myths */}
           <section className="bg-muted/30 p-6 rounded-lg">

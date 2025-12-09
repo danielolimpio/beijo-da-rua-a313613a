@@ -2,6 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { MessageSquare, UserCheck, ShieldAlert, Pause } from "lucide-react";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QuizPage2 = () => {
   return (
@@ -26,6 +27,9 @@ const QuizPage2 = () => {
             A maioria dos guias de namoro online ignora um fato: <strong>não existe uma fórmula única</strong>. 
             O que funciona para um homem extrovertido pode paralisar um introvertido — e vice-versa.
           </p>
+
+          {/* Under First Paragraph Ad */}
+          <UnderFirstParagraphAd />
 
           <div className="bg-success/10 border-l-4 border-success p-6 my-6 rounded-r-lg">
             <h3 className="text-xl font-semibold text-foreground mb-2">💡 Verdade que ninguém conta:</h3>
@@ -55,6 +59,9 @@ const QuizPage2 = () => {
               </p>
             </div>
 
+            {/* Mid Content Ad */}
+            <MidContentAd />
+
             <div className="bg-muted/50 p-4 rounded-lg">
               <h4 className="font-semibold text-foreground mb-2">😰 Tímidos/Inseguros</h4>
               <p className="text-foreground/80 text-sm">
@@ -79,6 +86,9 @@ const QuizPage2 = () => {
             <li>✓ "Questão importante: [pergunta engraçada sobre foto]" (57% resposta)</li>
             <li>✗ "Oi" / "Tudo bem?" / "Linda" (8-12% resposta)</li>
           </ul>
+
+          {/* InContent 5 Ad */}
+          <InContent5Ad />
 
           <p className="text-foreground/80">
             <strong>Lembre-se:</strong> Não existe certo ou errado. O app certo é aquele que respeita 

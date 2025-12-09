@@ -2,6 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { Calendar, CalendarCheck, CalendarDays, CalendarX2 } from "lucide-react";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QuizPage3 = () => {
   return (
@@ -27,6 +28,9 @@ const QuizPage3 = () => {
             <strong>Mentira.</strong> Estudos mostram que homens que saem demais em encontros têm 
             as mesmas taxas de sucesso (ou pior) que aqueles seletivos e estratégicos.
           </p>
+
+          {/* Under First Paragraph Ad */}
+          <UnderFirstParagraphAd />
 
           <div className="bg-warning/10 border-l-4 border-warning p-6 my-6 rounded-r-lg">
             <h3 className="text-xl font-semibold text-foreground mb-2">⚠️ Alerta de burnout:</h3>
@@ -63,6 +67,9 @@ const QuizPage3 = () => {
               </p>
             </div>
 
+            {/* Mid Content Ad */}
+            <MidContentAd />
+
             <div className="bg-muted/50 p-4 rounded-lg">
               <h4 className="font-semibold text-foreground mb-2">📆 Frequentemente (6-10 por mês)</h4>
               <p className="text-foreground/80 text-sm mb-2">
@@ -94,6 +101,9 @@ const QuizPage3 = () => {
             <li>✗ Encontros viraram obrigação, não empolgação</li>
             <li>✗ Está sempre cansado demais para fazer primeira impressão boa</li>
           </ul>
+
+          {/* InContent 5 Ad */}
+          <InContent5Ad />
 
           <p className="text-foreground/80">
             <strong>Conselho de ouro:</strong> O app certo não é o que te dá mais matches, 

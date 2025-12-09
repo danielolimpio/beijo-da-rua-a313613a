@@ -2,6 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { Baby, Users2, Briefcase, GraduationCap } from "lucide-react";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QuizPage4 = () => {
   return (
@@ -27,6 +28,9 @@ const QuizPage4 = () => {
             jogar futebol</strong> — até funciona, mas você está em desvantagem. Dados brasileiros 
             mostram que homens 35+ têm 72% menos matches no Tinder comparado a apps segmentados por idade.
           </p>
+
+          {/* Under First Paragraph Ad */}
+          <UnderFirstParagraphAd />
 
           <div className="bg-destructive/10 border-l-4 border-destructive p-6 my-6 rounded-r-lg">
             <h3 className="text-xl font-semibold text-foreground mb-2">🚨 Erro crítico que homens cometem:</h3>
@@ -70,6 +74,9 @@ const QuizPage4 = () => {
               </p>
             </div>
 
+            {/* Mid Content Ad */}
+            <MidContentAd />
+
             <div className="bg-muted/50 p-4 rounded-lg">
               <h4 className="font-semibold text-foreground mb-2">👔 35-44 anos</h4>
               <p className="text-foreground/80 text-sm mb-2">
@@ -108,6 +115,9 @@ const QuizPage4 = () => {
             <li>✗ Cultura do app favorece decisões rápidas = idade é filtro negativo</li>
             <li>✗ Assinatura premium não muda algoritmo, só te mostra mais (perda de $)</li>
           </ul>
+
+          {/* InContent 5 Ad */}
+          <InContent5Ad />
 
           <p className="text-foreground/80">
             <strong>Regra de ouro:</strong> Use apps onde mulheres da sua faixa etária estão ativas. 

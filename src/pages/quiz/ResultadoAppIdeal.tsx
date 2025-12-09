@@ -3,8 +3,13 @@ import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Star, TrendingUp, CheckCircle2, ExternalLink } from "lucide-react";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Link } from "react-router-dom";
+import { 
+  UnderPageTitleAd, 
+  MidContentAd, 
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const ResultadoAppIdeal = () => {
   return (
@@ -19,7 +24,8 @@ const ResultadoAppIdeal = () => {
         description="Baseado nas suas respostas, aqui está sua recomendação personalizada"
         progress={100}
       >
-        <AdSenseBlock />
+        {/* Under Page Title Ad */}
+        <UnderPageTitleAd />
         
         {/* Congratulations Section */}
         <div className="text-center mb-12">
@@ -116,7 +122,8 @@ const ResultadoAppIdeal = () => {
           </div>
         </Card>
 
-        <AdSenseBlock />
+        {/* Mid Content Ad */}
+        <MidContentAd />
 
         {/* Alternative Options */}
         <div className="mb-12">
@@ -148,6 +155,9 @@ const ResultadoAppIdeal = () => {
             </Card>
           </div>
         </div>
+
+        {/* InContent 5 Ad */}
+        <InContent5Ad />
 
         {/* Next Steps Section */}
         <Card className="p-8 bg-accent/30 border-2 border-accent">
@@ -213,7 +223,10 @@ const ResultadoAppIdeal = () => {
           </div>
         </Card>
 
-        <AdSenseBlock />
+        {/* Bottom of Page Ad */}
+        <div className="mt-8">
+          <BottomOfPageAd />
+        </div>
 
         {/* CTA Section */}
         <div className="text-center mt-12 space-y-4">
