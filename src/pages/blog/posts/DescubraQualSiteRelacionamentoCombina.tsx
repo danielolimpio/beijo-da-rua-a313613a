@@ -13,6 +13,17 @@ import articleCover from "@/assets/article-site-relacionamento.jpg";
 import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
 import { getArticleSchema } from "@/lib/structuredData";
+import { 
+  TopOfPageAd, 
+  UnderPageTitleAd, 
+  UnderFirstParagraphAd, 
+  UnderSecondParagraphAd, 
+  MidContentAd, 
+  LongContentAd, 
+  LongerContentAd, 
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const DescubraQualSiteRelacionamentoCombina = () => {
   const [showFullBio, setShowFullBio] = useState(false);
@@ -45,6 +56,10 @@ const DescubraQualSiteRelacionamentoCombina = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <StructuredData data={articleData} />
+      
+      {/* Top of Page Ad */}
+      <TopOfPageAd />
+      
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
@@ -82,6 +97,9 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                 </div>
               </header>
 
+              {/* Under Page Title Ad */}
+              <UnderPageTitleAd />
+
               {/* Article Cover Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
                 <img 
@@ -96,10 +114,16 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                 <p className="mb-6">
                   Você já se pegou navegando por perfis em apps de namoro, sentindo que algo está errado, mas não sabe exatamente o quê?
                 </p>
+
+                {/* Under First Paragraph Ad */}
+                <UnderFirstParagraphAd />
                 
                 <p className="mb-6">
                   Talvez tenha se inscrito em três ou quatro plataformas diferentes, só para perceber que nenhuma delas parecia "falar a sua língua". O problema, na maioria das vezes, não está em você — está na escolha errada do ambiente.
                 </p>
+
+                {/* Under Second Paragraph Ad */}
+                <UnderSecondParagraphAd />
 
                 <p className="mb-6">
                   Assim como não usamos o mesmo par de sapatos para correr uma maratona e ir a um casamento, também não devemos procurar relacionamentos em qualquer lugar só porque "está na moda".
@@ -133,6 +157,9 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                     </p>
                   </CardContent>
                 </Card>
+
+                {/* Mid Content Ad */}
+                <MidContentAd />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <Heart className="text-rose-500" />
@@ -193,6 +220,9 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                   Se ainda não tem clareza, vale fazer pausas reflexivas. Recomendamos nosso <Link to="/blog" className="text-primary hover:underline font-semibold">guia completo sobre como definir suas intenções amorosas</Link> de forma consciente, onde explicamos como alinhar suas escolhas digitais com suas verdades emocionais.
                 </p>
 
+                {/* Long Content Ad (800+ words) */}
+                <LongContentAd />
+
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <Search className="text-amber-500" />
                   Os Principais Tipos de Plataformas de Relacionamento no Brasil
@@ -234,6 +264,9 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                   <strong>Cuidado comum:</strong> Muitos usuários reclamam de "ghosting" ou superficialidade — mas isso acontece quando as expectativas não são explicitadas desde o início.
                 </p>
 
+                {/* Longer Content Ad (1200+ words) */}
+                <LongerContentAd />
+
                 <h3 className="text-2xl font-bold mt-8 mb-4">
                   3. Plataformas Niche (por nicho ou identidade)
                 </h3>
@@ -253,6 +286,9 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                 <p className="mb-6">
                   Sim, ainda existem! Alguns serviços oferecem matchmakers reais — profissionais que entrevistam, selecionam perfis e fazem introduções com base em critérios subjetivos que algoritmos não capturam. São mais caros, mas ideais para executivos, pessoas com agendas lotadas ou quem já tentou de tudo e quer qualidade, não quantidade.
                 </p>
+
+                {/* InContent 5 Ad */}
+                <InContent5Ad />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <MessageCircle className="text-blue-500" />
@@ -315,304 +351,146 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                       </ul>
                     </CardContent>
                   </Card>
-
-                  <Card className="border-2 border-primary/20">
-                    <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent">
-                      <CardTitle>3. Seu tempo livre é:</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <ul className="space-y-2">
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">a)</span>
-                          <span>Muito limitado (trabalho muito)</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">b)</span>
-                          <span>Flexível, mas seletivo</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">c)</span>
-                          <span>Aberto a novas experiências</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">d)</span>
-                          <span>Prefiro ficar em casa</span>
-                        </li>
-                      </ul>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-2 border-primary/20">
-                    <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent">
-                      <CardTitle>4. Você se sente confortável sendo 100% você em ambientes online?</CardTitle>
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                      <ul className="space-y-2">
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">a)</span>
-                          <span>Sim, desde que o espaço seja seguro</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">b)</span>
-                          <span>Só em plataformas com moderação</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">c)</span>
-                          <span>Sempre</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <span className="font-bold text-primary">d)</span>
-                          <span>Ainda estou descobrindo</span>
-                        </li>
-                      </ul>
-                    </CardContent>
-                  </Card>
                 </div>
 
-                <Card className="my-8 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border-2 border-primary">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Resultado aproximado:</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <p className="font-bold text-lg mb-2">Maioria de (a):</p>
-                      <p>Apps de relacionamento sério ou com curadoria</p>
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-2">Maioria de (b):</p>
-                      <p>Plataformas niche ou com foco em segurança</p>
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-2">Maioria de (c):</p>
-                      <p>Apps casuais com grande base de usuários</p>
-                    </div>
-                    <div>
-                      <p className="font-bold text-lg mb-2">Maioria de (d):</p>
-                      <p>Comunidades menores, grupos temáticos ou até terapia de relacionamento antes de entrar em apps</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <div className="my-8 text-center">
-                  <p className="mb-4 text-lg">
-                    Quer uma análise ainda mais personalizada?
-                  </p>
-                  <Button asChild size="lg" className="text-lg px-8">
-                    <Link to="/quiz">
-                      Responda Nosso Questionário Exclusivo
-                    </Link>
+                <div className="bg-gradient-to-r from-primary/10 to-rose-100 p-6 rounded-lg mb-8 text-center">
+                  <p className="font-semibold mb-4">Quer descobrir seu resultado personalizado?</p>
+                  <Button asChild size="lg">
+                    <Link to="/quiz">Fazer Quiz Completo</Link>
                   </Button>
                 </div>
 
-                <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-                  <Shield className="text-red-500" />
-                  Erros Comuns na Escolha do App (e Como Evitá-los)
-                </h2>
-
-                <p className="mb-6">
-                  Muitos repetem os mesmos equívocos, mesmo após frustrações:
-                </p>
-
-                <div className="space-y-6 my-8">
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Escolher só pelo número de usuários</p>
-                      <p className="text-muted-foreground">Mais não significa melhor. Um app com 10 milhões de pessoas pode ter apenas 200 na sua cidade que combinam com você.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Ignorar a cultura da plataforma</p>
-                      <p className="text-muted-foreground">Cada app tem uma "vibe". No <Link to="/apps/bumble" className="text-primary hover:underline">Bumble</Link>, as mulheres iniciam a conversa; no <Link to="/apps/hinge" className="text-primary hover:underline">Hinge</Link>, o foco é em conversas reais, não em swipes.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Não atualizar o perfil</p>
-                      <p className="text-muted-foreground">Um perfil de 2020 não reflete quem você é hoje. Revise fotos, bio e intenções a cada 3 meses.</p>
-                    </CardContent>
-                  </Card>
+                {/* Social Share */}
+                <div className="border-t border-b py-6 my-8">
+                  <p className="font-medium mb-4">Compartilhe este artigo:</p>
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="sm" onClick={() => handleShare('facebook')}>
+                      <Facebook className="h-4 w-4 mr-2" />
+                      Facebook
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('twitter')}>
+                      <Twitter className="h-4 w-4 mr-2" />
+                      Twitter
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('whatsapp')}>
+                      WhatsApp
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('pinterest')}>
+                      Pinterest
+                    </Button>
+                  </div>
                 </div>
 
-                <p className="mb-6">
-                  Se quiser evitar armadilhas comuns, leia nosso artigo sobre <Link to="/blog/posts/os-segredos-de-um-perfil-conquistador" className="text-primary hover:underline font-semibold">os segredos de um perfil conquistador</Link>.
-                </p>
-
-                <h2 className="text-3xl font-bold mt-12 mb-6">
-                  Conclusão: O Melhor App é Aquele que Reflete Quem Você É Hoje
-                </h2>
-
-                <p className="mb-6">
-                  Descobrir qual site de relacionamento combina com você não é um exercício técnico — é um ato de autoconhecimento. A tecnologia apenas amplifica o que já existe dentro de você: clareza atrai clareza, insegurança atrai confusão.
-                </p>
-
-                <p className="mb-6">
-                  Ao invés de se juntar a todas as plataformas disponíveis, escolha com intencionalidade. Invista tempo em entender seus desejos reais, experimente com curiosidade (não desespero) e lembre-se: relacionamentos, mesmo os digitais, começam com humanidade.
-                </p>
-
-                <p className="mb-6">
-                  Se este artigo te ajudou a enxergar seu caminho com mais nitidez, compartilhe com alguém que também está cansado de jogar no escuro. E se ainda tem dúvidas, explore nossos outros conteúdos sobre <Link to="/blog/posts/os-segredos-de-um-perfil-conquistador" className="text-primary hover:underline">como criar um perfil que atrai conexões reais</Link> ou <Link to="/blog" className="text-primary hover:underline">os sinais de que você está pronto para um novo relacionamento</Link>.
-                </p>
-
-                <Card className="my-8 bg-gradient-to-r from-primary to-secondary text-white">
-                  <CardContent className="pt-6 text-center">
-                    <p className="text-xl font-bold mb-4">
-                      Afinal, o amor não se encontra por acaso — ele se constrói com escolhas conscientes. E a primeira delas é saber onde procurar.
-                    </p>
-                    <Button asChild variant="secondary" size="lg">
-                      <Link to="/apps-de-namoro">
-                        Explore Todos os Apps de Namoro
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-
                 {/* FAQ Section */}
-                <h2 className="text-3xl font-bold mt-16 mb-6">
-                  Perguntas Frequentes (FAQ)
+                <h2 className="text-3xl font-bold mt-12 mb-6">
+                  Perguntas Frequentes
                 </h2>
 
-                <Accordion type="single" collapsible className="w-full mb-12">
+                <Accordion type="single" collapsible className="mb-8">
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="text-left">
-                      Como saber se um app de relacionamento é confiável?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Qual o melhor app de namoro para relacionamento sério?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Verifique se a plataforma tem política clara de privacidade, moderação ativa e avaliações reais no Google Play e App Store. Evite apps sem suporte ao consumidor ou que prometem "garantia de namoro".
-                      </p>
+                      Para relacionamentos sérios, apps como Par Perfeito, eDarling e Hinge são os mais recomendados. Eles usam questionários detalhados e algoritmos de compatibilidade que priorizam conexões profundas.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-2">
-                    <AccordionTrigger className="text-left">
-                      Posso usar mais de um app ao mesmo tempo?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Apps de namoro funcionam para pessoas tímidas?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Sim, desde que seja de forma ética e transparente. Muitos especialistas, como os do Conselho Federal de Psicologia, afirmam que explorar diferentes ambientes é válido — contanto que você não leve várias pessoas no mesmo barco sem informá-las.
-                      </p>
+                      Sim! Apps como Bumble (onde a mulher inicia a conversa) e Hinge (com prompts para quebrar o gelo) são ótimos para pessoas mais reservadas. O ambiente digital pode ser mais confortável para quem tem dificuldade em abordagens presenciais.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-3">
-                    <AccordionTrigger className="text-left">
-                      Existe app de relacionamento gratuito que realmente funciona?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Devo usar mais de um app ao mesmo tempo?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Sim, mas com limitações. Apps como <Link to="/apps/tinder" className="text-primary hover:underline">Tinder</Link> e <Link to="/apps/bumble" className="text-primary hover:underline">Bumble</Link> têm versões gratuitas funcionais, mas recursos avançados (como ver quem curtiu você) exigem assinatura. Já plataformas como <Link to="/apps/okcupid" className="text-primary hover:underline">OkCupid</Link> oferecem funcionalidades robustas sem custo.
-                      </p>
+                      Pode ser uma boa estratégia, desde que você consiga gerenciar as conversas sem se sobrecarregar. O ideal é escolher 2-3 apps com propósitos diferentes e focar em qualidade, não quantidade.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-4">
-                    <AccordionTrigger className="text-left">
-                      Qual site de relacionamento combina com pessoas tímidas?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Como evitar golpistas em apps de namoro?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Plataformas com foco em perguntas e respostas (como <Link to="/apps/hinge" className="text-primary hover:underline">Hinge</Link> ou <Link to="/apps/okcupid" className="text-primary hover:underline">OkCupid</Link>) são ideais, pois reduzem a pressão do "primeiro contato". Evite apps baseados apenas em fotos e swipes rápidos.
-                      </p>
+                      Fique atento a perfis com poucas fotos, histórias inconsistentes, pedidos de dinheiro ou links externos. Nunca compartilhe informações bancárias e prefira fazer chamadas de vídeo antes de encontros presenciais.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-5">
-                    <AccordionTrigger className="text-left">
-                      É possível encontrar relacionamentos sérios em apps casuais?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Qual a diferença entre Tinder e Bumble?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Sim, mas é menos provável. A intenção do ambiente influencia o comportamento dos usuários. Se você quer algo sério, comece em plataformas que já filtram por esse objetivo.
-                      </p>
+                      No Tinder, qualquer pessoa pode iniciar a conversa após o match. No Bumble, apenas a mulher pode enviar a primeira mensagem (em matches heterossexuais). O Bumble também oferece modos para networking e amizades, além de namoro.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
-                {/* Sources */}
-                <div className="mt-12 p-6 bg-muted rounded-lg">
-                  <p className="text-sm text-muted-foreground">
-                    <strong>Fontes de referência:</strong> IBOPE (2024), IBGE (Pesquisa Nacional por Amostra de Domicílios – PNAD Contínua, 2024), Conselho Federal de Psicologia (Orientações sobre Relacionamentos Online, 2023).
-                  </p>
+                {/* References */}
+                <div className="bg-muted/50 p-6 rounded-lg mb-8">
+                  <h3 className="font-bold mb-4">Referências</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Instituto Brasileiro de Opinião Pública e Estatística (IBOPE). Pesquisa sobre relacionamentos online.</li>
+                    <li>IBGE (2024). Dados sobre diversidade e comportamento digital.</li>
+                    <li>Pew Research Center. Studies on online dating trends.</li>
+                  </ul>
                 </div>
-              </div>
 
-              {/* Author Bio */}
-              <div className="mt-12 p-6 bg-muted rounded-lg">
-                <div className="flex gap-4">
-                  <img 
-                    src={authorImage} 
-                    alt="Daniel Olimpio" 
-                    className="w-20 h-20 rounded-full object-cover"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Daniel Olimpio</h3>
-                    <p className="text-muted-foreground mb-3">
-                      {showFullBio 
-                        ? "Especialista em relacionamentos modernos e estratégias de namoro online. Com mais de 8 anos de experiência analisando apps de encontros, Daniel já ajudou milhares de homens a encontrarem conexões significativas através de conselhos práticos e baseados em pesquisa."
-                        : "Especialista em relacionamentos modernos e estratégias de namoro online. Com mais de 8 anos de experiência..."
-                      }
-                    </p>
-                    <Button 
-                      variant="link" 
-                      className="p-0 h-auto text-primary"
-                      onClick={() => setShowFullBio(!showFullBio)}
-                    >
-                      {showFullBio ? "Ler menos" : "Ler mais"}
-                    </Button>
+                {/* Author Bio */}
+                <div className="bg-muted/30 p-6 rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <img 
+                      src={authorImage} 
+                      alt="Daniel Olimpio" 
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg mb-1">Daniel Olimpio</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Especialista em relacionamentos e fundador do Beijo da Rua. Ajuda homens a construírem conexões autênticas há mais de 5 anos.
+                      </p>
+                      
+                      <div className="flex gap-2 mb-3">
+                        <Button variant="ghost" size="sm">
+                          <Instagram className="h-4 w-4" />
+                        </Button>
+                        <Button variant="ghost" size="sm">
+                          <Linkedin className="h-4 w-4" />
+                        </Button>
+                        <Button variant="ghost" size="sm">
+                          <Twitter className="h-4 w-4" />
+                        </Button>
+                      </div>
+
+                      {showFullBio && (
+                        <p className="text-sm text-muted-foreground mt-3">
+                          Com formação em psicologia social e experiência em coaching de relacionamentos, Daniel criou o Beijo da Rua para oferecer orientação prática e respeitosa para homens que querem melhorar suas habilidades de comunicação e conexão.
+                        </p>
+                      )}
+
+                      <Button 
+                        variant="link" 
+                        size="sm" 
+                        onClick={() => setShowFullBio(!showFullBio)}
+                        className="p-0 h-auto"
+                      >
+                        {showFullBio ? 'Ver menos' : 'Ver bio completa'}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* Share Section */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <h3 className="text-xl font-bold mb-4">Compartilhe este artigo</h3>
-                <div className="flex gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('facebook')}
-                    className="hover:bg-blue-50 hover:border-blue-500"
-                  >
-                    <Facebook className="w-5 h-5 text-blue-600" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('twitter')}
-                    className="hover:bg-sky-50 hover:border-sky-500"
-                  >
-                    <Twitter className="w-5 h-5 text-sky-500" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('whatsapp')}
-                    className="hover:bg-green-50 hover:border-green-500"
-                  >
-                    <MessageCircle className="w-5 h-5 text-green-600" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('pinterest')}
-                    className="hover:bg-red-50 hover:border-red-500"
-                  >
-                    <Instagram className="w-5 h-5 text-red-600" />
-                  </Button>
-                </div>
-              </div>
             </div>
-
+            
             {/* Sidebar */}
-            <aside className="lg:w-80">
-              <BlogSidebar />
+            <aside className="lg:w-80 shrink-0">
+              <BlogSidebar activeCategory="Apps de Namoro" />
             </aside>
           </div>
         </div>
       </article>
+
+      {/* Bottom of Page Ad */}
+      <div className="container mx-auto px-4 mb-8">
+        <BottomOfPageAd />
+      </div>
 
       <Footer />
     </div>

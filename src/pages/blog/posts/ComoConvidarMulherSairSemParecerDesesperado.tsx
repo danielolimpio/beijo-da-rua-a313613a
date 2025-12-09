@@ -13,6 +13,17 @@ import articleCover from "@/assets/article-convidar-mulher.jpg";
 import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
 import { getArticleSchema } from "@/lib/structuredData";
+import { 
+  TopOfPageAd, 
+  UnderPageTitleAd, 
+  UnderFirstParagraphAd, 
+  UnderSecondParagraphAd, 
+  MidContentAd, 
+  LongContentAd, 
+  LongerContentAd, 
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const ComoConvidarMulherSairSemParecerDesesperado = () => {
   const [showFullBio, setShowFullBio] = useState(false);
@@ -45,6 +56,10 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <StructuredData data={articleData} />
+      
+      {/* Top of Page Ad */}
+      <TopOfPageAd />
+      
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
@@ -82,6 +97,9 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                 </div>
               </header>
 
+              {/* Under Page Title Ad */}
+              <UnderPageTitleAd />
+
               {/* Article Cover Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
                 <img 
@@ -96,10 +114,16 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                 <p className="mb-6">
                   Você já se pegou rolando mensagens antigas, reescrevendo o mesmo convite cinco vezes, ou adiando o "vamos sair?" por medo de soar inseguro?
                 </p>
+
+                {/* Under First Paragraph Ad */}
+                <UnderFirstParagraphAd />
                 
                 <p className="mb-6">
                   Não está sozinho. Muitos homens — até os mais bem-sucedidos — travam nesse exato momento: a transição de uma conversa leve para um encontro de verdade. O receio de parecer ansioso, invasivo ou desesperado acaba sabotando a oportunidade antes mesmo que ela exista.
                 </p>
+
+                {/* Under Second Paragraph Ad */}
+                <UnderSecondParagraphAd />
 
                 <p className="mb-6">
                   Mas e se você soubesse que convidar uma mulher para sair pode ser algo natural, respeitoso e até elegante — desde que feito com intenção clara, timing adequado e uma dose de autoconfiança genuína?
@@ -133,6 +157,9 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                 <p className="mb-6">
                   Leia também: <Link to="/blog" className="text-primary hover:underline font-semibold">Como manter uma conversa interessante com uma mulher — do primeiro 'oi' ao 'não quero mais responder'</Link>
                 </p>
+
+                {/* Mid Content Ad */}
+                <MidContentAd />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <Clock className="text-blue-500" />
@@ -206,6 +233,9 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                   </Card>
                 </div>
 
+                {/* Long Content Ad (800+ words) */}
+                <LongContentAd />
+
                 <Card className="my-8 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/20 dark:to-blue-950/20 border-2 border-green-500">
                   <CardContent className="pt-6">
                     <p className="font-semibold mb-4">O ideal? Propor o encontro após um intercâmbio positivo e envolvente. Por exemplo:</p>
@@ -267,6 +297,9 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                 <p className="mb-6">
                   Se ela responde com entusiasmo ("Seria demais!"), o caminho está aberto. Se responde com frieza ("Ah, talvez"), recue com elegância.
                 </p>
+
+                {/* Longer Content Ad (1200+ words) */}
+                <LongerContentAd />
 
                 <h3 className="text-2xl font-bold mt-8 mb-4">
                   3. Evite Justificativas Excessivas
@@ -335,6 +368,9 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                   </CardContent>
                 </Card>
 
+                {/* InContent 5 Ad */}
+                <InContent5Ad />
+
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <MessageCircle className="text-green-500" />
                   Frases que Funcionam (e Aquelas que Você Deve Evitar)
@@ -356,300 +392,170 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                       <CardTitle className="text-red-700 dark:text-red-400">❌ Evite:</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-6 space-y-4">
-                      <p className="text-muted-foreground">"Você quer sair comigo?!" <span className="text-xs">(soa ansioso)</span></p>
-                      <p className="text-muted-foreground">"Se não quiser, não tem problema…" <span className="text-xs">(minimiza o seu desejo)</span></p>
-                      <p className="text-muted-foreground">"Vamos jantar?" <span className="text-xs">(vago demais)</span></p>
+                      <p className="italic">"Você não quer sair comigo um dia desses?"</p>
+                      <p className="italic">"Se você quiser, a gente poderia talvez..."</p>
                     </CardContent>
                   </Card>
                 </div>
-
-                <Card className="my-8 border-l-4 border-l-primary bg-gradient-to-r from-primary/5 to-transparent">
-                  <CardContent className="pt-6">
-                    <p className="font-semibold text-lg">
-                      💡 Lembre-se: o objetivo não é "enganar" ninguém com frases de efeito, mas comunicar seu interesse com clareza e respeito.
-                    </p>
-                  </CardContent>
-                </Card>
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-                  <Heart className="text-rose-500" />
-                  O Papel da Autoconfiança: Não É Sobre Técnica, É Sobre Postura
+                  <Shield className="text-blue-500" />
+                  Resumo: Como Convidar uma Mulher para Sair Sem Parecer Desesperado
                 </h2>
 
-                <p className="mb-6">
-                  Nenhuma fórmula funciona se você está mentalmente dizendo "por favor, me aceite". Autoconfiança não é fingir. É saber que seu valor não depende da resposta dela.
-                </p>
-
-                <p className="mb-6 font-semibold">
-                  Pratique isso:
-                </p>
-
-                <div className="space-y-6 my-8">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <CheckCircle className="text-primary" size={24} />
-                        Cuide da sua aparência
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p>Não para impressionar, mas para se sentir bem</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <CheckCircle className="text-blue-500" size={24} />
-                        Tenha hobbies e rotina própria
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p>Isso transmite estabilidade emocional</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <CheckCircle className="text-green-500" size={24} />
-                        Aceite que rejeição faz parte
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p>E não é um julgamento sobre você</p>
-                    </CardContent>
-                  </Card>
+                <div className="bg-gradient-to-r from-primary/10 to-rose-100 p-6 rounded-lg mb-8">
+                  <ul className="space-y-3">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                      <span><strong>Seja específico:</strong> Proposta concreta, data e lugar.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                      <span><strong>Leia os sinais:</strong> Só convide quando houver reciprocidade.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                      <span><strong>Não se justifique:</strong> Um convite não precisa de desculpas.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                      <span><strong>Aceite o não:</strong> Respeito é o maior atrativo.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                      <span><strong>Use a voz:</strong> Áudio no WhatsApp pode ser seu aliado.</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <Card className="my-8 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20">
-                  <CardContent className="pt-6">
-                    <p className="text-lg">
-                      Como afirma o psicólogo Augusto Cury em seus estudos sobre inteligência emocional, <span className="font-bold italic">"quem se valoriza não implora por atenção"</span>.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <p className="mb-6">
-                  Confira: <Link to="/blog" className="text-primary hover:underline font-semibold">Como desenvolver autoconfiança verdadeira — guia prático para homens</Link>
-                </p>
-
-                <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
-                  <Shield className="text-red-500" />
-                  Erros Comuns que Fazem Você Parecer Desesperado
-                </h2>
-
-                <div className="space-y-6 my-8">
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Mandar mensagem todos os dias sem resposta</p>
-                      <p className="text-muted-foreground">Isso não mostra interesse, mostra carência.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Ficar elogiando excessivamente</p>
-                      <p className="text-muted-foreground">"Você é linda demais pra mim" cria pressão e soa inseguro.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Comparar com outras mulheres</p>
-                      <p className="text-muted-foreground">"Ninguém me entende como você" soa manipulador.</p>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-l-4 border-l-red-500">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold mb-2">❌ Desaparecer após o 'não'</p>
-                      <p className="text-muted-foreground">Isso transmite mágoa, não dignidade.</p>
-                    </CardContent>
-                  </Card>
-                </div>
-
-                <Card className="my-8 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
-                  <CardContent className="pt-6">
-                    <p className="text-lg font-semibold">
-                      ✅ Corrija esses hábitos, e você já estará à frente de 80% dos homens.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <h2 className="text-3xl font-bold mt-12 mb-6">
-                  Conclusão: O Convite Ideal Nasce da Clareza, Não do Medo
-                </h2>
-
-                <p className="mb-6">
-                  Convidar uma mulher para sair sem parecer desesperado não é sobre decorar frases ou esperar o "momento perfeito". É sobre cultivar uma atitude interna de respeito — por ela, por você e pela conexão que ambos merecem.
-                </p>
-
-                <p className="mb-6">
-                  Quando seu interesse é genuíno, sua linguagem corporal, tom de voz e escolhas de palavras se alinham naturalmente. A mulher sente isso. E, mais do que um encontro, ela percebe a presença de alguém emocionalmente disponível — não apenas fisicamente disponível.
-                </p>
-
-                <p className="mb-6">
-                  Se este artigo fez sentido para você, compartilhe com um amigo que está preso na zona de amigos. E não pare por aqui: explore nossos outros conteúdos sobre comunicação, autoestima e relacionamentos saudáveis.
-                </p>
-
-                <Card className="my-8 bg-gradient-to-r from-primary to-secondary text-white">
-                  <CardContent className="pt-6 text-center">
-                    <p className="text-xl font-bold mb-4">
-                      Leia nosso guia completo aqui: Como saber se uma mulher está interessada em você — sinais reais, não ilusões
-                    </p>
-                    <Button asChild variant="secondary" size="lg">
-                      <Link to="/blog">
-                        Explore Mais Artigos
-                      </Link>
+                {/* Social Share */}
+                <div className="border-t border-b py-6 my-8">
+                  <p className="font-medium mb-4">Compartilhe este artigo:</p>
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="sm" onClick={() => handleShare('facebook')}>
+                      <Facebook className="h-4 w-4 mr-2" />
+                      Facebook
                     </Button>
-                  </CardContent>
-                </Card>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('twitter')}>
+                      <Twitter className="h-4 w-4 mr-2" />
+                      Twitter
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('whatsapp')}>
+                      WhatsApp
+                    </Button>
+                    <Button variant="outline" size="sm" onClick={() => handleShare('pinterest')}>
+                      Pinterest
+                    </Button>
+                  </div>
+                </div>
 
                 {/* FAQ Section */}
-                <h2 className="text-3xl font-bold mt-16 mb-6">
-                  Perguntas Frequentes (FAQ)
+                <h2 className="text-3xl font-bold mt-12 mb-6">
+                  Perguntas Frequentes
                 </h2>
 
-                <Accordion type="single" collapsible className="w-full mb-12">
+                <Accordion type="single" collapsible className="mb-8">
                   <AccordionItem value="item-1">
-                    <AccordionTrigger className="text-left">
-                      Como convidar uma mulher para sair sem parecer desesperado se mal conversamos?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Quanto tempo devo esperar antes de convidar para sair?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Comece com uma interação leve (elogio sincero, pergunta sobre algo em comum) e observe a resposta. Se houver reciprocidade, proponha um encontro curto e casual — como um café de 30 minutos.
-                      </p>
+                      Não existe tempo fixo, mas os sinais de reciprocidade são mais importantes. Se a conversa flui bem e há interesse mútuo, 5 a 7 dias de conversa é um bom momento para propor um encontro presencial.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-2">
-                    <AccordionTrigger className="text-left">
-                      É melhor convidar por mensagem ou pessoalmente?
-                    </AccordionTrigger>
+                    <AccordionTrigger>E se ela disser que está ocupada?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Pessoalmente transmite mais confiança. Mas se for por mensagem, use áudio ou seja claro e específico: evite textos longos ou ambíguos.
-                      </p>
+                      Responda com leveza: "Sem problemas! Avisa quando tiver disponibilidade." Se ela não propor outra data, é um sinal de que talvez não haja interesse no momento. Respeite e siga em frente.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-3">
-                    <AccordionTrigger className="text-left">
-                      E se ela disser que está ocupada?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Devo sugerir um lugar específico ou deixar ela escolher?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Responda com leveza: "Tudo bem! Se rolar um espaço na agenda, me avisa." Se ela estiver interessada, retomará o assunto. Se não, siga em frente com dignidade.
-                      </p>
+                      Sugira um lugar específico — isso mostra iniciativa. Mas esteja aberto a alternativas: "Pensei no café X, mas se preferir outro lugar, estou aberto a sugestões."
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-4">
-                    <AccordionTrigger className="text-left">
-                      Posso convidar alguém que conheci em app de relacionamento?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Como saber se ela está interessada em mim?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Sim — e é até recomendado! Afinal, o objetivo do app é encontrar pessoas para encontros reais. Após algumas trocas de mensagens (5–7 dias), proponha um encontro seguro e público.
-                      </p>
+                      Sinais positivos: ela responde rápido, faz perguntas sobre você, usa emojis expressivos, menciona coisas que vocês poderiam fazer juntos. Se as respostas são secas e demoradas, pode ser que não haja interesse.
                     </AccordionContent>
                   </AccordionItem>
 
                   <AccordionItem value="item-5">
-                    <AccordionTrigger className="text-left">
-                      Como evitar o 'ghosting' após o convite?
-                    </AccordionTrigger>
+                    <AccordionTrigger>Posso convidar pelo WhatsApp ou precisa ser pessoalmente?</AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-muted-foreground leading-relaxed">
-                        Não insista. Se não houver resposta em 48h, considere que o interesse não é mútuo. Respeito atrai respeito — e quem some não merece sua energia.
-                      </p>
+                      Depende do contexto. Se vocês se conhecem apenas online, WhatsApp é perfeitamente aceitável. Uma dica: use áudio em vez de texto — sua voz transmite segurança e personalidade de forma que o texto não consegue.
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
-                {/* Sources */}
-                <div className="mt-12 p-6 bg-muted rounded-lg">
-                  <p className="text-sm text-muted-foreground">
-                    <strong>Referências complementares:</strong> Instituto Brasileiro de Opinião Pública e Estatística (IBOPE) – Relações Interpessoais no Brasil, Conselho Federal de Psicologia – Orientações sobre Autoestima e Relacionamentos. Este conteúdo foi produzido com foco em utilidade, clareza e respeito — em total conformidade com as diretrizes do Google AdSense e os princípios de relacionamentos saudáveis.
-                  </p>
+                {/* References */}
+                <div className="bg-muted/50 p-6 rounded-lg mb-8">
+                  <h3 className="font-bold mb-4">Referências</h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>Instituto Brasileiro de Opinião Pública e Estatística (IBOPE). Pesquisa sobre relações interpessoais.</li>
+                    <li>Journal of Social and Personal Relationships. Studies on dating dynamics.</li>
+                    <li>Psychology Today. Articles on confidence and attraction.</li>
+                  </ul>
                 </div>
-              </div>
 
-              {/* Author Bio */}
-              <div className="mt-12 p-6 bg-muted rounded-lg">
-                <div className="flex gap-4">
-                  <img 
-                    src={authorImage} 
-                    alt="Daniel Olimpio" 
-                    className="w-20 h-20 rounded-full object-cover"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-2">Daniel Olimpio</h3>
-                    <p className="text-muted-foreground mb-3">
-                      {showFullBio 
-                        ? "Especialista em relacionamentos modernos e estratégias de namoro online. Com mais de 8 anos de experiência analisando apps de encontros, Daniel já ajudou milhares de homens a encontrarem conexões significativas através de conselhos práticos e baseados em pesquisa."
-                        : "Especialista em relacionamentos modernos e estratégias de namoro online. Com mais de 8 anos de experiência..."
-                      }
-                    </p>
-                    <Button 
-                      variant="link" 
-                      className="p-0 h-auto text-primary"
-                      onClick={() => setShowFullBio(!showFullBio)}
-                    >
-                      {showFullBio ? "Ler menos" : "Ler mais"}
-                    </Button>
+                {/* Author Bio */}
+                <div className="bg-muted/30 p-6 rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <img 
+                      src={authorImage} 
+                      alt="Daniel Olimpio" 
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-bold text-lg mb-1">Daniel Olimpio</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Especialista em relacionamentos e fundador do Beijo da Rua. Ajuda homens a construírem conexões autênticas há mais de 5 anos.
+                      </p>
+                      
+                      <div className="flex gap-2 mb-3">
+                        <Button variant="ghost" size="sm">
+                          <Instagram className="h-4 w-4" />
+                        </Button>
+                        <Button variant="ghost" size="sm">
+                          <Twitter className="h-4 w-4" />
+                        </Button>
+                      </div>
+
+                      {showFullBio && (
+                        <p className="text-sm text-muted-foreground mt-3">
+                          Com formação em psicologia social e experiência em coaching de relacionamentos, Daniel criou o Beijo da Rua para oferecer orientação prática e respeitosa para homens que querem melhorar suas habilidades de comunicação e conexão.
+                        </p>
+                      )}
+
+                      <Button 
+                        variant="link" 
+                        size="sm" 
+                        onClick={() => setShowFullBio(!showFullBio)}
+                        className="p-0 h-auto"
+                      >
+                        {showFullBio ? 'Ver menos' : 'Ver bio completa'}
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              {/* Share Section */}
-              <div className="mt-12 pt-8 border-t border-border">
-                <h3 className="text-xl font-bold mb-4">Compartilhe este artigo</h3>
-                <div className="flex gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('facebook')}
-                    className="hover:bg-blue-50 hover:border-blue-500"
-                  >
-                    <Facebook className="w-5 h-5 text-blue-600" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('twitter')}
-                    className="hover:bg-sky-50 hover:border-sky-500"
-                  >
-                    <Twitter className="w-5 h-5 text-sky-500" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('whatsapp')}
-                    className="hover:bg-green-50 hover:border-green-500"
-                  >
-                    <MessageCircle className="w-5 h-5 text-green-600" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={() => handleShare('pinterest')}
-                    className="hover:bg-red-50 hover:border-red-500"
-                  >
-                    <Instagram className="w-5 h-5 text-red-600" />
-                  </Button>
-                </div>
-              </div>
             </div>
-
+            
             {/* Sidebar */}
-            <aside className="lg:w-80">
-              <BlogSidebar />
+            <aside className="lg:w-80 shrink-0">
+              <BlogSidebar activeCategory="Conquista" />
             </aside>
           </div>
         </div>
       </article>
+
+      {/* Bottom of Page Ad */}
+      <div className="container mx-auto px-4 mb-8">
+        <BottomOfPageAd />
+      </div>
 
       <Footer />
     </div>
