@@ -8,16 +8,37 @@
   RewriteRule ^ads\.txt$ https://srv.adstxtmanager.com/19390/beijodarua.com.br [R=301,L]
 
   # ———————————————————————
-  # ✅ Não redirecionar arquivos ou diretórios reais
+  # ✅ Não redirecionar arquivos ou diretórios reais existentes
   # ———————————————————————
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
   # ———————————————————————
-  # ✅ Proteger arquivos estáticos essenciais de redirecionamento
+  # ✅ Proteger arquivos estáticos essenciais por nome
   # ———————————————————————
-  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|apple-touch-icon\.png|og-image\.(jpg|png)|\.well-known/|google.+\.html)$ - [L]
+  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|favicon\.png|apple-touch-icon\.png|og-image\.(jpg|png|webp)|manifest\.json|browserconfig\.xml|site\.webmanifest)$ - [L]
+
+  # ———————————————————————
+  # ✅ Proteger arquivos de verificação do Google e outros serviços
+  # ———————————————————————
+  RewriteRule ^google[a-zA-Z0-9]*\.html$ - [L]
+  RewriteRule ^(BingSiteAuth\.xml|yandex_[a-zA-Z0-9]+\.html|pinterest-[a-zA-Z0-9]+\.html)$ - [L]
+
+  # ———————————————————————
+  # ✅ Proteger diretórios especiais
+  # ———————————————————————
+  RewriteRule ^\.well-known/ - [L]
+
+  # ———————————————————————
+  # ✅ Proteger arquivos estáticos por extensão
+  # ———————————————————————
+  RewriteRule \.(js|css|map|json|xml|txt|ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|eot|otf|mp4|webm|ogg|mp3|wav|pdf|zip)$ - [L]
+
+  # ———————————————————————
+  # ✅ Proteger arquivos do Ezoic e Analytics
+  # ———————————————————————
+  RewriteRule ^(ezoic|ez[a-zA-Z0-9_-]+|analytics|gtag|ga)\.js$ - [L]
 
   # ———————————————————————
   # 🌐 Redirecionar todas as demais rotas para index.html (SPA)
