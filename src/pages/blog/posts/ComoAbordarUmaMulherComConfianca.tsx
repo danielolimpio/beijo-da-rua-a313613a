@@ -13,6 +13,17 @@ import articleCover from "@/assets/article-abordar-mulher.jpg";
 import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
 import { getArticleSchema } from "@/lib/structuredData";
+import { 
+  TopOfPageAd, 
+  UnderPageTitleAd, 
+  UnderFirstParagraphAd, 
+  UnderSecondParagraphAd, 
+  MidContentAd, 
+  LongContentAd, 
+  LongerContentAd, 
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const ComoAbordarUmaMulherComConfianca = () => {
   const [showFullBio, setShowFullBio] = useState(false);
@@ -45,6 +56,10 @@ const ComoAbordarUmaMulherComConfianca = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <StructuredData data={articleData} />
+      
+      {/* Top of Page Ad */}
+      <TopOfPageAd />
+      
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
@@ -82,6 +97,9 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </div>
               </header>
 
+              {/* Under Page Title Ad */}
+              <UnderPageTitleAd />
+
               {/* Article Cover Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
                 <img 
@@ -96,10 +114,16 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 <p className="mb-6">
                   Você já sentiu aquele nó no estômago ao ver alguém que te atrai — seja na fila do café, em uma festa ou até mesmo em um parque — e, mesmo com o coração acelerado, não conseguiu dar o primeiro passo?
                 </p>
+
+                {/* Under First Paragraph Ad */}
+                <UnderFirstParagraphAd />
                 
                 <p className="mb-6">
                   Não está sozinho. Milhões de homens, independentemente da idade ou experiência, enfrentam o mesmo bloqueio: o medo de ser rejeitado, de parecer inadequado ou de "atrapalhar" o momento dela.
                 </p>
+
+                {/* Under Second Paragraph Ad */}
+                <UnderSecondParagraphAd />
 
                 <p className="mb-6">
                   Mas e se você soubesse que abordar uma mulher com confiança e naturalidade não depende de frases ensaiadas, aparência perfeita ou sorte?
@@ -150,6 +174,9 @@ const ComoAbordarUmaMulherComConfianca = () => {
                     </p>
                   </CardContent>
                 </Card>
+
+                {/* Mid Content Ad */}
+                <MidContentAd />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <CheckCircle className="text-green-500" />
@@ -209,6 +236,9 @@ const ComoAbordarUmaMulherComConfianca = () => {
                   Um estudo do Instituto Brasileiro de Opinião Pública e Estatística (IBOPE) revelou que 72% das mulheres se sentem mais receptivas a abordagens que começam com uma observação gentil do cotidiano — não com elogios físicos.
                 </p>
 
+                {/* Long Content Ad (800+ words) */}
+                <LongContentAd />
+
                 <h3 className="text-2xl font-bold mt-8 mb-4">
                   Em eventos sociais: você já tem vantagem
                 </h3>
@@ -252,6 +282,9 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 <p>
                   Se quiser ir além, leia nosso <Link to="/blog" className="text-primary hover:underline">guia completo sobre como criar um perfil conquistador nas redes sociais</Link>.
                 </p>
+
+                {/* Longer Content Ad (1200+ words) */}
+                <LongerContentAd />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6 flex items-center gap-3">
                   <Heart className="text-rose-500" />
@@ -401,6 +434,9 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 <p>
                   O Instituto Sedes Sapientiae, referência em psicologia no Brasil, destaca que homens que desenvolvem resiliência emocional têm mais sucesso em relacionamentos significativos — não apenas casuais.
                 </p>
+
+                {/* Incontent 5 Ad (80% of content) */}
+                <InContent5Ad />
 
                 <h2 className="text-3xl font-bold mt-12 mb-6">
                   A Conexão Vem Antes da Conquista
@@ -666,6 +702,11 @@ const ComoAbordarUmaMulherComConfianca = () => {
           </div>
         </div>
       </article>
+
+      {/* Bottom of Page Ad */}
+      <div className="container mx-auto px-4 mb-8">
+        <BottomOfPageAd />
+      </div>
 
       <Footer />
     </div>

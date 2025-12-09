@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { ReactNode } from "react";
+import { TopOfPageAd, UnderPageTitleAd, BottomOfPageAd } from "@/components/EzoicAd";
 
 interface QuizLayoutProps {
   children: ReactNode;
@@ -13,6 +14,9 @@ interface QuizLayoutProps {
 const QuizLayout = ({ children, title, description, progress }: QuizLayoutProps) => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      {/* Top of Page Ad */}
+      <TopOfPageAd />
+      
       <Header />
       <DynamicBreadcrumb />
       
@@ -39,6 +43,11 @@ const QuizLayout = ({ children, title, description, progress }: QuizLayoutProps)
               </p>
             )}
           </div>
+          
+          {/* Under Page Title Ad */}
+          <div className="max-w-3xl mx-auto mt-6">
+            <UnderPageTitleAd />
+          </div>
         </div>
       </section>
 
@@ -50,6 +59,11 @@ const QuizLayout = ({ children, title, description, progress }: QuizLayoutProps)
           </div>
         </div>
       </main>
+
+      {/* Bottom of Page Ad */}
+      <div className="container mx-auto px-4 mb-8">
+        <BottomOfPageAd />
+      </div>
 
       <Footer />
     </div>
