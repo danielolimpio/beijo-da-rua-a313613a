@@ -6,6 +6,7 @@ import tinderLogo from "@/assets/tinder-logo.jpeg";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import happnLogo from "@/assets/happn-logo.jpg";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
+import { SidebarAd, SidebarMiddleAd, SidebarBottomAd, SidebarFloating1Ad, SidebarFloating2Ad } from "@/components/EzoicAd";
 
 interface BlogSidebarProps {
   activeCategory?: string;
@@ -70,6 +71,9 @@ const datingApps = [
 const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
   return (
     <div className="space-y-6">
+      {/* Sidebar Top Ad */}
+      <SidebarAd />
+      
       {/* Categorias */}
       <Card>
         <CardHeader>
@@ -99,6 +103,9 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
         </CardContent>
       </Card>
 
+      {/* Sidebar Middle Ad */}
+      <SidebarMiddleAd />
+
       {/* Apps de Namoro */}
       <Card>
         <CardHeader>
@@ -125,6 +132,9 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
           </ul>
         </CardContent>
       </Card>
+
+      {/* Sidebar Bottom Ad */}
+      <SidebarBottomAd />
 
       {/* WhatsApp Card */}
       <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 border-green-200 dark:border-green-800">
@@ -175,6 +185,17 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
           </Button>
         </CardContent>
       </Card>
+
+      {/* Floating Ads - visible on desktop, sticky */}
+      <div className="hidden lg:block sticky top-24 space-y-6">
+        <SidebarFloating1Ad />
+        <SidebarFloating2Ad />
+      </div>
+      
+      {/* Mobile floating ad - show only one */}
+      <div className="lg:hidden">
+        <SidebarFloating1Ad />
+      </div>
     </div>
   );
 };

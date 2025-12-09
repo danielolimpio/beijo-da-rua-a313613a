@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "./EzoicAd";
 
 interface QuizAnswerOptionProps {
   emoji: string;
@@ -29,9 +30,10 @@ interface QuizQuestionProps {
   options: Array<{ emoji: string; text: string }>;
   nextPage: string;
   minTime?: number;
+  showAds?: boolean;
 }
 
-export const QuizQuestion = ({ options, nextPage, minTime = 5 }: QuizQuestionProps) => {
+export const QuizQuestion = ({ options, nextPage, minTime = 5, showAds = true }: QuizQuestionProps) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [canProceed, setCanProceed] = useState(false);
   const navigate = useNavigate();
@@ -53,17 +55,35 @@ export const QuizQuestion = ({ options, nextPage, minTime = 5 }: QuizQuestionPro
     }
   };
 
+  // Determine ad positions
+  const midPoint = Math.floor(options.length / 2);
+
   return (
     <>
+      {/* Ad after intro/question */}
+      {showAds && <UnderFirstParagraphAd className="mb-6" />}
+      
       <div className="space-y-4 mb-8">
         {options.map((option, index) => (
-          <div key={index} onClick={() => handleSelect(index)}>
-            <QuizAnswerOption
-              emoji={option.emoji}
-              text={option.text}
-              isSelected={selectedOption === index}
-              onSelect={() => handleSelect(index)}
-            />
+          <div key={index}>
+            <div onClick={() => handleSelect(index)}>
+              <QuizAnswerOption
+                emoji={option.emoji}
+                text={option.text}
+                isSelected={selectedOption === index}
+                onSelect={() => handleSelect(index)}
+              />
+            </div>
+            
+            {/* Mid content ad - between options */}
+            {showAds && index === midPoint - 1 && options.length > 3 && (
+              <MidContentAd className="my-4" />
+            )}
+            
+            {/* Incontent 5 ad - before last option */}
+            {showAds && index === options.length - 2 && options.length > 4 && (
+              <InContent5Ad className="my-4" />
+            )}
           </div>
         ))}
       </div>
