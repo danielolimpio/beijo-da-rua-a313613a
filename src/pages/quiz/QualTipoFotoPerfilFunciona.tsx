@@ -2,7 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { Camera, Shirt, Mountain, Users } from "lucide-react";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QualTipoFotoPerfilFunciona = () => {
   return (
@@ -17,7 +17,7 @@ const QualTipoFotoPerfilFunciona = () => {
         description="Suas fotos são seu cartão de visitas - escolher bem pode triplicar seus matches"
         progress={60}
       >
-        <AdSenseBlock />
+        <UnderFirstParagraphAd />
         
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
@@ -84,7 +84,7 @@ const QualTipoFotoPerfilFunciona = () => {
           </div>
         </article>
 
-        <AdSenseBlock />
+        <MidContentAd />
 
         {/* Quiz Options */}
         <div className="space-y-6 mt-8">
@@ -123,7 +123,7 @@ const QualTipoFotoPerfilFunciona = () => {
           </div>
         </div>
 
-        <AdSenseBlock />
+        <InContent5Ad />
       </QuizLayout>
     </>
   );

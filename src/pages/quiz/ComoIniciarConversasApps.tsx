@@ -2,7 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { MessageSquare, Sparkles, Coffee, Smile } from "lucide-react";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const ComoIniciarConversasApps = () => {
   return (
@@ -17,7 +17,7 @@ const ComoIniciarConversasApps = () => {
         description="Seu estilo de comunicação determina qual abordagem funciona melhor"
         progress={40}
       >
-        <AdSenseBlock />
+        <UnderFirstParagraphAd />
         
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
@@ -71,7 +71,7 @@ const ComoIniciarConversasApps = () => {
           </p>
         </article>
 
-        <AdSenseBlock />
+        <MidContentAd />
 
         {/* Quiz Options */}
         <div className="space-y-6 mt-8">
@@ -110,7 +110,7 @@ const ComoIniciarConversasApps = () => {
           </div>
         </div>
 
-        <AdSenseBlock />
+        <InContent5Ad />
       </QuizLayout>
     </>
   );

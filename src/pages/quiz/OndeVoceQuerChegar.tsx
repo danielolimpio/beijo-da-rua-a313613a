@@ -1,8 +1,8 @@
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Helmet } from "react-helmet";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const OndeVoceQuerChegar = () => {
   const options = [
@@ -45,7 +45,7 @@ const OndeVoceQuerChegar = () => {
             Você imagina seu relacionamento daqui a 2 anos como…?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/o-que-nunca-falta-no-seu-dia" />
 
@@ -55,7 +55,7 @@ const OndeVoceQuerChegar = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/onde-voce-quer-chegar-no-relacionamento" />
         </div>

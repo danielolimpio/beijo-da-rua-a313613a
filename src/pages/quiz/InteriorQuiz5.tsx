@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, InContent5Ad } from "@/components/EzoicAd";
 
 const InteriorQuiz5 = () => {
   const options = [
@@ -45,7 +45,7 @@ const InteriorQuiz5 = () => {
             Qual seu estilo de vida predominante?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/interior-quiz-resultado" />
 
@@ -55,7 +55,7 @@ const InteriorQuiz5 = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <InContent5Ad />
 
           <QuizFAQ items={faqItems} pageUrl="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" />
         </div>

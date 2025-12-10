@@ -1,8 +1,8 @@
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Helmet } from "react-helmet";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const OQueTeFazSorrir = () => {
   const options = [
@@ -45,7 +45,7 @@ const OQueTeFazSorrir = () => {
             Se você pudesse escolher um superpoder pra usar no dia a dia… qual seria? 😉
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/qual-seu-estilo-de-namoro" />
 
@@ -55,7 +55,7 @@ const OQueTeFazSorrir = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/o-que-te-faz-sorrir" />
         </div>

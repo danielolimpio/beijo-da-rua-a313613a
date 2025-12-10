@@ -2,7 +2,7 @@ import QuizLayout from "@/components/QuizLayout";
 import QuizOption from "@/components/QuizOption";
 import { Helmet } from "react-helmet";
 import { Clock, Zap, Battery, Gauge } from "lucide-react";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, MidContentAd, InContent5Ad } from "@/components/EzoicAd";
 
 const QuantoTempoDedicarApps = () => {
   return (
@@ -17,7 +17,7 @@ const QuantoTempoDedicarApps = () => {
         description="A estratégia certa de uso pode triplicar seus resultados com menos esforço"
         progress={80}
       >
-        <AdSenseBlock />
+        <UnderFirstParagraphAd />
         
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
@@ -104,7 +104,7 @@ const QuantoTempoDedicarApps = () => {
           </div>
         </article>
 
-        <AdSenseBlock />
+        <MidContentAd />
 
         {/* Quiz Options */}
         <div className="space-y-6 mt-8">
@@ -143,7 +143,7 @@ const QuantoTempoDedicarApps = () => {
           </div>
         </div>
 
-        <AdSenseBlock />
+        <InContent5Ad />
       </QuizLayout>
     </>
   );
