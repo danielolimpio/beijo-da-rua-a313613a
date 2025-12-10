@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const InteriorQuiz3 = () => {
   const options = [
@@ -45,7 +45,7 @@ const InteriorQuiz3 = () => {
             Qual sua disponibilidade para deslocamento?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/interior-quiz-4" />
 
@@ -55,7 +55,7 @@ const InteriorQuiz3 = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" />
         </div>

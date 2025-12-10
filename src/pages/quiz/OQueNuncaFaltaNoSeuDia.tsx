@@ -1,8 +1,8 @@
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Helmet } from "react-helmet";
+import { UnderFirstParagraphAd, InContent5Ad } from "@/components/EzoicAd";
 
 const OQueNuncaFaltaNoSeuDia = () => {
   const options = [
@@ -45,7 +45,7 @@ const OQueNuncaFaltaNoSeuDia = () => {
             Qual dessas coisas NUNCA falta na sua rotina? (Escolha 1!)
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/quiz" />
 
@@ -55,7 +55,7 @@ const OQueNuncaFaltaNoSeuDia = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <InContent5Ad />
 
           <QuizFAQ items={faqItems} pageUrl="/o-que-nunca-falta-no-seu-dia" />
         </div>

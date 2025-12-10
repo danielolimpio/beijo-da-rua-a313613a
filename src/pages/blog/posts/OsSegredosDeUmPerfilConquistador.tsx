@@ -29,6 +29,18 @@ import articleCover from "@/assets/article-perfil-conquistador.jpg";
 import authorImage from "@/assets/team-daniel.jpg";
 import StructuredData from "@/components/StructuredData";
 import { getArticleSchema } from "@/lib/structuredData";
+import { 
+  TopOfPageAd, 
+  UnderPageTitleAd, 
+  UnderFirstParagraphAd,
+  UnderSecondParagraphAd,
+  MidContentAd, 
+  LongContentAd,
+  LongerContentAd,
+  LongestContentAd,
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const OsSegredosDeUmPerfilConquistador = () => {
   const [showFullBio, setShowFullBio] = useState(false);
@@ -98,6 +110,9 @@ const OsSegredosDeUmPerfilConquistador = () => {
         </script>
       </Helmet>
 
+      {/* Top of Page Ad */}
+      <TopOfPageAd />
+
       <div className="min-h-screen bg-background">
         <Header />
         <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
@@ -133,6 +148,9 @@ const OsSegredosDeUmPerfilConquistador = () => {
                 </div>
               </header>
 
+              {/* Under Page Title Ad */}
+              <UnderPageTitleAd />
+
               {/* Article Cover Image */}
               <div className="mb-8 rounded-2xl overflow-hidden">
                 <img 
@@ -148,9 +166,15 @@ const OsSegredosDeUmPerfilConquistador = () => {
                   Você já parou para pensar que, antes mesmo de dizer "oi", seu perfil nas redes sociais já está falando por você?
                 </p>
 
+                {/* Under First Paragraph Ad */}
+                <UnderFirstParagraphAd />
+
                 <p className="mb-6 leading-relaxed">
                   Em um mundo onde o primeiro encontro muitas vezes começa com um swipe ou uma olhada rápida no Instagram, sua presença digital é seu cartão de visitas emocional. E, infelizmente, muitos homens — mesmo os mais interessantes, simpáticos e com muito a oferecer — perdem oportunidades antes mesmo de começar, por conta de fotos genéricas, bio vazia ou uma energia que não transmite quem realmente são.
                 </p>
+
+                {/* Under Second Paragraph Ad */}
+                <UnderSecondParagraphAd />
 
                 <p className="mb-8 leading-relaxed">
                   O problema não é a falta de "sorte". É a falta de intencionalidade na construção da imagem digital.

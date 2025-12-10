@@ -1,8 +1,8 @@
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Helmet } from "react-helmet";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const QualSeuEstiloDeNamoro = () => {
   const options = [
@@ -45,7 +45,7 @@ const QualSeuEstiloDeNamoro = () => {
             Seu encontro ideal é mais…?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/voce-e-mais-serio-ou-descontraido" />
 
@@ -55,7 +55,7 @@ const QualSeuEstiloDeNamoro = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/qual-seu-estilo-de-namoro" />
         </div>

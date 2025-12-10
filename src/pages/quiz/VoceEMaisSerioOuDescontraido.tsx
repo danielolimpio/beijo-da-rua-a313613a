@@ -1,8 +1,8 @@
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
 import { Helmet } from "react-helmet";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const VoceEMaisSerioOuDescontraido = () => {
   const options = [
@@ -45,7 +45,7 @@ const VoceEMaisSerioOuDescontraido = () => {
             Na sua opinião, o que é mais importante num relacionamento?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/onde-voce-quer-chegar-no-relacionamento" />
 
@@ -55,7 +55,7 @@ const VoceEMaisSerioOuDescontraido = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/voce-e-mais-serio-ou-descontraido" />
         </div>

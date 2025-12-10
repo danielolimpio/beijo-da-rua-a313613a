@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import { QuizQuestion } from "@/components/QuizAnswerOption";
 import QuizFAQ from "@/components/QuizFAQ";
-import AdSenseBlock from "@/components/AdSenseBlock";
+import { UnderFirstParagraphAd, MidContentAd } from "@/components/EzoicAd";
 
 const InteriorQuiz1 = () => {
   const options = [
@@ -45,7 +45,7 @@ const InteriorQuiz1 = () => {
             Qual o tamanho da sua cidade?
           </h2>
 
-          <AdSenseBlock />
+          <UnderFirstParagraphAd />
 
           <QuizQuestion options={options} nextPage="/interior-quiz-2" />
 
@@ -55,7 +55,7 @@ const InteriorQuiz1 = () => {
             </p>
           </div>
 
-          <AdSenseBlock />
+          <MidContentAd />
 
           <QuizFAQ items={faqItems} pageUrl="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" />
         </div>
