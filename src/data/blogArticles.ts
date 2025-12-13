@@ -4,6 +4,7 @@ import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg"
 import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
 import articleSiteRelacionamento from "@/assets/article-site-relacionamento.jpg";
 import articleConvidarMulher from "@/assets/article-convidar-mulher.jpg";
+import articleNervosismoPaquera from "@/assets/article-nervosismo-paquera.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -19,6 +20,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 6,
+    title: "Técnicas para Controlar o Nervosismo na Hora da Paquera",
+    excerpt: "Domine a ansiedade, respire fundo e conquiste com calma. Métodos psicológicos simples para manter a serenidade diante dela.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleNervosismoPaquera,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "13 de dezembro de 2025",
+    link: "/blog/posts/tecnicas-controlar-nervosismo-paquera"
+  },
   {
     id: 5,
     title: "Como Convidar uma Mulher para Sair Sem Parecer Desesperado",
