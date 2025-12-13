@@ -30,6 +30,7 @@ import DescubraQualSiteRelacionamentoCombina from "./pages/blog/posts/DescubraQu
 import ComoConvidarMulherSairSemParecerDesesperado from "./pages/blog/posts/ComoConvidarMulherSairSemParecerDesesperado";
 import TecnicasControlarNervosismoPaquera from "./pages/blog/posts/TecnicasControlarNervosismoPaquera";
 import FrasesDeEfeitoQueDeixamMulherInteressada from "./pages/blog/posts/FrasesDeEfeitoQueDeixamMulherInteressada";
+import ComoCriarConexoesReaisEmApps from "./pages/blog/posts/ComoCriarConexoesReaisEmApps";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -97,6 +98,7 @@ const App = () => (
           <Route path="/blog/posts/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
           <Route path="/blog/posts/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
           <Route path="/blog/posts/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
+          <Route path="/blog/posts/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />

@@ -6,6 +6,7 @@ import articleSiteRelacionamento from "@/assets/article-site-relacionamento.jpg"
 import articleConvidarMulher from "@/assets/article-convidar-mulher.jpg";
 import articleNervosismoPaquera from "@/assets/article-nervosismo-paquera.jpg";
 import articleFrasesEfeito from "@/assets/article-frases-efeito.jpg";
+import articleConexoesReais from "@/assets/article-conexoes-reais-apps.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -21,6 +22,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 8,
+    title: "Como Criar Conexões Reais em Aplicativos de Relacionamento",
+    excerpt: "Vá além do like! Saiba como manter conversas profundas e transformar matches em encontros memoráveis e relacionamentos reais.",
+    category: "Apps de Namoro",
+    categoryId: "apps-de-namoro",
+    image: articleConexoesReais,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "13 de dezembro de 2025",
+    link: "/blog/posts/como-criar-conexoes-reais-em-apps"
+  },
   {
     id: 7,
     title: "Frases de Efeito que Deixam Qualquer Mulher Interessada",
