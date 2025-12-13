@@ -5,6 +5,7 @@ import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
 import articleSiteRelacionamento from "@/assets/article-site-relacionamento.jpg";
 import articleConvidarMulher from "@/assets/article-convidar-mulher.jpg";
 import articleNervosismoPaquera from "@/assets/article-nervosismo-paquera.jpg";
+import articleFrasesEfeito from "@/assets/article-frases-efeito.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -20,6 +21,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 7,
+    title: "Frases de Efeito que Deixam Qualquer Mulher Interessada",
+    excerpt: "Use palavras que encantam sem soar clichê. Coleção de frases inteligentes, divertidas e sedutoras para momentos certos.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleFrasesEfeito,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "13 de dezembro de 2025",
+    link: "/blog/posts/frases-de-efeito-que-deixam-mulher-interessada"
+  },
   {
     id: 6,
     title: "Técnicas para Controlar o Nervosismo na Hora da Paquera",
