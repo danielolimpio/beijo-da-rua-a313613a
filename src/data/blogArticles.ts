@@ -7,6 +7,7 @@ import articleConvidarMulher from "@/assets/article-convidar-mulher.jpg";
 import articleNervosismoPaquera from "@/assets/article-nervosismo-paquera.jpg";
 import articleFrasesEfeito from "@/assets/article-frases-efeito.jpg";
 import articleConexoesReais from "@/assets/article-conexoes-reais-apps.jpg";
+import articleErrosFataisCharme from "@/assets/article-erros-fatais-charme.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -22,6 +23,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 9,
+    title: "Erros Fatais Que Destroem Seu Charme na Primeira Impressão",
+    excerpt: "Evite armadilhas comuns que afastam mulheres antes mesmo do 'oi'. Ajuste detalhes sutis e mude completamente sua energia.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleErrosFataisCharme,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "13 de dezembro de 2025",
+    link: "/blog/posts/erros-fatais-que-destroem-seu-charme"
+  },
   {
     id: 8,
     title: "Como Criar Conexões Reais em Aplicativos de Relacionamento",
