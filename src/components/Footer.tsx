@@ -144,6 +144,20 @@ const Footer = () => {
 
         <div className="border-t border-border pt-4 sm:pt-6 lg:pt-8 text-center text-[10px] sm:text-xs lg:text-sm text-muted-foreground px-2">
           <p>Todos os direitos reservados © Beijo da Rua | Design por: <a href="https://danielolimpio.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">DanielOlimpio</a></p>
+          
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-3 sm:mt-4">
+            <a href="/politica-de-privacidade" className="hover:text-primary transition-colors">
+              Política de Privacidade
+            </a>
+            <span className="hidden sm:inline">|</span>
+            <a href="/termos-de-uso" className="hover:text-primary transition-colors">
+              Termos de Uso
+            </a>
+            <span className="hidden sm:inline">|</span>
+            <a href="/politica-de-cookies" className="hover:text-primary transition-colors">
+              Política de Cookies
+            </a>
+          </div>
         </div>
       </div>
     </footer>
