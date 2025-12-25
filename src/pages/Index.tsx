@@ -10,12 +10,19 @@ import AboutPlatform from "@/components/AboutPlatform";
 import Footer from "@/components/Footer";
 import NewRegistrationPopup from "@/components/NewRegistrationPopup";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structuredData";
 import { TopOfPageAd, UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad, BottomOfPageAd } from "@/components/EzoicAd";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Beijo da Rua - Guia de Apps de Namoro para Homens Brasileiros"
+        description="Descubra os melhores apps de namoro para homens brasileiros. Dicas, reviews e guias completos para encontrar relacionamentos reais."
+        canonical="https://beijodarua.com.br/"
+        keywords="apps de namoro, namoro online, tinder brasil, bumble brasil, relacionamento"
+      />
       <StructuredData data={getOrganizationSchema()} />
       <StructuredData data={getWebSiteSchema()} />
       
