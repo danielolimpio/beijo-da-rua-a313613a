@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -146,6 +147,12 @@ const DatingApps = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Melhores Apps de Namoro no Brasil 2025 | Beijo da Rua"
+        description="Compare os melhores apps de namoro do Brasil: Tinder, Bumble, Happn, Badoo, Hinge e mais. Análises completas e dicas para encontrar matches."
+        canonical="https://beijodarua.com.br/apps-de-namoro"
+        keywords="melhores apps namoro brasil, tinder vs bumble, apps relacionamento 2025"
+      />
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>

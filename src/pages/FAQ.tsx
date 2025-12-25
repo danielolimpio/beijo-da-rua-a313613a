@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import {
   Accordion,
@@ -115,6 +116,12 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="Perguntas Frequentes (FAQ) | Beijo da Rua"
+        description="Respostas para as dúvidas mais comuns sobre apps de namoro, perfis, conversas, segurança e muito mais."
+        canonical="https://beijodarua.com.br/faq"
+        keywords="faq apps namoro, dúvidas tinder, perguntas namoro online"
+      />
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
