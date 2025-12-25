@@ -1,4 +1,4 @@
-name: Deploy Lovable via FTP na Hostinger
+name: Deploy Lovable via FTP na Hostinger (com SSG)
 
 on:
   push:
@@ -20,38 +20,32 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto (gera a SPA)
-        run: npm run build
-
-      - name: Instalar Puppeteer
+      - name: Instalar Puppeteer (necessário para o SSG)
         run: npm install puppeteer
 
-      - name: Instalar o servidor estático 'serve'
-        run: npm install -g serve
+      - name: Build do projeto (gera a SPA em dist/)
+        run: npm run build
 
       - name: Iniciar servidor local com a SPA
         run: |
-          serve -s dist -p 5173 &
+          npx serve -s dist &
           echo $! > .pidfile
-        # Roda o 'serve' em background
 
       - name: Aguardar servidor ficar pronto
-        run: sleep 5
+        run: sleep 10
 
-      - name: Executar script de SSG com Puppeteer
+      - name: Executar pré-renderização (SSG)
         run: node scripts/generate-static.js
 
       - name: Matar o servidor local
         run: |
           if [ -f .pidfile ]; then
-            kill $(cat .pidfile) || true
+            kill $(cat .pidfile)
             rm .pidfile
           fi
 
-      - name: Verificar estrutura SSG gerada (debug)
-        run: |
-          echo "Estrutura final do dist/:"
-          find dist -name "index.html" | head -50
+      - name: Verificar estrutura SSG gerada
+        run: find dist -name "index.html" | sort
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -62,6 +56,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
           server-dir: /
-          dangerous-clean-slate: false
+          dangerous-clean-slate: false  # mais seguro
           dry-run: false
           log-level: verbose
