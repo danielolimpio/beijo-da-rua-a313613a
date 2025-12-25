@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+# Block access to admin/dev paths
+Disallow: /api/
+Disallow: /_/
+
+# Sitemap location
 Sitemap: https://beijodarua.com.br/sitemap.xml
