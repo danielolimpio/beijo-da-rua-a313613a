@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -85,16 +85,13 @@ const Dicas = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Dicas de Apps de Namoro - Estratégias Que Funcionam | Beijo da Rua</title>
-        <meta 
-          name="description" 
-          content="Dicas práticas e comprovadas para ter sucesso em apps de namoro. Aprenda sobre fotos, bio perfeita, como iniciar conversas e muito mais." 
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background">
+      <SEO
+        title="Dicas de Apps de Namoro - Estratégias Que Funcionam"
+        description="Dicas práticas e comprovadas para ter sucesso em apps de namoro. Aprenda sobre fotos, bio perfeita, como iniciar conversas."
+        canonical="https://beijodarua.com.br/dicas"
+        keywords="dicas namoro, como ter sucesso tinder, fotos perfil, bio namoro"
+      />
         <StructuredData data={getWebSiteSchema()} />
         <Header />
         <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
@@ -185,7 +182,6 @@ const Dicas = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 

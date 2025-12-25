@@ -5,15 +5,17 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
-import { Helmet } from "react-helmet";
+import SEO from "@/components/SEO";
 
 const ComoFunciona = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Como Funciona - Beijo da Rua | Guia de Apps de Namoro</title>
-        <meta name="description" content="Entenda como o Beijo da Rua funciona: quiz personalizado, avaliações de apps, grupos reais e conteúdo especializado para você encontrar o relacionamento ideal." />
-      </Helmet>
+      <SEO
+        title="Como Funciona - Beijo da Rua | Guia de Apps de Namoro"
+        description="Entenda como o Beijo da Rua funciona: quiz personalizado, avaliações de apps, grupos reais e conteúdo especializado."
+        canonical="https://beijodarua.com.br/como-funciona"
+        keywords="como funciona beijo da rua, quiz namoro, avaliação apps namoro"
+      />
       
       <Header />
       <main className="pt-24 sm:pt-28 lg:pt-32">
