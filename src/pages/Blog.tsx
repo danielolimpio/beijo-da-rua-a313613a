@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { recentArticles } from "@/data/blogArticles";
 
@@ -50,6 +51,12 @@ const categories = [
 const Blog = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Blog - Dicas de Namoro e Relacionamentos"
+        description="Conquista, relacionamentos e autoconfiança: artigos e dicas para se destacar nos apps de namoro. Conteúdo atualizado para 2025."
+        canonical="https://beijodarua.com.br/blog"
+        keywords="blog namoro, dicas relacionamento, conquista, paquera, autoestima"
+      />
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>

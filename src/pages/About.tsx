@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Users, Heart, Target, Award, Facebook, Twitter, Instagram, Linkedin, Globe } from "lucide-react";
 import teamDaniel from "@/assets/team-daniel.jpg";
@@ -76,6 +77,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Sobre Nós - Beijo da Rua"
+        description="Conheça o Beijo da Rua: plataforma dedicada a ajudar homens brasileiros a encontrar relacionamentos com os melhores apps de namoro."
+        canonical="https://beijodarua.com.br/sobre-nos"
+        keywords="sobre beijo da rua, equipe beijo da rua, apps namoro brasil"
+      />
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>

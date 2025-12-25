@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -59,6 +60,12 @@ const Quiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Quiz: Descubra o App de Namoro Ideal Para Você"
+        description="Faça nosso quiz gratuito e descubra qual app de namoro combina com seu perfil. Resultados personalizados em menos de 3 minutos."
+        canonical="https://beijodarua.com.br/quiz"
+        keywords="quiz namoro, qual app de namoro, teste relacionamento, perfil amoroso"
+      />
       <StructuredData data={getWebSiteSchema()} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>

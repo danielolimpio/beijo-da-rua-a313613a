@@ -20,11 +20,38 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto
+      - name: Build do projeto (gera a SPA)
         run: npm run build
 
-      - name: Mostrar arquivos gerados
-        run: ls -la dist/
+      - name: Instalar Puppeteer
+        run: npm install puppeteer
+
+      - name: Instalar o servidor estático 'serve'
+        run: npm install -g serve
+
+      - name: Iniciar servidor local com a SPA
+        run: |
+          serve -s dist -p 5173 &
+          echo $! > .pidfile
+        # Roda o 'serve' em background
+
+      - name: Aguardar servidor ficar pronto
+        run: sleep 5
+
+      - name: Executar script de SSG com Puppeteer
+        run: node scripts/generate-static.js
+
+      - name: Matar o servidor local
+        run: |
+          if [ -f .pidfile ]; then
+            kill $(cat .pidfile) || true
+            rm .pidfile
+          fi
+
+      - name: Verificar estrutura SSG gerada (debug)
+        run: |
+          echo "Estrutura final do dist/:"
+          find dist -name "index.html" | head -50
 
       - name: Deploy FTP para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -35,6 +62,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
           server-dir: /
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
