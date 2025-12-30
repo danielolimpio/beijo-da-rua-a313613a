@@ -1,4 +1,4 @@
-name: Deploy Beijo da Rua (SSG) via FTP
+name: Deploy Beijo da Rua via FTP
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 15
     
     steps:
       - name: Checkout repository
@@ -20,26 +20,8 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install Chrome dependencies for Puppeteer
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libnss3 \
-            libxss1 \
-            libasound2 \
-            libatk-bridge2.0-0 \
-            libgtk-3-0 \
-            libgbm1 \
-            fonts-liberation \
-            libappindicator3-1 \
-            xdg-utils \
-            wget
-
       - name: Install project dependencies
         run: npm ci
-
-      - name: Install Puppeteer
-        run: npm install puppeteer@latest
 
       - name: Build Vite project
         run: npm run build
@@ -49,73 +31,8 @@ jobs:
           echo "📁 Checking dist/ contents..."
           ls -la dist/
           echo ""
-          echo "📄 Initial index.html (before SSG):"
+          echo "📄 index.html preview:"
           head -30 dist/index.html
-
-      - name: Start local server in background
-        run: |
-          npx serve -s dist -l 5173 &
-          sleep 5
-          echo "Server started on port 5173"
-
-      - name: Verify server is running
-        run: |
-          curl -I http://localhost:5173 || echo "Server check failed but continuing..."
-          sleep 2
-
-      - name: Run SSG (Static Site Generation)
-        run: node scripts/generate-static.js
-        env:
-          CI: true
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: false
-
-      - name: Kill local server
-        run: |
-          pkill -f "serve -s dist" || true
-          sleep 2
-
-      - name: List generated static pages
-        run: |
-          echo "📋 Generated index.html files:"
-          find dist -name "index.html" | sort
-          echo ""
-          echo "📊 Total pages generated: $(find dist -name 'index.html' | wc -l)"
-
-      - name: Verify SSG output - Check sobre-nos
-        run: |
-          echo "🔍 Checking /sobre-nos/index.html..."
-          if [ -f "dist/sobre-nos/index.html" ]; then
-            echo "✅ File exists!"
-            echo "--- Content preview (first 50 lines) ---"
-            head -50 dist/sobre-nos/index.html
-            echo ""
-            echo "--- Checking for content ---"
-            grep -o "<h1[^>]*>.*</h1>" dist/sobre-nos/index.html | head -5 || echo "No H1 found"
-            grep -o "<h2[^>]*>.*</h2>" dist/sobre-nos/index.html | head -5 || echo "No H2 found"
-          else
-            echo "❌ File NOT found!"
-            exit 1
-          fi
-
-      - name: Verify SSG output - Check blog
-        run: |
-          echo "🔍 Checking /blog/index.html..."
-          if [ -f "dist/blog/index.html" ]; then
-            echo "✅ File exists!"
-            grep -c "<a " dist/blog/index.html && echo "Links found" || echo "No links"
-          else
-            echo "❌ File NOT found!"
-          fi
-
-      - name: Verify canonical tags
-        run: |
-          echo "🔍 Checking canonical tags..."
-          for file in dist/sobre-nos/index.html dist/blog/index.html dist/quiz/index.html; do
-            if [ -f "$file" ]; then
-              echo "--- $file ---"
-              grep -o 'rel="canonical"[^>]*>' "$file" || echo "No canonical found"
-            fi
-          done
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
