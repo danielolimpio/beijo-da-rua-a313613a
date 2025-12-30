@@ -1,4 +1,4 @@
-name: Deploy Lovable via FTP na Hostinger (com SSG)
+name: Deploy Beijo da Rua (SSG) via FTP
 
 on:
   push:
@@ -8,47 +8,64 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
     steps:
-      - name: Clonar o repositório
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Configurar Node.js 18
-        uses: actions/setup-node@v3
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Install project dependencies
+        run: npm ci
 
-      - name: Instalar Puppeteer (necessário para o SSG)
-        run: npm install puppeteer
+      - name: Install Puppeteer with Chrome
+        run: |
+          npm install puppeteer
+          npx puppeteer browsers install chrome
 
-      - name: Build do projeto (gera a SPA em dist/)
+      - name: Build Vite project
         run: npm run build
 
-      - name: Iniciar servidor local com a SPA
+      - name: Verify dist directory
         run: |
-          npx serve -s dist &
-          echo $! > .pidfile
+          echo "📁 Checking dist/ contents..."
+          ls -la dist/
+          echo ""
+          echo "📄 Main index.html preview:"
+          head -50 dist/index.html
 
-      - name: Aguardar servidor ficar pronto
-        run: sleep 10
-
-      - name: Executar pré-renderização (SSG)
-        run: node scripts/generate-static.js
-
-      - name: Matar o servidor local
+      - name: Run SSG (Static Site Generation)
         run: |
-          if [ -f .pidfile ]; then
-            kill $(cat .pidfile)
-            rm .pidfile
+          echo "🚀 Starting SSG process..."
+          node scripts/generate-static.js
+        env:
+          CI: true
+
+      - name: List generated static pages
+        run: |
+          echo "📋 Generated index.html files:"
+          find dist -name "index.html" | sort
+          echo ""
+          echo "📊 Total pages: $(find dist -name 'index.html' | wc -l)"
+
+      - name: Verify SSG output (sample check)
+        run: |
+          echo "🔍 Checking sample page content..."
+          if [ -f "dist/sobre-nos/index.html" ]; then
+            echo "✓ /sobre-nos/index.html exists"
+            echo "First 30 lines:"
+            head -30 dist/sobre-nos/index.html
+          else
+            echo "⚠ /sobre-nos/index.html not found"
           fi
 
-      - name: Verificar estrutura SSG gerada
-        run: find dist -name "index.html" | sort
-
-      - name: Deploy FTP para Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           port: 21
@@ -56,6 +73,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
           server-dir: /
-          dangerous-clean-slate: false  # mais seguro
+          dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
