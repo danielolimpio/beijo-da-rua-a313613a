@@ -1,20 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * Static Site Generator Script
+ * Static Site Generator Script for Beijo da Rua
  * 
- * This script generates static HTML files for all routes after the Vite build.
- * It uses Puppeteer to render each page and extract the full HTML content.
+ * Generates static HTML files for all routes after Vite build.
+ * Uses Puppeteer to render each page and extract full HTML content.
  * 
  * Usage: node scripts/generate-static.js
- * 
- * Prerequisites:
- * - Run `npm run build` first to generate the dist/ folder
- * - Puppeteer must be installed
  */
 
 import puppeteer from 'puppeteer';
-import { spawn, execSync } from 'child_process';
+import { spawn } from 'child_process';
 import { mkdir, writeFile, readFile, access } from 'fs/promises';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
@@ -47,17 +43,16 @@ async function checkDistExists() {
 }
 
 // Wait for server to be ready by polling
-function waitForServer(maxAttempts = 30) {
+function waitForServer(maxAttempts = 60) {
   return new Promise((resolve, reject) => {
     let attempts = 0;
     
     const checkServer = () => {
       attempts++;
-      console.log(`  Checking server (attempt ${attempts}/${maxAttempts})...`);
       
       const req = http.get(BASE_URL, (res) => {
-        if (res.statusCode === 200) {
-          console.log('  ✓ Server is ready!');
+        if (res.statusCode === 200 || res.statusCode === 304) {
+          console.log(`  ✓ Server ready after ${attempts} attempts`);
           resolve(true);
         } else {
           retry();
@@ -68,7 +63,7 @@ function waitForServer(maxAttempts = 30) {
         retry();
       });
       
-      req.setTimeout(1000, () => {
+      req.setTimeout(2000, () => {
         req.destroy();
         retry();
       });
@@ -76,50 +71,15 @@ function waitForServer(maxAttempts = 30) {
     
     const retry = () => {
       if (attempts >= maxAttempts) {
-        reject(new Error('Server did not become ready in time'));
+        reject(new Error(`Server did not respond after ${maxAttempts} attempts`));
       } else {
         setTimeout(checkServer, 1000);
       }
     };
     
-    checkServer();
-  });
-}
-
-// Start a local server to serve the built files
-function startServer() {
-  return new Promise((resolve, reject) => {
-    console.log(`  Starting server on port ${PORT}...`);
-    
-    // Kill any process using the port first
-    try {
-      execSync(`lsof -ti:${PORT} | xargs kill -9 2>/dev/null || true`, { stdio: 'ignore' });
-    } catch (e) {
-      // Ignore errors - port might not be in use
-    }
-    
-    const server = spawn('npx', ['serve', DIST_DIR, '-p', PORT.toString(), '-s', '--no-clipboard'], {
-      stdio: ['pipe', 'pipe', 'pipe'],
-      shell: true,
-      detached: false
-    });
-
-    server.stdout.on('data', (data) => {
-      const output = data.toString().trim();
-      if (output) console.log(`  [serve] ${output}`);
-    });
-
-    server.stderr.on('data', (data) => {
-      const output = data.toString().trim();
-      if (output && !output.includes('WARN')) console.error(`  [serve error] ${output}`);
-    });
-
-    server.on('error', (err) => {
-      reject(err);
-    });
-
-    // Give server 2 seconds to start, then we'll poll for readiness
-    setTimeout(() => resolve(server), 2000);
+    // Start checking
+    console.log('  Waiting for server to be ready...');
+    setTimeout(checkServer, 2000);
   });
 }
 
@@ -128,20 +88,19 @@ function getOutputPath(route) {
   if (route === '/') {
     return join(DIST_DIR, 'index.html');
   }
-  // Remove leading slash and create folder structure
   const cleanRoute = route.replace(/^\//, '').replace(/\/$/, '');
   return join(DIST_DIR, cleanRoute, 'index.html');
 }
 
-// Process HTML to update canonical URLs and ensure proper structure
+// Process HTML to fix canonical URLs and ensure proper structure
 function processHtml(html, route) {
-  // Ensure canonical URL is correct for this route (with trailing slash)
+  // Build canonical URL with trailing slash (NO extra spaces)
   const canonicalUrl = route === '/' 
     ? `${SITE_URL}/` 
     : `${SITE_URL}${route}/`;
   
-  // Remove existing canonical links
-  html = html.replace(/<link[^>]*rel="canonical"[^>]*>/gi, '');
+  // Remove ALL existing canonical links
+  html = html.replace(/<link[^>]*rel=["']canonical["'][^>]*>/gi, '');
   
   // Add correct canonical link before </head>
   html = html.replace(
@@ -149,12 +108,11 @@ function processHtml(html, route) {
     `<link rel="canonical" href="${canonicalUrl}">\n</head>`
   );
 
-  // Ensure lang="pt-BR" is set correctly
+  // Ensure lang="pt-BR" is set correctly on <html> tag
   html = html.replace(
     /<html([^>]*)>/i,
     (match, attrs) => {
-      // Remove any existing lang attribute
-      const cleanAttrs = attrs.replace(/\s*lang="[^"]*"/gi, '');
+      const cleanAttrs = attrs.replace(/\s*lang=["'][^"']*["']/gi, '');
       return `<html lang="pt-BR"${cleanAttrs}>`;
     }
   );
@@ -168,42 +126,47 @@ async function renderRoute(browser, route) {
   
   try {
     const url = `${BASE_URL}${route}`;
-    console.log(`  Rendering: ${route}`);
     
-    // Set viewport for consistent rendering
-    await page.setViewport({ width: 1280, height: 800 });
+    // Set viewport
+    await page.setViewport({ width: 1280, height: 900 });
     
-    // Navigate to the page
+    // Navigate to the page with extended timeout
     await page.goto(url, { 
-      waitUntil: 'networkidle0',
-      timeout: 60000 
+      waitUntil: 'networkidle2',
+      timeout: 90000 
     });
 
-    // Wait for React to fully render - look for actual content
-    await page.waitForSelector('body', { timeout: 10000 });
+    // Wait for body to be present
+    await page.waitForSelector('body', { timeout: 15000 });
     
-    // Wait for specific content indicators (header, main content)
+    // Wait for React to render content
     try {
-      await page.waitForSelector('header, main, .min-h-screen', { timeout: 5000 });
+      await page.waitForFunction(
+        () => document.body.innerText.length > 200,
+        { timeout: 10000 }
+      );
     } catch (e) {
-      console.log(`    ⚠ No header/main found for ${route}, continuing...`);
+      console.log(`    ⚠ Limited content for ${route}, continuing...`);
     }
     
-    // Additional wait for dynamic content and images
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Additional wait for images and async content
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
     // Get the full HTML content
     let html = await page.content();
     
     // Verify content was rendered
-    const bodyContent = await page.evaluate(() => document.body.innerText.length);
-    if (bodyContent < 100) {
-      console.warn(`    ⚠ Warning: Very little content rendered for ${route} (${bodyContent} chars)`);
-    } else {
-      console.log(`    Content: ${bodyContent} characters`);
-    }
+    const stats = await page.evaluate(() => ({
+      textLength: document.body.innerText.length,
+      h1Count: document.querySelectorAll('h1').length,
+      h2Count: document.querySelectorAll('h2').length,
+      linkCount: document.querySelectorAll('a[href]').length
+    }));
     
-    // Process the HTML
+    console.log(`  ${route}`);
+    console.log(`    Text: ${stats.textLength} chars | H1: ${stats.h1Count} | H2: ${stats.h2Count} | Links: ${stats.linkCount}`);
+    
+    // Process the HTML (fix canonical, lang)
     html = processHtml(html, route);
 
     // Create directory structure and save file
@@ -213,10 +176,10 @@ async function renderRoute(browser, route) {
     
     console.log(`    ✓ Saved: ${outputPath.replace(DIST_DIR, 'dist')}`);
     
-    return true;
+    return { success: true, route, stats };
   } catch (error) {
-    console.error(`    ✗ Failed to render ${route}: ${error.message}`);
-    return false;
+    console.error(`  ✗ ${route}: ${error.message}`);
+    return { success: false, route, error: error.message };
   } finally {
     await page.close();
   }
@@ -224,86 +187,91 @@ async function renderRoute(browser, route) {
 
 // Main function
 async function main() {
-  console.log('\n🚀 Starting Static Site Generation...\n');
+  console.log('\n' + '='.repeat(60));
+  console.log('🚀 BEIJO DA RUA - Static Site Generation');
+  console.log('='.repeat(60) + '\n');
   
   // Check if dist exists
   const distExists = await checkDistExists();
   if (!distExists) {
-    console.error('❌ Error: dist/ directory not found. Run "npm run build" first.');
+    console.error('❌ dist/ directory not found. Run "npm run build" first.');
     process.exit(1);
   }
   console.log('✓ dist/ directory found\n');
   
   // Load routes
   const routes = await loadRoutes();
-  console.log(`📋 Found ${routes.length} routes to render\n`);
+  console.log(`📋 ${routes.length} routes to render\n`);
 
-  // Start local server
-  console.log('🖥️  Starting local server...');
-  const server = await startServer();
-  
-  // Wait for server to be ready
+  // Wait for server to be ready (assumes server is already started externally in CI)
+  console.log('🖥️  Connecting to local server...');
   try {
-    await waitForServer(30);
+    await waitForServer(60);
   } catch (e) {
-    console.error('❌ Server failed to start:', e.message);
-    server.kill();
+    console.error('❌ Could not connect to server:', e.message);
+    console.log('   Make sure "npx serve -s dist -l 5173" is running');
     process.exit(1);
   }
 
-  // Launch browser
+  // Launch browser with CI-friendly options
   console.log('\n🌐 Launching browser...');
   const browser = await puppeteer.launch({
     headless: 'new',
     args: [
-      '--no-sandbox', 
+      '--no-sandbox',
       '--disable-setuid-sandbox',
       '--disable-dev-shm-usage',
-      '--disable-gpu'
+      '--disable-gpu',
+      '--disable-extensions',
+      '--disable-background-networking',
+      '--disable-sync',
+      '--no-first-run',
+      '--single-process'
     ]
   });
   console.log('✓ Browser launched\n');
 
-  console.log('📄 Rendering pages...\n');
+  console.log('📄 Rendering pages:\n');
 
   // Track results
-  let success = 0;
-  let failed = 0;
+  const results = [];
 
-  // Render each route (with concurrency limit for stability)
-  const CONCURRENCY = 3;
-  for (let i = 0; i < routes.length; i += CONCURRENCY) {
-    const batch = routes.slice(i, i + CONCURRENCY);
-    const results = await Promise.all(batch.map(route => renderRoute(browser, route)));
-    results.forEach(result => result ? success++ : failed++);
+  // Render routes sequentially for stability in CI
+  for (const route of routes) {
+    const result = await renderRoute(browser, route);
+    results.push(result);
   }
 
   // Cleanup
   console.log('\n🧹 Cleaning up...');
   await browser.close();
-  
-  try {
-    server.kill('SIGTERM');
-  } catch (e) {
-    // Server might already be dead
-  }
 
-  console.log('\n' + '='.repeat(50));
-  console.log(`✅ Static Site Generation Complete!`);
-  console.log(`   Success: ${success}/${routes.length}`);
+  // Summary
+  const successful = results.filter(r => r.success).length;
+  const failed = results.filter(r => !r.success).length;
+
+  console.log('\n' + '='.repeat(60));
+  console.log('📊 SUMMARY');
+  console.log('='.repeat(60));
+  console.log(`   ✅ Success: ${successful}/${routes.length}`);
   if (failed > 0) {
-    console.log(`   Failed: ${failed}/${routes.length}`);
+    console.log(`   ❌ Failed: ${failed}/${routes.length}`);
+    console.log('\nFailed routes:');
+    results.filter(r => !r.success).forEach(r => {
+      console.log(`   - ${r.route}: ${r.error}`);
+    });
   }
-  console.log(`📁 Output directory: ${DIST_DIR}`);
-  console.log('='.repeat(50) + '\n');
+  console.log(`\n📁 Output: ${DIST_DIR}`);
+  console.log('='.repeat(60) + '\n');
   
+  // Exit with error if any failed
   if (failed > 0) {
     process.exit(1);
   }
 }
 
-// Run the script
+// Run
 main().catch(error => {
-  console.error('Fatal error:', error);
+  console.error('\n❌ FATAL ERROR:', error);
   process.exit(1);
 });
