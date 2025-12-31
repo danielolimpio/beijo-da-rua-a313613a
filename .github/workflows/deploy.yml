@@ -1,4 +1,4 @@
-name: Deploy Lovable via FTP na Hostinger
+name: Deploy Beijo da Rua (SSG) via FTP
 
 on:
   push:
@@ -8,26 +8,60 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
     steps:
-      - name: Clonar o repositório
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Configurar Node.js 18
-        uses: actions/setup-node@v3
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Install project dependencies
+        run: npm ci
 
-      - name: Build do projeto
+      - name: Build Vite project
         run: npm run build
 
-      - name: Mostrar arquivos gerados
-        run: ls -la dist/
+      - name: Verify dist directory exists
+        run: |
+          echo "📁 Checking dist/ contents..."
+          ls -la dist/
+          echo ""
+          echo "📄 Initial index.html (before SSG):"
+          head -30 dist/index.html
 
-      - name: Deploy FTP para Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Start local server in background
+        run: |
+          npx serve -s dist -l 5173 &
+          echo "⏳ Waiting for server to start..."
+          sleep 5
+          curl -s -o /dev/null -w "%{http_code}" http://localhost:5173 || echo "Server check"
+
+      - name: Run SSG (Static Site Generation)
+        run: node scripts/generate-static.js
+        env:
+          CI: true
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+
+      - name: Kill local server
+        run: pkill -f "serve -s dist" || true
+
+      - name: List generated static pages
+        run: |
+          echo "📋 Generated index.html files:"
+          find dist -name "index.html" | sort
+          echo ""
+          echo "📊 Total pages generated: $(find dist -name 'index.html' | wc -l)"
+
+      - name: Validate SSG Quality
+        run: node scripts/validate-static-html.js
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           port: 21
@@ -35,6 +69,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
           server-dir: /
-          dangerous-clean-slate: true
+          dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
