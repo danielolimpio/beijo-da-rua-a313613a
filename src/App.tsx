@@ -20,6 +20,9 @@ import Hinge from "./pages/apps/Hinge";
 import POF from "./pages/apps/POF";
 import FacebookDating from "./pages/apps/FacebookDating";
 import Skout from "./pages/apps/Skout";
+import MeetMe from "./pages/apps/MeetMe";
+import Eharmony from "./pages/apps/Eharmony";
+import Dating from "./pages/apps/Dating";
 import Dicas from "./pages/Dicas";
 import Blog from "./pages/Blog";
 import AutoestimaCategory from "./pages/blog/categories/Autoestima";
@@ -94,6 +97,9 @@ const App = () => (
           <Route path="/apps/pof" element={<POF />} />
           <Route path="/apps/facebook-dating" element={<FacebookDating />} />
           <Route path="/apps/skout" element={<Skout />} />
+          <Route path="/apps/meetme" element={<MeetMe />} />
+          <Route path="/apps/eharmony" element={<Eharmony />} />
+          <Route path="/apps/dating" element={<Dating />} />
           <Route path="/dicas" element={<Dicas />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/conquista" element={<ConquistaCategory />} />
