@@ -1,4 +1,4 @@
-name: Deploy Beijo da Rua (SSG) via FTP
+name: Deploy Lovable via FTP na Hostinger
 
 on:
   push:
@@ -8,130 +8,26 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Clonar o repositório
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js 18
-        uses: actions/setup-node@v4
+      - name: Configurar Node.js 18
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
-      - name: Install project dependencies
-        run: npm ci
+      - name: Instalar dependências
+        run: npm install
 
-      - name: Build Vite project
+      - name: Build do projeto
         run: npm run build
 
-      - name: Verify dist directory exists
-        run: |
-          echo "📁 Checking dist/ contents..."
-          ls -la dist/
-          echo ""
-          echo "📄 Initial index.html (before SSG):"
-          head -30 dist/index.html
+      - name: Mostrar arquivos gerados
+        run: ls -la dist/
 
-      - name: Start local server in background
-        run: |
-          npx serve -s dist -l 5173 &
-          echo "⏳ Waiting for server to start..."
-          sleep 5
-          curl -s -o /dev/null -w "%{http_code}" http://localhost:5173 || echo "Server check"
-
-      - name: Run SSG (Static Site Generation)
-        run: node scripts/generate-static.js
-        env:
-          CI: true
-          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
-
-      - name: Kill local server
-        run: pkill -f "serve -s dist" || true
-
-      - name: List generated static pages
-        run: |
-          echo "📋 Generated index.html files:"
-          find dist -name "index.html" | sort
-          echo ""
-          echo "📊 Total pages generated: $(find dist -name 'index.html' | wc -l)"
-
-      - name: Validate SSG Quality
-        run: |
-          echo "🔍 Validating static HTML quality..."
-          echo ""
-          
-          ERRORS=0
-          WARNINGS=0
-          TOTAL=0
-          
-          for file in $(find dist -name "index.html"); do
-            TOTAL=$((TOTAL + 1))
-            ROUTE="${file#dist}"
-            ROUTE="${ROUTE%/index.html}"
-            [ -z "$ROUTE" ] && ROUTE="/"
-            
-            # Check 1: H1 tag exists
-            H1_COUNT=$(grep -c "<h1" "$file" 2>/dev/null || echo "0")
-            if [ "$H1_COUNT" -eq 0 ]; then
-              echo "❌ $ROUTE - Missing H1 tag"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-            
-            # Check 2: Canonical with trailing slash (no spaces)
-            CANONICAL=$(grep -o 'rel="canonical"[^>]*href="[^"]*"' "$file" 2>/dev/null | head -1)
-            if [ -z "$CANONICAL" ]; then
-              echo "⚠️  $ROUTE - Missing canonical tag"
-              WARNINGS=$((WARNINGS + 1))
-            elif ! echo "$CANONICAL" | grep -q 'href="https://beijodarua.com.br[^"]*/"'; then
-              echo "⚠️  $ROUTE - Canonical missing trailing slash"
-              WARNINGS=$((WARNINGS + 1))
-            elif echo "$CANONICAL" | grep -q '/ "'; then
-              echo "⚠️  $ROUTE - Canonical has extra space before quote"
-              WARNINGS=$((WARNINGS + 1))
-            fi
-            
-            # Check 3: Content visible (not just empty React shell)
-            TEXT_LENGTH=$(grep -o '<body[^>]*>.*</body>' "$file" 2>/dev/null | sed 's/<[^>]*>//g' | wc -c)
-            if [ "$TEXT_LENGTH" -lt 500 ]; then
-              echo "❌ $ROUTE - Insufficient content ($TEXT_LENGTH chars)"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-            
-            # Check 4: Not just empty div#root
-            if grep -q '<div id="root"></div>' "$file" 2>/dev/null; then
-              echo "❌ $ROUTE - Empty React shell (div#root without content)"
-              ERRORS=$((ERRORS + 1))
-              continue
-            fi
-            
-            echo "✅ $ROUTE - OK (H1: $H1_COUNT, Content: ${TEXT_LENGTH}c)"
-          done
-          
-          echo ""
-          echo "════════════════════════════════════════"
-          echo "📊 VALIDATION SUMMARY"
-          echo "════════════════════════════════════════"
-          echo "   Total pages: $TOTAL"
-          echo "   ✅ Valid: $((TOTAL - ERRORS))"
-          echo "   ❌ Errors: $ERRORS"
-          echo "   ⚠️  Warnings: $WARNINGS"
-          echo "════════════════════════════════════════"
-          
-          if [ "$ERRORS" -gt 0 ]; then
-            echo ""
-            echo "❌ BUILD FAILED: $ERRORS pages have critical SEO issues"
-            exit 1
-          fi
-          
-          echo ""
-          echo "✅ All pages passed validation!"
-
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy FTP para Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           port: 21
@@ -139,6 +35,6 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
           server-dir: /
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
           dry-run: false
           log-level: verbose
