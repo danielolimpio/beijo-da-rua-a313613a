@@ -10,7 +10,6 @@
  */
 
 import { readFile } from 'fs/promises';
-import { glob } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
