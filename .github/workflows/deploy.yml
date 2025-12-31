@@ -57,17 +57,78 @@ jobs:
           echo ""
           echo "📊 Total pages generated: $(find dist -name 'index.html' | wc -l)"
 
-      - name: Verify SSG output
+      - name: Validate SSG Quality
         run: |
-          echo "🔍 Verifying static HTML content..."
-          for path in sobre-nos blog apps/tinder quiz; do
-            if [ -f "dist/$path/index.html" ]; then
-              echo "✅ /$path/ - OK"
-              grep -o "<h1[^>]*>.*</h1>" "dist/$path/index.html" | head -1 || echo "  (no H1)"
-            else
-              echo "❌ /$path/ - MISSING"
+          echo "🔍 Validating static HTML quality..."
+          echo ""
+          
+          ERRORS=0
+          WARNINGS=0
+          TOTAL=0
+          
+          for file in $(find dist -name "index.html"); do
+            TOTAL=$((TOTAL + 1))
+            ROUTE="${file#dist}"
+            ROUTE="${ROUTE%/index.html}"
+            [ -z "$ROUTE" ] && ROUTE="/"
+            
+            # Check 1: H1 tag exists
+            H1_COUNT=$(grep -c "<h1" "$file" 2>/dev/null || echo "0")
+            if [ "$H1_COUNT" -eq 0 ]; then
+              echo "❌ $ROUTE - Missing H1 tag"
+              ERRORS=$((ERRORS + 1))
+              continue
             fi
+            
+            # Check 2: Canonical with trailing slash (no spaces)
+            CANONICAL=$(grep -o 'rel="canonical"[^>]*href="[^"]*"' "$file" 2>/dev/null | head -1)
+            if [ -z "$CANONICAL" ]; then
+              echo "⚠️  $ROUTE - Missing canonical tag"
+              WARNINGS=$((WARNINGS + 1))
+            elif ! echo "$CANONICAL" | grep -q 'href="https://beijodarua.com.br[^"]*/"'; then
+              echo "⚠️  $ROUTE - Canonical missing trailing slash"
+              WARNINGS=$((WARNINGS + 1))
+            elif echo "$CANONICAL" | grep -q '/ "'; then
+              echo "⚠️  $ROUTE - Canonical has extra space before quote"
+              WARNINGS=$((WARNINGS + 1))
+            fi
+            
+            # Check 3: Content visible (not just empty React shell)
+            TEXT_LENGTH=$(grep -o '<body[^>]*>.*</body>' "$file" 2>/dev/null | sed 's/<[^>]*>//g' | wc -c)
+            if [ "$TEXT_LENGTH" -lt 500 ]; then
+              echo "❌ $ROUTE - Insufficient content ($TEXT_LENGTH chars)"
+              ERRORS=$((ERRORS + 1))
+              continue
+            fi
+            
+            # Check 4: Not just empty div#root
+            if grep -q '<div id="root"></div>' "$file" 2>/dev/null; then
+              echo "❌ $ROUTE - Empty React shell (div#root without content)"
+              ERRORS=$((ERRORS + 1))
+              continue
+            fi
+            
+            echo "✅ $ROUTE - OK (H1: $H1_COUNT, Content: ${TEXT_LENGTH}c)"
           done
+          
+          echo ""
+          echo "════════════════════════════════════════"
+          echo "📊 VALIDATION SUMMARY"
+          echo "════════════════════════════════════════"
+          echo "   Total pages: $TOTAL"
+          echo "   ✅ Valid: $((TOTAL - ERRORS))"
+          echo "   ❌ Errors: $ERRORS"
+          echo "   ⚠️  Warnings: $WARNINGS"
+          echo "════════════════════════════════════════"
+          
+          if [ "$ERRORS" -gt 0 ]; then
+            echo ""
+            echo "❌ BUILD FAILED: $ERRORS pages have critical SEO issues"
+            exit 1
+          fi
+          
+          echo ""
+          echo "✅ All pages passed validation!"
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
