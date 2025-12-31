@@ -17,7 +17,7 @@ import badooLogo from "@/assets/badoo-logo.jpeg";
 import hingeLogo from "@/assets/hinge-logo.jpeg";
 import pofLogo from "@/assets/pof-logo.jpeg";
 import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
-import parperfeitoLogo from "@/assets/parperfeito-logo.jpeg";
+import skoutLogo from "@/assets/skout-logo.png";
 
 const DatingApps = () => {
   const apps = [
@@ -110,15 +110,15 @@ const DatingApps = () => {
       slug: "/apps/facebook-dating"
     },
     {
-      name: "ParPerfeito",
-      description: "O site de namoro brasileiro focado em relacionamentos sérios e duradouros",
-      rating: 4.2,
-      users: "16M+",
-      logo: parperfeitoLogo,
-      pros: ["Foco em relacionamento sério", "Sistema de compatibilidade", "Maioria feminina", "20+ anos no Brasil"],
-      cons: ["Recursos premium pagos", "Interface tradicional"],
-      category: "Relacionamento Sério",
-      slug: "/apps/parperfeito"
+      name: "Skout",
+      description: "Conecte-se com pessoas do mundo inteiro e faça novas amizades",
+      rating: 4.1,
+      users: "50M+",
+      logo: skoutLogo,
+      pros: ["Conexões internacionais", "Lives e transmissões", "Shake to Chat", "180+ países"],
+      cons: ["Mais focado em amizade", "Maioria masculina (58%)"],
+      category: "Global",
+      slug: "/apps/skout"
     }
   ];
 
