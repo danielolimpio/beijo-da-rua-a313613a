@@ -22,7 +22,11 @@ import FacebookDating from "./pages/apps/FacebookDating";
 import ParPerfeito from "./pages/apps/ParPerfeito";
 import Dicas from "./pages/Dicas";
 import Blog from "./pages/Blog";
-import Category from "./pages/blog/Category";
+import AutoestimaCategory from "./pages/blog/categories/Autoestima";
+import RelacionamentoCategory from "./pages/blog/categories/Relacionamento";
+import PaqueraCategory from "./pages/blog/categories/Paquera";
+import AplicativosCategory from "./pages/blog/categories/Aplicativos";
+import ConquistaCategory from "./pages/blog/categories/Conquista";
 import ComoAbordarUmaMulherComConfianca from "./pages/blog/posts/ComoAbordarUmaMulherComConfianca";
 import OsSegredosDeUmPerfilConquistador from "./pages/blog/posts/OsSegredosDeUmPerfilConquistador";
 import CantadasIrresistiveisQueFuncionam from "./pages/blog/posts/CantadasIrresistiveisQueFuncionam";
@@ -92,7 +96,11 @@ const App = () => (
           <Route path="/apps/parperfeito" element={<ParPerfeito />} />
           <Route path="/dicas" element={<Dicas />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:category" element={<Category />} />
+          <Route path="/blog/conquista" element={<ConquistaCategory />} />
+          <Route path="/blog/relacionamento" element={<RelacionamentoCategory />} />
+          <Route path="/blog/paquera" element={<PaqueraCategory />} />
+          <Route path="/blog/aplicativos" element={<AplicativosCategory />} />
+          <Route path="/blog/autoestima" element={<AutoestimaCategory />} />
           <Route path="/blog/posts/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
           <Route path="/blog/posts/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
           <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
