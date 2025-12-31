@@ -215,8 +215,16 @@ async function main() {
 
   // Launch browser with CI-friendly options
   console.log('\n🌐 Launching browser...');
+  
+  // Use system Chrome if available (GitHub Actions ubuntu-latest has Chrome pre-installed)
+  const executablePath = process.env.PUPPETEER_EXECUTABLE_PATH || null;
+  if (executablePath) {
+    console.log(`  Using system Chrome: ${executablePath}`);
+  }
+  
   const browser = await puppeteer.launch({
     headless: 'new',
+    executablePath: executablePath,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
