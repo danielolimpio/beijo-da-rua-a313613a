@@ -209,7 +209,7 @@ const DatingApps = () => {
                       {app.logo && (
                         <img src={app.logo} alt={`${app.name} logo`} className="w-12 h-12 rounded-lg" />
                       )}
-                      {app.name !== "Skout" && <CardTitle className="text-2xl">{app.name}</CardTitle>}
+                      <CardTitle className="text-2xl">{app.name}</CardTitle>
                     </div>
                     <Badge variant="secondary">{app.category}</Badge>
                   </div>

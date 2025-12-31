@@ -26,9 +26,12 @@ const Skout = () => {
               className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-lg bg-white p-4"
             />
             <div className="text-center md:text-left">
-              <h1 className="text-2xl font-semibold mb-4">
-                Conecte-se com pessoas do mundo inteiro e faça novas amizades
+              <h1 className="text-5xl font-bold mb-4">
+                Skout
               </h1>
+              <p className="text-2xl font-semibold mb-4">
+                Conecte-se com pessoas do mundo inteiro e faça novas amizades
+              </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <Badge className="bg-white text-[#00A4E4] hover:bg-white/90">
                   <Star className="w-4 h-4 mr-1 fill-[#00A4E4]" />
