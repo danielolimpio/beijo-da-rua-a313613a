@@ -223,8 +223,9 @@ async function main() {
   }
   
   const browser = await puppeteer.launch({
-    headless: 'new',
-    executablePath: executablePath,
+    headless: true,
+    executablePath: executablePath || undefined,
+    protocolTimeout: 180000,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -234,7 +235,10 @@ async function main() {
       '--disable-background-networking',
       '--disable-sync',
       '--no-first-run',
-      '--single-process'
+      '--disable-features=site-per-process',
+      '--disable-background-timer-throttling',
+      '--disable-renderer-backgrounding',
+      '--mute-audio'
     ]
   });
   console.log('✓ Browser launched\n');
