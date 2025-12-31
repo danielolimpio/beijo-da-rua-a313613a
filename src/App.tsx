@@ -101,6 +101,7 @@ const App = () => (
           <Route path="/blog/paquera" element={<PaqueraCategory />} />
           <Route path="/blog/aplicativos" element={<AplicativosCategory />} />
           <Route path="/blog/autoestima" element={<AutoestimaCategory />} />
+          {/* Blog posts - rotas com /posts/ */}
           <Route path="/blog/posts/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
           <Route path="/blog/posts/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
           <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
@@ -110,6 +111,16 @@ const App = () => (
           <Route path="/blog/posts/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
           <Route path="/blog/posts/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
           <Route path="/blog/posts/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
+          {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
+          <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
+          <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
+          <Route path="/blog/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
+          <Route path="/blog/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
+          <Route path="/blog/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
+          <Route path="/blog/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
+          <Route path="/blog/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
+          <Route path="/blog/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
+          <Route path="/blog/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
