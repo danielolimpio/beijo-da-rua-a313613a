@@ -18,6 +18,9 @@ import hingeLogo from "@/assets/hinge-logo.jpeg";
 import pofLogo from "@/assets/pof-logo.jpeg";
 import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
 import skoutLogo from "@/assets/skout-logo.png";
+import meetmeLogo from "@/assets/meetme-logo.jpeg";
+import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
+import datingLogo from "@/assets/dating-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -119,6 +122,39 @@ const DatingApps = () => {
       cons: ["Mais focado em amizade", "Maioria masculina (58%)"],
       category: "Global",
       slug: "/apps/skout"
+    },
+    {
+      name: "MeetMe",
+      description: "Conheça novas pessoas através de lives, jogos e chat interativo",
+      rating: 4.2,
+      users: "100M+",
+      logo: meetmeLogo,
+      pros: ["Lives e entretenimento", "Jogos sociais", "Chat gratuito", "Ambiente descontraído"],
+      cons: ["Muitos buscam só amizade", "Anúncios na versão gratuita"],
+      category: "Social",
+      slug: "/apps/meetme"
+    },
+    {
+      name: "eHarmony",
+      description: "O site de relacionamentos sérios #1 do mundo com algoritmo científico",
+      rating: 4.4,
+      users: "66M+",
+      logo: eharmonyLogo,
+      pros: ["Algoritmo de compatibilidade", "Equilíbrio de gênero (52/48)", "Foco em casamento", "2M+ casamentos"],
+      cons: ["Questionário longo", "Plano premium mais caro"],
+      category: "Relacionamento Sério",
+      slug: "/apps/eharmony"
+    },
+    {
+      name: "Dating.com",
+      description: "Conheça pessoas do mundo inteiro com tradução automática em 32 idiomas",
+      rating: 4.3,
+      users: "40M+",
+      logo: datingLogo,
+      pros: ["Tradução em 32 idiomas", "200+ países", "Videochamadas HD", "Presentes reais"],
+      cons: ["Sistema de créditos", "Distância pode ser desafio"],
+      category: "Internacional",
+      slug: "/apps/dating"
     }
   ];
 
