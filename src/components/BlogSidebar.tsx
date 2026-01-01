@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Heart, Users, MessageCircle, Smartphone, Sparkles, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,14 @@ import tinderLogo from "@/assets/tinder-logo.jpeg";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import happnLogo from "@/assets/happn-logo.jpg";
 import okcupidLogo from "@/assets/okcupid-logo.jpeg";
+import badooLogo from "@/assets/badoo-logo.jpeg";
+import hingeLogo from "@/assets/hinge-logo.jpeg";
+import pofLogo from "@/assets/pof-logo.jpeg";
+import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
+import meetmeLogo from "@/assets/meetme-logo.jpeg";
+import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
+import datingLogo from "@/assets/dating-logo.jpeg";
+import skoutLogo from "@/assets/skout-logo.png";
 import { SidebarAd, SidebarMiddleAd, SidebarBottomAd, SidebarFloating1Ad, SidebarFloating2Ad } from "@/components/EzoicAd";
 
 interface BlogSidebarProps {
@@ -45,30 +54,35 @@ const categories = [
   }
 ];
 
-const datingApps = [
-  {
-    name: "Tinder",
-    url: "/apps/tinder",
-    logo: tinderLogo
-  },
-  {
-    name: "Bumble",
-    url: "/apps/bumble",
-    logo: bumbleLogo
-  },
-  {
-    name: "Happn",
-    url: "/apps/happn",
-    logo: happnLogo
-  },
-  {
-    name: "OkCupid",
-    url: "/apps/okcupid",
-    logo: okcupidLogo
-  }
+const allDatingApps = [
+  { name: "Tinder", url: "/apps/tinder/", logo: tinderLogo },
+  { name: "Bumble", url: "/apps/bumble/", logo: bumbleLogo },
+  { name: "Happn", url: "/apps/happn/", logo: happnLogo },
+  { name: "OkCupid", url: "/apps/okcupid/", logo: okcupidLogo },
+  { name: "Badoo", url: "/apps/badoo/", logo: badooLogo },
+  { name: "Hinge", url: "/apps/hinge/", logo: hingeLogo },
+  { name: "POF", url: "/apps/pof/", logo: pofLogo },
+  { name: "Facebook Dating", url: "/apps/facebook-dating/", logo: facebookDatingLogo },
+  { name: "MeetMe", url: "/apps/meetme/", logo: meetmeLogo },
+  { name: "eharmony", url: "/apps/eharmony/", logo: eharmonyLogo },
+  { name: "Dating.com", url: "/apps/dating/", logo: datingLogo },
+  { name: "Skout", url: "/apps/skout/", logo: skoutLogo },
 ];
 
+// Função para embaralhar array (Fisher-Yates)
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
+  // Seleciona 4 apps aleatórios a cada renderização
+  const randomApps = useMemo(() => shuffleArray(allDatingApps).slice(0, 4), []);
+
   return (
     <div className="space-y-6">
       {/* Sidebar Top Ad */}
@@ -113,7 +127,7 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
         </CardHeader>
         <CardContent>
           <ul className="space-y-3">
-            {datingApps.map((app) => (
+            {randomApps.map((app) => (
               <li key={app.name}>
                 <a
                   href={app.url}
