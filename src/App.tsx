@@ -39,6 +39,7 @@ import TecnicasControlarNervosismoPaquera from "./pages/blog/posts/TecnicasContr
 import FrasesDeEfeitoQueDeixamMulherInteressada from "./pages/blog/posts/FrasesDeEfeitoQueDeixamMulherInteressada";
 import ComoCriarConexoesReaisEmApps from "./pages/blog/posts/ComoCriarConexoesReaisEmApps";
 import ErrosFataisQueDestroemSeuCharme from "./pages/blog/posts/ErrosFataisQueDestroemSeuCharme";
+import LinguagemCorporalPoderosa from "./pages/blog/posts/LinguagemCorporalPoderosa";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -117,6 +118,7 @@ const App = () => (
           <Route path="/blog/posts/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
           <Route path="/blog/posts/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
           <Route path="/blog/posts/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
+          <Route path="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
           {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
           <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
           <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
@@ -127,6 +129,7 @@ const App = () => (
           <Route path="/blog/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
           <Route path="/blog/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
           <Route path="/blog/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
+          <Route path="/blog/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />

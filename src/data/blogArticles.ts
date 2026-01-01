@@ -8,6 +8,7 @@ import articleNervosismoPaquera from "@/assets/article-nervosismo-paquera.jpg";
 import articleFrasesEfeito from "@/assets/article-frases-efeito.jpg";
 import articleConexoesReais from "@/assets/article-conexoes-reais-apps.jpg";
 import articleErrosFataisCharme from "@/assets/article-erros-fatais-charme.jpg";
+import articleLinguagemCorporal from "@/assets/article-linguagem-corporal.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -23,6 +24,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 10,
+    title: "Linguagem Corporal Poderosa na Hora de Conquistar",
+    excerpt: "Seus gestos falam mais que palavras. Aprenda postura, olhar e movimentos que transmitem segurança e atração imediata.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleLinguagemCorporal,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "1 de janeiro de 2026",
+    link: "/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar"
+  },
   {
     id: 9,
     title: "Erros Fatais Que Destroem Seu Charme na Primeira Impressão",
