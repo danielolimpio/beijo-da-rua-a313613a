@@ -9,6 +9,7 @@ import articleFrasesEfeito from "@/assets/article-frases-efeito.jpg";
 import articleConexoesReais from "@/assets/article-conexoes-reais-apps.jpg";
 import articleErrosFataisCharme from "@/assets/article-erros-fatais-charme.jpg";
 import articleLinguagemCorporal from "@/assets/article-linguagem-corporal.jpg";
+import articlePrimeiroEncontro from "@/assets/article-primeiro-encontro.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -24,6 +25,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 11,
+    title: "Estratégias para Ser Inesquecível no Primeiro Encontro",
+    excerpt: "Deixe uma marca positiva desde o início. Dicas de comportamento, escuta e atitude para garantir um segundo encontro.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articlePrimeiroEncontro,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "3 de janeiro de 2026",
+    link: "/blog/posts/estrategias-primeiro-encontro"
+  },
   {
     id: 10,
     title: "Linguagem Corporal Poderosa na Hora de Conquistar",
