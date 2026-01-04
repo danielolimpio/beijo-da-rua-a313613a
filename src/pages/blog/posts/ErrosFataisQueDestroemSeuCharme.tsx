@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -792,6 +793,12 @@ const ErrosFataisQueDestroemSeuCharme = () => {
             </div>
           </div>
         </div>
+
+        {/* Related Articles */}
+        <RelatedArticles 
+          currentArticleLink="/blog/posts/erros-fatais-que-destroem-seu-charme" 
+          category="conquista" 
+        />
 
       </div>
     </BlogArticleLayout>

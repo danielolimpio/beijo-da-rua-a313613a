@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield, Brain, HandMetal, Activity, Scale, Wind, User, Smile, Move, Timer, Quote, BookOpen, HelpCircle, Briefcase, Zap, Coffee, Smartphone, Star, Award } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -74,6 +75,7 @@ const ComoSerAutenticoEAtraente = () => {
         <p className="text-muted-foreground leading-relaxed mb-6">
           Agora pense na última vez em que você se esforçou para "cair bem". Talvez tenha exagerado na simpatia, segurado uma opinião incômoda, ou até adaptado seu jeito de falar para parecer mais "profissional", "descolado" ou "confiante". No fundo, você sabia: aquilo não era você. E, pior: por mais que tenha funcionado na hora, deixou um gosto de vazio. Como se tivesse alugado uma máscara por uma noite — útil, mas pesada.
         </p>
+
 
         <ArticleAds.AfterFirstParagraph />
 
@@ -671,6 +673,12 @@ const ComoSerAutenticoEAtraente = () => {
           Texto publicado em 04 de janeiro de 2026. Todos os direitos reservados.<br />
           Conteúdo revisado por especialistas em psicologia positiva e comunicação humana.
         </p>
+
+        {/* Related Articles */}
+        <RelatedArticles 
+          currentArticleLink="/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo" 
+          category="autoestima" 
+        />
 
       </div>
     </BlogArticleLayout>

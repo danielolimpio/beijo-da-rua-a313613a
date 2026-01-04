@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield, Brain, HandMetal, Activity, Scale, Wind, User, Smile, Move, Timer, Quote, BookOpen, HelpCircle } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -879,6 +880,12 @@ const LinguagemCorporalPoderosa = () => {
             Fazer o Quiz Agora
           </Link>
         </div>
+
+        {/* Related Articles */}
+        <RelatedArticles 
+          currentArticleLink="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar" 
+          category="conquista" 
+        />
 
       </div>
     </BlogArticleLayout>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -1159,6 +1160,12 @@ const OsSegredosDeUmPerfilConquistador = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Related Articles */}
+              <RelatedArticles 
+                currentArticleLink="/blog/posts/os-segredos-de-um-perfil-conquistador" 
+                category="conquista" 
+              />
             </article>
 
             {/* Sidebar */}
