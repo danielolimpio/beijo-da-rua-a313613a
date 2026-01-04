@@ -1,4 +1,5 @@
 import { Heart, MessageCircle, Clock, Lightbulb, CheckCircle, AlertTriangle, Target, Shield } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -542,6 +543,12 @@ const ComoConvidarMulherSairSemParecerDesesperado = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Related Articles */}
+              <RelatedArticles 
+                currentArticleLink="/blog/posts/como-convidar-mulher-sair-sem-parecer-desesperado" 
+                category="conquista" 
+              />
             </div>
             
             {/* Sidebar */}

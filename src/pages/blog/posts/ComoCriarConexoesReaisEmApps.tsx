@@ -1,4 +1,5 @@
 import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle, Globe, Share2, Brain, Users, Shield, Target, Sparkles, Clock, Smartphone, MessageSquare, Calendar, UserCheck } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -806,6 +807,12 @@ const ComoCriarConexoesReaisEmApps = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Related Articles */}
+              <RelatedArticles 
+                currentArticleLink="/blog/posts/como-criar-conexoes-reais-em-apps" 
+                category="apps-de-namoro" 
+              />
 
               {/* Bottom of Page Ad */}
               <BottomOfPageAd />

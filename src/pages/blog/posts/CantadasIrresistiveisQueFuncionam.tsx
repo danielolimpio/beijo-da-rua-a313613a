@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Heart, MessageCircle, Lightbulb, CheckCircle2, XCircle, Sparkles, Users, MapPin, Share2, Facebook, Twitter, Globe, Instagram, Linkedin } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
@@ -571,6 +572,12 @@ const CantadasIrresistiveisQueFuncionam = () => {
                   </div>
                 </div>
               </div>
+
+              {/* Related Articles */}
+              <RelatedArticles 
+                currentArticleLink="/blog/posts/cantadas-irresistiveis-que-funcionam" 
+                category="conquista" 
+              />
             </article>
 
             {/* Sidebar */}

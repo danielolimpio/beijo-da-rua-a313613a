@@ -1,4 +1,5 @@
 import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle, Clock, Users, Smile, Target, Star, Coffee, Sparkles, BookOpen, UserCheck, MessageSquare } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -916,6 +917,11 @@ const EstrategiasPrimeiroEncontro = () => {
                   </div>
                 </div>
 
+                {/* Related Articles */}
+                <RelatedArticles 
+                  currentArticleLink="/blog/posts/estrategias-primeiro-encontro" 
+                  category="conquista" 
+                />
               </div>
             </div>
             

@@ -1,4 +1,5 @@
 import { Heart, Brain, Lightbulb, CheckCircle, AlertTriangle, Wind, Eye, Users, Phone, Share2 } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -728,9 +729,15 @@ const TecnicasControlarNervosismoPaquera = () => {
                         </a>
                       </div>
                     </div>
-                  </div>
                 </div>
+
+                {/* Related Articles */}
+                <RelatedArticles 
+                  currentArticleLink="/blog/posts/tecnicas-controlar-nervosismo-paquera" 
+                  category="conquista" 
+                />
               </div>
+            </div>
             </div>
             
             {/* Sidebar */}

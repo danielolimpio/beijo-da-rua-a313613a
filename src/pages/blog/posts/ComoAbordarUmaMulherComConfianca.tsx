@@ -1,4 +1,5 @@
 import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle, Globe, Share2 } from "lucide-react";
+import RelatedArticles from "@/components/RelatedArticles";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
@@ -693,6 +694,12 @@ const ComoAbordarUmaMulherComConfianca = () => {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Related Articles */}
+              <RelatedArticles 
+                currentArticleLink="/blog/posts/como-abordar-uma-mulher-com-confianca" 
+                category="conquista" 
+              />
             </div>
 
             {/* Sidebar */}
