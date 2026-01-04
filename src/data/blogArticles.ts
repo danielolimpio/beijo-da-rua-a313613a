@@ -10,6 +10,7 @@ import articleConexoesReais from "@/assets/article-conexoes-reais-apps.jpg";
 import articleErrosFataisCharme from "@/assets/article-erros-fatais-charme.jpg";
 import articleLinguagemCorporal from "@/assets/article-linguagem-corporal.jpg";
 import articlePrimeiroEncontro from "@/assets/article-primeiro-encontro.jpg";
+import articleAutenticoAtraente from "@/assets/article-autentico-atraente.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -25,6 +26,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 12,
+    title: "Como Ser Autêntico e Atraente ao Mesmo Tempo",
+    excerpt: "Atração verdadeira vem da essência. Descubra como mostrar quem você é sem fingir — e ainda assim encantar de verdade.",
+    category: "Autoestima",
+    categoryId: "autoestima",
+    image: articleAutenticoAtraente,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "4 de janeiro de 2026",
+    link: "/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo"
+  },
   {
     id: 11,
     title: "Estratégias para Ser Inesquecível no Primeiro Encontro",
