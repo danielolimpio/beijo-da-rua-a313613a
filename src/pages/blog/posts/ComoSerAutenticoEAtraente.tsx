@@ -3,7 +3,7 @@ import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield, Brain, HandMetal, Activity, Scale, Wind, User, Smile, Move, Timer, Quote, BookOpen, HelpCircle, Briefcase, Zap, Coffee, Smartphone, Star, Award } from "lucide-react";
-import authorImage from "@/assets/team-daniel.jpg";
+import authorImage from "@/assets/team-marina.jpg";
 import articleImage from "@/assets/article-autentico-atraente.jpg";
 import {
   Accordion,
@@ -55,11 +55,11 @@ const ComoSerAutenticoEAtraente = () => {
       <div className="flex items-center gap-4 mb-8 pb-8 border-b border-border">
         <img 
           src={authorImage} 
-          alt="Daniel Olimpio" 
+          alt="Marina Santos" 
           className="w-12 h-12 rounded-full object-cover"
         />
         <div>
-          <p className="font-semibold text-foreground">Daniel Olimpio</p>
+          <p className="font-semibold text-foreground">Marina Santos</p>
           <p className="text-sm text-muted-foreground">4 de janeiro de 2026 · Leitura de 16 min</p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import authorImage from "@/assets/team-daniel.jpg";
+import authorImageMarina from "@/assets/team-marina.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
@@ -11,6 +12,7 @@ import articleErrosFataisCharme from "@/assets/article-erros-fatais-charme.jpg";
 import articleLinguagemCorporal from "@/assets/article-linguagem-corporal.jpg";
 import articlePrimeiroEncontro from "@/assets/article-primeiro-encontro.jpg";
 import articleAutenticoAtraente from "@/assets/article-autentico-atraente.jpg";
+import articlePoderSilencio from "@/assets/article-poder-silencio.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -27,14 +29,26 @@ export interface BlogArticle {
 
 export const recentArticles: BlogArticle[] = [
   {
+    id: 13,
+    title: "O Poder do Silêncio: Quando Falar Menos Conquista Mais",
+    excerpt: "Menos fala, mais presença. Aprenda a usar pausas, escuta ativa e mistério para gerar curiosidade e desejo genuíno.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    image: articlePoderSilencio,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "5 de janeiro de 2026",
+    link: "/blog/posts/o-poder-do-silencio"
+  },
+  {
     id: 12,
     title: "Como Ser Autêntico e Atraente ao Mesmo Tempo",
     excerpt: "Atração verdadeira vem da essência. Descubra como mostrar quem você é sem fingir — e ainda assim encantar de verdade.",
     category: "Autoestima",
     categoryId: "autoestima",
     image: articleAutenticoAtraente,
-    author: "Daniel Olimpio",
-    authorImage: authorImage,
+    author: "Marina Santos",
+    authorImage: authorImageMarina,
     date: "4 de janeiro de 2026",
     link: "/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo"
   },
