@@ -17,20 +17,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
 
-    /* Tinder Pink - Strong vibrant pink */
-    --primary: 350 100% 63%;
+    --primary: 349 100% 68%;
     --primary-foreground: 0 0% 100%;
 
-    /* Tinder Coral Orange */
-    --secondary: 12 100% 64%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 186 48% 91%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 350 30% 96%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 0 0% 45%;
 
-    /* Soft pink accent */
-    --accent: 350 80% 92%;
-    --accent-foreground: 350 100% 35%;
+    --accent: 280 50% 90%;
+    --accent-foreground: 0 0% 15%;
 
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
@@ -41,22 +38,21 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 350 20% 90%;
-    --input: 350 20% 90%;
-    --ring: 350 100% 63%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 349 100% 68%;
 
     --radius: 0.75rem;
 
-    /* Tinder-style gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(350 80% 94%) 0%, hsl(12 80% 94%) 100%);
+    /* Custom tokens for Beijo da Rua */
+    --gradient-hero: linear-gradient(135deg, hsl(186 48% 91%) 0%, hsl(280 50% 90%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 71% 95%) 0%, hsl(142 71% 85%) 100%);
-    --gradient-trust: linear-gradient(135deg, hsl(350 80% 96%) 0%, hsl(12 80% 96%) 100%);
-    --gradient-footer: linear-gradient(135deg, hsl(12 80% 96%) 0%, hsl(350 80% 96%) 100%);
-    --gradient-tinder: linear-gradient(135deg, hsl(350 100% 63%) 0%, hsl(12 100% 64%) 100%);
+    --gradient-trust: linear-gradient(135deg, hsl(186 48% 95%) 0%, hsl(280 50% 95%) 100%);
+    --gradient-footer: linear-gradient(135deg, hsl(280 50% 95%) 0%, hsl(186 48% 95%) 100%);
 
-    --shadow-sm: 0 2px 8px rgba(255, 68, 88, 0.08);
-    --shadow-md: 0 4px 16px rgba(255, 68, 88, 0.12);
-    --shadow-lg: 0 8px 32px rgba(255, 68, 88, 0.18);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
