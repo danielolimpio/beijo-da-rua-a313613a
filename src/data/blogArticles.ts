@@ -13,6 +13,7 @@ import articleLinguagemCorporal from "@/assets/article-linguagem-corporal.jpg";
 import articlePrimeiroEncontro from "@/assets/article-primeiro-encontro.jpg";
 import articleAutenticoAtraente from "@/assets/article-autentico-atraente.jpg";
 import articlePoderSilencio from "@/assets/article-poder-silencio.jpg";
+import articleDomineEmocoes from "@/assets/article-domine-emocoes.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -28,6 +29,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 14,
+    title: "Domine Suas Emoções e Atraia o Tipo Certo de Mulher",
+    excerpt: "Controle emocional é a base da atração madura. Entenda como equilíbrio interior atrai relacionamentos saudáveis e duradouros.",
+    category: "Autoestima",
+    categoryId: "autoestima",
+    image: articleDomineEmocoes,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "6 de janeiro de 2026",
+    link: "/blog/posts/domine-suas-emocoes-e-atraia"
+  },
   {
     id: 13,
     title: "O Poder do Silêncio: Quando Falar Menos Conquista Mais",
