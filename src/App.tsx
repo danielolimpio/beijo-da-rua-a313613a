@@ -44,6 +44,7 @@ import EstrategiasPrimeiroEncontro from "./pages/blog/posts/EstrategiasPrimeiroE
 import ComoSerAutenticoEAtraente from "./pages/blog/posts/ComoSerAutenticoEAtraente";
 import OPoderDoSilencio from "./pages/blog/posts/OPoderDoSilencio";
 import DomineEmocoesAtraia from "./pages/blog/posts/DomineEmocoesAtraia";
+import VibeConquistaSemPalavra from "./pages/blog/posts/VibeConquistaSemPalavra";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -127,6 +128,7 @@ const App = () => (
           <Route path="/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
           <Route path="/blog/posts/o-poder-do-silencio" element={<OPoderDoSilencio />} />
           <Route path="/blog/posts/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
+          <Route path="/blog/posts/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
           {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
           <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
           <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
@@ -142,6 +144,7 @@ const App = () => (
           <Route path="/blog/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
           <Route path="/blog/o-poder-do-silencio" element={<OPoderDoSilencio />} />
           <Route path="/blog/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
+          <Route path="/blog/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
