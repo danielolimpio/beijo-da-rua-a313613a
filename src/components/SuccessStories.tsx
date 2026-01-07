@@ -1,42 +1,18 @@
-import articleAbordar from "@/assets/article-abordar-mulher.jpg";
-import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
-import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
-import authorImage from "@/assets/team-daniel.jpg";
 import { Badge } from "@/components/ui/badge";
+import { recentArticles } from "@/data/blogArticles";
 
 const SuccessStories = () => {
-  const stories = [
-    {
-      id: 1,
-      image: articleAbordar,
-      category: "Conquista",
-      title: "Como Abordar uma Mulher com Confiança e Naturalidade",
-      author: "Daniel Olimpio",
-      date: "21 de novembro de 2025",
-      avatar: authorImage,
-      link: "/blog/posts/como-abordar-uma-mulher-com-confianca"
-    },
-    {
-      id: 2,
-      image: articlePerfilConquistador,
-      category: "Conquista",
-      title: "Os Segredos de um Perfil Conquistador nas Redes Sociais",
-      author: "Daniel Olimpio",
-      date: "22 de novembro de 2025",
-      avatar: authorImage,
-      link: "/blog/posts/os-segredos-de-um-perfil-conquistador"
-    },
-    {
-      id: 3,
-      image: articleCantadas,
-      category: "Conquista",
-      title: "Cantadas Irresistíveis que Realmente Funcionam em 2025",
-      author: "Daniel Olimpio",
-      date: "23 de novembro de 2025",
-      avatar: authorImage,
-      link: "/blog/posts/cantadas-irresistiveis-que-funcionam"
-    }
-  ];
+  // Pega os 3 artigos mais recentes do blog
+  const stories = recentArticles.slice(0, 3).map((article) => ({
+    id: article.id,
+    image: article.image,
+    category: article.category,
+    title: article.title,
+    author: article.author,
+    date: article.date,
+    avatar: article.authorImage,
+    link: article.link
+  }));
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gradient-success overflow-x-hidden">
