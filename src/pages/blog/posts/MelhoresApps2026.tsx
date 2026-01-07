@@ -1,33 +1,80 @@
 import { Link } from "react-router-dom";
-import BlogArticleLayout from "@/components/BlogArticleLayout";
+import SEO from "@/components/SEO";
+import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
+import RelatedArticles from "@/components/RelatedArticles";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Heart, Shield, Target, CheckCircle, Smartphone, Users, Star, MessageCircle, AlertTriangle, HelpCircle } from "lucide-react";
 import articleImage from "@/assets/article-melhores-apps-2026.jpg";
+import authorImage from "@/assets/team-daniel.jpg";
 
 const MelhoresApps2026 = () => {
-  const articleData = {
-    title: "Os Melhores Apps de Relacionamento para Cada Perfil em 2026",
-    date: "7 de janeiro de 2026",
-    author: "Daniel Olimpio",
-    category: "Aplicativos",
-    categorySlug: "aplicativos",
-    image: articleImage,
-    metaDescription: "Do namoro sério ao flerte casual: descubra qual app combina com seus objetivos e personalidade. Guia atualizado e sem enrolação."
-  };
-
   return (
-    <BlogArticleLayout {...articleData}>
-      <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-        Se você já deslizou para a esquerda mais vezes do que consegue lembrar, trocou "oi" com dezenas de perfis que sumiram no dia seguinte ou se pegou revirando o feed à meia-noite com a esperança de encontrar alguém de verdade, saiba que não está sozinho. A busca por conexão em 2026 é mais complexa — e mais diversa — do que nunca. Não existe mais um único caminho para o amor, amizade ou até um encontro casual que valha a pena. Cada pessoa carrega expectativas distintas, e felizmente, os apps de relacionamento evoluíram para refletir essa pluralidade.
-      </p>
+    <>
+      <SEO 
+        title="Os Melhores Apps de Relacionamento para Cada Perfil em 2026"
+        description="Do namoro sério ao flerte casual: descubra qual app combina com seus objetivos e personalidade. Guia atualizado e sem enrolação."
+        canonical="https://beijodarua.com.br/blog/posts/melhores-apps-relacionamento-2026/"
+        type="article"
+        author="Daniel Olimpio"
+        publishedTime="2026-01-07"
+        keywords="apps de relacionamento 2026, melhores apps namoro, tinder, bumble, hinge, badoo, okcupid, happn, apps namoro sério, apps encontros casuais"
+        image={articleImage}
+      />
+      
+      <BlogArticleLayout category="aplicativos" wordCount={3500}>
+        {/* Hero Image */}
+        <div className="mb-8 rounded-2xl overflow-hidden">
+          <img 
+            src={articleImage}
+            alt="Os melhores apps de relacionamento para cada perfil em 2026"
+            className="w-full h-[400px] object-cover"
+            loading="eager"
+          />
+        </div>
 
-      <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-        Neste guia completo, atualizado com tendências reais observadas no primeiro semestre de 2026, você vai descobrir <strong>os melhores apps de relacionamento para cada perfil</strong> — do romântico incurável ao solteiro que só quer flertar sem compromisso. Vamos além das listas genéricas: explicamos como cada plataforma funciona, quem realmente usa, quais os riscos e benefícios, e, sobretudo, como alinhar sua escolha ao que você de fato busca.
-      </p>
+        {/* Title & Meta */}
+        <header className="mb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+              Aplicativos
+            </span>
+            <span className="text-muted-foreground text-sm">7 de janeiro de 2026</span>
+          </div>
+          
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+            Os Melhores Apps de Relacionamento para Cada Perfil em 2026
+          </h1>
+          
+          <div className="flex items-center gap-4">
+            <Avatar className="h-12 w-12">
+              <AvatarImage src={authorImage} alt="Daniel Olimpio" />
+              <AvatarFallback>DO</AvatarFallback>
+            </Avatar>
+            <div>
+              <p className="font-medium text-foreground">Daniel Olimpio</p>
+              <p className="text-sm text-muted-foreground">Especialista em Relacionamentos</p>
+            </div>
+          </div>
+        </header>
 
-      <p className="text-lg leading-relaxed text-muted-foreground mb-12">
-        Seja para encontrar um parceiro para a vida inteira ou apenas alguém com quem dividir uma risada (e talvez mais), este artigo é seu mapa.
-      </p>
+        <ArticleAds.UnderTitle />
+
+        {/* Introduction */}
+        <div className="prose prose-lg max-w-none">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-6">
+            Se você já deslizou para a esquerda mais vezes do que consegue lembrar, trocou "oi" com dezenas de perfis que sumiram no dia seguinte ou se pegou revirando o feed à meia-noite com a esperança de encontrar alguém de verdade, saiba que não está sozinho. A busca por conexão em 2026 é mais complexa — e mais diversa — do que nunca. Não existe mais um único caminho para o amor, amizade ou até um encontro casual que valha a pena. Cada pessoa carrega expectativas distintas, e felizmente, os apps de relacionamento evoluíram para refletir essa pluralidade.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Neste guia completo, atualizado com tendências reais observadas no primeiro semestre de 2026, você vai descobrir <strong>os melhores apps de relacionamento para cada perfil</strong> — do romântico incurável ao solteiro que só quer flertar sem compromisso. Vamos além das listas genéricas: explicamos como cada plataforma funciona, quem realmente usa, quais os riscos e benefícios, e, sobretudo, como alinhar sua escolha ao que você de fato busca.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-8">
+            Seja para encontrar um parceiro para a vida inteira ou apenas alguém com quem dividir uma risada (e talvez mais), este artigo é seu mapa.
+          </p>
+
+          <ArticleAds.AfterFirstParagraph />
 
       <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
         <Target className="w-8 h-8 text-primary" />
@@ -446,7 +493,15 @@ const MelhoresApps2026 = () => {
           </p>
         </CardContent>
       </Card>
-    </BlogArticleLayout>
+
+        </div>
+
+        <ArticleAds.BeforeEnd />
+
+        {/* Related Articles */}
+        <RelatedArticles currentArticleLink="/blog/posts/melhores-apps-relacionamento-2026" category="aplicativos" />
+      </BlogArticleLayout>
+    </>
   );
 };
 
