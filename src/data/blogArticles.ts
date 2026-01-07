@@ -16,6 +16,7 @@ import articlePoderSilencio from "@/assets/article-poder-silencio.jpg";
 import articleDomineEmocoes from "@/assets/article-domine-emocoes.jpg";
 import articleVibeConquista from "@/assets/article-vibe-conquista.jpg";
 import articleMelhoresApps2026 from "@/assets/article-melhores-apps-2026.jpg";
+import articleSinaisInteresseFeminino from "@/assets/article-sinais-interesse-feminino.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -31,6 +32,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 17,
+    title: "Como Entender os Sinais Não Verbais de Interesse Feminino",
+    excerpt: "Ela está afim? Aprenda a decifrar olhares, toques e gestos sutis que revelam interesse real — sem cair em ilusões.",
+    category: "Paquera",
+    categoryId: "paquera",
+    image: articleSinaisInteresseFeminino,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de janeiro de 2026",
+    link: "/blog/posts/sinais-interesse-feminino"
+  },
   {
     id: 16,
     title: "Os Melhores Apps de Relacionamento para Cada Perfil em 2026",
