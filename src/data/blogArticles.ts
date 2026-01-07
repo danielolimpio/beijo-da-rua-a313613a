@@ -14,6 +14,7 @@ import articlePrimeiroEncontro from "@/assets/article-primeiro-encontro.jpg";
 import articleAutenticoAtraente from "@/assets/article-autentico-atraente.jpg";
 import articlePoderSilencio from "@/assets/article-poder-silencio.jpg";
 import articleDomineEmocoes from "@/assets/article-domine-emocoes.jpg";
+import articleVibeConquista from "@/assets/article-vibe-conquista.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -29,6 +30,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 15,
+    title: "Como Criar uma Vibe de Conquista Sem Dizer uma Palavra",
+    excerpt: "Sua energia atrai antes mesmo da conversa. Saiba como sua postura, estilo e atitude transmitem desejo sem esforço.",
+    category: "Conquista",
+    categoryId: "conquista",
+    image: articleVibeConquista,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de janeiro de 2026",
+    link: "/blog/posts/vibe-conquista-sem-dizer-palavra"
+  },
   {
     id: 14,
     title: "Domine Suas Emoções e Atraia o Tipo Certo de Mulher",
