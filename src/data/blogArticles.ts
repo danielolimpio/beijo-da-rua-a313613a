@@ -15,6 +15,7 @@ import articleAutenticoAtraente from "@/assets/article-autentico-atraente.jpg";
 import articlePoderSilencio from "@/assets/article-poder-silencio.jpg";
 import articleDomineEmocoes from "@/assets/article-domine-emocoes.jpg";
 import articleVibeConquista from "@/assets/article-vibe-conquista.jpg";
+import articleMelhoresApps2026 from "@/assets/article-melhores-apps-2026.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -30,6 +31,18 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 16,
+    title: "Os Melhores Apps de Relacionamento para Cada Perfil em 2026",
+    excerpt: "Do namoro sério ao flerte casual: descubra qual app combina com seus objetivos e personalidade. Guia atualizado e sem enrolação.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    image: articleMelhoresApps2026,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de janeiro de 2026",
+    link: "/blog/posts/melhores-apps-relacionamento-2026"
+  },
   {
     id: 15,
     title: "Como Criar uma Vibe de Conquista Sem Dizer uma Palavra",
