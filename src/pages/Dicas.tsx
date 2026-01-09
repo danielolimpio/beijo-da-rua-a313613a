@@ -8,10 +8,18 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, MessageCircle, Camera, Shield, Star, TrendingUp } from "lucide-react";
 
+import dicaFotos from "@/assets/dica-fotos.jpg";
+import dicaConversas from "@/assets/dica-conversas.jpg";
+import dicaBio from "@/assets/dica-bio.jpg";
+import dicaSeguranca from "@/assets/dica-seguranca.jpg";
+import dicaMatches from "@/assets/dica-matches.jpg";
+import dicaEncontro from "@/assets/dica-encontro.jpg";
+
 const Dicas = () => {
   const dicas = [
     {
       icon: Camera,
+      image: dicaFotos,
       title: "Fotos que Funcionam de Verdade",
       description: "Aprenda a escolher e editar fotos que aumentam seus matches em até 300%. Descubra os erros fatais que 87% dos homens cometem.",
       topics: [
@@ -24,6 +32,7 @@ const Dicas = () => {
     },
     {
       icon: MessageCircle,
+      image: dicaConversas,
       title: "Como Iniciar Conversas Que Geram Encontros",
       description: "Estratégias comprovadas para sair do 'oi, tudo bem?' e criar conexão real. Taxa de resposta aumenta 5x com essas técnicas.",
       topics: [
@@ -36,6 +45,7 @@ const Dicas = () => {
     },
     {
       icon: Heart,
+      image: dicaBio,
       title: "Bio Perfeita: O Que Escrever (e O Que Nunca Escrever)",
       description: "Sua bio é lida em 3 segundos. Aprenda a usar cada palavra a seu favor. Exemplos reais de bios que convertem.",
       topics: [
@@ -48,6 +58,7 @@ const Dicas = () => {
     },
     {
       icon: Shield,
+      image: dicaSeguranca,
       title: "Segurança e Red Flags",
       description: "Como identificar perfis falsos, golpes e situações de risco. Proteja-se e suas informações pessoais.",
       topics: [
@@ -60,6 +71,7 @@ const Dicas = () => {
     },
     {
       icon: Star,
+      image: dicaMatches,
       title: "Estratégia de Matches: Qualidade vs Quantidade",
       description: "Dar like em todo mundo NÃO funciona. Aprenda a estratégia correta para maximizar matches de qualidade.",
       topics: [
@@ -72,6 +84,7 @@ const Dicas = () => {
     },
     {
       icon: TrendingUp,
+      image: dicaEncontro,
       title: "Do Match ao Primeiro Encontro",
       description: "Matched? Agora vem a parte crítica. Como conduzir a conversa até marcar o encontro sem parecer desesperado.",
       topics: [
@@ -129,11 +142,18 @@ const Dicas = () => {
               {dicas.map((dica, index) => {
                 const Icon = dica.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardHeader>
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6 text-primary" />
+                  <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={dica.image} 
+                        alt={dica.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute top-3 left-3 w-10 h-10 rounded-full bg-primary/90 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-primary-foreground" />
                       </div>
+                    </div>
+                    <CardHeader className="pt-4">
                       <CardTitle className="text-xl mb-2">{dica.title}</CardTitle>
                       <CardDescription className="text-base">
                         {dica.description}
