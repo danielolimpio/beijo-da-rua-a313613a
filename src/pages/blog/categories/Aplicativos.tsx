@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 import { recentArticles } from "@/data/blogArticles";
 
 const categoryId = "aplicativos";
-const articles = recentArticles.filter(article => article.categoryId === categoryId || article.categoryId === "apps-de-namoro");
+const articles = recentArticles.filter(article => article.categoryIds?.includes(categoryId) || article.categoryIds?.includes("apps-de-namoro") || article.categoryId === categoryId || article.categoryId === "apps-de-namoro");
 
 const AplicativosCategory = () => {
   return (
