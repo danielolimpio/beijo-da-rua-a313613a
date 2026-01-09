@@ -3,6 +3,7 @@ import { Heart, Users, MessageCircle, Smartphone, Sparkles, ExternalLink } from 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { recentArticles } from "@/data/blogArticles";
 import tinderLogo from "@/assets/tinder-logo.jpeg";
 import bumbleLogo from "@/assets/bumble-logo.webp";
 import happnLogo from "@/assets/happn-logo.jpg";
@@ -149,6 +150,38 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
 
       {/* Sidebar Bottom Ad */}
       <SidebarBottomAd />
+
+      {/* Artigos Recentes */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Artigos Recentes</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-3">
+            {recentArticles.slice(0, 3).map((article) => (
+              <a 
+                key={article.id} 
+                href={article.link}
+                className="flex gap-3 group"
+              >
+                <div className="w-14 h-14 rounded-lg flex-shrink-0 overflow-hidden bg-muted/50">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-125 group-hover:rotate-2"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium group-hover:text-primary transition-colors line-clamp-2">
+                    {article.title}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">{article.date}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       {/* WhatsApp Card */}
       <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950 dark:to-green-900 border-green-200 dark:border-green-800">
