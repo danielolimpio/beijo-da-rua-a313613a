@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield, Brain, HandMetal, Activity, Scale, Wind, User, Smile, Move, Timer, Quote, BookOpen, HelpCircle } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -880,6 +882,21 @@ const LinguagemCorporalPoderosa = () => {
             Fazer o Quiz Agora
           </Link>
         </div>
+
+        {/* Share Buttons */}
+        <ArticleShareButtons 
+          url="https://beijodarua.com.br/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar/"
+          title="Linguagem Corporal Poderosa na Hora de Conquistar"
+        />
+
+        {/* Author Bio */}
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos"
+          bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+          image={authorImage}
+          skills={["Linguagem Corporal", "Comunicação", "Relacionamentos"]}
+        />
 
         {/* Related Articles */}
         <RelatedArticles 

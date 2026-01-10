@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Lightbulb, Heart, Shield, Target, CheckCircle, Smartphone, Users, Star, MessageCircle, AlertTriangle, HelpCircle } from "lucide-react";
@@ -493,6 +495,21 @@ const MelhoresApps2026 = () => {
           </p>
         </CardContent>
       </Card>
+
+        {/* Share Buttons */}
+        <ArticleShareButtons 
+          url="https://beijodarua.com.br/blog/posts/melhores-apps-relacionamento-2026/"
+          title="Os Melhores Apps de Relacionamento para Cada Perfil em 2026"
+        />
+
+        {/* Author Bio */}
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos"
+          bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+          image={authorImage}
+          skills={["Apps de Namoro", "Tecnologia", "Relacionamentos"]}
+        />
 
         </div>
 

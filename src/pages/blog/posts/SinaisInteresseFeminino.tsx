@@ -1,6 +1,8 @@
 import SEO from "@/components/SEO";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 import { Eye, Sparkles, CheckCircle, AlertTriangle, Lightbulb, Heart, User, Target, Smile, MessageCircle, Hand, Brain, Zap, Star, Users, ShieldCheck, XCircle, HelpCircle } from "lucide-react";
@@ -516,6 +518,21 @@ const SinaisInteresseFeminino = () => {
               </p>
             </div>
           </div>
+
+          {/* Share Buttons */}
+          <ArticleShareButtons 
+            url="https://beijodarua.com.br/blog/posts/sinais-interesse-feminino/"
+            title="Como Entender os Sinais Não Verbais de Interesse Feminino"
+          />
+
+          {/* Author Bio */}
+          <ArticleAuthorBio
+            name="Daniel Olimpio"
+            role="Especialista em Relacionamentos"
+            bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+            image={authorImage}
+            skills={["Linguagem Corporal", "Paquera", "Relacionamentos"]}
+          />
 
           <ArticleAds.BeforeEnd />
         </div>

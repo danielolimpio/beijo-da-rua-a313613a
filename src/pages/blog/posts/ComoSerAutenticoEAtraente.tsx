@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield, Brain, HandMetal, Activity, Scale, Wind, User, Smile, Move, Timer, Quote, BookOpen, HelpCircle, Briefcase, Zap, Coffee, Smartphone, Star, Award } from "lucide-react";
 import authorImage from "@/assets/team-marina.jpg";
@@ -673,6 +675,21 @@ const ComoSerAutenticoEAtraente = () => {
           Texto publicado em 04 de janeiro de 2026. Todos os direitos reservados.<br />
           Conteúdo revisado por especialistas em psicologia positiva e comunicação humana.
         </p>
+
+        {/* Share Buttons */}
+        <ArticleShareButtons 
+          url="https://beijodarua.com.br/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo/"
+          title="Como Ser Autêntico e Atraente ao Mesmo Tempo"
+        />
+
+        {/* Author Bio */}
+        <ArticleAuthorBio
+          name="Marina Santos"
+          role="Diretora de Conteúdo"
+          bio="Especialista em comunicação humana e autenticidade. Com formação em psicologia positiva, ajuda pessoas a desenvolverem relacionamentos baseados em vulnerabilidade estratégica e presença autêntica."
+          image={authorImage}
+          skills={["Autenticidade", "Comunicação", "Psicologia Positiva"]}
+        />
 
         {/* Related Articles */}
         <RelatedArticles 
