@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Link } from "react-router-dom";
 import { Eye, Users, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Target, Sparkles, Shield } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -769,30 +771,20 @@ const ErrosFataisQueDestroemSeuCharme = () => {
           </ul>
         </div>
 
+        {/* Share Buttons */}
+        <ArticleShareButtons 
+          url="https://beijodarua.com.br/blog/posts/erros-fatais-que-destroem-seu-charme/"
+          title="Erros Fatais Que Destroem Seu Charme na Primeira Impressão"
+        />
+
         {/* Author Bio */}
-        <div className="bg-card border border-border rounded-xl p-6 my-8">
-          <div className="flex flex-col md:flex-row gap-4">
-            <img 
-              src={authorImage} 
-              alt="Daniel Olimpio" 
-              className="w-20 h-20 rounded-full object-cover"
-            />
-            <div>
-              <h3 className="font-bold text-foreground mb-2">Sobre o Autor</h3>
-              <p className="text-muted-foreground mb-3">
-                <strong>Daniel Olimpio</strong> é especialista em relacionamentos e comportamento humano, com mais de 10 anos de experiência ajudando homens a desenvolverem conexões autênticas e duradouras.
-              </p>
-              <div className="flex gap-3">
-                <a href="https://instagram.com/beijodarua" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">
-                  Instagram
-                </a>
-                <a href="https://twitter.com/beijodarua" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm">
-                  Twitter
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos"
+          bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+          image={authorImage}
+          skills={["Primeira Impressão", "Linguagem Corporal", "Conquista"]}
+        />
 
         {/* Related Articles */}
         <RelatedArticles 

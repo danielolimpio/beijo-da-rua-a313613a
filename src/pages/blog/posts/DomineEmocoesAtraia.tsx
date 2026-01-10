@@ -1,6 +1,8 @@
 import SEO from "@/components/SEO";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 import { Heart, Brain, CheckCircle, AlertTriangle, Lightbulb, MessageCircle, Users, Target, Shield, Clock } from "lucide-react";
@@ -415,6 +417,21 @@ const DomineEmocoesAtraia = () => {
               </p>
             </div>
           </div>
+
+          {/* Share Buttons */}
+          <ArticleShareButtons 
+            url="https://beijodarua.com.br/blog/posts/domine-suas-emocoes-e-atraia/"
+            title="Domine Suas Emoções e Atraia o Tipo Certo de Mulher"
+          />
+
+          {/* Author Bio */}
+          <ArticleAuthorBio
+            name="Daniel Olimpio"
+            role="Especialista em Relacionamentos"
+            bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+            image={authorImage}
+            skills={["Controle Emocional", "Inteligência Emocional", "Relacionamentos"]}
+          />
 
           {/* Related Articles */}
           <RelatedArticles 

@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Link } from "react-router-dom";
 import { Volume2, VolumeX, Brain, Target, MessageCircle, Lightbulb, AlertTriangle, Heart, CheckCircle, Sparkles, Shield, Eye, Quote, BookOpen, HelpCircle, Briefcase, Zap, Coffee, Smartphone, Timer, Users, Clock, Mic, MicOff, Pause, Play, Headphones, Hand, Scale, Activity, Award, Star, PenTool, FileText } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
@@ -736,6 +738,21 @@ const OPoderDoSilencio = () => {
             Este artigo foi revisado por especialistas em psicologia da comunicação e está alinhado às diretrizes do Google para conteúdo de alta utilidade. Nenhuma alegação foi feita sem base empírica ou experiência prática documentada.
           </p>
         </div>
+
+        {/* Share Buttons */}
+        <ArticleShareButtons 
+          url="https://beijodarua.com.br/blog/posts/o-poder-do-silencio/"
+          title="O Poder do Silêncio: Quando Falar Menos Conquista Mais"
+        />
+
+        {/* Author Bio */}
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos"
+          bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+          image={authorImage}
+          skills={["Comunicação Estratégica", "Escuta Ativa", "Relacionamentos"]}
+        />
 
         {/* Related Articles */}
         <RelatedArticles 

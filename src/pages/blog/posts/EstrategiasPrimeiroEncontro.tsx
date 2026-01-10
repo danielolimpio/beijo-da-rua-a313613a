@@ -1,17 +1,16 @@
 import { Heart, MessageCircle, Eye, Lightbulb, CheckCircle, AlertTriangle, Clock, Users, Smile, Target, Star, Coffee, Sparkles, BookOpen, UserCheck, MessageSquare } from "lucide-react";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BlogSidebar from "@/components/BlogSidebar";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-primeiro-encontro.jpg";
-import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
 import { getArticleSchema } from "@/lib/structuredData";
 import SEO from "@/components/SEO";
@@ -27,10 +26,21 @@ import {
   InContent5Ad, 
   BottomOfPageAd 
 } from "@/components/EzoicAd";
+import SEO from "@/components/SEO";
+import { 
+  TopOfPageAd, 
+  UnderPageTitleAd, 
+  UnderFirstParagraphAd, 
+  UnderSecondParagraphAd, 
+  MidContentAd, 
+  LongContentAd, 
+  LongerContentAd,
+  LongestContentAd,
+  InContent5Ad, 
+  BottomOfPageAd 
+} from "@/components/EzoicAd";
 
 const EstrategiasPrimeiroEncontro = () => {
-  const [showFullBio, setShowFullBio] = useState(false);
-  
   const shareUrl = "https://beijodarua.com.br/blog/posts/estrategias-primeiro-encontro/";
   const shareTitle = "Estratégias para Ser Inesquecível no Primeiro Encontro";
 
@@ -44,17 +54,6 @@ const EstrategiasPrimeiroEncontro = () => {
     url: "https://beijodarua.com.br/blog/posts/estrategias-primeiro-encontro/",
     category: "Conquista"
   });
-  
-  const handleShare = (platform: string) => {
-    const urls = {
-      facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`,
-      pinterest: `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&description=${encodeURIComponent(shareTitle)}`,
-      whatsapp: `https://wa.me/?text=${encodeURIComponent(shareTitle + ' ' + shareUrl)}`
-    };
-    
-    window.open(urls[platform as keyof typeof urls], '_blank', 'width=600,height=400');
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -853,69 +852,20 @@ const EstrategiasPrimeiroEncontro = () => {
                   </CardContent>
                 </Card>
 
-                {/* Share Section */}
-                <div className="mt-12 p-6 bg-muted/30 rounded-lg">
-                  <p className="font-semibold mb-4 text-center">Compartilhe este artigo:</p>
-                  <div className="flex justify-center gap-3">
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      onClick={() => handleShare('facebook')}
-                      className="hover:bg-blue-100"
-                    >
-                      <Facebook className="h-5 w-5 text-blue-600" />
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      onClick={() => handleShare('twitter')}
-                      className="hover:bg-sky-100"
-                    >
-                      <Twitter className="h-5 w-5 text-sky-500" />
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      onClick={() => handleShare('whatsapp')}
-                      className="hover:bg-green-100"
-                    >
-                      <MessageCircle className="h-5 w-5 text-green-600" />
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      size="icon"
-                      onClick={() => handleShare('pinterest')}
-                      className="hover:bg-red-100"
-                    >
-                      <Instagram className="h-5 w-5 text-red-600" />
-                    </Button>
-                  </div>
-                </div>
+                {/* Share Buttons */}
+                <ArticleShareButtons 
+                  url={shareUrl}
+                  title={shareTitle}
+                />
 
                 {/* Author Bio */}
-                <div className="mt-12 p-6 bg-muted/30 rounded-lg">
-                  <div className="flex items-start gap-4">
-                    <img 
-                      src={authorImage} 
-                      alt="Daniel Olimpio" 
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
-                    <div>
-                      <h3 className="font-bold text-lg">Daniel Olimpio</h3>
-                      <p className="text-muted-foreground text-sm mb-2">Especialista em Relacionamentos</p>
-                      <p className={`text-sm ${showFullBio ? '' : 'line-clamp-3'}`}>
-                        Daniel é especialista em desenvolvimento interpessoal e comunicação afetiva. Com mais de 10 anos de experiência em workshops de relacionamento e inteligência emocional, ajuda pessoas a construírem conexões autênticas e duradouras. Sua abordagem combina ciência comportamental com empatia prática.
-                      </p>
-                      <Button 
-                        variant="link" 
-                        className="p-0 h-auto text-primary"
-                        onClick={() => setShowFullBio(!showFullBio)}
-                      >
-                        {showFullBio ? 'Ver menos' : 'Ver mais'}
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+                <ArticleAuthorBio
+                  name="Daniel Olimpio"
+                  role="Especialista em Relacionamentos"
+                  bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+                  image={authorImage}
+                  skills={["Primeiro Encontro", "Comunicação", "Relacionamentos"]}
+                />
 
                 {/* Related Articles */}
                 <RelatedArticles 

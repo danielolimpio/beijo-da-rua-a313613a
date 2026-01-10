@@ -1,6 +1,8 @@
 import SEO from "@/components/SEO";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
+import ArticleShareButtons from "@/components/ArticleShareButtons";
+import ArticleAuthorBio from "@/components/ArticleAuthorBio";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 import { Eye, Sparkles, CheckCircle, AlertTriangle, Lightbulb, Heart, User, Target, Smile, Clock, Hand, Brain, Zap, Star } from "lucide-react";
@@ -689,6 +691,21 @@ const VibeConquistaSemPalavra = () => {
               <strong>Como criar uma vibe de conquista sem dizer uma palavra</strong> não é sobre mudar quem você é. É sobre deixar quem você é brilhar.
             </p>
           </div>
+
+          {/* Share Buttons */}
+          <ArticleShareButtons 
+            url="https://beijodarua.com.br/blog/posts/vibe-conquista-sem-dizer-palavra/"
+            title="Como Criar uma Vibe de Conquista Sem Dizer uma Palavra"
+          />
+
+          {/* Author Bio */}
+          <ArticleAuthorBio
+            name="Daniel Olimpio"
+            role="Especialista em Relacionamentos"
+            bio="Combinando psicologia comportamental e experiência prática para ajudar homens a desenvolverem conexões autênticas e duradouras. Com mais de 10 anos de atuação em workshops de relacionamento e inteligência emocional."
+            image={authorImage}
+            skills={["Presença Magnética", "Linguagem Corporal", "Conquista"]}
+          />
         </div>
 
         {/* Related Articles */}
