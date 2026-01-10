@@ -17,6 +17,7 @@ import articleDomineEmocoes from "@/assets/article-domine-emocoes.jpg";
 import articleVibeConquista from "@/assets/article-vibe-conquista.jpg";
 import articleMelhoresApps2026 from "@/assets/article-melhores-apps-2026.jpg";
 import articleSinaisInteresseFeminino from "@/assets/article-sinais-interesse-feminino.jpg";
+import articleEscutarConquistar from "@/assets/article-escutar-conquistar.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -33,6 +34,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 18,
+    title: "Por Que Escutar é a Nova Forma de Conquistar Mulheres",
+    excerpt: "A melhor cantada hoje é fazer ela se sentir ouvida. Descubra como a escuta genuína gera conexão mais forte que qualquer frase.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "conquista", "paquera", "autoestima"],
+    image: articleEscutarConquistar,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "10 de janeiro de 2026",
+    link: "/blog/posts/escutar-nova-forma-conquistar"
+  },
   {
     id: 17,
     title: "Como Entender os Sinais Não Verbais de Interesse Feminino",
