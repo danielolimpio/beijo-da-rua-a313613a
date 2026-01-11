@@ -1,5 +1,6 @@
 import authorImage from "@/assets/team-daniel.jpg";
 import authorImageMarina from "@/assets/team-marina.jpg";
+import authorImageRicardo from "@/assets/team-ricardo.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import articlePerfilConquistador from "@/assets/article-perfil-conquistador.jpg";
 import articleCantadas from "@/assets/article-cantadas-irresistiveis.jpg";
@@ -18,6 +19,7 @@ import articleVibeConquista from "@/assets/article-vibe-conquista.jpg";
 import articleMelhoresApps2026 from "@/assets/article-melhores-apps-2026.jpg";
 import articleSinaisInteresseFeminino from "@/assets/article-sinais-interesse-feminino.jpg";
 import articleEscutarConquistar from "@/assets/article-escutar-conquistar.jpg";
+import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -34,6 +36,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 19,
+    title: "Do Medo à Coragem: Sua Jornada para Conquistar com Respeito",
+    excerpt: "Supere inseguranças e conquiste com integridade. Um guia para homens que querem atrair com maturidade, não com manipulação.",
+    category: "Autoestima",
+    categoryId: "autoestima",
+    categoryIds: ["autoestima", "conquista", "relacionamento", "paquera"],
+    image: articleMedoCoragem,
+    author: "Ricardo Almeida",
+    authorImage: authorImageRicardo,
+    date: "11 de janeiro de 2026",
+    link: "/blog/posts/medo-coragem-conquistar-respeito"
+  },
   {
     id: 18,
     title: "Por Que Escutar é a Nova Forma de Conquistar Mulheres",
