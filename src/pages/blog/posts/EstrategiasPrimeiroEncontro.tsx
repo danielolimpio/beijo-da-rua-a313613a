@@ -26,19 +26,6 @@ import {
   InContent5Ad, 
   BottomOfPageAd 
 } from "@/components/EzoicAd";
-import SEO from "@/components/SEO";
-import { 
-  TopOfPageAd, 
-  UnderPageTitleAd, 
-  UnderFirstParagraphAd, 
-  UnderSecondParagraphAd, 
-  MidContentAd, 
-  LongContentAd, 
-  LongerContentAd,
-  LongestContentAd,
-  InContent5Ad, 
-  BottomOfPageAd 
-} from "@/components/EzoicAd";
 
 const EstrategiasPrimeiroEncontro = () => {
   const shareUrl = "https://beijodarua.com.br/blog/posts/estrategias-primeiro-encontro/";
