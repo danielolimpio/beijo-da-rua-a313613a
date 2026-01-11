@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { Link } from "react-router-dom";
 const Bumble = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Bumble Brasil - App Onde Mulheres Dão o Primeiro Passo"
+        description="Bumble: conexões com respeito, segurança e intenção. 70M+ usuários, mulheres iniciam a conversa. Conheça Date, BFF e Bizz para networking."
+        canonical="https://beijodarua.com.br/apps/bumble/"
+        keywords="bumble brasil, app bumble, bumble namoro, bumble date, bumble bff"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

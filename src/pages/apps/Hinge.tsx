@@ -59,15 +59,15 @@ const Hinge = () => {
   return (
     <>
       <Helmet>
-        <title>Hinge - App Feito Para Ser Deletado | Relacionamentos Sérios</title>
-        <meta name="description" content="Conheça o Hinge, o app de namoro desenvolvido para ser apagado. Com prompts criativos, vídeos e algoritmo Most Compatible, encontre relacionamentos reais que vão além do primeiro match." />
+        <title>Hinge Brasil - App Feito Para Ser Deletado | Relacionamentos Sérios</title>
+        <meta name="description" content="Hinge: o app de namoro feito para ser deletado. Prompts criativos, vídeos e algoritmo Most Compatible. Relacionamentos sérios para quem busca algo real." />
         <meta name="keywords" content="hinge, hinge brasil, app namoro sério, relacionamento real, most compatible, prompts criativos, app deletar" />
-        <link rel="canonical" href="https://www.parperfeito.love/apps/hinge" />
+        <link rel="canonical" href="https://beijodarua.com.br/apps/hinge/" />
         
-        <meta property="og:title" content="Hinge - App Feito Para Ser Deletado | Relacionamentos Sérios" />
-        <meta property="og:description" content="O app que te ajuda a encontrar alguém com quem você queira passar tempo de verdade — não só trocar mensagens infinitas." />
+        <meta property="og:title" content="Hinge Brasil - App Feito Para Ser Deletado | Relacionamentos Sérios" />
+        <meta property="og:description" content="Hinge: o app feito para ser deletado. Prompts criativos, vídeos e algoritmo Most Compatible para relacionamentos sérios." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.parperfeito.love/apps/hinge" />
+        <meta property="og:url" content="https://beijodarua.com.br/apps/hinge/" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hinge - App Feito Para Ser Deletado" />

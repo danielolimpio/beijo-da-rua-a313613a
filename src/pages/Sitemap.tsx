@@ -12,7 +12,7 @@ const Sitemap = () => {
         <title>Mapa do Site - Beijo da Rua | Navegação Completa</title>
         <meta name="description" content="Mapa completo do site Beijo da Rua. Encontre facilmente todas as páginas, apps de namoro, dicas, quiz, blog e muito mais." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://beijodarua.com.br/sitemap" />
+        <link rel="canonical" href="https://beijodarua.com.br/sitemap/" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -50,13 +50,19 @@ const Sitemap = () => {
                 <h2 className="text-2xl font-semibold text-foreground">Apps de Namoro</h2>
               </div>
               <ul className="space-y-2">
-                <li><Link to="/apps-de-namoro" className="text-primary hover:underline">Todos os Apps</Link></li>
-                <li><Link to="/apps/bumble" className="text-primary hover:underline">Bumble</Link></li>
-                <li><Link to="/apps/tinder" className="text-primary hover:underline">Tinder</Link></li>
-                <li><Link to="/apps/happn" className="text-primary hover:underline">Happn</Link></li>
-                <li><Link to="/apps/okcupid" className="text-primary hover:underline">OkCupid</Link></li>
-                <li><Link to="/apps/badoo" className="text-primary hover:underline">Badoo</Link></li>
-                <li><Link to="/apps/hinge" className="text-primary hover:underline">Hinge</Link></li>
+                <li><Link to="/apps-de-namoro/" className="text-primary hover:underline">Todos os Apps</Link></li>
+                <li><Link to="/apps/bumble/" className="text-primary hover:underline">Bumble</Link></li>
+                <li><Link to="/apps/tinder/" className="text-primary hover:underline">Tinder</Link></li>
+                <li><Link to="/apps/happn/" className="text-primary hover:underline">Happn</Link></li>
+                <li><Link to="/apps/okcupid/" className="text-primary hover:underline">OkCupid</Link></li>
+                <li><Link to="/apps/badoo/" className="text-primary hover:underline">Badoo</Link></li>
+                <li><Link to="/apps/hinge/" className="text-primary hover:underline">Hinge</Link></li>
+                <li><Link to="/apps/pof/" className="text-primary hover:underline">POF (Plenty of Fish)</Link></li>
+                <li><Link to="/apps/facebook-dating/" className="text-primary hover:underline">Facebook Dating</Link></li>
+                <li><Link to="/apps/skout/" className="text-primary hover:underline">Skout</Link></li>
+                <li><Link to="/apps/meetme/" className="text-primary hover:underline">MeetMe</Link></li>
+                <li><Link to="/apps/eharmony/" className="text-primary hover:underline">eHarmony</Link></li>
+                <li><Link to="/apps/dating/" className="text-primary hover:underline">Dating.com</Link></li>
               </ul>
             </section>
 
@@ -115,9 +121,10 @@ const Sitemap = () => {
                 <li className="ml-4"><Link to="/blog/aplicativos" className="text-primary hover:underline">Aplicativos</Link></li>
                 <li className="ml-4"><Link to="/blog/autoestima" className="text-primary hover:underline">Autoestima</Link></li>
                 <li className="ml-4 text-sm text-muted-foreground mt-2">Artigos em Destaque:</li>
-                <li className="ml-4"><Link to="/blog/posts/cantadas-irresistiveis-que-funcionam" className="text-primary hover:underline">Cantadas Irresistíveis</Link></li>
-                <li className="ml-4"><Link to="/blog/posts/os-segredos-de-um-perfil-conquistador" className="text-primary hover:underline">Perfil Conquistador</Link></li>
-                <li className="ml-4"><Link to="/blog/posts/como-abordar-uma-mulher-com-confianca" className="text-primary hover:underline">Abordar com Confiança</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/cantadas-irresistiveis-que-funcionam/" className="text-primary hover:underline">Cantadas Irresistíveis</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/os-segredos-de-um-perfil-conquistador/" className="text-primary hover:underline">Perfil Conquistador</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/como-abordar-uma-mulher-com-confianca/" className="text-primary hover:underline">Abordar com Confiança</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/medo-coragem-conquistar-respeito/" className="text-primary hover:underline">Do Medo à Coragem</Link></li>
               </ul>
             </section>
 

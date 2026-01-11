@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { trackAppClick } from "@/lib/analytics";
 const FacebookDating = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Facebook Dating Brasil - Namoro Gratuito Baseado em Interesses"
+        description="Facebook Dating: encontros 100% gratuitos baseados em grupos, eventos e interesses em comum. Separado do seu perfil principal. Veja como funciona."
+        canonical="https://beijodarua.com.br/apps/facebook-dating/"
+        keywords="facebook dating brasil, facebook namoro, dating facebook, facebook encontros, namoro gratuito"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

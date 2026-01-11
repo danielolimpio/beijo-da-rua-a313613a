@@ -11,7 +11,7 @@ const TermosUso = () => {
         <title>Termos de Uso | Beijo da Rua - Condições de Utilização do Site</title>
         <meta name="description" content="Leia nossos termos de uso completos. Conheça as regras, direitos, responsabilidades e condições para utilização do Beijo da Rua - guia sobre apps de namoro." />
         <meta name="keywords" content="termos de uso, condições de uso, regras do site, acordo de usuário, termos e condições, política de uso" />
-        <link rel="canonical" href="https://www.beijodarua.com.br/termos-de-uso" />
+        <link rel="canonical" href="https://beijodarua.com.br/termos-de-uso/" />
       </Helmet>
 
       <div className="min-h-screen bg-background">

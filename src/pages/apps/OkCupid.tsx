@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { Link } from "react-router-dom";
 const OkCupid = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="OkCupid Brasil - App de Namoro com Compatibilidade Inteligente"
+        description="OkCupid: 91M+ usuários, algoritmo de compatibilidade baseado em valores. Inclusivo com 22 gêneros e 13 orientações. Encontre conexões profundas."
+        canonical="https://beijodarua.com.br/apps/okcupid/"
+        keywords="okcupid brasil, app okcupid, okcupid namoro, compatibilidade, namoro lgbtqia+"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

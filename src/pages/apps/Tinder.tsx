@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { trackAppClick } from "@/lib/analytics";
 const Tinder = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Tinder Brasil - O App de Namoro Mais Popular do Mundo"
+        description="Tinder: o app de encontros que revolucionou o namoro online. 55 bilhões de matches, 10M+ usuários no Brasil. Descubra como ter sucesso no Tinder."
+        canonical="https://beijodarua.com.br/apps/tinder/"
+        keywords="tinder brasil, app tinder, tinder namoro, como usar tinder, tinder grátis"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
