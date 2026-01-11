@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { trackAppClick } from "@/lib/analytics";
 const POF = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="POF (Plenty of Fish) Brasil - App de Namoro 100% Gratuito"
+        description="POF: o app de namoro gratuito com 150M+ usuários. Converse sem pagar, filtros avançados e comunidade ativa. Descubra se o POF é ideal para você."
+        canonical="https://beijodarua.com.br/apps/pof/"
+        keywords="pof brasil, plenty of fish, pof grátis, app namoro grátis, pof funciona"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { Link } from "react-router-dom";
 const Badoo = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Badoo Brasil - O App Pioneiro que Conecta Pessoas Reais"
+        description="Badoo: 100M+ downloads, Brasil é o maior mercado. Converse sem match, verificação por selfie e modo Encounters. Conexões locais e autênticas."
+        canonical="https://beijodarua.com.br/apps/badoo/"
+        keywords="badoo brasil, app badoo, badoo namoro, badoo grátis, encontros badoo"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

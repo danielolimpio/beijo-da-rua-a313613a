@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { Link } from "react-router-dom";
 const Happn = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Happn Brasil - Encontre Pessoas que Cruzaram Seu Caminho"
+        description="Happn: conecte-se com quem você já cruzou na vida real. 155M+ usuários, Brasil é o 2º maior mercado. Cruzamentos reais, conexões autênticas."
+        canonical="https://beijodarua.com.br/apps/happn/"
+        keywords="happn brasil, app happn, happn cruzamento, happn encontros, namoro local"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />

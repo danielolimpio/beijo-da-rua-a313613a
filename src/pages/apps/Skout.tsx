@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +13,12 @@ import { trackAppClick } from "@/lib/analytics";
 const Skout = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Skout Brasil - Rede Social Global para Amizade e Namoro"
+        description="Skout: 50M+ usuários em todo o mundo. Faça amizades internacionais, pratique idiomas e encontre conexões genuínas. Ideal para quem busca diversidade."
+        canonical="https://beijodarua.com.br/apps/skout/"
+        keywords="skout brasil, skout app, app fazer amigos, amizade internacional, skout funciona"
+      />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
