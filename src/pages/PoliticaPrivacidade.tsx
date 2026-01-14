@@ -791,6 +791,25 @@ const PoliticaPrivacidade = () => {
                   </div>
                 </div>
               </section>
+
+              {/* Ezoic Privacy Policy Embed */}
+              <section className="bg-card rounded-2xl p-8 shadow-md border border-border animate-fade-in">
+                <div className="flex items-start gap-4">
+                  <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div className="w-full">
+                    <h2 className="text-2xl font-bold mb-4 text-foreground">DECLARAÇÃO SOBRE USO DO EZOIC</h2>
+                    
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      Nosso site utiliza a plataforma Ezoic para otimização de anúncios e experiência do usuário. As informações abaixo detalham como o Ezoic e seus parceiros utilizam suas informações e os cookies que podem ser utilizados no site.
+                    </p>
+
+                    {/* Ezoic dynamic privacy policy embed */}
+                    <div className="prose prose-sm max-w-none text-muted-foreground">
+                      <span id="ezoic-privacy-policy-embed"></span>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </main>
