@@ -3,9 +3,11 @@
   RewriteBase /
 
   # ———————————————————————
-  # 🔄 Redirecionamento 301 do ads.txt para Ezoic
+  # 🔄 PRIMEIRO: Redirecionamento 301 do ads.txt para Ezoic
+  # (Esta regra DEVE vir antes de qualquer outra proteção)
   # ———————————————————————
-  RewriteRule ^ads\.txt$ https://srv.adstxtmanager.com/19390/beijodarua.com.br [R=301,L]
+  RewriteCond %{REQUEST_URI} ^/ads\.txt$ [NC]
+  RewriteRule ^ads\.txt$ https://srv.adstxtmanager.com/19390/beijodarua.com.br [R=301,L,NE]
 
   # ———————————————————————
   # ✅ Não redirecionar arquivos ou diretórios reais existentes
