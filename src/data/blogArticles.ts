@@ -20,6 +20,7 @@ import articleMelhoresApps2026 from "@/assets/article-melhores-apps-2026.jpg";
 import articleSinaisInteresseFeminino from "@/assets/article-sinais-interesse-feminino.jpg";
 import articleEscutarConquistar from "@/assets/article-escutar-conquistar.jpg";
 import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
+import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -36,6 +37,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 20,
+    title: "Como Despertar Interesse Sem Dizer Nada Direto",
+    excerpt: "Use sutileza, presença e energia para atrair antes mesmo da primeira palavra. Estratégias reais para homens discretos.",
+    category: "Conquista",
+    categoryId: "conquista",
+    categoryIds: ["conquista", "paquera", "autoestima", "relacionamento"],
+    image: articleDespertarInteresse,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "15 de janeiro de 2026",
+    link: "/blog/posts/despertar-interesse-sem-dizer-nada"
+  },
   {
     id: 19,
     title: "Do Medo à Coragem: Sua Jornada para Conquistar com Respeito",

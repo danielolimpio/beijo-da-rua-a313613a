@@ -49,6 +49,7 @@ import MelhoresApps2026 from "./pages/blog/posts/MelhoresApps2026";
 import SinaisInteresseFeminino from "./pages/blog/posts/SinaisInteresseFeminino";
 import EscutarNovaFormaConquistar from "./pages/blog/posts/EscutarNovaFormaConquistar";
 import MedoCoragemConquistar from "./pages/blog/posts/MedoCoragemConquistar";
+import DespertarInteresseSemDizerNada from "./pages/blog/posts/DespertarInteresseSemDizerNada";
 import Quiz from "./pages/Quiz";
 import QuizPage1 from "./pages/quiz/QuizPage1";
 import QuizPage2 from "./pages/quiz/QuizPage2";
@@ -137,6 +138,7 @@ const App = () => (
           <Route path="/blog/posts/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
           <Route path="/blog/posts/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
           <Route path="/blog/posts/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
+          <Route path="/blog/posts/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
           {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
           <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
           <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
@@ -157,6 +159,7 @@ const App = () => (
           <Route path="/blog/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
           <Route path="/blog/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
           <Route path="/blog/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
+          <Route path="/blog/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
           <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
