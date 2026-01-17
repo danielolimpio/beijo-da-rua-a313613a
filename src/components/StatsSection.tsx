@@ -1,4 +1,5 @@
 import { Users, UserCheck, UserPlus, User } from "lucide-react";
+import { FEATURE_FLAGS } from "@/config/featureFlags";
 
 const StatsSection = () => {
   const stats = [
@@ -31,6 +32,11 @@ const StatsSection = () => {
       bgColor: "bg-accent",
     },
   ];
+
+  // Se a flag estiver desativada, não renderiza a seção
+  if (!FEATURE_FLAGS.SHOW_STATS_NUMBERS) {
+    return null;
+  }
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-background overflow-x-hidden">

@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import NewRegistrationPopup from "@/components/NewRegistrationPopup";
 import StructuredData from "@/components/StructuredData";
 import SEO from "@/components/SEO";
+import RecentArticlesThumbnails from "@/components/RecentArticlesThumbnails";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structuredData";
 import { TopOfPageAd, UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad, BottomOfPageAd } from "@/components/EzoicAd";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
@@ -48,6 +49,9 @@ const Index = () => {
       
       <SuccessStories />
       <StatsSection />
+      
+      {/* Recent Articles Thumbnails - 9 capas de artigos */}
+      <RecentArticlesThumbnails />
       
       {/* Long Content Ad */}
       <div className="container mx-auto px-4">

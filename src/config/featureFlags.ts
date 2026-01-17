@@ -24,4 +24,7 @@ export const FEATURE_FLAGS = {
   
   // Popup "Acabou de se cadastrar" (NewRegistrationPopup)
   SHOW_REGISTRATION_POPUP: false,
+  
+  // Números/estatísticas na seção "Tudo Começa Com Um Encontro" (StatsSection)
+  SHOW_STATS_NUMBERS: false,
 };
