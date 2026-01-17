@@ -13,6 +13,7 @@ import StructuredData from "@/components/StructuredData";
 import SEO from "@/components/SEO";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structuredData";
 import { TopOfPageAd, UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad, BottomOfPageAd } from "@/components/EzoicAd";
+import { FEATURE_FLAGS } from "@/config/featureFlags";
 
 const Index = () => {
   return (
@@ -53,7 +54,8 @@ const Index = () => {
         <LongContentAd />
       </div>
       
-      <PopularMembers />
+      {/* Popular Members - conditionally rendered */}
+      {FEATURE_FLAGS.SHOW_POPULAR_MEMBERS && <PopularMembers />}
       
       {/* Incontent 5 Ad */}
       <div className="container mx-auto px-4">
