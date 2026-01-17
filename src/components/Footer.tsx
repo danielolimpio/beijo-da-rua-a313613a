@@ -4,6 +4,7 @@ import footerMember2 from "@/assets/footer-member2.jpg";
 import footerMember3 from "@/assets/footer-member3.jpg";
 import logo from "@/assets/logo.png";
 import { recentArticles } from "@/data/blogArticles";
+import { FEATURE_FLAGS } from "@/config/featureFlags";
 
 const Footer = () => {
   const featuredMembers = [
@@ -38,25 +39,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Featured Members */}
-          <div>
-            <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 sm:mb-4 text-foreground">Membros Destacados</h3>
-            <div className="space-y-2 sm:space-y-3">
-              {featuredMembers.map((member, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <img 
-                    src={member.image}
-                    alt={member.name}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-medium text-xs sm:text-sm">{member.name}</p>
-                    <p className="text-xs text-success">{member.status}</p>
+          {/* Featured Members - conditionally rendered */}
+          {FEATURE_FLAGS.SHOW_FEATURED_MEMBERS_FOOTER && (
+            <div>
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-3 sm:mb-4 text-foreground">Membros Destacados</h3>
+              <div className="space-y-2 sm:space-y-3">
+                {featuredMembers.map((member, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <img 
+                      src={member.image}
+                      alt={member.name}
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-medium text-xs sm:text-sm">{member.name}</p>
+                      <p className="text-xs text-success">{member.status}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Support Links */}
           <div>

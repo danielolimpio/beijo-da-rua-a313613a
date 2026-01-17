@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { UserPlus } from "lucide-react";
+import { FEATURE_FLAGS } from "@/config/featureFlags";
 import profile1 from "@/assets/popup-profile1.jpeg";
 import profile2 from "@/assets/popup-profile2.jpeg";
 import profile3 from "@/assets/popup-profile3.jpeg";
@@ -63,7 +64,8 @@ const NewRegistrationPopup = () => {
     };
   }, []);
 
-  if (!currentProfile) return null;
+  // Return null if feature is disabled or no profile
+  if (!FEATURE_FLAGS.SHOW_REGISTRATION_POPUP || !currentProfile) return null;
 
   return (
     <div
