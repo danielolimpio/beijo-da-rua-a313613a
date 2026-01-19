@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import IntroTextSection from "@/components/IntroTextSection";
 import StatsSection from "@/components/StatsSection";
-import SuccessStories from "@/components/SuccessStories";
 import PopularMembers from "@/components/PopularMembers";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import AboutPlatform from "@/components/AboutPlatform";
@@ -47,7 +46,6 @@ const Index = () => {
         <MidContentAd />
       </div>
       
-      <SuccessStories />
       <StatsSection />
       
       {/* Recent Articles Thumbnails - 9 capas de artigos */}
