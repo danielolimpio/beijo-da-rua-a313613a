@@ -12,6 +12,8 @@ import StructuredData from "@/components/StructuredData";
 import SEO from "@/components/SEO";
 import RecentArticlesThumbnails from "@/components/RecentArticlesThumbnails";
 import DatingAppsShowcase from "@/components/DatingAppsShowcase";
+import PremiumGuideSection from "@/components/PremiumGuideSection";
+import HomeFAQ from "@/components/HomeFAQ";
 import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structuredData";
 import { TopOfPageAd, UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad, BottomOfPageAd } from "@/components/EzoicAd";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
@@ -49,6 +51,9 @@ const Index = () => {
       
       <StatsSection />
       
+      {/* Premium Guide Section - Rich Informational Content */}
+      <PremiumGuideSection />
+      
       {/* Dating Apps Showcase */}
       <DatingAppsShowcase />
       
@@ -70,6 +75,9 @@ const Index = () => {
       
       <WhyChooseUs />
       <AboutPlatform />
+      
+      {/* FAQ Section */}
+      <HomeFAQ />
       
       {/* Bottom of Page Ad */}
       <div className="container mx-auto px-4 mb-8">
