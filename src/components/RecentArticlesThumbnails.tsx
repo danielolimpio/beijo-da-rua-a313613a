@@ -6,7 +6,7 @@ const RecentArticlesThumbnails = () => {
   const articles = recentArticles.slice(0, 9);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
+    <section className="py-12 sm:py-16 lg:py-20 bg-success/10">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
