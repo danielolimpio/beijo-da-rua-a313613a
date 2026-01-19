@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 // Import app logos
 import tinderLogo from "@/assets/tinder-logo.jpeg";
-import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import bumbleLogo from "@/assets/bumble-logo.webp";
 import happnLogo from "@/assets/happn-logo.jpg";
 import okCupidLogo from "@/assets/okcupid-logo.jpeg";
 import badooLogo from "@/assets/badoo-logo.jpeg";
