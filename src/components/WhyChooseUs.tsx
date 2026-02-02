@@ -6,8 +6,8 @@ const WhyChooseUs = () => {
       icon: SmilePlus,
       title: "Fácil de Usar",
       description: "Passos simples para montar seu perfil e começar a conversar.",
-      color: "text-accent-foreground",
-      bgColor: "bg-accent",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
     {
       icon: Target,
@@ -20,20 +20,20 @@ const WhyChooseUs = () => {
       icon: Filter,
       title: "Filtre Rápido",
       description: "Não perca tempo. Encontre só o que realmente importa para você.",
-      color: "text-secondary-foreground",
-      bgColor: "bg-secondary",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
     {
       icon: Shield,
       title: "Comunidade Confiável",
       description: "Dicas reais de homens que já passaram por isso.",
-      color: "text-success",
-      bgColor: "bg-success/10",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
     },
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-trust overflow-x-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-section-alt overflow-x-hidden">
       <div className="container mx-auto px-2 sm:px-4 max-w-7xl">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 px-4">
