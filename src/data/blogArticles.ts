@@ -21,6 +21,7 @@ import articleSinaisInteresseFeminino from "@/assets/article-sinais-interesse-fe
 import articleEscutarConquistar from "@/assets/article-escutar-conquistar.jpg";
 import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
 import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg";
+import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -37,6 +38,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 21,
+    title: "A Arte de Manter uma Conversa Leve e Envolver",
+    excerpt: "Evite silêncios constrangedores. Aprenda a fluir em qualquer papo com naturalidade, graça e curiosidade genuína.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "paquera", "conquista", "autoestima"],
+    image: articleArteConversaLeve,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "2 de fevereiro de 2026",
+    link: "/blog/posts/arte-manter-conversa-leve-envolver"
+  },
   {
     id: 20,
     title: "Como Despertar Interesse Sem Dizer Nada Direto",
