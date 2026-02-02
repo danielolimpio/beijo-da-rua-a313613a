@@ -56,20 +56,20 @@ const HomeFAQ = () => {
         </script>
       </Helmet>
 
-      <section className="py-16 bg-gradient-to-br from-muted/30 via-background to-muted/30">
+      <section className="py-16 bg-gradient-section-alt">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-warning/10 px-4 py-2 rounded-full mb-4">
+              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
                 <HelpCircle className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">
+                <span className="text-sm font-medium text-primary">
                   Tire Suas Dúvidas
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                 Perguntas Frequentes sobre{" "}
-                <span className="bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">
+                <span className="text-primary">
                   Namoro Online
                 </span>
               </h2>
@@ -77,10 +77,10 @@ const HomeFAQ = () => {
 
             {/* FAQ Accordion */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-warning/50 to-primary/50 rounded-2xl p-[1px]">
+              <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px]">
                 <div className="absolute inset-[1px] bg-card rounded-2xl" />
               </div>
-              <div className="relative bg-card rounded-2xl p-6 md:p-8 shadow-lg">
+              <div className="relative bg-card rounded-2xl p-6 md:p-8 shadow-custom-md">
                 <Accordion type="single" collapsible className="w-full">
                   {faqItems.map((item, index) => (
                     <AccordionItem 

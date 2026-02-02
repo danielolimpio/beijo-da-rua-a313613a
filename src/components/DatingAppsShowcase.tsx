@@ -67,7 +67,7 @@ const DatingAppsShowcase = () => {
         <div className="text-center mt-8 sm:mt-10">
           <Link
             to="/apps/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground rounded-full font-medium hover:shadow-custom-primary transition-all duration-300"
           >
             Ver todos os apps
           </Link>

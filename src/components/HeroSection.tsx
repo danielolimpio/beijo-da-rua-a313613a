@@ -56,7 +56,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
+                className="bg-gradient-primary text-primary-foreground hover:shadow-custom-primary px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg transition-all duration-300"
                 onClick={() => window.location.href = '/quiz'}
               >
                 Fazer Quiz Grátis
@@ -64,7 +64,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg"
+                className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg border-primary/30 hover:bg-primary/5 hover:border-primary"
                 onClick={() => window.location.href = '/apps-de-namoro'}
               >
                 Ver Avaliações de Apps

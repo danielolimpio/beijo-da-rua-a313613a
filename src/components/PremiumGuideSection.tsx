@@ -19,23 +19,23 @@ import { Link } from "react-router-dom";
 
 const PremiumGuideSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-gradient-hero relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-warning/5 to-transparent rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-warning/10 px-4 py-2 rounded-full mb-6">
+          <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">
+            <span className="text-sm font-medium text-primary">
               Guia Completo 2026
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
             Namoro Online em 2026: Guia Completo para{" "}
-            <span className="bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">
+            <span className="text-primary">
               Homens Brasileiros
             </span>
           </h2>
@@ -47,12 +47,12 @@ const PremiumGuideSection = () => {
 
         {/* Why Online Dating Works - Premium Card */}
         <div className="relative mb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-warning to-primary rounded-2xl p-[1px]">
+          <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px]">
             <div className="absolute inset-[1px] bg-card rounded-2xl" />
           </div>
-          <div className="relative bg-card rounded-2xl p-8 md:p-12 shadow-lg">
+          <div className="relative bg-card rounded-2xl p-8 md:p-12 shadow-custom-md">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-warning flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center shadow-custom-primary">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">
@@ -69,8 +69,8 @@ const PremiumGuideSection = () => {
             <div className="grid md:grid-cols-3 gap-6">
               {/* Stat Card 1 */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-warning/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-                <div className="relative bg-gradient-to-br from-muted/50 to-muted/30 rounded-xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300">
+                <div className="absolute inset-0 bg-primary/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+                <div className="relative bg-card rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 shadow-custom-sm">
                   <TrendingUp className="w-8 h-8 text-primary mb-4" />
                   <h4 className="text-xl font-bold text-foreground mb-2">Eficiência</h4>
                   <p className="text-sm text-muted-foreground">
@@ -81,9 +81,9 @@ const PremiumGuideSection = () => {
 
               {/* Stat Card 2 */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-warning/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-                <div className="relative bg-gradient-to-br from-muted/50 to-muted/30 rounded-xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300">
-                  <Clock className="w-8 h-8 text-warning mb-4" />
+                <div className="absolute inset-0 bg-primary/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+                <div className="relative bg-card rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 shadow-custom-sm">
+                  <Clock className="w-8 h-8 text-primary mb-4" />
                   <h4 className="text-xl font-bold text-foreground mb-2">Economia de Tempo</h4>
                   <p className="text-sm text-muted-foreground">
                     Reduza drasticamente o tempo gasto em encontros sem futuro.
@@ -93,9 +93,9 @@ const PremiumGuideSection = () => {
 
               {/* Stat Card 3 */}
               <div className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/50 to-warning/50 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-                <div className="relative bg-gradient-to-br from-muted/50 to-muted/30 rounded-xl p-6 border border-border/50 hover:border-primary/30 transition-all duration-300">
-                  <Zap className="w-8 h-8 text-success mb-4" />
+                <div className="absolute inset-0 bg-primary/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+                <div className="relative bg-card rounded-xl p-6 border border-border hover:border-primary/30 transition-all duration-300 shadow-custom-sm">
+                  <Zap className="w-8 h-8 text-primary mb-4" />
                   <h4 className="text-xl font-bold text-foreground mb-2">Investimento Inteligente</h4>
                   <p className="text-sm text-muted-foreground">
                     R$ 30-80/mês vs R$ 15.000/ano em encontros tradicionais.
@@ -110,13 +110,13 @@ const PremiumGuideSection = () => {
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Left Card - Proven Results */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-warning rounded-2xl p-[1px] opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px] opacity-70 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute inset-[1px] bg-card rounded-2xl" />
             </div>
-            <div className="relative bg-card rounded-2xl p-8 h-full shadow-md">
+            <div className="relative bg-card rounded-2xl p-8 h-full shadow-custom-md">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-success/20 to-success/10 flex items-center justify-center">
-                  <BadgeCheck className="w-5 h-5 text-success" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <BadgeCheck className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">Resultados Comprovados</h3>
               </div>
@@ -128,15 +128,15 @@ const PremiumGuideSection = () => {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Níveis mais altos de satisfação emocional</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Comunicação mais aberta entre os casais</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Maior alinhamento de valores e objetivos</span>
                 </div>
               </div>
@@ -145,12 +145,12 @@ const PremiumGuideSection = () => {
 
           {/* Right Card - Future of Dating */}
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-warning to-primary rounded-2xl p-[1px] opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px] opacity-70 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute inset-[1px] bg-card rounded-2xl" />
             </div>
-            <div className="relative bg-card rounded-2xl p-8 h-full shadow-md">
+            <div className="relative bg-card rounded-2xl p-8 h-full shadow-custom-md">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-warning/20 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Sparkles className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">O Futuro do Namoro no Brasil</h3>
@@ -163,15 +163,15 @@ const PremiumGuideSection = () => {
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Star className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Algoritmos de compatibilidade refinados por IA</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Star className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Eventos online + presenciais organizados por apps</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Star className="w-5 h-5 text-warning mt-0.5 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-muted-foreground">Coaching de namoro integrado às plataformas</span>
                 </div>
               </div>
@@ -181,13 +181,13 @@ const PremiumGuideSection = () => {
 
         {/* How to Choose Section */}
         <div className="relative mb-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-warning to-primary rounded-2xl p-[1px]">
-            <div className="absolute inset-[1px] bg-gradient-to-br from-card to-muted/20 rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px]">
+            <div className="absolute inset-[1px] bg-card rounded-2xl" />
           </div>
           <div className="relative rounded-2xl p-8 md:p-12">
             <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 mb-4">
-                <Crown className="w-6 h-6 text-warning" />
+                <Crown className="w-6 h-6 text-primary" />
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                   Como Escolher o Melhor App em 2026?
                 </h3>
@@ -200,9 +200,9 @@ const PremiumGuideSection = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Criteria 1 */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-warning flex items-center justify-center mb-4">
+                <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 h-full shadow-custom-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-4 shadow-custom-primary">
                     <Target className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Intenção Clara</h4>
@@ -214,9 +214,9 @@ const PremiumGuideSection = () => {
 
               {/* Criteria 2 */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-b from-warning/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 hover:border-warning/50 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-warning to-primary flex items-center justify-center mb-4">
+                <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 h-full shadow-custom-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-4 shadow-custom-primary">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Qualidade dos Perfis</h4>
@@ -228,9 +228,9 @@ const PremiumGuideSection = () => {
 
               {/* Criteria 3 */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-b from-success/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 hover:border-success/50 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-success to-success/70 flex items-center justify-center mb-4">
+                <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 h-full shadow-custom-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-4 shadow-custom-primary">
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Algoritmos Inteligentes</h4>
@@ -242,9 +242,9 @@ const PremiumGuideSection = () => {
 
               {/* Criteria 4 */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-warning flex items-center justify-center mb-4">
+                <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 h-full shadow-custom-sm">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center mb-4 shadow-custom-primary">
                     <MessageCircle className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Recursos de Conversa</h4>
@@ -262,12 +262,12 @@ const PremiumGuideSection = () => {
           {/* Left - Profile Tips */}
           <div className="lg:col-span-3">
             <div className="relative h-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-warning rounded-2xl p-[1px]">
+              <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px]">
                 <div className="absolute inset-[1px] bg-card rounded-2xl" />
               </div>
-              <div className="relative bg-card rounded-2xl p-8 h-full shadow-md">
+              <div className="relative bg-card rounded-2xl p-8 h-full shadow-custom-md">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-warning flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-custom-primary">
                     <Lightbulb className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">Dicas para um Perfil que Atrai</h3>
@@ -275,8 +275,8 @@ const PremiumGuideSection = () => {
 
                 <div className="space-y-5">
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-warning/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-sm font-bold bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">1</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-sm font-bold text-primary">1</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Use 3 a 5 fotos de qualidade</h4>
@@ -285,8 +285,8 @@ const PremiumGuideSection = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-warning/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-sm font-bold bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">2</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-sm font-bold text-primary">2</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Seja específico na bio</h4>
@@ -295,8 +295,8 @@ const PremiumGuideSection = () => {
                   </div>
 
                   <div className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary/20 to-warning/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-sm font-bold bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">3</span>
+                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-sm font-bold text-primary">3</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground mb-1">Mostre intenção e vulnerabilidade</h4>
@@ -311,12 +311,12 @@ const PremiumGuideSection = () => {
           {/* Right - Premium Benefits */}
           <div className="lg:col-span-2">
             <div className="relative h-full">
-              <div className="absolute inset-0 bg-gradient-to-r from-warning to-primary rounded-2xl p-[1px]">
-                <div className="absolute inset-[1px] bg-gradient-to-br from-primary/5 via-card to-warning/5 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[1px]">
+                <div className="absolute inset-[1px] bg-card rounded-2xl" />
               </div>
-              <div className="relative rounded-2xl p-8 h-full">
+              <div className="relative bg-card rounded-2xl p-8 h-full shadow-custom-md">
                 <div className="flex items-center gap-3 mb-6">
-                  <Crown className="w-6 h-6 text-warning" />
+                  <Crown className="w-6 h-6 text-primary" />
                   <h3 className="text-xl font-bold text-foreground">Vale a Pena o Premium?</h3>
                 </div>
 
@@ -325,20 +325,20 @@ const PremiumGuideSection = () => {
                 </p>
 
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 bg-card/50 rounded-lg p-3">
-                    <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
+                  <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-3 border border-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">Mensagens ilimitadas</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-card/50 rounded-lg p-3">
-                    <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
+                  <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-3 border border-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">Ver quem curtiu seu perfil</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-card/50 rounded-lg p-3">
-                    <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
+                  <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-3 border border-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">Filtros avançados</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-card/50 rounded-lg p-3">
-                    <CheckCircle2 className="w-5 h-5 text-success flex-shrink-0" />
+                  <div className="flex items-center gap-3 bg-primary/5 rounded-lg p-3 border border-primary/10">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-sm text-foreground">Maior visibilidade</span>
                   </div>
                 </div>
@@ -349,18 +349,18 @@ const PremiumGuideSection = () => {
 
         {/* Next Steps CTA */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-warning to-primary rounded-2xl p-[2px]">
-            <div className="absolute inset-[2px] bg-gradient-to-br from-card via-muted/30 to-card rounded-2xl" />
+          <div className="absolute inset-0 bg-gradient-primary rounded-2xl p-[2px]">
+            <div className="absolute inset-[2px] bg-card rounded-2xl" />
           </div>
           <div className="relative rounded-2xl p-8 md:p-12 text-center">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-warning/10 px-4 py-2 rounded-full mb-6">
-              <Zap className="w-4 h-4 text-warning" />
-              <span className="text-sm font-medium text-foreground">Comece Agora</span>
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <Zap className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Comece Agora</span>
             </div>
             
             <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
               Próximos Passos para Encontrar{" "}
-              <span className="bg-gradient-to-r from-primary to-warning bg-clip-text text-transparent">
+              <span className="text-primary">
                 Seu Amor
               </span>
             </h3>
@@ -373,14 +373,14 @@ const PremiumGuideSection = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/quiz/"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-warning text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg"
+                className="inline-flex items-center gap-2 bg-gradient-primary text-white px-6 py-3 rounded-full font-semibold hover:shadow-custom-primary transition-all duration-300 shadow-lg"
               >
                 <Target className="w-5 h-5" />
                 Descobrir Meu App Ideal
               </Link>
               <Link 
                 to="/apps/"
-                className="inline-flex items-center gap-2 bg-card border-2 border-primary/30 text-foreground px-6 py-3 rounded-full font-semibold hover:border-primary/60 transition-all"
+                className="inline-flex items-center gap-2 bg-card border-2 border-primary/30 text-foreground px-6 py-3 rounded-full font-semibold hover:border-primary hover:bg-primary/5 transition-all duration-300"
               >
                 <Smartphone className="w-5 h-5" />
                 Ver Apps Avaliados

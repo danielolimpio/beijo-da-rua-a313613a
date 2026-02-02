@@ -6,7 +6,7 @@ const RecentArticlesThumbnails = () => {
   const articles = recentArticles.slice(0, 9);
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-success/10">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-section-alt">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -48,7 +48,7 @@ const RecentArticlesThumbnails = () => {
         <div className="text-center mt-8">
           <Link
             to="/blog/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground rounded-full font-medium hover:shadow-custom-primary transition-all duration-300"
           >
             Ver todos os artigos
           </Link>

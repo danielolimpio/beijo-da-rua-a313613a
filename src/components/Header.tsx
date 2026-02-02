@@ -46,7 +46,7 @@ const Header = () => {
           {/* Mobile & Tablet Actions */}
           <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
             <a href="/quiz">
-              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 whitespace-nowrap">
+              <Button className="bg-gradient-primary text-primary-foreground hover:shadow-custom-primary text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 whitespace-nowrap transition-all duration-300">
                 QUIZ
               </Button>
             </a>
