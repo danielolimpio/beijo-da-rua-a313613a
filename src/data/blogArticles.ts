@@ -22,6 +22,7 @@ import articleEscutarConquistar from "@/assets/article-escutar-conquistar.jpg";
 import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
 import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg";
 import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
+import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -38,6 +39,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 22,
+    title: "Por Que o Humor Inteligente Conquista Mais que Beleza",
+    excerpt: "Descubra como fazer rir com elegância — sem piadas cafajestes — e criar conexões emocionais duradouras.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "conquista", "paquera", "autoestima"],
+    image: articleHumorInteligente,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "14 de fevereiro de 2026",
+    link: "/blog/posts/humor-inteligente-conquista-mais-que-beleza"
+  },
   {
     id: 21,
     title: "A Arte de Manter uma Conversa Leve e Envolver",
