@@ -127,6 +127,7 @@ const Sitemap = () => {
                 <li className="ml-4"><Link to="/blog/posts/medo-coragem-conquistar-respeito/" className="text-primary hover:underline">Do Medo à Coragem</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/despertar-interesse-sem-dizer-nada/" className="text-primary hover:underline">Despertar Interesse Silencioso</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/arte-manter-conversa-leve-envolver/" className="text-primary hover:underline">A Arte de Manter uma Conversa Leve</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/humor-inteligente-conquista-mais-que-beleza/" className="text-primary hover:underline">Humor Inteligente Conquista Mais que Beleza</Link></li>
               </ul>
             </section>
 
