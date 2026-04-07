@@ -93,7 +93,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
         title="Como Reconhecer Se Ela Está Disponível Emocionalmente"
       />
 
-      <ArticleAds id={101} />
+      <ArticleAds.UnderTitle />
 
       {/* Intro */}
       <div className="prose prose-lg max-w-none">
@@ -106,7 +106,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           Reconhecer se ela está realmente aberta a construir algo sério é uma das habilidades mais valiosas que um homem pode desenvolver no mundo do namoro moderno. Não se trata de adivinhação, mas de observar sinais claros, consistentes e baseados em comportamentos reais. Neste guia, vamos desmontar mitos, apresentar insights psicológicos validados e oferecer um passo a passo prático para que você pare de perder tempo com quem não está pronto — e foque sua energia em quem realmente merece.
         </p>
 
-        <ArticleAds id={102} />
+        <ArticleAds.AfterFirstParagraph />
 
         {/* Section 1 */}
         <div className="my-12">
@@ -135,7 +135,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={103} />
+        <ArticleAds.AfterSecondParagraph />
 
         {/* Section 2 - Sinais Claros */}
         <div className="my-12">
@@ -154,8 +154,8 @@ const ReconhecerDisponibilidadeEmocional = () => {
           <div className="space-y-4 mb-8">
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg flex-shrink-0">
-                  <MessageCircle className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg flex-shrink-0">
+                  <MessageCircle className="w-5 h-5 text-primary dark:text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">1. Ela inicia contato e mantém a comunicação consistente</h3>
@@ -168,8 +168,8 @@ const ReconhecerDisponibilidadeEmocional = () => {
 
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg flex-shrink-0">
-                  <Heart className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg flex-shrink-0">
+                  <Heart className="w-5 h-5 text-primary dark:text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">2. Compartilha coisas pessoais, não só curiosidades</h3>
@@ -182,8 +182,8 @@ const ReconhecerDisponibilidadeEmocional = () => {
 
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg flex-shrink-0">
-                  <Target className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg flex-shrink-0">
+                  <Target className="w-5 h-5 text-primary dark:text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">3. Fala do futuro de forma inclusiva</h3>
@@ -196,8 +196,8 @@ const ReconhecerDisponibilidadeEmocional = () => {
 
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg flex-shrink-0">
-                  <Users className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg flex-shrink-0">
+                  <Users className="w-5 h-5 text-primary dark:text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">4. Apresenta você ao seu círculo (mesmo que virtualmente)</h3>
@@ -210,8 +210,8 @@ const ReconhecerDisponibilidadeEmocional = () => {
 
             <div className="bg-card border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg flex-shrink-0">
-                  <Shield className="w-5 h-5 text-green-600 dark:text-green-400" />
+                <div className="p-2 bg-primary/10 dark:bg-primary/20 rounded-lg flex-shrink-0">
+                  <Shield className="w-5 h-5 text-primary dark:text-primary" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">5. Lida bem com desentendimentos</h3>
@@ -224,7 +224,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={104} />
+        <ArticleAds.MidContent />
 
         {/* Section 3 - Red Flags */}
         <div className="my-12">
@@ -271,7 +271,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={105} />
+        <ArticleAds.MidContent />
 
         {/* Middle Image */}
         <div className="my-12">
@@ -321,7 +321,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={106} />
+        <ArticleAds.MidContent />
 
         {/* Section 5 - A Armadilha dos Quase */}
         <div className="my-12">
@@ -364,7 +364,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </p>
         </div>
 
-        <ArticleAds id={107} />
+        <ArticleAds.LongContent />
 
         {/* Section 6 - Autoavaliação */}
         <div className="my-12">
@@ -414,7 +414,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={108} />
+        <ArticleAds.LongContent />
 
         {/* Section 7 - Apps de Namoro */}
         <div className="my-12">
@@ -468,7 +468,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={109} />
+        <ArticleAds.LongContent />
 
         {/* Conclusão */}
         <div className="my-12">
@@ -496,7 +496,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           </div>
         </div>
 
-        <ArticleAds id={110} />
+        <ArticleAds.BeforeEnd />
 
         {/* FAQ */}
         <div className="my-12">

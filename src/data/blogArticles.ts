@@ -23,6 +23,7 @@ import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
 import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg";
 import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
 import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
+import articleReconhecerDisponivel from "@/assets/article-reconhecer-disponivel.jpg";
 
 export interface BlogArticle {
   id: number;
