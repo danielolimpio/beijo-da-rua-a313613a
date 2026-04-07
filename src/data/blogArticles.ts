@@ -23,6 +23,7 @@ import articleMedoCoragem from "@/assets/article-medo-coragem.jpg";
 import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg";
 import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
 import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
+import articleReconhecerDisponivel from "@/assets/article-reconhecer-disponivel.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -39,6 +40,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 23,
+    title: "Como Reconhecer Se Ela Está Disponível Emocionalmente",
+    excerpt: "Aprenda a identificar sinais claros de disponibilidade emocional e pare de perder tempo com quem não está pronto para um relacionamento real.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "conquista", "paquera", "autoestima"],
+    image: articleReconhecerDisponivel,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de abril de 2026",
+    link: "/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente"
+  },
   {
     id: 22,
     title: "Por Que o Humor Inteligente Conquista Mais que Beleza",
