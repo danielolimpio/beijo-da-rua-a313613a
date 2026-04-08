@@ -1,3 +1,4 @@
+// Artigo: Como Reconhecer Se Ela Está Disponível Emocionalmente
 import { Helmet } from "react-helmet";
 import BlogArticleLayout, { ArticleAds } from "@/components/BlogArticleLayout";
 import RelatedArticles from "@/components/RelatedArticles";
