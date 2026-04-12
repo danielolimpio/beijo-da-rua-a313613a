@@ -379,7 +379,7 @@ const PremiumGuideSection = () => {
                 Descobrir Meu App Ideal
               </Link>
               <Link 
-                to="/apps/"
+                to="/apps-de-namoro/"
                 className="inline-flex items-center gap-2 bg-card border-2 border-primary/30 text-foreground px-6 py-3 rounded-full font-semibold hover:border-primary hover:bg-primary/5 transition-all duration-300"
               >
                 <Smartphone className="w-5 h-5" />
