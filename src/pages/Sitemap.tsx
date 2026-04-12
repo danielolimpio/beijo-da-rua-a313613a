@@ -38,6 +38,7 @@ const Sitemap = () => {
               <ul className="space-y-2">
                 <li><Link to="/" className="text-primary hover:underline">Página Inicial</Link></li>
                 <li><Link to="/sobre-nos" className="text-primary hover:underline">Sobre Nós</Link></li>
+                <li><Link to="/como-funciona" className="text-primary hover:underline">Como Funciona</Link></li>
                 <li><Link to="/contato" className="text-primary hover:underline">Contato</Link></li>
                 <li><Link to="/faq" className="text-primary hover:underline">Perguntas Frequentes</Link></li>
               </ul>
@@ -141,6 +142,7 @@ const Sitemap = () => {
               <ul className="space-y-2">
                 <li><Link to="/politica-de-privacidade" className="text-primary hover:underline">Política de Privacidade</Link></li>
                 <li><Link to="/termos-de-uso" className="text-primary hover:underline">Termos de Uso</Link></li>
+                <li><Link to="/politica-de-cookies" className="text-primary hover:underline">Política de Cookies</Link></li>
               </ul>
             </section>
           </div>
