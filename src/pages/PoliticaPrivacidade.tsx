@@ -792,21 +792,24 @@ const PoliticaPrivacidade = () => {
                 </div>
               </section>
 
-              {/* Ezoic Privacy Policy Embed */}
+              {/* Google AdSense Policy */}
               <section className="bg-card rounded-2xl p-8 shadow-md border border-border animate-fade-in">
                 <div className="flex items-start gap-4">
                   <Shield className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
                   <div className="w-full">
-                    <h2 className="text-2xl font-bold mb-4 text-foreground">DECLARAÇÃO SOBRE USO DO EZOIC</h2>
+                    <h2 className="text-2xl font-bold mb-4 text-foreground">PUBLICIDADE E ANÚNCIOS</h2>
                     
-                    <p className="text-muted-foreground leading-relaxed mb-6">
-                      Nosso site utiliza a plataforma Ezoic para otimização de anúncios e experiência do usuário. As informações abaixo detalham como o Ezoic e seus parceiros utilizam suas informações e os cookies que podem ser utilizados no site.
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Nosso site utiliza o Google AdSense para exibição de anúncios. O Google e seus parceiros podem utilizar cookies para veicular anúncios com base em visitas anteriores ao nosso site ou a outros sites na internet.
                     </p>
 
-                    {/* Ezoic dynamic privacy policy embed */}
-                    <div className="prose prose-sm max-w-none text-muted-foreground">
-                      <span id="ezoic-privacy-policy-embed"></span>
-                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      Você pode desativar a publicidade personalizada acessando as <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Configurações de Anúncios do Google</a>.
+                    </p>
+
+                    <p className="text-muted-foreground leading-relaxed">
+                      Para mais informações sobre como o Google utiliza dados quando você usa sites de parceiros, acesse: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Política de Privacidade do Google</a>.
+                    </p>
                   </div>
                 </div>
               </section>

@@ -83,7 +83,7 @@ const PoliticaCookies = () => {
                       </div>
                       <div className="bg-secondary/5 border border-secondary/20 rounded-xl p-4">
                         <h4 className="font-semibold text-foreground mb-2">Cookies de Terceiros</h4>
-                        <p className="text-muted-foreground text-sm">Definidos por parceiros (ex: Google, Ezoic, redes de anúncios).</p>
+                        <p className="text-muted-foreground text-sm">Definidos por parceiros (ex: Google AdSense, redes de anúncios).</p>
                       </div>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ const PoliticaCookies = () => {
                       </div>
                       <div className="space-y-2 text-muted-foreground">
                         <p><strong>Finalidade:</strong> Entender como os visitantes usam o site (páginas visitadas, tempo de permanência, erros).</p>
-                        <p><strong>Fornecedores:</strong> Google Analytics, Ezoic, Adobe Analytics.</p>
+                        <p><strong>Fornecedores:</strong> Google Analytics, Google AdSense.</p>
                         <p><strong>Prazo:</strong> Até 2 anos.</p>
                         <p><strong>Podem ser recusados?</strong> <span className="text-green-600 font-medium">Sim.</span></p>
                       </div>
@@ -136,7 +136,7 @@ const PoliticaCookies = () => {
                       </div>
                       <div className="space-y-2 text-muted-foreground">
                         <p><strong>Finalidade:</strong> Exibir anúncios relevantes com base em seus interesses e comportamento online.</p>
-                        <p><strong>Fornecedores:</strong> Google Ads, Ezoic, ID5, Pubmatic, Sonobi, Trade Desk, DoubleClick.</p>
+                        <p><strong>Fornecedores:</strong> Google Ads, Google AdSense, DoubleClick.</p>
                         <p><strong>Prazo:</strong> De 30 minutos a 2 anos.</p>
                         <p><strong>Podem ser recusados?</strong> <span className="text-green-600 font-medium">Sim.</span></p>
                       </div>
@@ -165,7 +165,7 @@ const PoliticaCookies = () => {
                     <h2 className="text-2xl font-bold mb-4 text-foreground">Como controlar ou recusar cookies?</h2>
                     
                     <p className="text-muted-foreground leading-relaxed mb-4">
-                      Você tem total controle sobre os cookies por meio do <strong>Gerenciador de Consentimento</strong> exibido no banner do topo do site (fornecido pelo Ezoic). Nele, você pode:
+                      Você tem total controle sobre os cookies por meio das configurações do seu navegador. Nelas, você pode:
                     </p>
 
                     <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6 ml-4">
