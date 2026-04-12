@@ -1,96 +1,31 @@
-interface EzoicAdProps {
-  placeholderId: number;
+/**
+ * Ad Placeholder Component (Google AdSense)
+ * 
+ * These components serve as empty placeholders.
+ * Google AdSense auto ads are loaded via the script in index.html
+ * and will automatically place ads in optimal positions.
+ */
+
+interface AdPlaceholderProps {
   className?: string;
 }
 
-/**
- * Ezoic Ad Placeholder Component
- * 
- * Placeholder IDs:
- * 101 - top_of_page
- * 102 - under_page_title
- * 103 - bottom_of_page
- * 104 - sidebar
- * 105 - sidebar_middle_1
- * 106 - sidebar_bottom
- * 107 - sidebar_floating_1
- * 108 - sidebar_floating_2
- * 109 - under_first_paragraph
- * 110 - under_second_paragraph
- * 111 - mid_content
- * 112 - long_content (800+ words)
- * 113 - longer_content (1200+ words)
- * 114 - longest_content (1800+ words)
- * 115 - incontent_5
- */
-const EzoicAd = ({ placeholderId, className = "" }: EzoicAdProps) => {
-  return (
-    <div 
-      id={`ezoic-pub-ad-placeholder-${placeholderId}`}
-      className={`ezoic-ad my-6 ${className}`}
-    />
-  );
-};
+// All ad components return null — AdSense auto ads handle placement
+export const TopOfPageAd = ({ className }: AdPlaceholderProps) => null;
+export const UnderPageTitleAd = ({ className }: AdPlaceholderProps) => null;
+export const BottomOfPageAd = ({ className }: AdPlaceholderProps) => null;
+export const SidebarAd = ({ className }: AdPlaceholderProps) => null;
+export const SidebarMiddleAd = ({ className }: AdPlaceholderProps) => null;
+export const SidebarBottomAd = ({ className }: AdPlaceholderProps) => null;
+export const SidebarFloating1Ad = ({ className }: AdPlaceholderProps) => null;
+export const SidebarFloating2Ad = ({ className }: AdPlaceholderProps) => null;
+export const UnderFirstParagraphAd = ({ className }: AdPlaceholderProps) => null;
+export const UnderSecondParagraphAd = ({ className }: AdPlaceholderProps) => null;
+export const MidContentAd = ({ className }: AdPlaceholderProps) => null;
+export const LongContentAd = ({ className }: AdPlaceholderProps) => null;
+export const LongerContentAd = ({ className }: AdPlaceholderProps) => null;
+export const LongestContentAd = ({ className }: AdPlaceholderProps) => null;
+export const InContent5Ad = ({ className }: AdPlaceholderProps) => null;
 
+const EzoicAd = () => null;
 export default EzoicAd;
-
-// Named exports for specific ad placements
-export const TopOfPageAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={101} className={className} />
-);
-
-export const UnderPageTitleAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={102} className={className} />
-);
-
-export const BottomOfPageAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={103} className={className} />
-);
-
-export const SidebarAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={104} className={className} />
-);
-
-export const SidebarMiddleAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={105} className={className} />
-);
-
-export const SidebarBottomAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={106} className={className} />
-);
-
-export const SidebarFloating1Ad = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={107} className={className} />
-);
-
-export const SidebarFloating2Ad = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={108} className={className} />
-);
-
-export const UnderFirstParagraphAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={109} className={className} />
-);
-
-export const UnderSecondParagraphAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={110} className={className} />
-);
-
-export const MidContentAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={111} className={className} />
-);
-
-export const LongContentAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={112} className={className} />
-);
-
-export const LongerContentAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={113} className={className} />
-);
-
-export const LongestContentAd = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={114} className={className} />
-);
-
-export const InContent5Ad = ({ className }: { className?: string }) => (
-  <EzoicAd placeholderId={115} className={className} />
-);

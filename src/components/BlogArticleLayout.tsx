@@ -24,7 +24,7 @@ interface BlogArticleLayoutProps {
 }
 
 /**
- * Blog Article Layout with strategic Ezoic ad placements
+ * Blog Article Layout with Google AdSense auto ads
  * 
  * Ads shown based on content length:
  * - Always: top_of_page, under_page_title, under_first_paragraph, under_second_paragraph, mid_content, incontent_5, bottom_of_page

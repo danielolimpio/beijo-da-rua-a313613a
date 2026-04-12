@@ -2,7 +2,7 @@
  * Feature flags para controlar visibilidade de seções do site
  * Altere para true/false para mostrar/ocultar seções
  * 
- * NOTA: Estas flags foram criadas para aprovação do Ezoic
+ * NOTA: Estas flags foram criadas para aprovação do Google AdSense
  * Depois de aprovado, volte todas para true
  */
 
