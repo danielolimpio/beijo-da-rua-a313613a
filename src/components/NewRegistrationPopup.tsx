@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { UserPlus } from "lucide-react";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
 import profile1 from "@/assets/popup-profile1.jpeg";
@@ -35,26 +35,21 @@ const NewRegistrationPopup = () => {
   const [currentProfile, setCurrentProfile] = useState<Profile | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const showRandomProfile = useCallback(() => {
+    const randomIndex = Math.floor(Math.random() * profiles.length);
+    setCurrentProfile(profiles[randomIndex]);
+    setIsVisible(true);
+    setTimeout(() => setIsVisible(false), 4000);
+  }, []);
+
   useEffect(() => {
-    const showRandomProfile = () => {
-      const randomIndex = Math.floor(Math.random() * profiles.length);
-      const profile = profiles[randomIndex];
-      
-      setCurrentProfile(profile);
-      setIsVisible(true);
+    if (!FEATURE_FLAGS.SHOW_REGISTRATION_POPUP) return;
 
-      // Hide after 4 seconds
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 4000);
-    };
+    // Delay first popup to not block initial interaction
+    const initialTimeout = setTimeout(showRandomProfile, 5000);
 
-    // Show first profile after 3 seconds
-    const initialTimeout = setTimeout(showRandomProfile, 3000);
-
-    // Then show profiles at random intervals between 8-15 seconds
     const interval = setInterval(() => {
-      const randomDelay = Math.random() * 7000 + 8000; // 8-15 seconds
+      const randomDelay = Math.random() * 7000 + 8000;
       setTimeout(showRandomProfile, randomDelay);
     }, 15000);
 
@@ -62,9 +57,8 @@ const NewRegistrationPopup = () => {
       clearTimeout(initialTimeout);
       clearInterval(interval);
     };
-  }, []);
+  }, [showRandomProfile]);
 
-  // Return null if feature is disabled or no profile
   if (!FEATURE_FLAGS.SHOW_REGISTRATION_POPUP || !currentProfile) return null;
 
   return (
@@ -82,6 +76,7 @@ const NewRegistrationPopup = () => {
             src={currentProfile.image}
             alt={currentProfile.name}
             className="w-12 h-12 rounded-full object-cover"
+            loading="lazy"
           />
           <div className="flex-1">
             <p className="text-sm font-semibold text-foreground">

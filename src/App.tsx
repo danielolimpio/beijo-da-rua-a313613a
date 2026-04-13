@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,87 +6,97 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+
+// Eagerly load Index for fastest first paint
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import FAQ from "./pages/FAQ";
-import DatingApps from "./pages/DatingApps";
-import Bumble from "./pages/apps/Bumble";
-import Tinder from "./pages/apps/Tinder";
-import Happn from "./pages/apps/Happn";
-import OkCupid from "./pages/apps/OkCupid";
-import Badoo from "./pages/apps/Badoo";
-import Hinge from "./pages/apps/Hinge";
-import POF from "./pages/apps/POF";
-import FacebookDating from "./pages/apps/FacebookDating";
-import Skout from "./pages/apps/Skout";
-import MeetMe from "./pages/apps/MeetMe";
-import Eharmony from "./pages/apps/Eharmony";
-import Dating from "./pages/apps/Dating";
-import Dicas from "./pages/Dicas";
-import Blog from "./pages/Blog";
-import AutoestimaCategory from "./pages/blog/categories/Autoestima";
-import RelacionamentoCategory from "./pages/blog/categories/Relacionamento";
-import PaqueraCategory from "./pages/blog/categories/Paquera";
-import AplicativosCategory from "./pages/blog/categories/Aplicativos";
-import ConquistaCategory from "./pages/blog/categories/Conquista";
-import ComoAbordarUmaMulherComConfianca from "./pages/blog/posts/ComoAbordarUmaMulherComConfianca";
-import OsSegredosDeUmPerfilConquistador from "./pages/blog/posts/OsSegredosDeUmPerfilConquistador";
-import CantadasIrresistiveisQueFuncionam from "./pages/blog/posts/CantadasIrresistiveisQueFuncionam";
-import DescubraQualSiteRelacionamentoCombina from "./pages/blog/posts/DescubraQualSiteRelacionamentoCombina";
-import ComoConvidarMulherSairSemParecerDesesperado from "./pages/blog/posts/ComoConvidarMulherSairSemParecerDesesperado";
-import TecnicasControlarNervosismoPaquera from "./pages/blog/posts/TecnicasControlarNervosismoPaquera";
-import FrasesDeEfeitoQueDeixamMulherInteressada from "./pages/blog/posts/FrasesDeEfeitoQueDeixamMulherInteressada";
-import ComoCriarConexoesReaisEmApps from "./pages/blog/posts/ComoCriarConexoesReaisEmApps";
-import ErrosFataisQueDestroemSeuCharme from "./pages/blog/posts/ErrosFataisQueDestroemSeuCharme";
-import LinguagemCorporalPoderosa from "./pages/blog/posts/LinguagemCorporalPoderosa";
-import EstrategiasPrimeiroEncontro from "./pages/blog/posts/EstrategiasPrimeiroEncontro";
-import ComoSerAutenticoEAtraente from "./pages/blog/posts/ComoSerAutenticoEAtraente";
-import OPoderDoSilencio from "./pages/blog/posts/OPoderDoSilencio";
-import DomineEmocoesAtraia from "./pages/blog/posts/DomineEmocoesAtraia";
-import VibeConquistaSemPalavra from "./pages/blog/posts/VibeConquistaSemPalavra";
-import MelhoresApps2026 from "./pages/blog/posts/MelhoresApps2026";
-import SinaisInteresseFeminino from "./pages/blog/posts/SinaisInteresseFeminino";
-import EscutarNovaFormaConquistar from "./pages/blog/posts/EscutarNovaFormaConquistar";
-import MedoCoragemConquistar from "./pages/blog/posts/MedoCoragemConquistar";
-import DespertarInteresseSemDizerNada from "./pages/blog/posts/DespertarInteresseSemDizerNada";
-import ArteManterConversaLeve from "./pages/blog/posts/ArteManterConversaLeve";
-import HumorInteligente from "./pages/blog/posts/HumorInteligente";
-import ReconhecerDisponibilidadeEmocional from "./pages/blog/posts/ReconhecerDisponibilidadeEmocional";
-import Quiz from "./pages/Quiz";
-import QuizPage1 from "./pages/quiz/QuizPage1";
-import QuizPage2 from "./pages/quiz/QuizPage2";
-import QuizPage3 from "./pages/quiz/QuizPage3";
-import QuizPage4 from "./pages/quiz/QuizPage4";
-import QuizPage5 from "./pages/quiz/QuizPage5";
-import InteriorQuiz1 from "./pages/quiz/InteriorQuiz1";
-import InteriorQuiz2 from "./pages/quiz/InteriorQuiz2";
-import InteriorQuiz3 from "./pages/quiz/InteriorQuiz3";
-import InteriorQuiz4 from "./pages/quiz/InteriorQuiz4";
-import InteriorQuiz5 from "./pages/quiz/InteriorQuiz5";
-import InteriorQuizResultado from "./pages/quiz/InteriorQuizResultado";
-import OQueTeFazSorrir from "./pages/quiz/OQueTeFazSorrir";
-import QualSeuEstiloDeNamoro from "./pages/quiz/QualSeuEstiloDeNamoro";
-import VoceEMaisSerioOuDescontraido from "./pages/quiz/VoceEMaisSerioOuDescontraido";
-import OndeVoceQuerChegar from "./pages/quiz/OndeVoceQuerChegar";
-import OQueNuncaFaltaNoSeuDia from "./pages/quiz/OQueNuncaFaltaNoSeuDia";
-import ComoIniciarConversasApps from "./pages/quiz/ComoIniciarConversasApps";
-import QualTipoFotoPerfilFunciona from "./pages/quiz/QualTipoFotoPerfilFunciona";
-import QuantoTempoDedicarApps from "./pages/quiz/QuantoTempoDedicarApps";
-import ResultadoAppIdeal from "./pages/quiz/ResultadoAppIdeal";
-import ComoHomensTimidosUsarApps from "./pages/quiz/ComoHomensTimidosUsarApps";
-import MelhorHorarioUsarApps from "./pages/quiz/MelhorHorarioUsarApps";
-import FrequenciaIdealUsarApps from "./pages/quiz/FrequenciaIdealUsarApps";
-import TipoMensagemEnviarPrimeiro from "./pages/quiz/TipoMensagemEnviarPrimeiro";
-import AppIdealHomensTimidos from "./pages/quiz/AppIdealHomensTimidos";
-import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
-import TermosUso from "./pages/TermosUso";
-import PoliticaCookies from "./pages/PoliticaCookies";
-import Sitemap from "./pages/Sitemap";
-import ComoFunciona from "./pages/ComoFunciona";
+
+// Lazy load all other pages for better INP and smaller initial bundle
+const Contact = lazy(() => import("./pages/Contact"));
+const About = lazy(() => import("./pages/About"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const DatingApps = lazy(() => import("./pages/DatingApps"));
+const Bumble = lazy(() => import("./pages/apps/Bumble"));
+const Tinder = lazy(() => import("./pages/apps/Tinder"));
+const Happn = lazy(() => import("./pages/apps/Happn"));
+const OkCupid = lazy(() => import("./pages/apps/OkCupid"));
+const Badoo = lazy(() => import("./pages/apps/Badoo"));
+const Hinge = lazy(() => import("./pages/apps/Hinge"));
+const POF = lazy(() => import("./pages/apps/POF"));
+const FacebookDating = lazy(() => import("./pages/apps/FacebookDating"));
+const Skout = lazy(() => import("./pages/apps/Skout"));
+const MeetMe = lazy(() => import("./pages/apps/MeetMe"));
+const Eharmony = lazy(() => import("./pages/apps/Eharmony"));
+const Dating = lazy(() => import("./pages/apps/Dating"));
+const Dicas = lazy(() => import("./pages/Dicas"));
+const Blog = lazy(() => import("./pages/Blog"));
+const AutoestimaCategory = lazy(() => import("./pages/blog/categories/Autoestima"));
+const RelacionamentoCategory = lazy(() => import("./pages/blog/categories/Relacionamento"));
+const PaqueraCategory = lazy(() => import("./pages/blog/categories/Paquera"));
+const AplicativosCategory = lazy(() => import("./pages/blog/categories/Aplicativos"));
+const ConquistaCategory = lazy(() => import("./pages/blog/categories/Conquista"));
+const ComoAbordarUmaMulherComConfianca = lazy(() => import("./pages/blog/posts/ComoAbordarUmaMulherComConfianca"));
+const OsSegredosDeUmPerfilConquistador = lazy(() => import("./pages/blog/posts/OsSegredosDeUmPerfilConquistador"));
+const CantadasIrresistiveisQueFuncionam = lazy(() => import("./pages/blog/posts/CantadasIrresistiveisQueFuncionam"));
+const DescubraQualSiteRelacionamentoCombina = lazy(() => import("./pages/blog/posts/DescubraQualSiteRelacionamentoCombina"));
+const ComoConvidarMulherSairSemParecerDesesperado = lazy(() => import("./pages/blog/posts/ComoConvidarMulherSairSemParecerDesesperado"));
+const TecnicasControlarNervosismoPaquera = lazy(() => import("./pages/blog/posts/TecnicasControlarNervosismoPaquera"));
+const FrasesDeEfeitoQueDeixamMulherInteressada = lazy(() => import("./pages/blog/posts/FrasesDeEfeitoQueDeixamMulherInteressada"));
+const ComoCriarConexoesReaisEmApps = lazy(() => import("./pages/blog/posts/ComoCriarConexoesReaisEmApps"));
+const ErrosFataisQueDestroemSeuCharme = lazy(() => import("./pages/blog/posts/ErrosFataisQueDestroemSeuCharme"));
+const LinguagemCorporalPoderosa = lazy(() => import("./pages/blog/posts/LinguagemCorporalPoderosa"));
+const EstrategiasPrimeiroEncontro = lazy(() => import("./pages/blog/posts/EstrategiasPrimeiroEncontro"));
+const ComoSerAutenticoEAtraente = lazy(() => import("./pages/blog/posts/ComoSerAutenticoEAtraente"));
+const OPoderDoSilencio = lazy(() => import("./pages/blog/posts/OPoderDoSilencio"));
+const DomineEmocoesAtraia = lazy(() => import("./pages/blog/posts/DomineEmocoesAtraia"));
+const VibeConquistaSemPalavra = lazy(() => import("./pages/blog/posts/VibeConquistaSemPalavra"));
+const MelhoresApps2026 = lazy(() => import("./pages/blog/posts/MelhoresApps2026"));
+const SinaisInteresseFeminino = lazy(() => import("./pages/blog/posts/SinaisInteresseFeminino"));
+const EscutarNovaFormaConquistar = lazy(() => import("./pages/blog/posts/EscutarNovaFormaConquistar"));
+const MedoCoragemConquistar = lazy(() => import("./pages/blog/posts/MedoCoragemConquistar"));
+const DespertarInteresseSemDizerNada = lazy(() => import("./pages/blog/posts/DespertarInteresseSemDizerNada"));
+const ArteManterConversaLeve = lazy(() => import("./pages/blog/posts/ArteManterConversaLeve"));
+const HumorInteligente = lazy(() => import("./pages/blog/posts/HumorInteligente"));
+const ReconhecerDisponibilidadeEmocional = lazy(() => import("./pages/blog/posts/ReconhecerDisponibilidadeEmocional"));
+const Quiz = lazy(() => import("./pages/Quiz"));
+const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
+const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
+const QuizPage3 = lazy(() => import("./pages/quiz/QuizPage3"));
+const QuizPage4 = lazy(() => import("./pages/quiz/QuizPage4"));
+const QuizPage5 = lazy(() => import("./pages/quiz/QuizPage5"));
+const InteriorQuiz1 = lazy(() => import("./pages/quiz/InteriorQuiz1"));
+const InteriorQuiz2 = lazy(() => import("./pages/quiz/InteriorQuiz2"));
+const InteriorQuiz3 = lazy(() => import("./pages/quiz/InteriorQuiz3"));
+const InteriorQuiz4 = lazy(() => import("./pages/quiz/InteriorQuiz4"));
+const InteriorQuiz5 = lazy(() => import("./pages/quiz/InteriorQuiz5"));
+const InteriorQuizResultado = lazy(() => import("./pages/quiz/InteriorQuizResultado"));
+const OQueTeFazSorrir = lazy(() => import("./pages/quiz/OQueTeFazSorrir"));
+const QualSeuEstiloDeNamoro = lazy(() => import("./pages/quiz/QualSeuEstiloDeNamoro"));
+const VoceEMaisSerioOuDescontraido = lazy(() => import("./pages/quiz/VoceEMaisSerioOuDescontraido"));
+const OndeVoceQuerChegar = lazy(() => import("./pages/quiz/OndeVoceQuerChegar"));
+const OQueNuncaFaltaNoSeuDia = lazy(() => import("./pages/quiz/OQueNuncaFaltaNoSeuDia"));
+const ComoIniciarConversasApps = lazy(() => import("./pages/quiz/ComoIniciarConversasApps"));
+const QualTipoFotoPerfilFunciona = lazy(() => import("./pages/quiz/QualTipoFotoPerfilFunciona"));
+const QuantoTempoDedicarApps = lazy(() => import("./pages/quiz/QuantoTempoDedicarApps"));
+const ResultadoAppIdeal = lazy(() => import("./pages/quiz/ResultadoAppIdeal"));
+const ComoHomensTimidosUsarApps = lazy(() => import("./pages/quiz/ComoHomensTimidosUsarApps"));
+const MelhorHorarioUsarApps = lazy(() => import("./pages/quiz/MelhorHorarioUsarApps"));
+const FrequenciaIdealUsarApps = lazy(() => import("./pages/quiz/FrequenciaIdealUsarApps"));
+const TipoMensagemEnviarPrimeiro = lazy(() => import("./pages/quiz/TipoMensagemEnviarPrimeiro"));
+const AppIdealHomensTimidos = lazy(() => import("./pages/quiz/AppIdealHomensTimidos"));
+const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
+const TermosUso = lazy(() => import("./pages/TermosUso"));
+const PoliticaCookies = lazy(() => import("./pages/PoliticaCookies"));
+const Sitemap = lazy(() => import("./pages/Sitemap"));
+const ComoFunciona = lazy(() => import("./pages/ComoFunciona"));
 
 const queryClient = new QueryClient();
+
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -95,111 +106,113 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <ScrollToTopButton />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/como-funciona" element={<ComoFunciona />} />
-          <Route path="/contato" element={<Contact />} />
-          <Route path="/sobre-nos" element={<About />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/apps-de-namoro" element={<DatingApps />} />
-          <Route path="/apps/bumble" element={<Bumble />} />
-          <Route path="/apps/tinder" element={<Tinder />} />
-          <Route path="/apps/happn" element={<Happn />} />
-          <Route path="/apps/okcupid" element={<OkCupid />} />
-          <Route path="/apps/badoo" element={<Badoo />} />
-          <Route path="/apps/hinge" element={<Hinge />} />
-          <Route path="/apps/pof" element={<POF />} />
-          <Route path="/apps/facebook-dating" element={<FacebookDating />} />
-          <Route path="/apps/skout" element={<Skout />} />
-          <Route path="/apps/meetme" element={<MeetMe />} />
-          <Route path="/apps/eharmony" element={<Eharmony />} />
-          <Route path="/apps/dating" element={<Dating />} />
-          <Route path="/dicas" element={<Dicas />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/conquista" element={<ConquistaCategory />} />
-          <Route path="/blog/relacionamento" element={<RelacionamentoCategory />} />
-          <Route path="/blog/paquera" element={<PaqueraCategory />} />
-          <Route path="/blog/aplicativos" element={<AplicativosCategory />} />
-          <Route path="/blog/autoestima" element={<AutoestimaCategory />} />
-          {/* Blog posts - rotas com /posts/ */}
-          <Route path="/blog/posts/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
-          <Route path="/blog/posts/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
-          <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
-          <Route path="/blog/posts/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
-          <Route path="/blog/posts/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
-          <Route path="/blog/posts/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
-          <Route path="/blog/posts/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
-          <Route path="/blog/posts/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
-          <Route path="/blog/posts/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
-          <Route path="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
-          <Route path="/blog/posts/estrategias-primeiro-encontro" element={<EstrategiasPrimeiroEncontro />} />
-          <Route path="/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
-          <Route path="/blog/posts/o-poder-do-silencio" element={<OPoderDoSilencio />} />
-          <Route path="/blog/posts/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
-          <Route path="/blog/posts/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
-          <Route path="/blog/posts/melhores-apps-relacionamento-2026" element={<MelhoresApps2026 />} />
-          <Route path="/blog/posts/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
-          <Route path="/blog/posts/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
-          <Route path="/blog/posts/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
-          <Route path="/blog/posts/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
-          <Route path="/blog/posts/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
-          <Route path="/blog/posts/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
-          <Route path="/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
-          {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
-          <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
-          <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
-          <Route path="/blog/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
-          <Route path="/blog/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
-          <Route path="/blog/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
-          <Route path="/blog/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
-          <Route path="/blog/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
-          <Route path="/blog/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
-          <Route path="/blog/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
-          <Route path="/blog/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
-          <Route path="/blog/estrategias-primeiro-encontro" element={<EstrategiasPrimeiroEncontro />} />
-          <Route path="/blog/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
-          <Route path="/blog/o-poder-do-silencio" element={<OPoderDoSilencio />} />
-          <Route path="/blog/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
-          <Route path="/blog/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
-          <Route path="/blog/melhores-apps-relacionamento-2026" element={<MelhoresApps2026 />} />
-          <Route path="/blog/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
-          <Route path="/blog/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
-          <Route path="/blog/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
-          <Route path="/blog/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
-          <Route path="/blog/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
-          <Route path="/blog/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
-          <Route path="/blog/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
-          <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
-          <Route path="/melhor-horario-usar-apps-namoro" element={<MelhorHorarioUsarApps />} />
-          <Route path="/frequencia-ideal-usar-apps" element={<FrequenciaIdealUsarApps />} />
-          <Route path="/tipo-mensagem-enviar-primeiro" element={<TipoMensagemEnviarPrimeiro />} />
-          <Route path="/app-ideal-homens-timidos" element={<AppIdealHomensTimidos />} />
-          <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
-          <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
-          <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
-          <Route path="/interior-quiz-2" element={<InteriorQuiz2 />} />
-          <Route path="/interior-quiz-3" element={<InteriorQuiz3 />} />
-          <Route path="/interior-quiz-4" element={<InteriorQuiz4 />} />
-          <Route path="/interior-quiz-5" element={<InteriorQuiz5 />} />
-          <Route path="/interior-quiz-resultado" element={<InteriorQuizResultado />} />
-          <Route path="/o-que-te-faz-sorrir" element={<OQueTeFazSorrir />} />
-          <Route path="/qual-seu-estilo-de-namoro" element={<QualSeuEstiloDeNamoro />} />
-          <Route path="/voce-e-mais-serio-ou-descontraido" element={<VoceEMaisSerioOuDescontraido />} />
-          <Route path="/onde-voce-quer-chegar-no-relacionamento" element={<OndeVoceQuerChegar />} />
-          <Route path="/o-que-nunca-falta-no-seu-dia" element={<OQueNuncaFaltaNoSeuDia />} />
-          <Route path="/como-iniciar-conversas-apps-namoro-que-geram-respostas" element={<ComoIniciarConversasApps />} />
-          <Route path="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem" element={<QualTipoFotoPerfilFunciona />} />
-          <Route path="/quanto-tempo-dedicar-apps-namoro-por-dia-homem" element={<QuantoTempoDedicarApps />} />
-          <Route path="/seu-app-de-namoro-ideal-resultado" element={<ResultadoAppIdeal />} />
-          <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
-          <Route path="/termos-de-uso" element={<TermosUso />} />
-          <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
-          <Route path="/sitemap" element={<Sitemap />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/como-funciona" element={<ComoFunciona />} />
+            <Route path="/contato" element={<Contact />} />
+            <Route path="/sobre-nos" element={<About />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/apps-de-namoro" element={<DatingApps />} />
+            <Route path="/apps/bumble" element={<Bumble />} />
+            <Route path="/apps/tinder" element={<Tinder />} />
+            <Route path="/apps/happn" element={<Happn />} />
+            <Route path="/apps/okcupid" element={<OkCupid />} />
+            <Route path="/apps/badoo" element={<Badoo />} />
+            <Route path="/apps/hinge" element={<Hinge />} />
+            <Route path="/apps/pof" element={<POF />} />
+            <Route path="/apps/facebook-dating" element={<FacebookDating />} />
+            <Route path="/apps/skout" element={<Skout />} />
+            <Route path="/apps/meetme" element={<MeetMe />} />
+            <Route path="/apps/eharmony" element={<Eharmony />} />
+            <Route path="/apps/dating" element={<Dating />} />
+            <Route path="/dicas" element={<Dicas />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/conquista" element={<ConquistaCategory />} />
+            <Route path="/blog/relacionamento" element={<RelacionamentoCategory />} />
+            <Route path="/blog/paquera" element={<PaqueraCategory />} />
+            <Route path="/blog/aplicativos" element={<AplicativosCategory />} />
+            <Route path="/blog/autoestima" element={<AutoestimaCategory />} />
+            {/* Blog posts - rotas com /posts/ */}
+            <Route path="/blog/posts/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
+            <Route path="/blog/posts/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
+            <Route path="/blog/posts/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
+            <Route path="/blog/posts/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
+            <Route path="/blog/posts/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
+            <Route path="/blog/posts/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
+            <Route path="/blog/posts/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
+            <Route path="/blog/posts/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
+            <Route path="/blog/posts/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
+            <Route path="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
+            <Route path="/blog/posts/estrategias-primeiro-encontro" element={<EstrategiasPrimeiroEncontro />} />
+            <Route path="/blog/posts/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
+            <Route path="/blog/posts/o-poder-do-silencio" element={<OPoderDoSilencio />} />
+            <Route path="/blog/posts/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
+            <Route path="/blog/posts/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
+            <Route path="/blog/posts/melhores-apps-relacionamento-2026" element={<MelhoresApps2026 />} />
+            <Route path="/blog/posts/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
+            <Route path="/blog/posts/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
+            <Route path="/blog/posts/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
+            <Route path="/blog/posts/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
+            <Route path="/blog/posts/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
+            <Route path="/blog/posts/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
+            <Route path="/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
+            {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
+            <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
+            <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
+            <Route path="/blog/os-segredos-de-um-perfil-conquistador" element={<OsSegredosDeUmPerfilConquistador />} />
+            <Route path="/blog/como-convidar-mulher-sair-sem-parecer-desesperado" element={<ComoConvidarMulherSairSemParecerDesesperado />} />
+            <Route path="/blog/tecnicas-controlar-nervosismo-paquera" element={<TecnicasControlarNervosismoPaquera />} />
+            <Route path="/blog/frases-de-efeito-que-deixam-mulher-interessada" element={<FrasesDeEfeitoQueDeixamMulherInteressada />} />
+            <Route path="/blog/como-criar-conexoes-reais-em-apps" element={<ComoCriarConexoesReaisEmApps />} />
+            <Route path="/blog/erros-fatais-que-destroem-seu-charme" element={<ErrosFataisQueDestroemSeuCharme />} />
+            <Route path="/blog/descubra-qual-site-relacionamento-combina" element={<DescubraQualSiteRelacionamentoCombina />} />
+            <Route path="/blog/linguagem-corporal-poderosa-na-hora-de-conquistar" element={<LinguagemCorporalPoderosa />} />
+            <Route path="/blog/estrategias-primeiro-encontro" element={<EstrategiasPrimeiroEncontro />} />
+            <Route path="/blog/como-ser-autentico-e-atraente-ao-mesmo-tempo" element={<ComoSerAutenticoEAtraente />} />
+            <Route path="/blog/o-poder-do-silencio" element={<OPoderDoSilencio />} />
+            <Route path="/blog/domine-suas-emocoes-e-atraia" element={<DomineEmocoesAtraia />} />
+            <Route path="/blog/vibe-conquista-sem-dizer-palavra" element={<VibeConquistaSemPalavra />} />
+            <Route path="/blog/melhores-apps-relacionamento-2026" element={<MelhoresApps2026 />} />
+            <Route path="/blog/sinais-interesse-feminino" element={<SinaisInteresseFeminino />} />
+            <Route path="/blog/escutar-nova-forma-conquistar" element={<EscutarNovaFormaConquistar />} />
+            <Route path="/blog/medo-coragem-conquistar-respeito" element={<MedoCoragemConquistar />} />
+            <Route path="/blog/despertar-interesse-sem-dizer-nada" element={<DespertarInteresseSemDizerNada />} />
+            <Route path="/blog/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
+            <Route path="/blog/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
+            <Route path="/blog/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
+            <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
+            <Route path="/melhor-horario-usar-apps-namoro" element={<MelhorHorarioUsarApps />} />
+            <Route path="/frequencia-ideal-usar-apps" element={<FrequenciaIdealUsarApps />} />
+            <Route path="/tipo-mensagem-enviar-primeiro" element={<TipoMensagemEnviarPrimeiro />} />
+            <Route path="/app-ideal-homens-timidos" element={<AppIdealHomensTimidos />} />
+            <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
+            <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
+            <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
+            <Route path="/interior-quiz-2" element={<InteriorQuiz2 />} />
+            <Route path="/interior-quiz-3" element={<InteriorQuiz3 />} />
+            <Route path="/interior-quiz-4" element={<InteriorQuiz4 />} />
+            <Route path="/interior-quiz-5" element={<InteriorQuiz5 />} />
+            <Route path="/interior-quiz-resultado" element={<InteriorQuizResultado />} />
+            <Route path="/o-que-te-faz-sorrir" element={<OQueTeFazSorrir />} />
+            <Route path="/qual-seu-estilo-de-namoro" element={<QualSeuEstiloDeNamoro />} />
+            <Route path="/voce-e-mais-serio-ou-descontraido" element={<VoceEMaisSerioOuDescontraido />} />
+            <Route path="/onde-voce-quer-chegar-no-relacionamento" element={<OndeVoceQuerChegar />} />
+            <Route path="/o-que-nunca-falta-no-seu-dia" element={<OQueNuncaFaltaNoSeuDia />} />
+            <Route path="/como-iniciar-conversas-apps-namoro-que-geram-respostas" element={<ComoIniciarConversasApps />} />
+            <Route path="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem" element={<QualTipoFotoPerfilFunciona />} />
+            <Route path="/quanto-tempo-dedicar-apps-namoro-por-dia-homem" element={<QuantoTempoDedicarApps />} />
+            <Route path="/seu-app-de-namoro-ideal-resultado" element={<ResultadoAppIdeal />} />
+            <Route path="/politica-de-privacidade" element={<PoliticaPrivacidade />} />
+            <Route path="/termos-de-uso" element={<TermosUso />} />
+            <Route path="/politica-de-cookies" element={<PoliticaCookies />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
