@@ -448,7 +448,7 @@ const SinaisInteresseFeminino = () => {
             </p>
             <p className="text-lg leading-relaxed mb-0">
               Ah, e se você quer saber como saber se uma mulher está interessada em você de verdade,{" "}
-              <Link to="/blog/posts/linguagem-corporal-poderosa-conquista/" className="text-pink-600 hover:text-pink-700 underline font-medium">
+              <Link to="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar/" className="text-pink-600 hover:text-pink-700 underline font-medium">
                 leia nosso guia sobre linguagem corporal poderosa
               </Link>{" "}
               — com testes práticos e sinais verbais que complementam os não verbais.

@@ -106,28 +106,28 @@ const QuizPage2 = () => {
             <QuizOption
               title="Adoro puxar assunto"
               description="Sou comunicativo e gosto de tomar iniciativa"
-              href="/frases-para-iniciar-conversa-app-namoro-homem"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
               icon={<MessageSquare size={24} />}
             />
             
             <QuizOption
               title="Prefiro que ela comece"
               description="Funciono melhor quando a mulher dá o primeiro passo"
-              href="/apps-para-homens-que-odeiam-dar-primeiro-oi"
+              href="/app-ideal-homens-timidos"
               icon={<UserCheck size={24} />}
             />
             
             <QuizOption
               title="Me sinto inseguro"
               description="Preciso de ajuda para saber o que falar"
-              href="/como-superar-a-timidez-em-apps-de-namoro"
+              href="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso"
               icon={<ShieldAlert size={24} />}
             />
             
             <QuizOption
               title="Evito conversa longa"
               description="Prefiro marcar encontro rápido do que ficar conversando"
-              href="/apps-que-nao-exigem-conversa-para-match"
+              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
               icon={<Pause size={24} />}
             />
           </div>
