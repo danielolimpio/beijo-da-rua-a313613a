@@ -733,7 +733,7 @@ const EstrategiasPrimeiroEncontro = () => {
                 </Card>
 
                 <p className="mb-6">
-                  Gostou deste conteúdo? Compartilhe com alguém que merece um encontro de verdade. E explore mais dicas no nosso artigo sobre <Link to="/blog/posts/linguagem-corporal-poderosa/" className="text-primary hover:underline font-semibold">linguagem corporal poderosa na hora de conquistar</Link> — porque, afinal, conexão é via de duas mãos.
+                  Gostou deste conteúdo? Compartilhe com alguém que merece um encontro de verdade. E explore mais dicas no nosso artigo sobre <Link to="/blog/posts/linguagem-corporal-poderosa-na-hora-de-conquistar/" className="text-primary hover:underline font-semibold">linguagem corporal poderosa na hora de conquistar</Link> — porque, afinal, conexão é via de duas mãos.
                 </p>
 
                 {/* FAQ Section */}
