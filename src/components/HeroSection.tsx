@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-woman-rose.png";
 import perfisValidados from "@/assets/perfis-validados.png";
@@ -5,14 +6,15 @@ import maisMatches from "@/assets/mais-matches.png";
 import privado from "@/assets/privado.png";
 
 const HeroSection = () => {
-  // Generate hearts with random positions and delays
-  const hearts = Array.from({ length: 15 }, (_, i) => ({
-    id: i,
-    left: Math.random() * 100,
-    delay: Math.random() * 8,
-    size: 20 + Math.random() * 30,
-    animation: ['animate-float-up', 'animate-float-up-slow', 'animate-float-up-fast'][Math.floor(Math.random() * 3)]
-  }));
+  const hearts = useMemo(() => 
+    Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 8,
+      size: 20 + Math.random() * 30,
+      animation: ['animate-float-up', 'animate-float-up-slow', 'animate-float-up-fast'][Math.floor(Math.random() * 3)]
+    })), []
+  );
 
   return (
     <section className="bg-gradient-hero pt-[140px] sm:pt-[148px] pb-0 overflow-hidden relative">
@@ -54,21 +56,23 @@ const HeroSection = () => {
               O <strong>Beijo da Rua</strong> é um portal independente que testa e recomenda os <strong>melhores apps e sites de relacionamento</strong> do Brasil e do mundo. 
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-primary text-primary-foreground hover:shadow-custom-primary px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg transition-all duration-300"
-                onClick={() => window.location.href = '/quiz'}
-              >
-                Fazer Quiz Grátis
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg border-primary/30 hover:bg-primary/5 hover:border-primary"
-                onClick={() => window.location.href = '/apps-de-namoro'}
-              >
-                Ver Avaliações de Apps
-              </Button>
+              <a href="/quiz">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-primary text-primary-foreground hover:shadow-custom-primary px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg transition-all duration-300 w-full"
+                >
+                  Fazer Quiz Grátis
+                </Button>
+              </a>
+              <a href="/apps-de-namoro">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg border-primary/30 hover:bg-primary/5 hover:border-primary w-full"
+                >
+                  Ver Avaliações de Apps
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -88,18 +92,21 @@ const HeroSection = () => {
                   alt="Perfis Validados" 
                   className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0s' }}
+                  loading="lazy"
                 />
                 <img 
                   src={maisMatches} 
                   alt="Mais Matches" 
                   className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.3s' }}
+                  loading="lazy"
                 />
                 <img 
                   src={privado} 
                   alt="100% Privado" 
                   className="w-[180px] sm:w-[220px] md:w-[260px] h-auto animate-float"
                   style={{ animationDelay: '0.6s' }}
+                  loading="lazy"
                 />
               </div>
             </div>
