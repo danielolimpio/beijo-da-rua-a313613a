@@ -28,6 +28,9 @@ const Skout = lazy(() => import("./pages/apps/Skout"));
 const MeetMe = lazy(() => import("./pages/apps/MeetMe"));
 const Eharmony = lazy(() => import("./pages/apps/Eharmony"));
 const Dating = lazy(() => import("./pages/apps/Dating"));
+const Match = lazy(() => import("./pages/apps/Match"));
+const Jaumo = lazy(() => import("./pages/apps/Jaumo"));
+const Umatch = lazy(() => import("./pages/apps/Umatch"));
 const Dicas = lazy(() => import("./pages/Dicas"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AutoestimaCategory = lazy(() => import("./pages/blog/categories/Autoestima"));
@@ -126,6 +129,9 @@ const App = () => (
             <Route path="/apps/meetme" element={<MeetMe />} />
             <Route path="/apps/eharmony" element={<Eharmony />} />
             <Route path="/apps/dating" element={<Dating />} />
+            <Route path="/apps/match" element={<Match />} />
+            <Route path="/apps/jaumo" element={<Jaumo />} />
+            <Route path="/apps/umatch" element={<Umatch />} />
             <Route path="/dicas" element={<Dicas />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/conquista" element={<ConquistaCategory />} />
