@@ -13,6 +13,9 @@ import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
 import meetmeLogo from "@/assets/meetme-logo.jpeg";
 import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
 import datingLogo from "@/assets/dating-logo.jpeg";
+import ashleyMadisonLogo from "@/assets/ashley-madison-logo.jpeg";
+import brazilCupidLogo from "@/assets/brazilcupid-logo.jpeg";
+import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
 
 const apps = [
   { name: "Tinder", logo: tinderLogo, slug: "tinder" },
@@ -26,6 +29,9 @@ const apps = [
   { name: "MeetMe", logo: meetmeLogo, slug: "meetme" },
   { name: "eharmony", logo: eharmonyLogo, slug: "eharmony" },
   { name: "Dating.com", logo: datingLogo, slug: "dating" },
+  { name: "Ashley Madison", logo: ashleyMadisonLogo, slug: "ashley-madison" },
+  { name: "BrazilCupid", logo: brazilCupidLogo, slug: "brazilcupid" },
+  { name: "Inner Circle", logo: innerCircleLogo, slug: "inner-circle" },
   { name: "Skout", logo: skoutLogo, slug: "skout" },
 ];
 

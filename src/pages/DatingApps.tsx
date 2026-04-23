@@ -24,6 +24,9 @@ import datingLogo from "@/assets/dating-logo.jpeg";
 import matchLogo from "@/assets/match-logo.jpeg";
 import jaumoLogo from "@/assets/jaumo-logo.jpeg";
 import umatchLogo from "@/assets/umatch-logo.png";
+import ashleyMadisonLogo from "@/assets/ashley-madison-logo.jpeg";
+import brazilCupidLogo from "@/assets/brazilcupid-logo.jpeg";
+import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
 
 const DatingApps = () => {
   const apps = [
@@ -191,6 +194,39 @@ const DatingApps = () => {
       cons: ["Público bem nichado", "Fora da faculdade perde força", "Depende da base ativa na sua região"],
       category: "Universitário",
       slug: "/apps/umatch"
+    },
+    {
+      name: "Ashley Madison",
+      description: "Site de namoro discreto para adultos que priorizam privacidade, sigilo e maior controle de exposição",
+      rating: 4.1,
+      users: "91M+",
+      logo: ashleyMadisonLogo,
+      pros: ["Foco forte em privacidade", "Recursos de cobrança discreta", "Modo invisível e proteção de mídia", "Marca global muito conhecida"],
+      cons: ["Nicho específico", "Não é ideal para todos os perfis", "Pode ter percepção pública polarizada"],
+      category: "Discreto",
+      slug: "/apps/ashley-madison"
+    },
+    {
+      name: "BrazilCupid",
+      description: "Site para conhecer solteiros brasileiros com alcance internacional e perfil mais segmentado",
+      rating: 4.3,
+      users: "1.5M+",
+      logo: brazilCupidLogo,
+      pros: ["Foco em solteiros brasileiros", "Alcance internacional", "Ligação com a rede Cupid Media", "Boa opção para namoro com mais contexto"],
+      cons: ["Interface menos casual", "Parte dos recursos é premium", "Menos instantâneo que apps de swipe"],
+      category: "Brasileiros",
+      slug: "/apps/brazilcupid"
+    },
+    {
+      name: "Inner Circle",
+      description: "App de namoro seletivo com comunidade curada, eventos e proposta premium para solteiros exigentes",
+      rating: 4.5,
+      users: "Comunidade curada",
+      logo: innerCircleLogo,
+      pros: ["Foco em qualidade", "Ambiente mais seletivo", "Eventos e experiências offline", "Proposta premium e refinada"],
+      cons: ["Base menor por região", "Entrada pode ser mais seletiva", "Não é para quem quer volume rápido"],
+      category: "Premium",
+      slug: "/apps/inner-circle"
     }
   ];
 
