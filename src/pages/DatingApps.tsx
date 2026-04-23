@@ -21,6 +21,9 @@ import skoutLogo from "@/assets/skout-logo.png";
 import meetmeLogo from "@/assets/meetme-logo.jpeg";
 import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
 import datingLogo from "@/assets/dating-logo.jpeg";
+import matchLogo from "@/assets/match-logo.jpeg";
+import jaumoLogo from "@/assets/jaumo-logo.jpeg";
+import umatchLogo from "@/assets/umatch-logo.png";
 
 const DatingApps = () => {
   const apps = [
@@ -155,6 +158,39 @@ const DatingApps = () => {
       cons: ["Sistema de créditos", "Distância pode ser desafio"],
       category: "Internacional",
       slug: "/apps/dating"
+    },
+    {
+      name: "Match",
+      description: "Plataforma tradicional para quem busca relacionamento sério, maturidade e objetivos alinhados",
+      rating: 4.4,
+      users: "Adultos 30+",
+      logo: matchLogo,
+      pros: ["Foco claro em relacionamento sério", "Filtros por intenção amorosa", "Recurso Core Values", "Experiências como 72 Hours"],
+      cons: ["Menor popularidade no Brasil", "Exige perfil mais completo", "Menos casual para matches rápidos"],
+      category: "Compromisso",
+      slug: "/apps/match"
+    },
+    {
+      name: "Jaumo",
+      description: "App de comunidades e afinidades que mistura namoro, amizade e descoberta por interesses em comum",
+      rating: 4.6,
+      users: "90M+",
+      logo: jaumoLogo,
+      pros: ["Comunidades por hobby", "Perfis verificados", "Boa presença global", "Ótimo para puxar conversa natural"],
+      cons: ["Pode variar por cidade", "Parte do público busca amizade", "Menos focado só em namoro sério"],
+      category: "Afinidades",
+      slug: "/apps/jaumo"
+    },
+    {
+      name: "Umatch",
+      description: "App brasileiro para universitários que querem conhecer pessoas da mesma fase de vida",
+      rating: 4.7,
+      users: "Universitários",
+      logo: umatchLogo,
+      pros: ["Exclusivo para estudantes", "Ambiente mais filtrado", "Contexto universitário ajuda na conversa", "Forte proposta nacional"],
+      cons: ["Público bem nichado", "Fora da faculdade perde força", "Depende da base ativa na sua região"],
+      category: "Universitário",
+      slug: "/apps/umatch"
     }
   ];
 
