@@ -133,6 +133,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://beijodarua.com.br/apps/ashley-madison/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/brazilcupid/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/inner-circle/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://beijodarua.com.br/dicas/</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
