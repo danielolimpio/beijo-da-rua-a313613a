@@ -16,6 +16,9 @@ import datingLogo from "@/assets/dating-logo.jpeg";
 import ashleyMadisonLogo from "@/assets/ashley-madison-logo.jpeg";
 import brazilCupidLogo from "@/assets/brazilcupid-logo.jpeg";
 import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
+import lauradateLogo from "@/assets/lauradate-logo.jpeg";
+import feeldLogo from "@/assets/feeld-logo.png";
+import booLogo from "@/assets/boo-logo.jpg";
 
 const apps = [
   { name: "Tinder", logo: tinderLogo, slug: "tinder" },
