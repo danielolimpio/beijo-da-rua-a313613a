@@ -30,6 +30,9 @@ import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
 import lauradateLogo from "@/assets/lauradate-logo.jpeg";
 import feeldLogo from "@/assets/feeld-logo.png";
 import booLogo from "@/assets/boo-logo.jpg";
+import dateMyAgeLogo from "@/assets/datemyage-logo.png";
+import onceLogo from "@/assets/once-logo.jpg";
+import eliteSinglesLogo from "@/assets/elitesingles-logo.webp";
 
 const DatingApps = () => {
   const apps = [
@@ -263,6 +266,39 @@ const DatingApps = () => {
       cons: ["Quem não curte MBTI pode estranhar", "Filtros avançados são premium", "Parte do público busca só amizade"],
       category: "Personalidade",
       slug: "/apps/boo"
+    },
+    {
+      name: "DateMyAge",
+      description: "Site de namoro maduro internacional para solteiros acima dos 40 com mais de 66 milhões de usuários",
+      rating: 4.3,
+      users: "66M+",
+      logo: dateMyAgeLogo,
+      pros: ["Foco em namoro maduro 40+", "Alcance global em 40+ países", "Verificação de identidade biométrica", "Chat, vídeo e cartas"],
+      cons: ["Modelo de créditos pode pesar", "Mais voltado para internacional", "Não é ideal para jovens"],
+      category: "Maduro",
+      slug: "/apps/datemyage"
+    },
+    {
+      name: "Once",
+      description: "App de namoro com curadoria que entrega 1 match perfeito por dia, com Spotify Match e vibes",
+      rating: 4.3,
+      users: "Curadoria",
+      logo: onceLogo,
+      pros: ["1 match perfeito por dia", "Spotify Match musical", "Comunidades por vibes", "Sistema Sparks gamificado"],
+      cons: ["Volume baixo de matches", "Exige paciência", "Recursos premium pagos"],
+      category: "Curadoria",
+      slug: "/apps/once"
+    },
+    {
+      name: "EliteSingles",
+      description: "Site de namoro premium para solteiros ambiciosos e escolarizados, focado em relacionamento sério",
+      rating: 4.5,
+      users: "85% escolarizados",
+      logo: eliteSinglesLogo,
+      pros: ["Foco em profissionais escolarizados", "Smart matchmaking inteligente", "Relacionamento sério", "Alcance global premium"],
+      cons: ["Plano premium mais caro", "Cadastro inicial demorado", "Não é para casual"],
+      category: "Premium",
+      slug: "/apps/elitesingles"
     }
   ];
 
