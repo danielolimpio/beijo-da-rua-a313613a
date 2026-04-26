@@ -70,6 +70,9 @@ const Sitemap = () => {
                 <li><Link to="/apps/ashley-madison/" className="text-primary hover:underline">Ashley Madison</Link></li>
                 <li><Link to="/apps/brazilcupid/" className="text-primary hover:underline">BrazilCupid</Link></li>
                 <li><Link to="/apps/inner-circle/" className="text-primary hover:underline">Inner Circle</Link></li>
+                <li><Link to="/apps/lauradate/" className="text-primary hover:underline">Lauradate</Link></li>
+                <li><Link to="/apps/feeld/" className="text-primary hover:underline">Feeld</Link></li>
+                <li><Link to="/apps/boo/" className="text-primary hover:underline">Boo</Link></li>
               </ul>
             </section>
 

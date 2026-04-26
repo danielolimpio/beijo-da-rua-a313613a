@@ -151,6 +151,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://beijodarua.com.br/apps/lauradate/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/feeld/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/boo/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://beijodarua.com.br/dicas/</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>

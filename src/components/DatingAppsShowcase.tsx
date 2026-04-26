@@ -16,6 +16,9 @@ import datingLogo from "@/assets/dating-logo.jpeg";
 import ashleyMadisonLogo from "@/assets/ashley-madison-logo.jpeg";
 import brazilCupidLogo from "@/assets/brazilcupid-logo.jpeg";
 import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
+import lauradateLogo from "@/assets/lauradate-logo.jpeg";
+import feeldLogo from "@/assets/feeld-logo.png";
+import booLogo from "@/assets/boo-logo.jpg";
 
 const apps = [
   { name: "Tinder", logo: tinderLogo, slug: "tinder" },
@@ -33,6 +36,9 @@ const apps = [
   { name: "BrazilCupid", logo: brazilCupidLogo, slug: "brazilcupid" },
   { name: "Inner Circle", logo: innerCircleLogo, slug: "inner-circle" },
   { name: "Skout", logo: skoutLogo, slug: "skout" },
+  { name: "Lauradate", logo: lauradateLogo, slug: "lauradate" },
+  { name: "Feeld", logo: feeldLogo, slug: "feeld" },
+  { name: "Boo", logo: booLogo, slug: "boo" },
 ];
 
 const DatingAppsShowcase = () => {

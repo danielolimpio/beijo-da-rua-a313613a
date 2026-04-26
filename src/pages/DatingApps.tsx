@@ -27,6 +27,9 @@ import umatchLogo from "@/assets/umatch-logo.png";
 import ashleyMadisonLogo from "@/assets/ashley-madison-logo.jpeg";
 import brazilCupidLogo from "@/assets/brazilcupid-logo.jpeg";
 import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
+import lauradateLogo from "@/assets/lauradate-logo.jpeg";
+import feeldLogo from "@/assets/feeld-logo.png";
+import booLogo from "@/assets/boo-logo.jpg";
 
 const DatingApps = () => {
   const apps = [
@@ -227,6 +230,39 @@ const DatingApps = () => {
       cons: ["Base menor por região", "Entrada pode ser mais seletiva", "Não é para quem quer volume rápido"],
       category: "Premium",
       slug: "/apps/inner-circle"
+    },
+    {
+      name: "Lauradate",
+      description: "Site de namoro internacional com foco em conversas profundas, personalidade e segurança reforçada",
+      rating: 4.3,
+      users: "Internacional",
+      logo: lauradateLogo,
+      pros: ["Conexões internacionais", "Foco em personalidade", "Segurança e privacidade fortes", "Ambiente sem barreiras culturais"],
+      cons: ["Encontros presenciais mais raros", "Recursos premium pesam", "Ritmo lento para quem quer match rápido"],
+      category: "Internacional",
+      slug: "/apps/lauradate"
+    },
+    {
+      name: "Feeld",
+      description: "App de namoro aberto e inclusivo para solteiros, casais, poliamoristas e comunidade LGBTQIA+",
+      rating: 4.4,
+      users: "Global e diverso",
+      logo: feeldLogo,
+      pros: ["Inclusivo e sem julgamento", "Modo casal e poliamor", "20+ identidades de gênero", "Privacidade avançada"],
+      cons: ["Mais forte em capitais", "Recursos premium (Majestic) pagos", "Não foca em namoro tradicional"],
+      category: "Aberto e Inclusivo",
+      slug: "/apps/feeld"
+    },
+    {
+      name: "Boo",
+      description: "App de namoro por personalidade MBTI, signo e interesses, com mais de 50 milhões de downloads",
+      rating: 4.5,
+      users: "50M+",
+      logo: booLogo,
+      pros: ["Match por personalidade MBTI", "Universos de interesses", "Comunidade jovem e ativa", "Funciona para namoro e amizade"],
+      cons: ["Quem não curte MBTI pode estranhar", "Filtros avançados são premium", "Parte do público busca só amizade"],
+      category: "Personalidade",
+      slug: "/apps/boo"
     }
   ];
 

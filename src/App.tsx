@@ -34,6 +34,9 @@ const Umatch = lazy(() => import("./pages/apps/Umatch"));
 const AshleyMadison = lazy(() => import("./pages/apps/AshleyMadison"));
 const BrazilCupid = lazy(() => import("./pages/apps/BrazilCupid"));
 const InnerCircle = lazy(() => import("./pages/apps/InnerCircle"));
+const Lauradate = lazy(() => import("./pages/apps/Lauradate"));
+const Feeld = lazy(() => import("./pages/apps/Feeld"));
+const Boo = lazy(() => import("./pages/apps/Boo"));
 const Dicas = lazy(() => import("./pages/Dicas"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AutoestimaCategory = lazy(() => import("./pages/blog/categories/Autoestima"));
@@ -138,6 +141,9 @@ const App = () => (
             <Route path="/apps/ashley-madison" element={<AshleyMadison />} />
             <Route path="/apps/brazilcupid" element={<BrazilCupid />} />
             <Route path="/apps/inner-circle" element={<InnerCircle />} />
+            <Route path="/apps/lauradate" element={<Lauradate />} />
+            <Route path="/apps/feeld" element={<Feeld />} />
+            <Route path="/apps/boo" element={<Boo />} />
             <Route path="/dicas" element={<Dicas />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/conquista" element={<ConquistaCategory />} />
