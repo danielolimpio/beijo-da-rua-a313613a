@@ -36,6 +36,9 @@ const apps = [
   { name: "BrazilCupid", logo: brazilCupidLogo, slug: "brazilcupid" },
   { name: "Inner Circle", logo: innerCircleLogo, slug: "inner-circle" },
   { name: "Skout", logo: skoutLogo, slug: "skout" },
+  { name: "Lauradate", logo: lauradateLogo, slug: "lauradate" },
+  { name: "Feeld", logo: feeldLogo, slug: "feeld" },
+  { name: "Boo", logo: booLogo, slug: "boo" },
 ];
 
 const DatingAppsShowcase = () => {
