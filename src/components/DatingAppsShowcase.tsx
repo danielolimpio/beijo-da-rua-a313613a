@@ -19,6 +19,9 @@ import innerCircleLogo from "@/assets/inner-circle-logo.jpeg";
 import lauradateLogo from "@/assets/lauradate-logo.jpeg";
 import feeldLogo from "@/assets/feeld-logo.png";
 import booLogo from "@/assets/boo-logo.jpg";
+import dateMyAgeLogo from "@/assets/datemyage-logo.png";
+import onceLogo from "@/assets/once-logo.jpg";
+import eliteSinglesLogo from "@/assets/elitesingles-logo.webp";
 
 const apps = [
   { name: "Tinder", logo: tinderLogo, slug: "tinder" },
@@ -39,6 +42,9 @@ const apps = [
   { name: "Lauradate", logo: lauradateLogo, slug: "lauradate" },
   { name: "Feeld", logo: feeldLogo, slug: "feeld" },
   { name: "Boo", logo: booLogo, slug: "boo" },
+  { name: "DateMyAge", logo: dateMyAgeLogo, slug: "datemyage" },
+  { name: "Once", logo: onceLogo, slug: "once" },
+  { name: "EliteSingles", logo: eliteSinglesLogo, slug: "elitesingles" },
 ];
 
 const DatingAppsShowcase = () => {

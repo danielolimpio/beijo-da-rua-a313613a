@@ -169,6 +169,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://beijodarua.com.br/apps/datemyage/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/once/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beijodarua.com.br/apps/elitesingles/</loc>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://beijodarua.com.br/dicas/</loc>
     <lastmod>2025-12-30</lastmod>
     <changefreq>weekly</changefreq>
