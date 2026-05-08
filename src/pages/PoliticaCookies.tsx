@@ -11,7 +11,7 @@ const PoliticaCookies = () => {
         <title>Política de Cookies | Beijo da Rua - Como Usamos Cookies</title>
         <meta name="description" content="Saiba como o Beijo da Rua utiliza cookies e tecnologias semelhantes. Entenda seus direitos e como controlar suas preferências de privacidade." />
         <meta name="keywords" content="política de cookies, cookies, rastreamento, privacidade, preferências, consentimento" />
-        <link rel="canonical" href="https://www.beijodarua.com.br/politica-de-cookies" />
+        <link rel="canonical" href="https://beijodarua.com.br/politica-de-cookies/" />
       </Helmet>
 
       <div className="min-h-screen bg-background">
