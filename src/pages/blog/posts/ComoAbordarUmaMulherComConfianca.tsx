@@ -13,6 +13,7 @@ import authorImage from "@/assets/team-daniel.jpg";
 import articleCover from "@/assets/article-abordar-mulher.jpg";
 import { useState } from "react";
 import StructuredData from "@/components/StructuredData";
+import SEO from "@/components/SEO";
 import { getArticleSchema } from "@/lib/structuredData";
 import { 
   TopOfPageAd, 
@@ -39,7 +40,7 @@ const ComoAbordarUmaMulherComConfianca = () => {
     datePublished: "2025-11-21",
     dateModified: "2025-11-21",
     image: "https://beijodarua.com.br" + articleCover,
-    url: "https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca",
+    url: "https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca/",
     category: "Conquista"
   });
   
@@ -56,6 +57,15 @@ const ComoAbordarUmaMulherComConfianca = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Como Abordar uma Mulher com Confiança e Naturalidade"
+        description="Aprenda técnicas práticas para iniciar conversas sem medo e conquistar com autenticidade. Dicas que funcionam na rua, em eventos e até online."
+        canonical="https://beijodarua.com.br/blog/posts/como-abordar-uma-mulher-com-confianca/"
+        type="article"
+        author="Daniel Olimpio"
+        publishedTime="2025-11-21"
+        keywords="como abordar uma mulher, abordar mulher com confiança, como puxar assunto, dicas de abordagem, conquistar com naturalidade"
+      />
       <StructuredData data={articleData} />
       
       {/* Top of Page Ad */}
