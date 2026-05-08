@@ -1,6 +1,36 @@
+# ===========================================================
+# Beijo da Rua – .htaccess
+# SEO + SPA + limpeza de URLs legadas
+# ===========================================================
+
+Options -Indexes
+DirectoryIndex index.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # ———————————————————————
+  # 🔁 Forçar HTTPS
+  # ———————————————————————
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ———————————————————————
+  # 🔁 Forçar non-www (canônica = beijodarua.com.br)
+  # ———————————————————————
+  RewriteCond %{HTTP_HOST} ^www\.beijodarua\.com\.br$ [NC]
+  RewriteRule ^(.*)$ https://beijodarua.com.br/$1 [L,R=301]
+
+  # ———————————————————————
+  # 🚫 410 Gone para URLs legadas do site antigo (ASP / PDFs)
+  # Evita "Soft 404" e "Não encontrado" no Search Console
+  # ———————————————————————
+  RewriteRule ^materia\.asp - [G,L]
+  RewriteRule ^main\.asp - [G,L]
+  RewriteRule \.asp$ - [G,L]
+  RewriteRule ^(setembro|agosto|abril|maio|junho|julho|janeiro|fevereiro|marco|outubro|novembro|dezembro)[0-9]{4}\.pdf$ - [G,L]
 
   # ———————————————————————
   # ✅ Não redirecionar arquivos ou diretórios reais existentes
@@ -10,19 +40,15 @@
   RewriteRule ^ - [L]
 
   # ———————————————————————
-  # ✅ Proteger arquivos estáticos essenciais por nome
+  # ✅ Proteger arquivos estáticos essenciais
   # ———————————————————————
-  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|favicon\.png|apple-touch-icon\.png|og-image\.(jpg|png|webp)|manifest\.json|browserconfig\.xml|site\.webmanifest|ads\.txt)$ - [L]
+  RewriteRule ^(robots\.txt|sitemap\.xml|favicon\.ico|favicon\.png|apple-touch-icon\.png|og-image\.(jpg|png|webp)|manifest\.json|browserconfig\.xml|site\.webmanifest|ads\.txt|sw\.js)$ - [L]
 
   # ———————————————————————
-  # ✅ Proteger arquivos de verificação do Google e outros serviços
+  # ✅ Proteger arquivos de verificação
   # ———————————————————————
   RewriteRule ^google[a-zA-Z0-9]*\.html$ - [L]
   RewriteRule ^(BingSiteAuth\.xml|yandex_[a-zA-Z0-9]+\.html|pinterest-[a-zA-Z0-9]+\.html)$ - [L]
-
-  # ———————————————————————
-  # ✅ Proteger diretórios especiais
-  # ———————————————————————
   RewriteRule ^\.well-known/ - [L]
 
   # ———————————————————————
@@ -31,7 +57,23 @@
   RewriteRule \.(js|css|map|json|xml|txt|ico|png|jpg|jpeg|gif|svg|webp|avif|woff|woff2|ttf|eot|otf|mp4|webm|ogg|mp3|wav|pdf|zip)$ - [L]
 
   # ———————————————————————
-  # 🌐 Redirecionar todas as demais rotas para index.html (SPA)
+  # 🔁 Forçar trailing slash (canônica padrão do site)
+  # Não aplica a arquivos com extensão nem ao root.
+  # ———————————————————————
+  RewriteCond %{REQUEST_URI} !(/$|\.[a-zA-Z0-9]+$)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)$ /$1/ [L,R=301]
+
+  # ———————————————————————
+  # 🌐 SPA fallback → index.html
   # ———————————————————————
   RewriteRule ^ index.html [L]
+</IfModule>
+
+# ===========================================================
+# 🚫 Bloquear listagem explícita em diretórios de app/blog
+# (caso o servidor tente servir índice de pasta vazia)
+# ===========================================================
+<IfModule mod_autoindex.c>
+  IndexIgnore *
 </IfModule>
