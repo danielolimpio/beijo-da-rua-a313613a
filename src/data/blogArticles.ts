@@ -24,6 +24,7 @@ import articleDespertarInteresse from "@/assets/article-despertar-interesse.jpg"
 import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
 import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
 import articleReconhecerDisponivel from "@/assets/article-reconhecer-disponivel.jpg";
+import articleCriarExpectativa from "@/assets/article-criar-expectativa-sem-parecer-jogador.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -40,6 +41,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 24,
+    title: "Como Criar Expectativa sem Parecer Jogador: Guia Sincero",
+    excerpt: "Aprenda a demonstrar interesse genuíno sem jogos. Técnicas psicológicas para conexões reais sem joguinhos emocionais — e um quiz gratuito ao final.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "conquista", "paquera", "autoestima"],
+    image: articleCriarExpectativa,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "12 de maio de 2026",
+    link: "/blog/posts/criar-expectativa-sem-parecer-jogador"
+  },
   {
     id: 23,
     title: "Como Reconhecer Se Ela Está Disponível Emocionalmente",

@@ -72,6 +72,7 @@ const DespertarInteresseSemDizerNada = lazy(() => import("./pages/blog/posts/Des
 const ArteManterConversaLeve = lazy(() => import("./pages/blog/posts/ArteManterConversaLeve"));
 const HumorInteligente = lazy(() => import("./pages/blog/posts/HumorInteligente"));
 const ReconhecerDisponibilidadeEmocional = lazy(() => import("./pages/blog/posts/ReconhecerDisponibilidadeEmocional"));
+const CriarExpectativaSemParecerJogador = lazy(() => import("./pages/blog/posts/CriarExpectativaSemParecerJogador"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
 const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
@@ -184,6 +185,7 @@ const App = () => (
             <Route path="/blog/posts/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
             <Route path="/blog/posts/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
             <Route path="/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
+            <Route path="/blog/posts/criar-expectativa-sem-parecer-jogador" element={<CriarExpectativaSemParecerJogador />} />
             {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
             <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
             <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
@@ -208,6 +210,8 @@ const App = () => (
             <Route path="/blog/arte-manter-conversa-leve-envolver" element={<ArteManterConversaLeve />} />
             <Route path="/blog/humor-inteligente-conquista-mais-que-beleza" element={<HumorInteligente />} />
             <Route path="/blog/como-reconhecer-se-ela-esta-disponivel-emocionalmente" element={<ReconhecerDisponibilidadeEmocional />} />
+            <Route path="/blog/criar-expectativa-sem-parecer-jogador" element={<CriarExpectativaSemParecerJogador />} />
+            <Route path="/criar-expectativa-sem-parecer-jogador" element={<CriarExpectativaSemParecerJogador />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" element={<QuizPage1 />} />
             <Route path="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" element={<ComoHomensTimidosUsarApps />} />
