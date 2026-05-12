@@ -33,6 +33,7 @@ import booLogo from "@/assets/boo-logo.jpg";
 import dateMyAgeLogo from "@/assets/datemyage-logo.png";
 import onceLogo from "@/assets/once-logo.jpg";
 import eliteSinglesLogo from "@/assets/elitesingles-logo.webp";
+import nomadtableLogo from "@/assets/nomadtable-logo.webp";
 
 const DatingApps = () => {
   const apps = [
@@ -299,6 +300,17 @@ const DatingApps = () => {
       cons: ["Plano premium mais caro", "Cadastro inicial demorado", "Não é para casual"],
       category: "Premium",
       slug: "/apps/elitesingles"
+    },
+    {
+      name: "Nomadtable",
+      description: "App social para viajantes solo conhecerem pessoas em atividades próximas em tempo real, no mundo todo",
+      rating: 4.7,
+      users: "60K+ ativos",
+      logo: nomadtableLogo,
+      pros: ["Atividades acontecendo agora perto de você", "Ideal para nômades digitais e mochileiros", "IA sugere ideias de encontros", "Comunidade global e verificada"],
+      cons: ["Funciona melhor em cidades populares entre nômades", "Foco principal em amizade, não namoro tradicional", "Exige sair de casa para aproveitar"],
+      category: "Social & Viagem",
+      slug: "/apps/nomadtable"
     }
   ];
 

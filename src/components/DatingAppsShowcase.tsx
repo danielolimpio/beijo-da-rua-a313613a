@@ -22,6 +22,7 @@ import booLogo from "@/assets/boo-logo.jpg";
 import dateMyAgeLogo from "@/assets/datemyage-logo.png";
 import onceLogo from "@/assets/once-logo.jpg";
 import eliteSinglesLogo from "@/assets/elitesingles-logo.webp";
+import nomadtableLogo from "@/assets/nomadtable-logo.webp";
 
 const apps = [
   { name: "Tinder", logo: tinderLogo, slug: "tinder" },
@@ -45,6 +46,7 @@ const apps = [
   { name: "DateMyAge", logo: dateMyAgeLogo, slug: "datemyage" },
   { name: "Once", logo: onceLogo, slug: "once" },
   { name: "EliteSingles", logo: eliteSinglesLogo, slug: "elitesingles" },
+  { name: "Nomadtable", logo: nomadtableLogo, slug: "nomadtable" },
 ];
 
 const DatingAppsShowcase = () => {
