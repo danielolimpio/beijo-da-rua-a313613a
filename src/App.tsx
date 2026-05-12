@@ -41,6 +41,7 @@ const Boo = lazy(() => import("./pages/apps/Boo"));
 const DateMyAge = lazy(() => import("./pages/apps/DateMyAge"));
 const Once = lazy(() => import("./pages/apps/Once"));
 const EliteSingles = lazy(() => import("./pages/apps/EliteSingles"));
+const Nomadtable = lazy(() => import("./pages/apps/Nomadtable"));
 const Dicas = lazy(() => import("./pages/Dicas"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AutoestimaCategory = lazy(() => import("./pages/blog/categories/Autoestima"));
@@ -151,6 +152,7 @@ const App = () => (
             <Route path="/apps/datemyage" element={<DateMyAge />} />
             <Route path="/apps/once" element={<Once />} />
             <Route path="/apps/elitesingles" element={<EliteSingles />} />
+            <Route path="/apps/nomadtable" element={<Nomadtable />} />
             <Route path="/dicas" element={<Dicas />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/conquista" element={<ConquistaCategory />} />

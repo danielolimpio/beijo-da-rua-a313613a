@@ -76,6 +76,7 @@ const Sitemap = () => {
                 <li><Link to="/apps/datemyage/" className="text-primary hover:underline">DateMyAge</Link></li>
                 <li><Link to="/apps/once/" className="text-primary hover:underline">Once</Link></li>
                 <li><Link to="/apps/elitesingles/" className="text-primary hover:underline">EliteSingles</Link></li>
+                <li><Link to="/apps/nomadtable/" className="text-primary hover:underline">Nomadtable</Link></li>
               </ul>
             </section>
 
