@@ -34,6 +34,7 @@ import dateMyAgeLogo from "@/assets/datemyage-logo.png";
 import onceLogo from "@/assets/once-logo.jpg";
 import eliteSinglesLogo from "@/assets/elitesingles-logo.webp";
 import nomadtableLogo from "@/assets/nomadtable-logo.webp";
+import batepapogratisLogo from "@/assets/batepapogratis-logo.png";
 
 const DatingApps = () => {
   const apps = [
@@ -311,6 +312,17 @@ const DatingApps = () => {
       cons: ["Funciona melhor em cidades populares entre nômades", "Foco principal em amizade, não namoro tradicional", "Exige sair de casa para aproveitar"],
       category: "Social & Viagem",
       slug: "/apps/nomadtable"
+    },
+    {
+      name: "Bate Papo Grátis",
+      description: "Sala de bate papo online gratuita em tempo real para conhecer pessoas do Brasil e do mundo, com sistema de match e conversa privada",
+      rating: 4.6,
+      users: "Milhares ativos",
+      logo: batepapogratisLogo,
+      pros: ["100% gratuito sem paywall", "Chat em tempo real estilo MSN/UOL", "Sistema de match e privado", "Sem precisar baixar app"],
+      cons: ["Sala aberta exige paciência para filtrar", "Sem algoritmo avançado de compatibilidade", "Picos só em horários de movimento"],
+      category: "Chat & Salas Online",
+      slug: "/apps/batepapogratis"
     }
   ];
 
