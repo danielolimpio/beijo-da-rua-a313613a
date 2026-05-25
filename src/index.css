@@ -27,7 +27,7 @@ All colors MUST be HSL.
 
     /* Soft lavender muted tones */
     --muted: 340 30% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 0 0% 32%;
 
     /* Soft pink accent */
     --accent: 354 60% 92%;
