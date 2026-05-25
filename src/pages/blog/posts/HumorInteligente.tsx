@@ -46,7 +46,7 @@ const HumorInteligente = () => {
   return (
     <BlogArticleLayout category="relacionamento" wordCount={articleWordCount}>
       <Helmet>
-        <title>Por Que o Humor Inteligente Conquista Mais que Beleza | Beijo da Rua</title>
+        <title>Humor Inteligente Conquista Mais | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Descubra como fazer rir com elegância — sem piadas cafajestes — e criar conexões emocionais duradouras." 
@@ -55,7 +55,7 @@ const HumorInteligente = () => {
         <link rel="canonical" href="https://beijodarua.com.br/blog/posts/humor-inteligente-conquista-mais-que-beleza/" />
         <meta property="og:url" content="https://beijodarua.com.br/blog/posts/humor-inteligente-conquista-mais-que-beleza/" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Por Que o Humor Inteligente Conquista Mais que Beleza | Beijo da Rua" />
+        <meta property="og:title" content="Humor Inteligente Conquista Mais | Beijo da Rua" />
         <meta property="og:description" content="Descubra como fazer rir com elegância — sem piadas cafajestes — e criar conexões emocionais duradouras." />
         <meta property="og:image" content="https://beijodarua.com.br/og-image.jpg" />
         <meta property="article:published_time" content="2026-02-14" />

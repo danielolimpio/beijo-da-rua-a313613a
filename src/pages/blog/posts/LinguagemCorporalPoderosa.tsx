@@ -20,7 +20,7 @@ const LinguagemCorporalPoderosa = () => {
   return (
     <BlogArticleLayout category="conquista" wordCount={articleWordCount}>
       <Helmet>
-        <title>Linguagem Corporal Poderosa na Hora de Conquistar | Beijo da Rua</title>
+        <title>Linguagem Corporal Para Conquistar | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Seus gestos falam mais que palavras. Aprenda postura, olhar e movimentos que transmitem segurança e atração imediata." 

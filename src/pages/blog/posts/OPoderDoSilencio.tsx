@@ -20,7 +20,7 @@ const OPoderDoSilencio = () => {
   return (
     <BlogArticleLayout category="relacionamento" wordCount={articleWordCount}>
       <Helmet>
-        <title>O Poder do Silêncio: Quando Falar Menos Conquista Mais | Beijo da Rua</title>
+        <title>O Poder do Silêncio na Conquista | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Menos fala, mais presença. Aprenda a usar pausas, escuta ativa e mistério para gerar curiosidade e desejo genuíno." 

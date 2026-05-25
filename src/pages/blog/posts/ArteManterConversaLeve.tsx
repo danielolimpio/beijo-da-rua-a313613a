@@ -45,7 +45,7 @@ const ArteManterConversaLeve = () => {
   return (
     <BlogArticleLayout category="relacionamento" wordCount={articleWordCount}>
       <Helmet>
-        <title>A Arte de Manter uma Conversa Leve e Envolver | Beijo da Rua</title>
+        <title>Conversa Leve e Envolver | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Evite silêncios constrangedores. Aprenda a fluir em qualquer papo com naturalidade, graça e curiosidade genuína." 
@@ -54,7 +54,7 @@ const ArteManterConversaLeve = () => {
         <link rel="canonical" href="https://beijodarua.com.br/blog/posts/arte-manter-conversa-leve-envolver/" />
         <meta property="og:url" content="https://beijodarua.com.br/blog/posts/arte-manter-conversa-leve-envolver/" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="A Arte de Manter uma Conversa Leve e Envolver | Beijo da Rua" />
+        <meta property="og:title" content="Conversa Leve e Envolver | Beijo da Rua" />
         <meta property="og:description" content="Evite silêncios constrangedores. Aprenda a fluir em qualquer papo com naturalidade, graça e curiosidade genuína." />
         <meta property="og:image" content="https://beijodarua.com.br/og-image.jpg" />
         <meta property="article:published_time" content="2026-02-02" />

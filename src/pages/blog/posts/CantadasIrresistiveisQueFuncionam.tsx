@@ -57,7 +57,7 @@ const CantadasIrresistiveisQueFuncionam = () => {
     <div className="min-h-screen flex flex-col">
       <StructuredData data={articleData} />
       <Helmet>
-        <title>{articleTitle} | Beijo da Rua</title>
+        <title>Cantadas Irresistíveis | Beijo da Rua</title>
         <meta name="description" content="Frases criativas, respeitosas e eficazes para quebrar o gelo e causar boa impressão. Testadas e aprovadas por especialistas em conquista." />
         <meta property="og:title" content={articleTitle} />
         <meta property="og:description" content="Frases criativas, respeitosas e eficazes para quebrar o gelo e causar boa impressão. Testadas e aprovadas por especialistas em conquista." />

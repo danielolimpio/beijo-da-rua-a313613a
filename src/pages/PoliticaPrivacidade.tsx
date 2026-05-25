@@ -29,8 +29,8 @@ const PoliticaPrivacidade = () => {
   return (
     <>
       <Helmet>
-        <title>Política de Privacidade | Beijo da Rua - Proteção de Dados e Privacidade</title>
-        <meta name="description" content="Vá além do like! Saiba como manter conversas profundas e transformar matches em encontros memoráveis e relacionamentos reais." />
+        <title>Política de Privacidade | Beijo da Rua</title>
+        <meta name="description" content="Saiba como o Beijo da Rua protege seus dados pessoais. Conheça nossas práticas de privacidade, cookies e seus direitos sob a LGPD." />
         <meta name="keywords" content="política de privacidade, proteção de dados, LGPD, privacidade online, dados pessoais, segurança da informação" />
         <link rel="canonical" href="https://beijodarua.com.br/politica-de-privacidade/" />
       </Helmet>

@@ -79,7 +79,7 @@ const OsSegredosDeUmPerfilConquistador = () => {
     <>
       <StructuredData data={articleData} />
       <Helmet>
-        <title>Os Segredos de um Perfil Conquistador nas Redes Sociais | Beijo da Rua</title>
+        <title>Perfil Conquistador nas Redes | Beijo da Rua</title>
         <meta name="description" content="Descubra como criar uma presença digital que atrai olhares e desperta interesse real. Fotos, bio e atitude: tudo revelado aqui." />
         <meta property="og:title" content="Os Segredos de um Perfil Conquistador nas Redes Sociais" />
         <meta property="og:description" content="Descubra como criar uma presença digital que atrai olhares e desperta interesse real. Fotos, bio e atitude: tudo revelado aqui." />
