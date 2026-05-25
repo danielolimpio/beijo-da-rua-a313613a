@@ -1,0 +1,54 @@
+# Beijo da Rua
+
+> Guia educacional completo para homens brasileiros navegarem apps de namoro e relacionamentos com confiança e autenticidade.
+
+Beijo da Rua é um portal educacional brasileiro que ajuda homens a entenderem o universo dos aplicativos de namoro e a desenvolverem habilidades sociais para conexões reais. Publicamos reviews honestos de apps, artigos sobre conquista, autoestima e relacionamentos, além de quizzes interativos que ajudam o usuário a descobrir seu perfil e o app ideal para seus objetivos.
+
+Tudo o que publicamos segue uma linha editorial educativa e respeitosa, sem conteúdo sexualizado ou explícito. O tom é amigável, direto e focado em transformar dúvidas em ação prática.
+
+## Páginas Principais
+
+- [Início](/): Descubra os melhores apps de namoro e dicas para relacionamentos reais.
+- [Sobre Nós](/sobre-nos/): Conheça a missão do Beijo da Rua e nossa equipe.
+- [Como Funciona](/como-funciona/): Entenda como usar nosso guia e quizzes para evoluir.
+- [Apps de Namoro](/apps-de-namoro/): Catálogo completo com reviews de apps de relacionamento.
+- [Blog](/blog/): Artigos sobre conquista, paquera, autoestima e relacionamentos.
+- [Dicas](/dicas/): Guias práticos e rápidos para melhorar seus resultados.
+- [FAQ](/faq/): Respostas para as dúvidas mais comuns dos nossos leitores.
+- [Contato](/contato/): Fale com a equipe do Beijo da Rua.
+- [Mapa do Site](/sitemap/): Navegação completa por todas as seções.
+
+## Reviews de Apps
+
+- [Tinder](/apps/tinder/): Análise completa do maior app de namoro do mundo.
+- [Bumble](/apps/bumble/): Como funciona o app onde mulheres dão o primeiro passo.
+- [Hinge](/apps/hinge/): Review do app "feito para ser deletado".
+- [Badoo](/apps/badoo/): Guia do app popular no Brasil e Europa.
+- [OkCupid](/apps/okcupid/): Perfil detalhado do app baseado em compatibilidade.
+- [Bate Papo Grátis](/apps/batepapogratis/): Sala de chat online gratuita com matchs em tempo real.
+
+## Artigos do Blog
+
+- [Como Criar Expectativa sem Parecer Jogador](/criar-expectativa-sem-parecer-jogador/): Guia sincero com técnicas psicológicas para conexões reais.
+- [Melhores Apps de Namoro para 2026](/melhores-apps-namoro-2026/): Ranking atualizado dos principais aplicativos de relacionamento.
+- [Os Segredos de um Perfil Conquistador](/segredos-perfil-conquistador/): Como montar um perfil que chama atenção nos apps.
+- [Arte de Manter uma Conversa Leve](/arte-manter-conversa-leve/): Técnicas para evitar silêncios constrangedores.
+
+## Quizzes Interativos
+
+- [Qual App Combina com Você?](/quiz/): Descubra o aplicativo ideal para seu estilo de namoro.
+- [Qual Seu Estilo de Namoro?](/quiz/qual-seu-estilo-de-namoro/): Entenda seu perfil e como ele influencia suas conexões.
+- [Como os Homens Tímidos Podem Usar Apps](/quiz/como-homens-timidos-usar-apps/): Estratégias para quem tem dificuldade de iniciar conversas.
+
+## Informações Legais
+
+- [Termos de Uso](/termos-de-uso/): Regras de utilização do conteúdo do site.
+- [Política de Privacidade](/politica-de-privacidade/): Como coletamos, usamos e protegemos seus dados.
+- [Política de Cookies](/politica-de-cookies/): Uso de cookies e tecnologias de rastreamento.
+
+## Optional
+
+- [Quiz: Tipo de Mensagem para Enviar Primeiro](/quiz/tipo-mensagem-enviar-primeiro/)
+- [Quiz: Melhor Horário para Usar Apps](/quiz/melhor-horario-usar-apps/)
+- [Blog: Categoria Conquista](/blog/categoria/conquista/)
+- [Blog: Categoria Relacionamento](/blog/categoria/relacionamento/)
