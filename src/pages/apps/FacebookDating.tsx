@@ -14,7 +14,7 @@ const FacebookDating = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Facebook Dating Brasil - Namoro Gratuito Baseado em Interesses"
+        title="Facebook Dating Brasil | Namoro Gratuito"
         description="Facebook Dating: encontros 100% gratuitos baseados em grupos, eventos e interesses em comum. Separado do seu perfil principal. Veja como funciona."
         canonical="https://beijodarua.com.br/apps/facebook-dating/"
         keywords="facebook dating brasil, facebook namoro, dating facebook, facebook encontros, namoro gratuito"

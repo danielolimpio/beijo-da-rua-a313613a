@@ -20,7 +20,7 @@ const DespertarInteresseSemDizerNada = () => {
   return (
     <BlogArticleLayout category="conquista" wordCount={articleWordCount}>
       <Helmet>
-        <title>Como Despertar Interesse Sem Dizer Nada Direto | Beijo da Rua</title>
+        <title>Despertar Interesse Sem Dizer Nada | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Use sutileza, presença e energia para atrair antes mesmo da primeira palavra. Estratégias reais para homens discretos." 
@@ -29,7 +29,7 @@ const DespertarInteresseSemDizerNada = () => {
         <link rel="canonical" href="https://beijodarua.com.br/blog/posts/despertar-interesse-sem-dizer-nada/" />
         <meta property="og:url" content="https://beijodarua.com.br/blog/posts/despertar-interesse-sem-dizer-nada/" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Como Despertar Interesse Sem Dizer Nada Direto | Beijo da Rua" />
+        <meta property="og:title" content="Despertar Interesse Sem Dizer Nada | Beijo da Rua" />
         <meta property="og:description" content="Use sutileza, presença e energia para atrair antes mesmo da primeira palavra. Estratégias reais para homens discretos." />
         <meta property="og:image" content="https://beijodarua.com.br/og-image.jpg" />
         <meta property="article:published_time" content="2026-01-15" />

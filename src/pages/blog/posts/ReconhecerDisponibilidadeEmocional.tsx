@@ -42,7 +42,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
   return (
     <BlogArticleLayout category="relacionamento" wordCount={articleWordCount}>
       <Helmet>
-        <title>Como Reconhecer Se Ela Está Disponível Emocionalmente | Beijo da Rua</title>
+        <title>Disponibilidade Emocional | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Aprenda a identificar sinais claros de disponibilidade emocional e pare de perder tempo com quem não está pronto para um relacionamento real." 
@@ -51,7 +51,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
         <link rel="canonical" href="https://beijodarua.com.br/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente/" />
         <meta property="og:url" content="https://beijodarua.com.br/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente/" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="Como Reconhecer Se Ela Está Disponível Emocionalmente | Beijo da Rua" />
+        <meta property="og:title" content="Disponibilidade Emocional | Beijo da Rua" />
         <meta property="og:description" content="Aprenda a identificar sinais claros de disponibilidade emocional e pare de perder tempo com quem não está pronto para um relacionamento real." />
         <meta property="og:image" content="https://beijodarua.com.br/og-image.jpg" />
         <meta property="article:published_time" content="2026-04-07" />

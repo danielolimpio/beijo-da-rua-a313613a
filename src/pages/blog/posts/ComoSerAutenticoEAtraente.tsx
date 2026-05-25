@@ -20,7 +20,7 @@ const ComoSerAutenticoEAtraente = () => {
   return (
     <BlogArticleLayout category="autoestima" wordCount={articleWordCount}>
       <Helmet>
-        <title>Como Ser Autêntico e Atraente ao Mesmo Tempo | Beijo da Rua</title>
+        <title>Autêntico e Atraente | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Atração verdadeira vem da essência. Descubra como mostrar quem você é sem fingir — e ainda assim encantar de verdade." 

@@ -14,7 +14,7 @@ const OkCupid = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="OkCupid Brasil - App de Namoro com Compatibilidade Inteligente"
+        title="OkCupid Brasil | Compatibilidade Inteligente"
         description="OkCupid: 91M+ usuários, algoritmo de compatibilidade baseado em valores. Inclusivo com 22 gêneros e 13 orientações. Encontre conexões profundas."
         canonical="https://beijodarua.com.br/apps/okcupid/"
         keywords="okcupid brasil, app okcupid, okcupid namoro, compatibilidade, namoro lgbtqia+"

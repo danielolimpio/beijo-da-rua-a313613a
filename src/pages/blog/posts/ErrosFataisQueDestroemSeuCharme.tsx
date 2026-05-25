@@ -14,7 +14,7 @@ const ErrosFataisQueDestroemSeuCharme = () => {
   return (
     <BlogArticleLayout category="conquista" wordCount={articleWordCount}>
       <Helmet>
-        <title>Erros Fatais Que Destroem Seu Charme na Primeira Impressão | Beijo da Rua</title>
+        <title>Erros Que Destroem Seu Charme | Beijo da Rua</title>
         <meta 
           name="description" 
           content="Evite armadilhas comuns que afastam mulheres antes mesmo do 'oi'. Ajuste detalhes sutis e mude completamente sua energia." 

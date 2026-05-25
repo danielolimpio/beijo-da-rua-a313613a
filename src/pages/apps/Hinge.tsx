@@ -59,12 +59,12 @@ const Hinge = () => {
   return (
     <>
       <Helmet>
-        <title>Hinge Brasil - App Feito Para Ser Deletado | Relacionamentos Sérios</title>
+        <title>Hinge Brasil | App Para Relacionamentos</title>
         <meta name="description" content="Hinge: o app de namoro feito para ser deletado. Prompts criativos, vídeos e algoritmo Most Compatible. Relacionamentos sérios para quem busca algo real." />
         <meta name="keywords" content="hinge, hinge brasil, app namoro sério, relacionamento real, most compatible, prompts criativos, app deletar" />
         <link rel="canonical" href="https://beijodarua.com.br/apps/hinge/" />
         
-        <meta property="og:title" content="Hinge Brasil - App Feito Para Ser Deletado | Relacionamentos Sérios" />
+        <meta property="og:title" content="Hinge Brasil | App Para Relacionamentos" />
         <meta property="og:description" content="Hinge: o app feito para ser deletado. Prompts criativos, vídeos e algoritmo Most Compatible para relacionamentos sérios." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://beijodarua.com.br/apps/hinge/" />

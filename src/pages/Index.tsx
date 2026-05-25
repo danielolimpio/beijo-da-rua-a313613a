@@ -22,7 +22,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Beijo da Rua - Guia de Apps de Namoro para Homens Brasileiros"
+        title="Beijo da Rua | Guia de Apps de Namoro"
         description="Descubra os melhores apps de namoro para homens brasileiros. Dicas, reviews e guias completos para encontrar relacionamentos reais."
         canonical="https://beijodarua.com.br/"
         keywords="apps de namoro, namoro online, tinder brasil, bumble brasil, relacionamento"
