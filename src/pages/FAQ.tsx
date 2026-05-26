@@ -123,6 +123,7 @@ const FAQ = () => {
         keywords="faq apps namoro, dúvidas tinder, perguntas namoro online"
       />
       <StructuredData data={getWebSiteSchema()} />
+      <StructuredData data={getFAQSchema(faqs.flatMap(c => c.questions))} />
       <Header />
       <div className="pt-[140px]">{/* Spacer for fixed header */}</div>
       <DynamicBreadcrumb />
