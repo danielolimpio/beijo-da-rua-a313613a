@@ -36,7 +36,10 @@ export const getWebSiteSchema = () => ({
   "description": "Guia completo sobre aplicativos de namoro no Brasil",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://beijodarua.com.br/buscar-vagas?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://beijodarua.com.br/faq?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   },
   "publisher": {
@@ -110,4 +113,39 @@ export const getQuizSchema = (quiz: {
   "inLanguage": "pt-BR",
   "educationalLevel": "Beginner",
   "assesses": "Dating app compatibility"
+});
+
+export const getLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Beijo da Rua",
+  "image": "https://beijodarua.com.br/og-image.jpg",
+  "url": "https://beijodarua.com.br",
+  "telephone": "+55-12-98251-9116",
+  "email": "contato@beijodarua.com.br",
+  "priceRange": "Free",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Julia Freire, 1200",
+    "addressLocality": "João Pessoa",
+    "addressRegion": "PB",
+    "addressCountry": "BR"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brazil"
+  }
+});
+
+export const getFAQSchema = (faqs: Array<{ q: string; a: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
 });
