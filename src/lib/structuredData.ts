@@ -36,7 +36,10 @@ export const getWebSiteSchema = () => ({
   "description": "Guia completo sobre aplicativos de namoro no Brasil",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://beijodarua.com.br/buscar-vagas?q={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://beijodarua.com.br/faq?q={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   },
   "publisher": {
