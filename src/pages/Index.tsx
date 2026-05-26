@@ -29,6 +29,7 @@ const Index = () => {
       />
       <StructuredData data={getOrganizationSchema()} />
       <StructuredData data={getWebSiteSchema()} />
+      <StructuredData data={getLocalBusinessSchema()} />
       
       {/* Top of Page Ad */}
       <TopOfPageAd />
