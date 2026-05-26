@@ -83,6 +83,9 @@ const HeroSection = () => {
                 src={heroImage} 
                 alt="Mulher sorridente segurando rosa vermelha" 
                 className="w-full h-full object-cover object-bottom"
+                width={800}
+                height={1000}
+                fetchPriority="high"
               />
               
               {/* Feature Tags - Hidden on very small screens, visible on sm+ */}
