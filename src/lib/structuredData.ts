@@ -114,3 +114,38 @@ export const getQuizSchema = (quiz: {
   "educationalLevel": "Beginner",
   "assesses": "Dating app compatibility"
 });
+
+export const getLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Beijo da Rua",
+  "image": "https://beijodarua.com.br/og-image.jpg",
+  "url": "https://beijodarua.com.br",
+  "telephone": "+55-12-98251-9116",
+  "email": "contato@beijodarua.com.br",
+  "priceRange": "Free",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Julia Freire, 1200",
+    "addressLocality": "João Pessoa",
+    "addressRegion": "PB",
+    "addressCountry": "BR"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brazil"
+  }
+});
+
+export const getFAQSchema = (faqs: Array<{ q: string; a: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(item => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a
+    }
+  }))
+});
