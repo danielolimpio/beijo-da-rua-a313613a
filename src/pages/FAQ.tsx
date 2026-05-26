@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import DynamicBreadcrumb from "@/components/DynamicBreadcrumb";
 import StructuredData from "@/components/StructuredData";
 import SEO from "@/components/SEO";
-import { getWebSiteSchema } from "@/lib/structuredData";
+import { getWebSiteSchema, getFAQSchema } from "@/lib/structuredData";
 import {
   Accordion,
   AccordionContent,
