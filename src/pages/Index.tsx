@@ -14,7 +14,7 @@ import RecentArticlesThumbnails from "@/components/RecentArticlesThumbnails";
 import DatingAppsShowcase from "@/components/DatingAppsShowcase";
 import PremiumGuideSection from "@/components/PremiumGuideSection";
 import HomeFAQ from "@/components/HomeFAQ";
-import { getOrganizationSchema, getWebSiteSchema } from "@/lib/structuredData";
+import { getOrganizationSchema, getWebSiteSchema, getLocalBusinessSchema } from "@/lib/structuredData";
 import { TopOfPageAd, UnderFirstParagraphAd, MidContentAd, LongContentAd, InContent5Ad, BottomOfPageAd } from "@/components/EzoicAd";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
 
