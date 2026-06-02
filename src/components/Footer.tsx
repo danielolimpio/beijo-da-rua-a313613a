@@ -72,43 +72,43 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/sobre-nos" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/sobre-nos/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Info size={16} />
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
-                <a href="/quiz" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/quiz/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>Quiz</span>
                 </a>
               </li>
               <li>
-                <a href="/dicas" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/dicas/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Lightbulb size={16} />
                   <span>Dicas</span>
                 </a>
               </li>
               <li>
-                <a href="/blog" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/blog/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <BookOpen size={16} />
                   <span>Blog</span>
                 </a>
               </li>
               <li>
-                <a href="/contato" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/contato/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Mail size={16} />
                   <span>Contato</span>
                 </a>
               </li>
               <li>
-                <a href="/faq" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/faq/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>FAQ</span>
                 </a>
               </li>
               <li>
-                <a href="/sitemap" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/sitemap/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Map size={16} />
                   <span>Mapa do Site</span>
                 </a>
