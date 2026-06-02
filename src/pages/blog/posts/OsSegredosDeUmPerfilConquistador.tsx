@@ -45,7 +45,7 @@ import {
 
 const OsSegredosDeUmPerfilConquistador = () => {
   const [showFullBio, setShowFullBio] = useState(false);
-  const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador";
+  const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador/";
   const shareTitle = "Os Segredos de um Perfil Conquistador nas Redes Sociais";
 
   const articleData = getArticleSchema({
