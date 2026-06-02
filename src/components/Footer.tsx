@@ -78,6 +78,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/como-funciona/" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <HelpCircle size={16} />
+                  <span>Como Funciona</span>
+                </a>
+              </li>
+              <li>
+                <a href="/apps-de-namoro/" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Globe size={16} />
+                  <span>Apps de Namoro</span>
+                </a>
+              </li>
+              <li>
                 <a href="/quiz/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>Quiz</span>
