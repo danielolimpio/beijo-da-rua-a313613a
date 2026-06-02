@@ -20,7 +20,7 @@ const ErrosFataisQueDestroemSeuCharme = () => {
           content="Evite armadilhas comuns que afastam mulheres antes mesmo do 'oi'. Ajuste detalhes sutis e mude completamente sua energia." 
         />
         <meta name="keywords" content="primeira impressão, erros na paquera, charme, abordagem, linguagem corporal, conquista" />
-        <link rel="canonical" href="https://beijodarua.com.br/blog/posts/erros-fatais-que-destroem-seu-charme" />
+        <link rel="canonical" href="https://beijodarua.com.br/blog/posts/erros-fatais-que-destroem-seu-charme/" />
       </Helmet>
 
       {/* Hero Image */}
