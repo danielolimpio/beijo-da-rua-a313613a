@@ -33,6 +33,13 @@ DirectoryIndex index.html
   RewriteRule ^(setembro|agosto|abril|maio|junho|julho|janeiro|fevereiro|marco|outubro|novembro|dezembro)[0-9]{4}\.pdf$ - [G,L]
 
   # ———————————————————————
+  # 🔁 Consolidar URLs alternativas de artigos para a versão canônica /blog/posts/
+  # Evita conteúdo duplicado e "Cópia sem página canônica selecionada" no Search Console
+  # ———————————————————————
+  RewriteRule ^blog/(cantadas-irresistiveis-que-funcionam|como-abordar-uma-mulher-com-confianca|os-segredos-de-um-perfil-conquistador|como-convidar-mulher-sair-sem-parecer-desesperado|tecnicas-controlar-nervosismo-paquera|frases-de-efeito-que-deixam-mulher-interessada|como-criar-conexoes-reais-em-apps|erros-fatais-que-destroem-seu-charme|descubra-qual-site-relacionamento-combina|linguagem-corporal-poderosa-na-hora-de-conquistar|estrategias-primeiro-encontro|como-ser-autentico-e-atraente-ao-mesmo-tempo|o-poder-do-silencio|domine-suas-emocoes-e-atraia|vibe-conquista-sem-dizer-palavra|melhores-apps-relacionamento-2026|sinais-interesse-feminino|escutar-nova-forma-conquistar|medo-coragem-conquistar-respeito|despertar-interesse-sem-dizer-nada|arte-manter-conversa-leve-envolver|humor-inteligente-conquista-mais-que-beleza|como-reconhecer-se-ela-esta-disponivel-emocionalmente|criar-expectativa-sem-parecer-jogador)/?$ /blog/posts/$1/ [L,R=301]
+  RewriteRule ^criar-expectativa-sem-parecer-jogador/?$ /blog/posts/criar-expectativa-sem-parecer-jogador/ [L,R=301]
+
+  # ———————————————————————
   # ✅ Não redirecionar arquivos ou diretórios reais existentes
   # ———————————————————————
   RewriteCond %{REQUEST_FILENAME} -f [OR]
