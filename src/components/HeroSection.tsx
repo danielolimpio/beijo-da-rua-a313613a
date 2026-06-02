@@ -56,7 +56,7 @@ const HeroSection = () => {
               O <strong>Beijo da Rua</strong> é um portal independente que testa e recomenda os <strong>melhores apps e sites de relacionamento</strong> do Brasil e do mundo. 
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="/quiz">
+              <a href="/quiz/">
                 <Button 
                   size="lg" 
                   className="bg-gradient-primary text-primary-foreground hover:shadow-custom-primary px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg transition-all duration-300 w-full"
@@ -64,7 +64,7 @@ const HeroSection = () => {
                   Fazer Quiz Grátis
                 </Button>
               </a>
-              <a href="/apps-de-namoro">
+              <a href="/apps-de-namoro/">
                 <Button 
                   size="lg" 
                   variant="outline"
