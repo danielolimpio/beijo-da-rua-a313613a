@@ -45,7 +45,7 @@ import {
 
 const OsSegredosDeUmPerfilConquistador = () => {
   const [showFullBio, setShowFullBio] = useState(false);
-  const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador";
+  const shareUrl = "https://beijodarua.com.br/blog/posts/os-segredos-de-um-perfil-conquistador/";
   const shareTitle = "Os Segredos de um Perfil Conquistador nas Redes Sociais";
 
   const articleData = getArticleSchema({
@@ -715,7 +715,7 @@ const OsSegredosDeUmPerfilConquistador = () => {
                   <CardContent className="p-6">
                     <p className="leading-relaxed">
                       <strong>Quer saber qual app combina com seu perfil?</strong> Confira nosso guia sobre{" "}
-                      <a href="/apps-de-namoro" className="text-primary hover:underline font-semibold">
+                      <a href="/apps-de-namoro/" className="text-primary hover:underline font-semibold">
                         os melhores apps de relacionamento para cada perfil em 2025
                       </a>.
                     </p>
@@ -850,7 +850,7 @@ const OsSegredosDeUmPerfilConquistador = () => {
                         como abordar uma mulher com confiança e naturalidade
                       </a>{" "}
                       ou navegue pelas{" "}
-                      <a href="/dicas" className="text-primary hover:underline font-semibold">
+                      <a href="/dicas/" className="text-primary hover:underline font-semibold">
                         dicas de relacionamento
                       </a>.
                     </p>

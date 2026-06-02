@@ -23,7 +23,7 @@ const ConquistaCategory = () => {
         <div className="container mx-auto px-4">
           {/* Breadcrumb e Navegação */}
           <div className="mb-8">
-            <a href="/blog" className="text-primary hover:underline mb-4 inline-flex items-center gap-2">
+            <a href="/blog/" className="text-primary hover:underline mb-4 inline-flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
               Voltar para o Blog
             </a>
@@ -176,7 +176,7 @@ const ConquistaCategory = () => {
                       para ajudá-lo a desenvolver habilidades reais de conquista.
                     </p>
                     <Button asChild variant="outline">
-                      <a href="/blog">Ver todos os artigos</a>
+                      <a href="/blog/">Ver todos os artigos</a>
                     </Button>
                   </CardContent>
                 </Card>

@@ -61,7 +61,7 @@ const Category = () => {
         <div className="flex-1 pt-32 pb-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-3xl font-bold">Categoria não encontrada</h1>
-            <a href="/blog" className="text-primary hover:underline mt-4 inline-block">
+            <a href="/blog/" className="text-primary hover:underline mt-4 inline-block">
               Voltar para o Blog
             </a>
           </div>
@@ -80,7 +80,7 @@ const Category = () => {
       <div className="flex-1 pt-32 pb-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <a href="/blog" className="text-primary hover:underline mb-4 inline-block">
+            <a href="/blog/" className="text-primary hover:underline mb-4 inline-block">
               ← Voltar para o Blog
             </a>
             <div className="flex items-center gap-4 mb-4">

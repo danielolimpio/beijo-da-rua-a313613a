@@ -72,43 +72,55 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/sobre-nos" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/sobre-nos/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Info size={16} />
                   <span>Sobre Nós</span>
                 </a>
               </li>
               <li>
-                <a href="/quiz" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/como-funciona/" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <HelpCircle size={16} />
+                  <span>Como Funciona</span>
+                </a>
+              </li>
+              <li>
+                <a href="/apps-de-namoro/" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <Globe size={16} />
+                  <span>Apps de Namoro</span>
+                </a>
+              </li>
+              <li>
+                <a href="/quiz/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>Quiz</span>
                 </a>
               </li>
               <li>
-                <a href="/dicas" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/dicas/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Lightbulb size={16} />
                   <span>Dicas</span>
                 </a>
               </li>
               <li>
-                <a href="/blog" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/blog/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <BookOpen size={16} />
                   <span>Blog</span>
                 </a>
               </li>
               <li>
-                <a href="/contato" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/contato/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Mail size={16} />
                   <span>Contato</span>
                 </a>
               </li>
               <li>
-                <a href="/faq" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/faq/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <HelpCircle size={16} />
                   <span>FAQ</span>
                 </a>
               </li>
               <li>
-                <a href="/sitemap" className="hover:text-primary transition-colors flex items-center gap-2">
+                <a href="/sitemap/" className="hover:text-primary transition-colors flex items-center gap-2">
                   <Map size={16} />
                   <span>Mapa do Site</span>
                 </a>
@@ -149,15 +161,15 @@ const Footer = () => {
           <p>Todos os direitos reservados © Beijo da Rua | Design por: <a href="https://danielolimpio.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">DanielOlimpio</a></p>
           
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-3 sm:mt-4">
-            <a href="/politica-de-privacidade" className="hover:text-primary transition-colors">
+            <a href="/politica-de-privacidade/" className="hover:text-primary transition-colors">
               Política de Privacidade
             </a>
             <span className="hidden sm:inline">|</span>
-            <a href="/termos-de-uso" className="hover:text-primary transition-colors">
+            <a href="/termos-de-uso/" className="hover:text-primary transition-colors">
               Termos de Uso
             </a>
             <span className="hidden sm:inline">|</span>
-            <a href="/politica-de-cookies" className="hover:text-primary transition-colors">
+            <a href="/politica-de-cookies/" className="hover:text-primary transition-colors">
               Política de Cookies
             </a>
           </div>

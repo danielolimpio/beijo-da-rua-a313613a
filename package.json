@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "ssg": "node scripts/generate-static.js",
+    "validate:static": "node scripts/validate-static-html.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -218,7 +218,7 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                 </div>
 
                 <p className="mb-6">
-                  Se ainda não tem clareza, vale fazer pausas reflexivas. Recomendamos nosso <Link to="/blog" className="text-primary hover:underline font-semibold">guia completo sobre como definir suas intenções amorosas</Link> de forma consciente, onde explicamos como alinhar suas escolhas digitais com suas verdades emocionais.
+                  Se ainda não tem clareza, vale fazer pausas reflexivas. Recomendamos nosso <Link to="/blog/" className="text-primary hover:underline font-semibold">guia completo sobre como definir suas intenções amorosas</Link> de forma consciente, onde explicamos como alinhar suas escolhas digitais com suas verdades emocionais.
                 </p>
 
                 {/* Long Content Ad (800+ words) */}
@@ -357,7 +357,7 @@ const DescubraQualSiteRelacionamentoCombina = () => {
                 <div className="bg-gradient-to-r from-primary/10 to-rose-100 p-6 rounded-lg mb-8 text-center">
                   <p className="font-semibold mb-4">Quer descobrir seu resultado personalizado?</p>
                   <Button asChild size="lg">
-                    <Link to="/quiz">Fazer Quiz Completo</Link>
+                    <Link to="/quiz/">Fazer Quiz Completo</Link>
                   </Button>
                 </div>
 

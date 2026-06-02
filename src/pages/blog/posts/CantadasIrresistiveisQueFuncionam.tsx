@@ -28,7 +28,7 @@ import {
 
 const CantadasIrresistiveisQueFuncionam = () => {
   const [showFullBio, setShowFullBio] = useState(false);
-  const articleUrl = "https://beijodarua.com.br/blog/posts/cantadas-irresistiveis-que-funcionam";
+  const articleUrl = "https://beijodarua.com.br/blog/posts/cantadas-irresistiveis-que-funcionam/";
   const articleTitle = "Cantadas Irresistíveis que Realmente Funcionam em 2025";
 
   const articleData = getArticleSchema({

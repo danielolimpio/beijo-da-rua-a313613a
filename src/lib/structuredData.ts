@@ -32,7 +32,7 @@ export const getWebSiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Beijo da Rua",
-  "url": "https://beijodarua.com.br",
+  "url": "https://beijodarua.com.br/",
   "description": "Guia completo sobre aplicativos de namoro no Brasil",
   "potentialAction": {
     "@type": "SearchAction",
@@ -50,6 +50,20 @@ export const getWebSiteSchema = () => ({
       "url": "https://beijodarua.com.br/og-image.jpg"
     }
   }
+});
+
+export const getSiteNavigationSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Páginas principais do Beijo da Rua",
+  "itemListElement": [
+    { "@type": "SiteNavigationElement", "position": 1, "name": "Como Funciona", "url": "https://beijodarua.com.br/como-funciona/" },
+    { "@type": "SiteNavigationElement", "position": 2, "name": "Sobre Nós", "url": "https://beijodarua.com.br/sobre-nos/" },
+    { "@type": "SiteNavigationElement", "position": 3, "name": "Apps de Namoro", "url": "https://beijodarua.com.br/apps-de-namoro/" },
+    { "@type": "SiteNavigationElement", "position": 4, "name": "Quiz", "url": "https://beijodarua.com.br/quiz/" },
+    { "@type": "SiteNavigationElement", "position": 5, "name": "Blog", "url": "https://beijodarua.com.br/blog/" },
+    { "@type": "SiteNavigationElement", "position": 6, "name": "Dicas", "url": "https://beijodarua.com.br/dicas/" }
+  ]
 });
 
 export const getBreadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({

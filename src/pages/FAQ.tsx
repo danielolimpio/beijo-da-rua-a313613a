@@ -203,7 +203,7 @@ const FAQ = () => {
             <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Entre em contato conosco e teremos prazer em ajudar você.
             </p>
-            <a href="/contato">
+            <a href="/contato/">
               <button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-bold">
                 Falar Conosco
               </button>
