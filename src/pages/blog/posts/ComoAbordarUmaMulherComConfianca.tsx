@@ -291,7 +291,7 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </ul>
 
                 <p>
-                  Se quiser ir além, leia nosso <Link to="/blog" className="text-primary hover:underline">guia completo sobre como criar um perfil conquistador nas redes sociais</Link>.
+                  Se quiser ir além, leia nosso <Link to="/blog/" className="text-primary hover:underline">guia completo sobre como criar um perfil conquistador nas redes sociais</Link>.
                 </p>
 
                 {/* Longer Content Ad (1200+ words) */}
@@ -384,7 +384,7 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </ul>
 
                 <p>
-                  Quer evitar esses erros de forma definitiva? Conheça as <Link to="/blog" className="text-primary hover:underline">frases de efeito que deixam qualquer mulher interessada</Link> — usadas com inteligência, não como fórmula mágica.
+                  Quer evitar esses erros de forma definitiva? Conheça as <Link to="/blog/" className="text-primary hover:underline">frases de efeito que deixam qualquer mulher interessada</Link> — usadas com inteligência, não como fórmula mágica.
                 </p>
 
                 <h2 className="text-3xl font-bold mt-12 mb-6">
@@ -466,7 +466,7 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </p>
 
                 <p className="mb-6">
-                  Se você quer se aprofundar nesse mindset, leia também nosso artigo sobre <Link to="/blog" className="text-primary hover:underline">como ser autêntico e atraente ao mesmo tempo</Link>.
+                  Se você quer se aprofundar nesse mindset, leia também nosso artigo sobre <Link to="/blog/" className="text-primary hover:underline">como ser autêntico e atraente ao mesmo tempo</Link>.
                 </p>
 
                 <h2 className="text-3xl font-bold mt-12 mb-6">
@@ -482,7 +482,7 @@ const ComoAbordarUmaMulherComConfianca = () => {
                 </p>
 
                 <p className="font-semibold mb-6">
-                  Se este artigo te ajudou, compartilhe com um amigo que também merece viver conexões reais. E se quiser descobrir qual tipo de site ou app de relacionamento combina com seu estilo, faça nosso <Link to="/quiz" className="text-primary hover:underline">questionário exclusivo no Beijo da Rua</Link> — porque o amor começa com o autoconhecimento.
+                  Se este artigo te ajudou, compartilhe com um amigo que também merece viver conexões reais. E se quiser descobrir qual tipo de site ou app de relacionamento combina com seu estilo, faça nosso <Link to="/quiz/" className="text-primary hover:underline">questionário exclusivo no Beijo da Rua</Link> — porque o amor começa com o autoconhecimento.
                 </p>
 
                 {/* Social Share Buttons */}

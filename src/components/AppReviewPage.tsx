@@ -131,7 +131,7 @@ const AppReviewPage = ({
                 {officialLabel}
               </Button>
             </a>
-            <Link to="/quiz">
+            <Link to="/quiz/">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                 Fazer Quiz
               </Button>
@@ -273,7 +273,7 @@ const AppReviewPage = ({
                   Acessar site oficial
                 </Button>
               </a>
-              <Link to="/apps-de-namoro">
+              <Link to="/apps-de-namoro/">
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                   Ver outros apps
                 </Button>

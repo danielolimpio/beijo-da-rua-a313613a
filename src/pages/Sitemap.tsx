@@ -37,10 +37,10 @@ const Sitemap = () => {
               </div>
               <ul className="space-y-2">
                 <li><Link to="/" className="text-primary hover:underline">Página Inicial</Link></li>
-                <li><Link to="/sobre-nos" className="text-primary hover:underline">Sobre Nós</Link></li>
-                <li><Link to="/como-funciona" className="text-primary hover:underline">Como Funciona</Link></li>
-                <li><Link to="/contato" className="text-primary hover:underline">Contato</Link></li>
-                <li><Link to="/faq" className="text-primary hover:underline">Perguntas Frequentes</Link></li>
+                <li><Link to="/sobre-nos/" className="text-primary hover:underline">Sobre Nós</Link></li>
+                <li><Link to="/como-funciona/" className="text-primary hover:underline">Como Funciona</Link></li>
+                <li><Link to="/contato/" className="text-primary hover:underline">Contato</Link></li>
+                <li><Link to="/faq/" className="text-primary hover:underline">Perguntas Frequentes</Link></li>
               </ul>
             </section>
 
@@ -88,7 +88,7 @@ const Sitemap = () => {
                 <h2 className="text-2xl font-semibold text-foreground">Quiz Personalizado</h2>
               </div>
               <ul className="space-y-2">
-                <li><Link to="/quiz" className="text-primary hover:underline">Iniciar Quiz</Link></li>
+                <li><Link to="/quiz/" className="text-primary hover:underline">Iniciar Quiz</Link></li>
                 <li><Link to="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil" className="text-primary hover:underline">Qual seu objetivo ideal?</Link></li>
                 <li><Link to="/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso" className="text-primary hover:underline">Apps para homens tímidos</Link></li>
                 <li><Link to="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" className="text-primary hover:underline">Quantos encontros por mês?</Link></li>
@@ -117,7 +117,7 @@ const Sitemap = () => {
                 <h2 className="text-2xl font-semibold text-foreground">Dicas</h2>
               </div>
               <ul className="space-y-2">
-                <li><Link to="/dicas" className="text-primary hover:underline">Todas as Dicas</Link></li>
+                <li><Link to="/dicas/" className="text-primary hover:underline">Todas as Dicas</Link></li>
               </ul>
             </section>
 
@@ -128,7 +128,7 @@ const Sitemap = () => {
                 <h2 className="text-2xl font-semibold text-foreground">Blog</h2>
               </div>
               <ul className="space-y-2">
-                <li><Link to="/blog" className="text-primary hover:underline">Todos os Artigos</Link></li>
+                <li><Link to="/blog/" className="text-primary hover:underline">Todos os Artigos</Link></li>
                 <li className="ml-4 text-sm text-muted-foreground">Categorias:</li>
                 <li className="ml-4"><Link to="/blog/conquista" className="text-primary hover:underline">Conquista</Link></li>
                 <li className="ml-4"><Link to="/blog/relacionamento" className="text-primary hover:underline">Relacionamento</Link></li>
@@ -155,9 +155,9 @@ const Sitemap = () => {
                 <h2 className="text-2xl font-semibold text-foreground">Políticas e Termos</h2>
               </div>
               <ul className="space-y-2">
-                <li><Link to="/politica-de-privacidade" className="text-primary hover:underline">Política de Privacidade</Link></li>
-                <li><Link to="/termos-de-uso" className="text-primary hover:underline">Termos de Uso</Link></li>
-                <li><Link to="/politica-de-cookies" className="text-primary hover:underline">Política de Cookies</Link></li>
+                <li><Link to="/politica-de-privacidade/" className="text-primary hover:underline">Política de Privacidade</Link></li>
+                <li><Link to="/termos-de-uso/" className="text-primary hover:underline">Termos de Uso</Link></li>
+                <li><Link to="/politica-de-cookies/" className="text-primary hover:underline">Política de Cookies</Link></li>
               </ul>
             </section>
           </div>

@@ -408,7 +408,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
               <Star className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <p className="text-foreground leading-relaxed">
                 Se você quer entender melhor seu próprio perfil de apego e expectativas, faça nosso{" "}
-                <Link to="/quiz" className="text-primary font-semibold hover:underline">quiz gratuito no Beijo da Rua</Link>.
+                <Link to="/quiz/" className="text-primary font-semibold hover:underline">quiz gratuito no Beijo da Rua</Link>.
                 {" "}Ele foi criado com base em estudos de psicologia relacional e pode revelar padrões que você nem imaginava.
               </p>
             </div>
@@ -437,7 +437,7 @@ const ReconhecerDisponibilidadeEmocional = () => {
           <p className="text-muted-foreground leading-relaxed mb-6">
             Além disso, escolha plataformas que incentivem perfis mais completos e intenções claras. Apps como{" "}
             <Link to="/apps/hinge" className="text-primary font-semibold hover:underline">Hinge</Link>, que exigem respostas a perguntas e focam em compatibilidade, tendem a atrair usuários mais sérios. Confira nossa{" "}
-            <Link to="/apps-de-namoro" className="text-primary font-semibold hover:underline">análise detalhada dos apps de namoro</Link>{" "}
+            <Link to="/apps-de-namoro/" className="text-primary font-semibold hover:underline">análise detalhada dos apps de namoro</Link>{" "}
             para entender como cada um funciona na prática.
           </p>
         </div>

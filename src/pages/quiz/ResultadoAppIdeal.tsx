@@ -235,12 +235,12 @@ const ResultadoAppIdeal = () => {
           </h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="outline" asChild>
-              <Link to="/blog">
+              <Link to="/blog/">
                 Ver Artigos do Blog
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/dicas">
+              <Link to="/dicas/">
                 Conferir Todas as Dicas
               </Link>
             </Button>

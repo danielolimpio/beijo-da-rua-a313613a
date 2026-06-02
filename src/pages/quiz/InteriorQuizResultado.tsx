@@ -248,10 +248,10 @@ const InteriorQuizResultado = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link to="/quiz">Fazer Quiz Completo</Link>
+                <Link to="/quiz/">Fazer Quiz Completo</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 border-white text-white">
-                <Link to="/apps-de-namoro">Ver Todos os Apps</Link>
+                <Link to="/apps-de-namoro/">Ver Todos os Apps</Link>
               </Button>
             </div>
           </section>

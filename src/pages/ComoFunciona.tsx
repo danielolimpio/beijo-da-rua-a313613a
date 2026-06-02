@@ -55,7 +55,7 @@ const ComoFunciona = () => {
                     <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Happn</span>
                     <span className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">+10 apps</span>
                   </div>
-                  <Link to="/apps-de-namoro">
+                  <Link to="/apps-de-namoro/">
                     <Button className="w-full">
                       Ver Todos os Apps Avaliados
                     </Button>
@@ -84,7 +84,7 @@ const ComoFunciona = () => {
                     </div>
                     <p className="text-sm text-muted-foreground">Média de 4.8/5 estrelas de satisfação</p>
                   </div>
-                  <Link to="/quiz">
+                  <Link to="/quiz/">
                     <Button className="w-full" variant="default">
                       Fazer Quiz Grátis Agora
                     </Button>
@@ -170,7 +170,7 @@ const ComoFunciona = () => {
                       → Segredos de um Perfil Vencedor
                     </Link>
                   </div>
-                  <Link to="/blog">
+                  <Link to="/blog/">
                     <Button className="w-full" variant="outline">
                       Ler Mais Artigos
                     </Button>
