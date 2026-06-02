@@ -12,11 +12,11 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2 overflow-x-hidden">
         <div className="container mx-auto px-2 sm:px-4 flex justify-between items-center text-xs sm:text-sm max-w-7xl">
           <div className="flex items-center gap-3 sm:gap-6">
-            <a href="/politica-de-privacidade" className="flex items-center gap-1 sm:gap-2 hover:opacity-80 transition-opacity">
+            <a href="/politica-de-privacidade/" className="flex items-center gap-1 sm:gap-2 hover:opacity-80 transition-opacity">
               <FileText size={14} className="hidden sm:block" />
               <span className="text-xs sm:text-sm">Privacidade</span>
             </a>
-            <a href="/termos-de-uso" className="flex items-center gap-1 sm:gap-2 hover:opacity-80 transition-opacity">
+            <a href="/termos-de-uso/" className="flex items-center gap-1 sm:gap-2 hover:opacity-80 transition-opacity">
               <Scale size={14} className="hidden sm:block" />
               <span className="text-xs sm:text-sm">Termos</span>
             </a>
@@ -34,13 +34,13 @@ const Header = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             <a href="/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Home</a>
-            <a href="/como-funciona" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Como Funciona</a>
-            <a href="/sobre-nos" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Sobre Nós</a>
-            <a href="/apps-de-namoro" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Apps de Namoro</a>
-            <a href="/quiz" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Quiz</a>
-            <a href="/blog" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Blog</a>
-            <a href="/dicas" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Dicas</a>
-            <a href="/contato" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Contato</a>
+            <a href="/como-funciona/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Como Funciona</a>
+            <a href="/sobre-nos/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Sobre Nós</a>
+            <a href="/apps-de-namoro/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Apps de Namoro</a>
+            <a href="/quiz/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Quiz</a>
+            <a href="/blog/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Blog</a>
+            <a href="/dicas/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Dicas</a>
+            <a href="/contato/" className="text-foreground hover:text-primary transition-colors font-medium text-sm xl:text-base">Contato</a>
           </div>
 
           {/* Mobile & Tablet Actions */}
