@@ -16,6 +16,42 @@ const ComoHomensTimidosUsarApps = () => {
         description="Descubra a estratégia ideal para o seu perfil"
         progress={20}
       >
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+            Qual sua maior dificuldade nos apps de namoro?
+          </h2>
+          
+          <div className="grid gap-4">
+            <QuizOption
+              icon={<MessageCircle size={32} />}
+              title="Iniciar Conversas"
+              description="Não sei como começar a falar ou manter o papo interessante"
+              href="/melhor-horario-usar-apps-namoro/"
+            />
+            
+            <QuizOption
+              icon={<Video size={32} />}
+              title="Propor Encontros Presenciais"
+              description="Tenho medo de sugerir um encontro e ser rejeitado"
+              href="/melhor-horario-usar-apps-namoro/"
+            />
+            
+            <QuizOption
+              icon={<Coffee size={32} />}
+              title="Criar um Perfil Atraente"
+              description="Não sei quais fotos usar ou o que escrever sobre mim"
+              href="/melhor-horario-usar-apps-namoro/"
+            />
+            
+            <QuizOption
+              icon={<Calendar size={32} />}
+              title="Lidar com Rejeição"
+              description="Fico desanimado quando não recebo respostas"
+              href="/melhor-horario-usar-apps-namoro/"
+            />
+          </div>
+        </div>
+
         <article className="prose prose-lg max-w-none mb-12">
           <div className="bg-card border border-border rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -80,42 +116,6 @@ const ComoHomensTimidosUsarApps = () => {
             </ul>
           </div>
         </article>
-
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
-            Qual sua maior dificuldade nos apps de namoro?
-          </h2>
-          
-          <div className="grid gap-4">
-            <QuizOption
-              icon={<MessageCircle size={32} />}
-              title="Iniciar Conversas"
-              description="Não sei como começar a falar ou manter o papo interessante"
-              href="/melhor-horario-usar-apps-namoro"
-            />
-            
-            <QuizOption
-              icon={<Video size={32} />}
-              title="Propor Encontros Presenciais"
-              description="Tenho medo de sugerir um encontro e ser rejeitado"
-              href="/melhor-horario-usar-apps-namoro"
-            />
-            
-            <QuizOption
-              icon={<Coffee size={32} />}
-              title="Criar um Perfil Atraente"
-              description="Não sei quais fotos usar ou o que escrever sobre mim"
-              href="/melhor-horario-usar-apps-namoro"
-            />
-            
-            <QuizOption
-              icon={<Calendar size={32} />}
-              title="Lidar com Rejeição"
-              description="Fico desanimado quando não recebo respostas"
-              href="/melhor-horario-usar-apps-namoro"
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );

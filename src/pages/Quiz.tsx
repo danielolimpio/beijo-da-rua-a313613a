@@ -15,7 +15,7 @@ const Quiz = () => {
       id: 1,
       title: "Qual Seu Objetivo Ideal para Usar App de Namoro?",
       description: "Descubra se você está buscando um relacionamento sério, casual ou apenas fazer novas amizades",
-      url: "/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil",
+      url: "/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil/",
       icon: Target,
       duration: "2 min",
       questions: 5
@@ -24,7 +24,7 @@ const Quiz = () => {
       id: 2,
       title: "Como Homens Tímidos Podem Usar Apps com Sucesso",
       description: "Estratégias específicas para homens introvertidos conquistarem matches de qualidade",
-      url: "/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso",
+      url: "/como-homens-timidos-podem-usar-apps-de-namoro-com-sucesso/",
       icon: Heart,
       duration: "3 min",
       questions: 6
@@ -33,7 +33,7 @@ const Quiz = () => {
       id: 3,
       title: "Quantos Encontros por Mês é Ideal para Você?",
       description: "Descubra o ritmo perfeito de encontros baseado no seu estilo de vida e objetivos",
-      url: "/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro",
+      url: "/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro/",
       icon: Clock,
       duration: "2 min",
       questions: 5
@@ -42,7 +42,7 @@ const Quiz = () => {
       id: 4,
       title: "Melhores Apps para Homens Após os 35 Anos",
       description: "Encontre os apps mais adequados para sua faixa etária e objetivos de relacionamento",
-      url: "/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil",
+      url: "/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil/",
       icon: Users,
       duration: "3 min",
       questions: 7
@@ -51,7 +51,7 @@ const Quiz = () => {
       id: 5,
       title: "Apps de Namoro no Interior do Brasil Vale a Pena?",
       description: "Descubra quais apps funcionam melhor fora das grandes capitais",
-      url: "/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena",
+      url: "/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/",
       icon: MapPin,
       duration: "2 min",
       questions: 5
@@ -201,7 +201,7 @@ const Quiz = () => {
           <p className="text-xl max-w-2xl mx-auto mb-8">
             Comece agora e descubra qual app de namoro é perfeito para você em menos de 3 minutos.
           </p>
-          <Link to="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil">
+          <Link to="/qual-objetivo-ideal-para-usar-app-de-namoro-homem-brasil/">
             <Button size="lg" className="bg-background text-primary hover:bg-background/90">
               Começar Primeiro Quiz
             </Button>

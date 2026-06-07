@@ -225,6 +225,11 @@ const App = () => (
             <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
             <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
             <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
+            <Route path="/experiencia-com-apps-de-namoro-cidades-interior" element={<InteriorQuiz2 />} />
+            <Route path="/mobilidade-para-encontros-apps-namoro-interior" element={<InteriorQuiz3 />} />
+            <Route path="/objetivo-relacionamento-apps-namoro-interior" element={<InteriorQuiz4 />} />
+            <Route path="/estilo-de-vida-apps-de-namoro-interior" element={<InteriorQuiz5 />} />
+            {/* Rotas legadas para compatibilidade */}
             <Route path="/interior-quiz-2" element={<InteriorQuiz2 />} />
             <Route path="/interior-quiz-3" element={<InteriorQuiz3 />} />
             <Route path="/interior-quiz-4" element={<InteriorQuiz4 />} />
