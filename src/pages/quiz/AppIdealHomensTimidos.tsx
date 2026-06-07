@@ -40,9 +40,7 @@ const AppIdealHomensTimidos = () => {
           <Card className="p-8 border-2 border-primary shadow-custom-lg">
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Heart className="w-12 h-12 text-white" fill="white" />
-                </div>
+                <img src={bumbleLogo} alt="Logo Bumble" width={96} height={96} className="w-24 h-24 rounded-2xl object-cover shadow-lg border border-border bg-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
