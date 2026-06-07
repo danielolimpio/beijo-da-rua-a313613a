@@ -4,6 +4,10 @@ import { Building2, Home, MapPin, AlertTriangle, CheckCircle2, XCircle, Lightbul
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
+import badooLogo from "@/assets/badoo-logo.jpeg";
+import tinderLogo from "@/assets/tinder-logo.jpeg";
+import pofLogo from "@/assets/pof-logo.jpeg";
 
 const InteriorQuizResultado = () => {
   return (
