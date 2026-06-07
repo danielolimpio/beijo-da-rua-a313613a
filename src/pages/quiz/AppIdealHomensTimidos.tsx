@@ -98,9 +98,7 @@ const AppIdealHomensTimidos = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="p-6 hover:shadow-custom-lg transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
+                  <img src={hingeLogo} alt="Logo Hinge" width={64} height={64} className="w-16 h-16 rounded-xl object-cover border border-border bg-white" />
                   <h4 className="text-xl font-bold text-foreground">Hinge</h4>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -116,9 +114,7 @@ const AppIdealHomensTimidos = () => {
 
               <Card className="p-6 hover:shadow-custom-lg transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <MessageCircle className="w-8 h-8 text-white" />
-                  </div>
+                  <img src={okcupidLogo} alt="Logo OkCupid" width={64} height={64} className="w-16 h-16 rounded-xl object-cover border border-border bg-white" />
                   <h4 className="text-xl font-bold text-foreground">OkCupid</h4>
                 </div>
                 <p className="text-muted-foreground mb-4">
