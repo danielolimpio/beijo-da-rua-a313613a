@@ -4,6 +4,10 @@ import { Building2, Home, MapPin, AlertTriangle, CheckCircle2, XCircle, Lightbul
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import facebookDatingLogo from "@/assets/facebook-dating-logo.jpg";
+import badooLogo from "@/assets/badoo-logo.jpeg";
+import tinderLogo from "@/assets/tinder-logo.jpeg";
+import pofLogo from "@/assets/pof-logo.jpeg";
 
 const InteriorQuizResultado = () => {
   return (
@@ -64,9 +68,9 @@ const InteriorQuizResultado = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Card className="border-2 border-primary">
                 <CardHeader className="bg-primary/5">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-primary" />
-                    Facebook Dating
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={facebookDatingLogo} alt="Logo Facebook Dating" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-primary" /> Facebook Dating</span>
                   </CardTitle>
                   <CardDescription>Melhor escolha para interior</CardDescription>
                 </CardHeader>
@@ -82,9 +86,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-blue-500">
                 <CardHeader className="bg-blue-50 dark:bg-blue-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-blue-600" />
-                    Badoo
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={badooLogo} alt="Logo Badoo" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-blue-600" /> Badoo</span>
                   </CardTitle>
                   <CardDescription>Forte presença no interior</CardDescription>
                 </CardHeader>
@@ -100,9 +104,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-rose-500">
                 <CardHeader className="bg-rose-50 dark:bg-rose-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-rose-600" />
-                    Tinder
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={tinderLogo} alt="Logo Tinder" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-rose-600" /> Tinder</span>
                   </CardTitle>
                   <CardDescription>Com raio ampliado</CardDescription>
                 </CardHeader>
@@ -118,9 +122,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-purple-500">
                 <CardHeader className="bg-purple-50 dark:bg-purple-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-purple-600" />
-                    POF (Plenty of Fish)
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={pofLogo} alt="Logo POF Plenty of Fish" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-purple-600" /> POF (Plenty of Fish)</span>
                   </CardTitle>
                   <CardDescription>Subestimado, mas eficaz</CardDescription>
                 </CardHeader>

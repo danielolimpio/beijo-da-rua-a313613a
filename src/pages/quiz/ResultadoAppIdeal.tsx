@@ -2,8 +2,11 @@ import QuizLayout from "@/components/QuizLayout";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Star, TrendingUp, CheckCircle2, ExternalLink } from "lucide-react";
+import { Star, TrendingUp, CheckCircle2, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import tinderLogo from "@/assets/tinder-logo.jpeg";
+import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import happnLogo from "@/assets/happn-logo.jpg";
 import { 
   UnderPageTitleAd, 
   MidContentAd, 
@@ -45,9 +48,7 @@ const ResultadoAppIdeal = () => {
         <Card className="p-8 mb-8 border-2 border-primary bg-gradient-to-br from-primary/5 to-transparent">
           <div className="flex items-start gap-6 mb-6">
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                <Heart className="w-8 h-8 text-primary-foreground" />
-              </div>
+              <img src={tinderLogo} alt="Logo Tinder" width={80} height={80} className="w-20 h-20 rounded-2xl object-cover shadow-md border border-border bg-white" />
             </div>
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-foreground mb-2">
@@ -133,7 +134,10 @@ const ResultadoAppIdeal = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6 hover:shadow-lg transition-all">
-              <h4 className="text-xl font-semibold text-foreground mb-3">Bumble</h4>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={bumbleLogo} alt="Logo Bumble" width={56} height={56} className="w-14 h-14 rounded-xl object-cover border border-border bg-white" />
+                <h4 className="text-xl font-semibold text-foreground">Bumble</h4>
+              </div>
               <p className="text-foreground/80 mb-4">
                 Ótima segunda opção se você quer mulheres que tomam iniciativa. 
                 Perfeito para complementar o Tinder sem sobrecarregar.
@@ -144,7 +148,10 @@ const ResultadoAppIdeal = () => {
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-all">
-              <h4 className="text-xl font-semibold text-foreground mb-3">Happn</h4>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={happnLogo} alt="Logo Happn" width={56} height={56} className="w-14 h-14 rounded-xl object-cover border border-border bg-white" />
+                <h4 className="text-xl font-semibold text-foreground">Happn</h4>
+              </div>
               <p className="text-foreground/80 mb-4">
                 Use se você mora em cidade grande e quer matches com pessoas 
                 que cruzaram seu caminho fisicamente.

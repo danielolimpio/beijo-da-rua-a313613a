@@ -2,8 +2,11 @@ import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Heart, MessageCircle, Shield, ArrowRight } from "lucide-react";
+import { CheckCircle, MessageCircle, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import hingeLogo from "@/assets/hinge-logo.jpeg";
+import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 
 const AppIdealHomensTimidos = () => {
   return (
@@ -37,9 +40,7 @@ const AppIdealHomensTimidos = () => {
           <Card className="p-8 border-2 border-primary shadow-custom-lg">
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Heart className="w-12 h-12 text-white" fill="white" />
-                </div>
+                <img src={bumbleLogo} alt="Logo Bumble" width={96} height={96} className="w-24 h-24 rounded-2xl object-cover shadow-lg border border-border bg-white" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
@@ -97,9 +98,7 @@ const AppIdealHomensTimidos = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="p-6 hover:shadow-custom-lg transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                    <Heart className="w-8 h-8 text-white" />
-                  </div>
+                  <img src={hingeLogo} alt="Logo Hinge" width={64} height={64} className="w-16 h-16 rounded-xl object-cover border border-border bg-white" />
                   <h4 className="text-xl font-bold text-foreground">Hinge</h4>
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -115,9 +114,7 @@ const AppIdealHomensTimidos = () => {
 
               <Card className="p-6 hover:shadow-custom-lg transition-all">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <MessageCircle className="w-8 h-8 text-white" />
-                  </div>
+                  <img src={okcupidLogo} alt="Logo OkCupid" width={64} height={64} className="w-16 h-16 rounded-xl object-cover border border-border bg-white" />
                   <h4 className="text-xl font-bold text-foreground">OkCupid</h4>
                 </div>
                 <p className="text-muted-foreground mb-4">
