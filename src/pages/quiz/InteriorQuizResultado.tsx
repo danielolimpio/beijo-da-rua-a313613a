@@ -68,9 +68,9 @@ const InteriorQuizResultado = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Card className="border-2 border-primary">
                 <CardHeader className="bg-primary/5">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-primary" />
-                    Facebook Dating
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={facebookDatingLogo} alt="Logo Facebook Dating" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-primary" /> Facebook Dating</span>
                   </CardTitle>
                   <CardDescription>Melhor escolha para interior</CardDescription>
                 </CardHeader>
