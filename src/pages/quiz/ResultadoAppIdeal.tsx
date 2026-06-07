@@ -2,8 +2,11 @@ import QuizLayout from "@/components/QuizLayout";
 import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Star, TrendingUp, CheckCircle2, ExternalLink } from "lucide-react";
+import { Star, TrendingUp, CheckCircle2, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import tinderLogo from "@/assets/tinder-logo.jpeg";
+import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import happnLogo from "@/assets/happn-logo.jpg";
 import { 
   UnderPageTitleAd, 
   MidContentAd, 
