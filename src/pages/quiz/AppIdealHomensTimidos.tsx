@@ -2,8 +2,11 @@ import { Helmet } from "react-helmet";
 import QuizLayout from "@/components/QuizLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Heart, MessageCircle, Shield, ArrowRight } from "lucide-react";
+import { CheckCircle, MessageCircle, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import bumbleLogo from "@/assets/bumble-logo.jpeg";
+import hingeLogo from "@/assets/hinge-logo.jpeg";
+import okcupidLogo from "@/assets/okcupid-logo.jpeg";
 
 const AppIdealHomensTimidos = () => {
   return (
