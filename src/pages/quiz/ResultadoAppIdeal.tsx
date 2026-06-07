@@ -48,9 +48,7 @@ const ResultadoAppIdeal = () => {
         <Card className="p-8 mb-8 border-2 border-primary bg-gradient-to-br from-primary/5 to-transparent">
           <div className="flex items-start gap-6 mb-6">
             <div className="flex-shrink-0">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                <Heart className="w-8 h-8 text-primary-foreground" />
-              </div>
+              <img src={tinderLogo} alt="Logo Tinder" width={80} height={80} className="w-20 h-20 rounded-2xl object-cover shadow-md border border-border bg-white" />
             </div>
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-foreground mb-2">
