@@ -47,7 +47,7 @@ const InteriorQuiz1 = () => {
 
           <UnderFirstParagraphAd />
 
-          <QuizQuestion options={options} nextPage="/interior-quiz-2" />
+          <QuizQuestion options={options} nextPage="/experiencia-com-apps-de-namoro-cidades-interior/" />
 
           <div className="prose prose-lg max-w-none mt-12">
             <p className="text-foreground/80">
