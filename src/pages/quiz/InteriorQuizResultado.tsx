@@ -86,9 +86,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-blue-500">
                 <CardHeader className="bg-blue-50 dark:bg-blue-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-blue-600" />
-                    Badoo
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={badooLogo} alt="Logo Badoo" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-blue-600" /> Badoo</span>
                   </CardTitle>
                   <CardDescription>Forte presença no interior</CardDescription>
                 </CardHeader>
