@@ -134,7 +134,10 @@ const ResultadoAppIdeal = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="p-6 hover:shadow-lg transition-all">
-              <h4 className="text-xl font-semibold text-foreground mb-3">Bumble</h4>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={bumbleLogo} alt="Logo Bumble" width={56} height={56} className="w-14 h-14 rounded-xl object-cover border border-border bg-white" />
+                <h4 className="text-xl font-semibold text-foreground">Bumble</h4>
+              </div>
               <p className="text-foreground/80 mb-4">
                 Ótima segunda opção se você quer mulheres que tomam iniciativa. 
                 Perfeito para complementar o Tinder sem sobrecarregar.
@@ -145,7 +148,10 @@ const ResultadoAppIdeal = () => {
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-all">
-              <h4 className="text-xl font-semibold text-foreground mb-3">Happn</h4>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={happnLogo} alt="Logo Happn" width={56} height={56} className="w-14 h-14 rounded-xl object-cover border border-border bg-white" />
+                <h4 className="text-xl font-semibold text-foreground">Happn</h4>
+              </div>
               <p className="text-foreground/80 mb-4">
                 Use se você mora em cidade grande e quer matches com pessoas 
                 que cruzaram seu caminho fisicamente.
