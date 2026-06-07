@@ -17,6 +17,43 @@ const QuizPage3 = () => {
         description="Seu ritmo de vida define qual app usar"
         progress={60}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Qual sua frequência ideal de encontros?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="Quase nunca"
+              description="0-2 encontros por mês, preciso de apps seletivos"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil/"
+              icon={<CalendarX2 size={24} />}
+            />
+            
+            <QuizOption
+              title="De vez em quando"
+              description="3-5 encontros por mês, equilíbrio é importante"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil/"
+              icon={<Calendar size={24} />}
+            />
+            
+            <QuizOption
+              title="Frequentemente"
+              description="6-10 encontros por mês, tenho bastante tempo"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil/"
+              icon={<CalendarDays size={24} />}
+            />
+            
+            <QuizOption
+              title="Sempre"
+              description="10+ encontros por mês, preciso otimizar"
+              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil/"
+              icon={<CalendarCheck size={24} />}
+            />
+          </div>
+        </div>
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -110,43 +147,6 @@ const QuizPage3 = () => {
             é o que respeita seu tempo e estilo de vida. Namoro online é maratona, não sprint.
           </p>
         </article>
-
-        {/* Quiz Options */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Qual sua frequência ideal de encontros?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="Quase nunca"
-              description="0-2 encontros por mês, preciso de apps seletivos"
-              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
-              icon={<CalendarX2 size={24} />}
-            />
-            
-            <QuizOption
-              title="De vez em quando"
-              description="3-5 encontros por mês, equilíbrio é importante"
-              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
-              icon={<Calendar size={24} />}
-            />
-            
-            <QuizOption
-              title="Frequentemente"
-              description="6-10 encontros por mês, tenho bastante tempo"
-              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
-              icon={<CalendarDays size={24} />}
-            />
-            
-            <QuizOption
-              title="Sempre"
-              description="10+ encontros por mês, preciso otimizar"
-              href="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil"
-              icon={<CalendarCheck size={24} />}
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );

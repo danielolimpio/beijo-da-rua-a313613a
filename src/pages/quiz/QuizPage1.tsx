@@ -16,6 +16,43 @@ const QuizPage1 = () => {
         description="Seu objetivo define qual app funciona melhor para você"
         progress={20}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Escolha seu objetivo principal:
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="Encontros casuais"
+              description="Quero me divertir, sem pressão de compromisso"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas/"
+              icon={<Heart size={24} />}
+            />
+            
+            <QuizOption
+              title="Namoro sério"
+              description="Busco uma parceira para relacionamento estável"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas/"
+              icon={<Users size={24} />}
+            />
+            
+            <QuizOption
+              title="Casamento"
+              description="Quero encontrar alguém para construir uma vida junto"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas/"
+              icon={<Home size={24} />}
+            />
+            
+            <QuizOption
+              title="Só conhecer gente"
+              description="Expandir círculo social, amizades e depois vejo"
+              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas/"
+              icon={<MessageCircle size={24} />}
+            />
+          </div>
+        </div>
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -57,43 +94,6 @@ const QuizPage1 = () => {
             economiza meses de frustração.
           </p>
         </article>
-
-        {/* Quiz Options */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Escolha seu objetivo principal:
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="Encontros casuais"
-              description="Quero me divertir, sem pressão de compromisso"
-              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
-              icon={<Heart size={24} />}
-            />
-            
-            <QuizOption
-              title="Namoro sério"
-              description="Busco uma parceira para relacionamento estável"
-              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
-              icon={<Users size={24} />}
-            />
-            
-            <QuizOption
-              title="Casamento"
-              description="Quero encontrar alguém para construir uma vida junto"
-              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
-              icon={<Home size={24} />}
-            />
-            
-            <QuizOption
-              title="Só conhecer gente"
-              description="Expandir círculo social, amizades e depois vejo"
-              href="/como-iniciar-conversas-apps-namoro-que-geram-respostas"
-              icon={<MessageCircle size={24} />}
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );

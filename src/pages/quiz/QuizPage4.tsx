@@ -17,6 +17,43 @@ const QuizPage4 = () => {
         description="Cada idade tem apps que funcionam melhor"
         progress={80}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Selecione sua faixa etária:
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="18-24 anos"
+              description="Apps populares funcionam muito bem nessa idade"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/"
+              icon={<Baby size={24} />}
+            />
+            
+            <QuizOption
+              title="25-34 anos"
+              description="Equilíbrio entre casual e sério"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/"
+              icon={<GraduationCap size={24} />}
+            />
+            
+            <QuizOption
+              title="35-44 anos"
+              description="Foco em apps que valorizam maturidade"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/"
+              icon={<Briefcase size={24} />}
+            />
+            
+            <QuizOption
+              title="45+ anos"
+              description="Apps especializados em relacionamentos maduros"
+              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/"
+              icon={<Users2 size={24} />}
+            />
+          </div>
+        </div>
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -124,43 +161,6 @@ const QuizPage4 = () => {
             Idade é vantagem em apps certos (maturidade, estabilidade) e desvantagem em apps errados.
           </p>
         </article>
-
-        {/* Quiz Options */}
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Selecione sua faixa etária:
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="18-24 anos"
-              description="Apps populares funcionam muito bem nessa idade"
-              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
-              icon={<Baby size={24} />}
-            />
-            
-            <QuizOption
-              title="25-34 anos"
-              description="Equilíbrio entre casual e sério"
-              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
-              icon={<GraduationCap size={24} />}
-            />
-            
-            <QuizOption
-              title="35-44 anos"
-              description="Foco em apps que valorizam maturidade"
-              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
-              icon={<Briefcase size={24} />}
-            />
-            
-            <QuizOption
-              title="45+ anos"
-              description="Apps especializados em relacionamentos maduros"
-              href="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena"
-              icon={<Users2 size={24} />}
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );
