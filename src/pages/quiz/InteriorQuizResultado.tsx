@@ -122,9 +122,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-purple-500">
                 <CardHeader className="bg-purple-50 dark:bg-purple-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-purple-600" />
-                    POF (Plenty of Fish)
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={pofLogo} alt="Logo POF Plenty of Fish" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-purple-600" /> POF (Plenty of Fish)</span>
                   </CardTitle>
                   <CardDescription>Subestimado, mas eficaz</CardDescription>
                 </CardHeader>
