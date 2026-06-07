@@ -104,9 +104,9 @@ const InteriorQuizResultado = () => {
 
               <Card className="border-2 border-rose-500">
                 <CardHeader className="bg-rose-50 dark:bg-rose-950/20">
-                  <CardTitle className="flex items-center gap-2">
-                    <CheckCircle2 className="text-rose-600" />
-                    Tinder
+                  <CardTitle className="flex items-center gap-3">
+                    <img src={tinderLogo} alt="Logo Tinder" width={48} height={48} className="w-12 h-12 rounded-lg object-cover border border-border bg-white" />
+                    <span className="flex items-center gap-2"><CheckCircle2 className="text-rose-600" /> Tinder</span>
                   </CardTitle>
                   <CardDescription>Com raio ampliado</CardDescription>
                 </CardHeader>
