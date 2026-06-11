@@ -25,6 +25,7 @@ import articleArteConversaLeve from "@/assets/article-arte-conversa-leve.jpg";
 import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
 import articleReconhecerDisponivel from "@/assets/article-reconhecer-disponivel.jpg";
 import articleCriarExpectativa from "@/assets/article-criar-expectativa-sem-parecer-jogador.jpg";
+import articleAmizadeRomance from "@/assets/article-amizade-romance.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -41,6 +42,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 25,
+    title: "Como Transformar Amizade em Romance com Respeito",
+    excerpt: "Quando há química, mas ela te vê só como amigo. Descubra estratégias éticas para revelar seus sentimentos sem arriscar a amizade.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "conquista", "paquera", "autoestima"],
+    image: articleAmizadeRomance,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "11 de junho de 2026",
+    link: "/blog/posts/como-transformar-amizade-em-romance-com-respeito"
+  },
   {
     id: 24,
     title: "Como Criar Expectativa sem Parecer Jogador: Guia Sincero",
