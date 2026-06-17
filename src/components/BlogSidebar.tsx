@@ -16,6 +16,7 @@ import meetmeLogo from "@/assets/meetme-logo.jpeg";
 import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
 import datingLogo from "@/assets/dating-logo.jpeg";
 import skoutLogo from "@/assets/skout-logo.png";
+import batePapoBanner from "@/assets/batepapo-banner.jpeg";
 import { SidebarAd, SidebarMiddleAd, SidebarBottomAd, SidebarFloating1Ad, SidebarFloating2Ad } from "@/components/EzoicAd";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
 
@@ -141,8 +142,31 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
         </Card>
       )}
 
+      {/* Bate Papo Grátis Banner */}
+      <a
+        href="https://batepapogratis.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block relative rounded-xl overflow-hidden group shadow-lg hover:shadow-2xl transition-shadow"
+        aria-label="Entrar no Bate Papo Grátis"
+      >
+        <img
+          src={batePapoBanner}
+          alt="Bate Papo Grátis - Conheça pessoas agora"
+          className="w-full h-auto block"
+          loading="lazy"
+        />
+        <div className="absolute left-3 right-3 bottom-3">
+          <span className="relative flex items-center justify-center w-full py-3 rounded-lg text-white font-bold tracking-wider text-sm bg-gradient-to-b from-[#4DA6FF] to-[#1E6FD9] shadow-[0_4px_14px_rgba(30,111,217,0.5)] overflow-hidden">
+            <span className="relative z-10">ENTRAR</span>
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/40 to-transparent"></span>
+          </span>
+        </div>
+      </a>
+
       {/* Sidebar Top Ad */}
       <SidebarAd />
+      
       
       {/* Categorias */}
       <Card>
