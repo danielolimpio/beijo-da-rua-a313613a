@@ -106,7 +106,7 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
               asChild
               className="w-full bg-green-600 hover:bg-green-700 text-white"
             >
-              <a href="https://chat.whatsapp.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://gruposdewhats.com.br/" target="_blank" rel="noopener noreferrer">
                 Entrar no WhatsApp
               </a>
             </Button>
@@ -133,7 +133,7 @@ const BlogSidebar = ({ activeCategory }: BlogSidebarProps) => {
               asChild
               className="w-full bg-blue-600 hover:bg-blue-700 text-white"
             >
-              <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+              <a href="https://gruposdotelegram.org/" target="_blank" rel="noopener noreferrer">
                 Entrar no Telegram
               </a>
             </Button>
