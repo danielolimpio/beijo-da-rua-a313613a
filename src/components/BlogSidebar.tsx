@@ -16,6 +16,7 @@ import meetmeLogo from "@/assets/meetme-logo.jpeg";
 import eharmonyLogo from "@/assets/eharmony-logo.jpeg";
 import datingLogo from "@/assets/dating-logo.jpeg";
 import skoutLogo from "@/assets/skout-logo.png";
+import batePapoBanner from "@/assets/batepapo-banner.jpeg";
 import { SidebarAd, SidebarMiddleAd, SidebarBottomAd, SidebarFloating1Ad, SidebarFloating2Ad } from "@/components/EzoicAd";
 import { FEATURE_FLAGS } from "@/config/featureFlags";
 
