@@ -515,7 +515,9 @@ const CriarExpectativaSemParecerJogador = () => {
               <BottomOfPageAd />
             </div>
 
-            <BlogSidebar />
+            <aside className="lg:w-80 shrink-0">
+              <BlogSidebar />
+            </aside>
           </div>
         </div>
       </article>
