@@ -17,8 +17,45 @@ const QualTipoFotoPerfilFunciona = () => {
         description="Suas fotos são seu cartão de visitas - escolher bem pode triplicar seus matches"
         progress={60}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Qual estilo de foto você mais usa?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="Fotos naturais e casuais"
+              description="Prefiro fotos espontâneas, em lugares que gosto, sem pose forçada"
+              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
+              icon={<Camera size={24} />}
+            />
+            
+            <QuizOption
+              title="Fotos mais arrumado"
+              description="Gosto de fotos onde estou bem vestido, cuidado, transmitindo confiança"
+              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
+              icon={<Shirt size={24} />}
+            />
+            
+            <QuizOption
+              title="Fotos de aventuras"
+              description="Prefiro mostrar viagens, trilhas, esportes - meu lado aventureiro"
+              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
+              icon={<Mountain size={24} />}
+            />
+            
+            <QuizOption
+              title="Fotos sociais"
+              description="Fotos com amigos, em eventos, festas - mostrando vida social"
+              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
+              icon={<Users size={24} />}
+            />
+          </div>
+        </div>
+
         <UnderFirstParagraphAd />
-        
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -85,44 +122,6 @@ const QualTipoFotoPerfilFunciona = () => {
         </article>
 
         <MidContentAd />
-
-        {/* Quiz Options */}
-        <div className="space-y-6 mt-8">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Qual estilo de foto você mais usa?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="Fotos naturais e casuais"
-              description="Prefiro fotos espontâneas, em lugares que gosto, sem pose forçada"
-              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
-              icon={<Camera size={24} />}
-            />
-            
-            <QuizOption
-              title="Fotos mais arrumado"
-              description="Gosto de fotos onde estou bem vestido, cuidado, transmitindo confiança"
-              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
-              icon={<Shirt size={24} />}
-            />
-            
-            <QuizOption
-              title="Fotos de aventuras"
-              description="Prefiro mostrar viagens, trilhas, esportes - meu lado aventureiro"
-              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
-              icon={<Mountain size={24} />}
-            />
-            
-            <QuizOption
-              title="Fotos sociais"
-              description="Fotos com amigos, em eventos, festas - mostrando vida social"
-              href="/quanto-tempo-dedicar-apps-namoro-por-dia-homem"
-              icon={<Users size={24} />}
-            />
-          </div>
-        </div>
-
         <InContent5Ad />
       </QuizLayout>
     </>

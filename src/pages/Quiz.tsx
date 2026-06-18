@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import { getWebSiteSchema } from "@/lib/structuredData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Clock, Target, Heart, Users, MapPin } from "lucide-react";
+import { ArrowRight, Clock, Target, Heart, Users, MapPin, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Quiz = () => {
@@ -53,6 +53,15 @@ const Quiz = () => {
       description: "Descubra quais apps funcionam melhor fora das grandes capitais",
       url: "/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena/",
       icon: MapPin,
+      duration: "2 min",
+      questions: 5
+    },
+    {
+      id: 6,
+      title: "Como Saber Se Uma Mulher Tem Interesse Real em Você",
+      description: "Aprenda a identificar os sinais verdadeiros de interesse feminino nos apps e pare de perder tempo",
+      url: "/como-saber-se-mulher-tem-interesse-real-em-voce-apps-namoro-homem-brasil/",
+      icon: Eye,
       duration: "2 min",
       questions: 5
     }

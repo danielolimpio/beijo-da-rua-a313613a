@@ -16,6 +16,42 @@ const MelhorHorarioUsarApps = () => {
         description="O timing certo aumenta suas chances em até 300%"
         progress={40}
       >
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+            Qual período do dia você mais usa apps?
+          </h2>
+          
+          <div className="grid gap-4">
+            <QuizOption
+              icon={<Sunrise size={32} />}
+              title="Manhã (6h - 12h)"
+              description="Acordo cedo e gosto de começar o dia checando os apps"
+              href="/frequencia-ideal-usar-apps"
+            />
+            
+            <QuizOption
+              icon={<Sun size={32} />}
+              title="Tarde (12h - 18h)"
+              description="Uso principalmente na hora do almoço ou pausas do trabalho"
+              href="/frequencia-ideal-usar-apps"
+            />
+            
+            <QuizOption
+              icon={<Sunset size={32} />}
+              title="Início da Noite (18h - 21h)"
+              description="Prefiro após o trabalho, no momento de relaxar"
+              href="/frequencia-ideal-usar-apps"
+            />
+            
+            <QuizOption
+              icon={<Moon size={32} />}
+              title="Noite (21h - 2h)"
+              description="Sou mais noturno, uso antes de dormir"
+              href="/frequencia-ideal-usar-apps"
+            />
+          </div>
+        </div>
+
         <article className="prose prose-lg max-w-none mb-12">
           <div className="bg-card border border-border rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -72,42 +108,6 @@ const MelhorHorarioUsarApps = () => {
             </p>
           </div>
         </article>
-
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
-            Qual período do dia você mais usa apps?
-          </h2>
-          
-          <div className="grid gap-4">
-            <QuizOption
-              icon={<Sunrise size={32} />}
-              title="Manhã (6h - 12h)"
-              description="Acordo cedo e gosto de começar o dia checando os apps"
-              href="/frequencia-ideal-usar-apps"
-            />
-            
-            <QuizOption
-              icon={<Sun size={32} />}
-              title="Tarde (12h - 18h)"
-              description="Uso principalmente na hora do almoço ou pausas do trabalho"
-              href="/frequencia-ideal-usar-apps"
-            />
-            
-            <QuizOption
-              icon={<Sunset size={32} />}
-              title="Início da Noite (18h - 21h)"
-              description="Prefiro após o trabalho, no momento de relaxar"
-              href="/frequencia-ideal-usar-apps"
-            />
-            
-            <QuizOption
-              icon={<Moon size={32} />}
-              title="Noite (21h - 2h)"
-              description="Sou mais noturno, uso antes de dormir"
-              href="/frequencia-ideal-usar-apps"
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );

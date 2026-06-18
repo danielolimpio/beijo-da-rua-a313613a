@@ -16,6 +16,42 @@ const FrequenciaIdealUsarApps = () => {
         description="O equilíbrio certo entre quantidade e qualidade"
         progress={60}
       >
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+            Como você prefere usar os apps?
+          </h2>
+          
+          <div className="grid gap-4">
+            <QuizOption
+              icon={<Zap size={32} />}
+              title="Uso Intensivo"
+              description="Várias vezes ao dia, sempre que tenho um tempo livre"
+              href="/tipo-mensagem-enviar-primeiro"
+            />
+            
+            <QuizOption
+              icon={<BarChart size={32} />}
+              title="Uso Regular"
+              description="1-2 vezes por dia, em horários específicos"
+              href="/tipo-mensagem-enviar-primeiro"
+            />
+            
+            <QuizOption
+              icon={<TrendingUp size={32} />}
+              title="Uso Moderado"
+              description="Algumas vezes por semana, quando tenho tempo de qualidade"
+              href="/tipo-mensagem-enviar-primeiro"
+            />
+            
+            <QuizOption
+              icon={<Target size={32} />}
+              title="Uso Esporádico"
+              description="Só quando estou realmente interessado, sem pressão"
+              href="/tipo-mensagem-enviar-primeiro"
+            />
+          </div>
+        </div>
+
         <article className="prose prose-lg max-w-none mb-12">
           <div className="bg-card border border-border rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -85,42 +121,6 @@ const FrequenciaIdealUsarApps = () => {
             </ul>
           </div>
         </article>
-
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
-            Como você prefere usar os apps?
-          </h2>
-          
-          <div className="grid gap-4">
-            <QuizOption
-              icon={<Zap size={32} />}
-              title="Uso Intensivo"
-              description="Várias vezes ao dia, sempre que tenho um tempo livre"
-              href="/tipo-mensagem-enviar-primeiro"
-            />
-            
-            <QuizOption
-              icon={<BarChart size={32} />}
-              title="Uso Regular"
-              description="1-2 vezes por dia, em horários específicos"
-              href="/tipo-mensagem-enviar-primeiro"
-            />
-            
-            <QuizOption
-              icon={<TrendingUp size={32} />}
-              title="Uso Moderado"
-              description="Algumas vezes por semana, quando tenho tempo de qualidade"
-              href="/tipo-mensagem-enviar-primeiro"
-            />
-            
-            <QuizOption
-              icon={<Target size={32} />}
-              title="Uso Esporádico"
-              description="Só quando estou realmente interessado, sem pressão"
-              href="/tipo-mensagem-enviar-primeiro"
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );
