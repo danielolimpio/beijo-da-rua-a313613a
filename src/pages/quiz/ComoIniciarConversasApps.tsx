@@ -17,8 +17,45 @@ const ComoIniciarConversasApps = () => {
         description="Seu estilo de comunicação determina qual abordagem funciona melhor"
         progress={40}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Qual estilo mais combina com você?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="Observador e personalizado"
+              description="Leio o perfil e comento algo específico que me chamou atenção"
+              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
+              icon={<Sparkles size={24} />}
+            />
+            
+            <QuizOption
+              title="Bem-humorado e leve"
+              description="Começo com piada ou comentário engraçado sobre algo da bio"
+              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
+              icon={<Smile size={24} />}
+            />
+            
+            <QuizOption
+              title="Direto e interessado"
+              description="Faço pergunta direta sobre interesse em comum que vi no perfil"
+              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
+              icon={<MessageSquare size={24} />}
+            />
+            
+            <QuizOption
+              title="Casual e descontraído"
+              description="Envio algo simples mas amigável, deixo a conversa fluir"
+              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
+              icon={<Coffee size={24} />}
+            />
+          </div>
+        </div>
+
         <UnderFirstParagraphAd />
-        
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -72,44 +109,6 @@ const ComoIniciarConversasApps = () => {
         </article>
 
         <MidContentAd />
-
-        {/* Quiz Options */}
-        <div className="space-y-6 mt-8">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Qual estilo mais combina com você?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="Observador e personalizado"
-              description="Leio o perfil e comento algo específico que me chamou atenção"
-              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
-              icon={<Sparkles size={24} />}
-            />
-            
-            <QuizOption
-              title="Bem-humorado e leve"
-              description="Começo com piada ou comentário engraçado sobre algo da bio"
-              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
-              icon={<Smile size={24} />}
-            />
-            
-            <QuizOption
-              title="Direto e interessado"
-              description="Faço pergunta direta sobre interesse em comum que vi no perfil"
-              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
-              icon={<MessageSquare size={24} />}
-            />
-            
-            <QuizOption
-              title="Casual e descontraído"
-              description="Envio algo simples mas amigável, deixo a conversa fluir"
-              href="/qual-tipo-foto-perfil-funciona-melhor-apps-namoro-homem"
-              icon={<Coffee size={24} />}
-            />
-          </div>
-        </div>
-
         <InContent5Ad />
       </QuizLayout>
     </>

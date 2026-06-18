@@ -16,6 +16,42 @@ const TipoMensagemEnviarPrimeiro = () => {
         description="Sua autenticidade é seu maior diferencial"
         progress={80}
       >
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
+            Qual estilo combina mais com você?
+          </h2>
+          
+          <div className="grid gap-4">
+            <QuizOption
+              icon={<Lightbulb size={32} />}
+              title="Observador e Atencioso"
+              description="Gosto de notar detalhes no perfil e comentar sobre eles"
+              href="/app-ideal-homens-timidos"
+            />
+            
+            <QuizOption
+              icon={<Heart size={32} />}
+              title="Genuíno e Sincero"
+              description="Prefiro ser direto sobre meu interesse de forma respeitosa"
+              href="/app-ideal-homens-timidos"
+            />
+            
+            <QuizOption
+              icon={<Smile size={32} />}
+              title="Leve e Bem-Humorado"
+              description="Uso humor sutil e autêntico para quebrar o gelo"
+              href="/app-ideal-homens-timidos"
+            />
+            
+            <QuizOption
+              icon={<Sparkles size={32} />}
+              title="Curioso e Interessado"
+              description="Faço perguntas interessantes sobre os hobbies dela"
+              href="/app-ideal-homens-timidos"
+            />
+          </div>
+        </div>
+
         <article className="prose prose-lg max-w-none mb-12">
           <div className="bg-card border border-border rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -100,42 +136,6 @@ const TipoMensagemEnviarPrimeiro = () => {
             </ul>
           </div>
         </article>
-
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-foreground text-center mb-8">
-            Qual estilo combina mais com você?
-          </h2>
-          
-          <div className="grid gap-4">
-            <QuizOption
-              icon={<Lightbulb size={32} />}
-              title="Observador e Atencioso"
-              description="Gosto de notar detalhes no perfil e comentar sobre eles"
-              href="/app-ideal-homens-timidos"
-            />
-            
-            <QuizOption
-              icon={<Heart size={32} />}
-              title="Genuíno e Sincero"
-              description="Prefiro ser direto sobre meu interesse de forma respeitosa"
-              href="/app-ideal-homens-timidos"
-            />
-            
-            <QuizOption
-              icon={<Smile size={32} />}
-              title="Leve e Bem-Humorado"
-              description="Uso humor sutil e autêntico para quebrar o gelo"
-              href="/app-ideal-homens-timidos"
-            />
-            
-            <QuizOption
-              icon={<Sparkles size={32} />}
-              title="Curioso e Interessado"
-              description="Faço perguntas interessantes sobre os hobbies dela"
-              href="/app-ideal-homens-timidos"
-            />
-          </div>
-        </div>
       </QuizLayout>
     </>
   );

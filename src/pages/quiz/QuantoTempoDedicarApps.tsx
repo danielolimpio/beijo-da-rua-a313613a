@@ -17,8 +17,45 @@ const QuantoTempoDedicarApps = () => {
         description="A estratégia certa de uso pode triplicar seus resultados com menos esforço"
         progress={80}
       >
+        {/* Quiz Options - movidas para o topo */}
+        <div className="space-y-6 mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+            Quanto tempo você pode dedicar realisticamente?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <QuizOption
+              title="15-20 minutos por dia"
+              description="Tenho rotina corrida, mas posso dedicar esse tempo focado"
+              href="/seu-app-de-namoro-ideal-resultado"
+              icon={<Zap size={24} />}
+            />
+            
+            <QuizOption
+              title="30-40 minutos por dia"
+              description="Consigo reservar esse tempo, especialmente à noite"
+              href="/seu-app-de-namoro-ideal-resultado"
+              icon={<Clock size={24} />}
+            />
+            
+            <QuizOption
+              title="1 hora ou mais por dia"
+              description="Estou realmente comprometido em encontrar alguém"
+              href="/seu-app-de-namoro-ideal-resultado"
+              icon={<Battery size={24} />}
+            />
+            
+            <QuizOption
+              title="Tempo flexível"
+              description="Alguns dias mais, outros menos - depende da semana"
+              href="/seu-app-de-namoro-ideal-resultado"
+              icon={<Gauge size={24} />}
+            />
+          </div>
+        </div>
+
         <UnderFirstParagraphAd />
-        
+
         {/* Educational Content */}
         <article className="prose prose-lg max-w-none mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-4">
@@ -105,44 +142,6 @@ const QuantoTempoDedicarApps = () => {
         </article>
 
         <MidContentAd />
-
-        {/* Quiz Options */}
-        <div className="space-y-6 mt-8">
-          <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Quanto tempo você pode dedicar realisticamente?
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-4">
-            <QuizOption
-              title="15-20 minutos por dia"
-              description="Tenho rotina corrida, mas posso dedicar esse tempo focado"
-              href="/seu-app-de-namoro-ideal-resultado"
-              icon={<Zap size={24} />}
-            />
-            
-            <QuizOption
-              title="30-40 minutos por dia"
-              description="Consigo reservar esse tempo, especialmente à noite"
-              href="/seu-app-de-namoro-ideal-resultado"
-              icon={<Clock size={24} />}
-            />
-            
-            <QuizOption
-              title="1 hora ou mais por dia"
-              description="Estou realmente comprometido em encontrar alguém"
-              href="/seu-app-de-namoro-ideal-resultado"
-              icon={<Battery size={24} />}
-            />
-            
-            <QuizOption
-              title="Tempo flexível"
-              description="Alguns dias mais, outros menos - depende da semana"
-              href="/seu-app-de-namoro-ideal-resultado"
-              icon={<Gauge size={24} />}
-            />
-          </div>
-        </div>
-
         <InContent5Ad />
       </QuizLayout>
     </>
