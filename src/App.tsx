@@ -101,6 +101,7 @@ const MelhorHorarioUsarApps = lazy(() => import("./pages/quiz/MelhorHorarioUsarA
 const FrequenciaIdealUsarApps = lazy(() => import("./pages/quiz/FrequenciaIdealUsarApps"));
 const TipoMensagemEnviarPrimeiro = lazy(() => import("./pages/quiz/TipoMensagemEnviarPrimeiro"));
 const AppIdealHomensTimidos = lazy(() => import("./pages/quiz/AppIdealHomensTimidos"));
+const ComoSaberSeElaTemInteresse = lazy(() => import("./pages/quiz/ComoSaberSeElaTemInteresse"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const PoliticaCookies = lazy(() => import("./pages/PoliticaCookies"));
@@ -229,6 +230,7 @@ const App = () => (
             <Route path="/quantos-encontros-por-mes-e-ideal-para-homens-em-apps-namoro" element={<QuizPage3 />} />
             <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
             <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
+            <Route path="/como-saber-se-mulher-tem-interesse-real-em-voce-apps-namoro-homem-brasil" element={<ComoSaberSeElaTemInteresse />} />
             <Route path="/experiencia-com-apps-de-namoro-cidades-interior" element={<InteriorQuiz2 />} />
             <Route path="/mobilidade-para-encontros-apps-namoro-interior" element={<InteriorQuiz3 />} />
             <Route path="/objetivo-relacionamento-apps-namoro-interior" element={<InteriorQuiz4 />} />
