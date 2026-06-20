@@ -107,6 +107,18 @@ const Sitemap = () => {
                 <li><Link to="/tipo-mensagem-enviar-primeiro" className="text-primary hover:underline">Tipo de mensagem</Link></li>
                 <li><Link to="/app-ideal-homens-timidos" className="text-primary hover:underline">App ideal para tímidos</Link></li>
                 <li><Link to="/seu-app-de-namoro-ideal-resultado" className="text-primary hover:underline">Seu resultado</Link></li>
+                <li className="text-sm text-muted-foreground mt-2">Quiz: Interesse Feminino Real</li>
+                <li><Link to="/como-saber-se-mulher-tem-interesse-real-em-voce-apps-namoro-homem-brasil" className="text-primary hover:underline">Ela tem interesse real?</Link></li>
+                <li><Link to="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem" className="text-primary hover:underline">Tempo de resposta nas mensagens</Link></li>
+                <li><Link to="/perguntas-pessoais-mulher-interesse-genuino-conversa-apps-namoro" className="text-primary hover:underline">Perguntas pessoais e interesse genuíno</Link></li>
+                <li><Link to="/mulher-aceita-marcar-encontro-rapido-app-namoro-sinal-interesse" className="text-primary hover:underline">Mulher aceita marcar encontro</Link></li>
+                <li><Link to="/emojis-mensagens-longas-iniciativa-mulher-interessada-apps-namoro" className="text-primary hover:underline">Emojis, mensagens longas e iniciativa</Link></li>
+                <li className="text-sm text-muted-foreground mt-2">Quiz Interior (Cidades do Interior)</li>
+                <li><Link to="/experiencia-com-apps-de-namoro-cidades-interior" className="text-primary hover:underline">Experiência em cidades do interior</Link></li>
+                <li><Link to="/mobilidade-para-encontros-apps-namoro-interior" className="text-primary hover:underline">Mobilidade para encontros</Link></li>
+                <li><Link to="/objetivo-relacionamento-apps-namoro-interior" className="text-primary hover:underline">Objetivo do relacionamento</Link></li>
+                <li><Link to="/estilo-de-vida-apps-de-namoro-interior" className="text-primary hover:underline">Estilo de vida</Link></li>
+                <li><Link to="/interior-quiz-resultado" className="text-primary hover:underline">Resultado quiz interior</Link></li>
               </ul>
             </section>
 
@@ -145,6 +157,7 @@ const Sitemap = () => {
                 <li className="ml-4"><Link to="/blog/posts/humor-inteligente-conquista-mais-que-beleza/" className="text-primary hover:underline">Humor Inteligente Conquista Mais que Beleza</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente/" className="text-primary hover:underline">Reconhecer Disponibilidade Emocional</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/criar-expectativa-sem-parecer-jogador/" className="text-primary hover:underline">Criar Expectativa sem Parecer Jogador</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/como-transformar-amizade-em-romance-com-respeito/" className="text-primary hover:underline">Como Transformar Amizade em Romance</Link></li>
               </ul>
             </section>
 
