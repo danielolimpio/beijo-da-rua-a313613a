@@ -102,6 +102,10 @@ const FrequenciaIdealUsarApps = lazy(() => import("./pages/quiz/FrequenciaIdealU
 const TipoMensagemEnviarPrimeiro = lazy(() => import("./pages/quiz/TipoMensagemEnviarPrimeiro"));
 const AppIdealHomensTimidos = lazy(() => import("./pages/quiz/AppIdealHomensTimidos"));
 const ComoSaberSeElaTemInteresse = lazy(() => import("./pages/quiz/ComoSaberSeElaTemInteresse"));
+const TempoRespostaMulherInteressada = lazy(() => import("./pages/quiz/TempoRespostaMulherInteressada"));
+const PerguntasPessoaisInteresseGenuino = lazy(() => import("./pages/quiz/PerguntasPessoaisInteresseGenuino"));
+const MulherAceitaMarcarEncontro = lazy(() => import("./pages/quiz/MulherAceitaMarcarEncontro"));
+const EmojisMensagensIniciativaMulher = lazy(() => import("./pages/quiz/EmojisMensagensIniciativaMulher"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
 const PoliticaCookies = lazy(() => import("./pages/PoliticaCookies"));
@@ -231,6 +235,10 @@ const App = () => (
             <Route path="/melhores-apps-de-namoro-para-homens-apos-os-35-anos-brasil" element={<QuizPage4 />} />
             <Route path="/apps-de-namoro-para-homens-no-interior-do-brasil-vale-a-pena" element={<InteriorQuiz1 />} />
             <Route path="/como-saber-se-mulher-tem-interesse-real-em-voce-apps-namoro-homem-brasil" element={<ComoSaberSeElaTemInteresse />} />
+            <Route path="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem" element={<TempoRespostaMulherInteressada />} />
+            <Route path="/perguntas-pessoais-mulher-interesse-genuino-conversa-apps-namoro" element={<PerguntasPessoaisInteresseGenuino />} />
+            <Route path="/mulher-aceita-marcar-encontro-rapido-app-namoro-sinal-interesse" element={<MulherAceitaMarcarEncontro />} />
+            <Route path="/emojis-mensagens-longas-iniciativa-mulher-interessada-apps-namoro" element={<EmojisMensagensIniciativaMulher />} />
             <Route path="/experiencia-com-apps-de-namoro-cidades-interior" element={<InteriorQuiz2 />} />
             <Route path="/mobilidade-para-encontros-apps-namoro-interior" element={<InteriorQuiz3 />} />
             <Route path="/objetivo-relacionamento-apps-namoro-interior" element={<InteriorQuiz4 />} />

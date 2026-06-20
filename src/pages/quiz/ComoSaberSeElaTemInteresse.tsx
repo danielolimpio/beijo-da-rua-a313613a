@@ -14,7 +14,7 @@ const ComoSaberSeElaTemInteresse = () => {
 
       <QuizLayout
         title="Como Saber Se Uma Mulher Tem Interesse Real Em Você nos Apps?"
-        description="Identifique os sinais corretos e pare de perder tempo com quem não está a fim"
+        description="Pergunta 1 de 5 — Identifique os sinais corretos e pare de perder tempo"
         progress={20}
       >
         {/* Quiz Options - movidas para o topo */}
@@ -28,31 +28,32 @@ const ComoSaberSeElaTemInteresse = () => {
               icon={<MessageCircle size={24} />}
               title="Ela puxa assunto primeiro"
               description="Manda mensagem sem você precisar dar o primeiro passo"
-              href="/seu-app-de-namoro-ideal-resultado"
+              href="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem"
             />
 
             <QuizOption
               icon={<Clock size={24} />}
               title="Responde rápido e com calma"
               description="Não demora horas e escreve mensagens completas, não monossílabos"
-              href="/seu-app-de-namoro-ideal-resultado"
+              href="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem"
             />
 
             <QuizOption
               icon={<Eye size={24} />}
               title="Faz perguntas sobre você"
               description="Demonstra curiosidade real sobre sua vida, trabalho e hobbies"
-              href="/seu-app-de-namoro-ideal-resultado"
+              href="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem"
             />
 
             <QuizOption
               icon={<Heart size={24} />}
               title="Aceita marcar encontro"
               description="Topa sair e sugere horários ou lugares por conta própria"
-              href="/seu-app-de-namoro-ideal-resultado"
+              href="/tempo-resposta-mensagens-mulher-interessada-apps-namoro-homem"
             />
           </div>
         </div>
+
 
         <article className="prose prose-lg max-w-none mb-12">
           <div className="bg-card border border-border rounded-lg p-8 mb-8">
