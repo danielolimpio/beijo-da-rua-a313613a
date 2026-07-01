@@ -26,6 +26,8 @@ import articleHumorInteligente from "@/assets/article-humor-inteligente.jpg";
 import articleReconhecerDisponivel from "@/assets/article-reconhecer-disponivel.jpg";
 import articleCriarExpectativa from "@/assets/article-criar-expectativa-sem-parecer-jogador.jpg";
 import articleAmizadeRomance from "@/assets/article-amizade-romance.jpg";
+import articleGolpesAmorosos from "@/assets/article-golpes-amorosos-apps.jpg";
+import articleIaNamoro from "@/assets/article-ia-namoro-apps.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -42,6 +44,32 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 27,
+    title: "Inteligência Artificial no Namoro: Como Usar IA para Conquistar em Apps",
+    excerpt: "Como usar ChatGPT, Gemini e outras IAs para melhorar bio, fotos e conversas nos apps de namoro sem perder sua autenticidade.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "conquista", "relacionamento"],
+    image: articleIaNamoro,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "1 de julho de 2026",
+    link: "/blog/posts/inteligencia-artificial-no-namoro-apps"
+  },
+  {
+    id: 26,
+    title: "Golpes Amorosos em Apps de Namoro: Como se Proteger em 2026",
+    excerpt: "Guia completo para identificar catfishing, romance scam e outros golpes em apps de namoro. Aprenda a proteger seu coração, seus dados e seu dinheiro.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "relacionamento"],
+    image: articleGolpesAmorosos,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "1 de julho de 2026",
+    link: "/blog/posts/golpes-amorosos-em-apps-de-namoro-como-se-proteger"
+  },
   {
     id: 25,
     title: "Como Transformar Amizade em Romance com Respeito",
