@@ -75,6 +75,8 @@ const HumorInteligente = lazy(() => import("./pages/blog/posts/HumorInteligente"
 const ReconhecerDisponibilidadeEmocional = lazy(() => import("./pages/blog/posts/ReconhecerDisponibilidadeEmocional"));
 const CriarExpectativaSemParecerJogador = lazy(() => import("./pages/blog/posts/CriarExpectativaSemParecerJogador"));
 const ComoTransformarAmizadeEmRomance = lazy(() => import("./pages/blog/posts/ComoTransformarAmizadeEmRomance"));
+const GolpesAmorososEmAppsDeNamoro = lazy(() => import("./pages/blog/posts/GolpesAmorososEmAppsDeNamoro"));
+const InteligenciaArtificialNoNamoro = lazy(() => import("./pages/blog/posts/InteligenciaArtificialNoNamoro"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
 const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
@@ -198,6 +200,10 @@ const App = () => (
             <Route path="/blog/posts/como-transformar-amizade-em-romance-com-respeito" element={<ComoTransformarAmizadeEmRomance />} />
             <Route path="/blog/como-transformar-amizade-em-romance-com-respeito" element={<ComoTransformarAmizadeEmRomance />} />
             <Route path="/como-transformar-amizade-em-romance" element={<ComoTransformarAmizadeEmRomance />} />
+            <Route path="/blog/posts/golpes-amorosos-em-apps-de-namoro-como-se-proteger" element={<GolpesAmorososEmAppsDeNamoro />} />
+            <Route path="/blog/golpes-amorosos-em-apps-de-namoro-como-se-proteger" element={<GolpesAmorososEmAppsDeNamoro />} />
+            <Route path="/blog/posts/inteligencia-artificial-no-namoro-apps" element={<InteligenciaArtificialNoNamoro />} />
+            <Route path="/blog/inteligencia-artificial-no-namoro-apps" element={<InteligenciaArtificialNoNamoro />} />
             {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
             <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
             <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />

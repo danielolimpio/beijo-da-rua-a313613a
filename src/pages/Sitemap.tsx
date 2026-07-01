@@ -158,6 +158,8 @@ const Sitemap = () => {
                 <li className="ml-4"><Link to="/blog/posts/como-reconhecer-se-ela-esta-disponivel-emocionalmente/" className="text-primary hover:underline">Reconhecer Disponibilidade Emocional</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/criar-expectativa-sem-parecer-jogador/" className="text-primary hover:underline">Criar Expectativa sem Parecer Jogador</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/como-transformar-amizade-em-romance-com-respeito/" className="text-primary hover:underline">Como Transformar Amizade em Romance</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/golpes-amorosos-em-apps-de-namoro-como-se-proteger/" className="text-primary hover:underline">Golpes Amorosos em Apps de Namoro</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/inteligencia-artificial-no-namoro-apps/" className="text-primary hover:underline">Inteligência Artificial no Namoro</Link></li>
               </ul>
             </section>
 
