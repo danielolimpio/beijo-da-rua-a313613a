@@ -77,6 +77,8 @@ const CriarExpectativaSemParecerJogador = lazy(() => import("./pages/blog/posts/
 const ComoTransformarAmizadeEmRomance = lazy(() => import("./pages/blog/posts/ComoTransformarAmizadeEmRomance"));
 const GolpesAmorososEmAppsDeNamoro = lazy(() => import("./pages/blog/posts/GolpesAmorososEmAppsDeNamoro"));
 const InteligenciaArtificialNoNamoro = lazy(() => import("./pages/blog/posts/InteligenciaArtificialNoNamoro"));
+const BioPerfeitaAppsDeNamoro = lazy(() => import("./pages/blog/posts/BioPerfeitaAppsDeNamoro"));
+const TinderVsBumbleComparativo = lazy(() => import("./pages/blog/posts/TinderVsBumbleComparativo"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
 const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
@@ -204,6 +206,10 @@ const App = () => (
             <Route path="/blog/golpes-amorosos-em-apps-de-namoro-como-se-proteger" element={<GolpesAmorososEmAppsDeNamoro />} />
             <Route path="/blog/posts/inteligencia-artificial-no-namoro-apps" element={<InteligenciaArtificialNoNamoro />} />
             <Route path="/blog/inteligencia-artificial-no-namoro-apps" element={<InteligenciaArtificialNoNamoro />} />
+            <Route path="/blog/posts/bio-perfeita-apps-de-namoro-2026" element={<BioPerfeitaAppsDeNamoro />} />
+            <Route path="/blog/bio-perfeita-apps-de-namoro-2026" element={<BioPerfeitaAppsDeNamoro />} />
+            <Route path="/blog/posts/tinder-vs-bumble-comparativo-2026" element={<TinderVsBumbleComparativo />} />
+            <Route path="/blog/tinder-vs-bumble-comparativo-2026" element={<TinderVsBumbleComparativo />} />
             {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
             <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
             <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />

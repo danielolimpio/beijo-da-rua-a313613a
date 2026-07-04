@@ -28,6 +28,8 @@ import articleCriarExpectativa from "@/assets/article-criar-expectativa-sem-pare
 import articleAmizadeRomance from "@/assets/article-amizade-romance.jpg";
 import articleGolpesAmorosos from "@/assets/article-golpes-amorosos-apps.jpg";
 import articleIaNamoro from "@/assets/article-ia-namoro-apps.jpg";
+import articleBioPerfeita from "@/assets/article-bio-perfeita-apps.jpg";
+import articleTinderVsBumble from "@/assets/article-tinder-vs-bumble.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -44,6 +46,32 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 29,
+    title: "Tinder vs Bumble em 2026: Comparativo Completo (Qual É o Melhor para Você?)",
+    excerpt: "Preços, público, algoritmo e segurança dos dois maiores apps de namoro do Brasil comparados lado a lado. Descubra qual combina com você.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "relacionamento"],
+    image: articleTinderVsBumble,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "4 de julho de 2026",
+    link: "/blog/posts/tinder-vs-bumble-comparativo-2026"
+  },
+  {
+    id: 28,
+    title: "Bio Perfeita para Apps de Namoro em 2026: Guia Definitivo (com Exemplos)",
+    excerpt: "Estrutura testada, exemplos reais para Tinder, Bumble, Hinge e Happn e um checklist final para escrever a bio que gera 10x mais matches.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "conquista", "relacionamento"],
+    image: articleBioPerfeita,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "4 de julho de 2026",
+    link: "/blog/posts/bio-perfeita-apps-de-namoro-2026"
+  },
   {
     id: 27,
     title: "Inteligência Artificial no Namoro: Como Usar IA para Conquistar em Apps",
