@@ -451,10 +451,18 @@ const BioPerfeitaAppsDeNamoro = () => {
           </ul>
         </div>
 
-        <ArticleAuthorBio name="Daniel Olimpio" image={authorImage} />
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos e Apps de Namoro"
+          image={authorImage}
+          bio="Estuda comportamento de conquista em plataformas digitais desde 2018. Ajuda homens brasileiros a montar perfis, bios e conversas que geram encontros reais."
+        />
       </div>
 
-      <RelatedArticles currentArticleId={28} />
+      <RelatedArticles
+        currentArticleLink="/blog/posts/bio-perfeita-apps-de-namoro-2026"
+        category="aplicativos"
+      />
     </BlogArticleLayout>
   );
 };

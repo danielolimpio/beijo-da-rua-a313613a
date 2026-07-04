@@ -494,10 +494,18 @@ const TinderVsBumbleComparativo = () => {
           </ul>
         </div>
 
-        <ArticleAuthorBio name="Daniel Olimpio" image={authorImage} />
+        <ArticleAuthorBio
+          name="Daniel Olimpio"
+          role="Especialista em Relacionamentos e Apps de Namoro"
+          image={authorImage}
+          bio="Analisa apps de namoro e comportamento digital brasileiro há mais de 7 anos. Já testou pessoalmente todos os grandes aplicativos do mercado."
+        />
       </div>
 
-      <RelatedArticles currentArticleId={29} />
+      <RelatedArticles
+        currentArticleLink="/blog/posts/tinder-vs-bumble-comparativo-2026"
+        category="aplicativos"
+      />
     </BlogArticleLayout>
   );
 };
