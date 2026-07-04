@@ -160,6 +160,8 @@ const Sitemap = () => {
                 <li className="ml-4"><Link to="/blog/posts/como-transformar-amizade-em-romance-com-respeito/" className="text-primary hover:underline">Como Transformar Amizade em Romance</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/golpes-amorosos-em-apps-de-namoro-como-se-proteger/" className="text-primary hover:underline">Golpes Amorosos em Apps de Namoro</Link></li>
                 <li className="ml-4"><Link to="/blog/posts/inteligencia-artificial-no-namoro-apps/" className="text-primary hover:underline">Inteligência Artificial no Namoro</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/bio-perfeita-apps-de-namoro-2026/" className="text-primary hover:underline">Bio Perfeita para Apps de Namoro em 2026</Link></li>
+                <li className="ml-4"><Link to="/blog/posts/tinder-vs-bumble-comparativo-2026/" className="text-primary hover:underline">Tinder vs Bumble: Comparativo 2026</Link></li>
               </ul>
             </section>
 
