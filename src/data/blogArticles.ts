@@ -30,6 +30,8 @@ import articleGolpesAmorosos from "@/assets/article-golpes-amorosos-apps.jpg";
 import articleIaNamoro from "@/assets/article-ia-namoro-apps.jpg";
 import articleBioPerfeita from "@/assets/article-bio-perfeita-apps.jpg";
 import articleTinderVsBumble from "@/assets/article-tinder-vs-bumble.jpg";
+import articleVpnAppsNamoro from "@/assets/article-vpn-apps-namoro.jpg";
+import articleFotosPerfilApps from "@/assets/article-fotos-perfil-apps.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -46,6 +48,32 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 31,
+    title: "Fotos de Perfil para Apps de Namoro: O Guia Definitivo para Homens em 2026",
+    excerpt: "Ordem ideal das fotos, luz, poses, expressão, uso responsável de IA e os 10 erros que matam matches no Tinder, Bumble, Hinge e Happn.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "conquista", "autoestima"],
+    image: articleFotosPerfilApps,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "5 de julho de 2026",
+    link: "/blog/posts/fotos-perfil-apps-namoro-guia-homens"
+  },
+  {
+    id: 30,
+    title: "VPN para Apps de Namoro: Como Proteger sua Privacidade e Localização em 2026",
+    excerpt: "Quando faz sentido usar VPN em apps de namoro, riscos de ban, mudança de localização, LGPD e checklist prático de privacidade digital.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "relacionamento"],
+    image: articleVpnAppsNamoro,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "5 de julho de 2026",
+    link: "/blog/posts/vpn-para-apps-de-namoro-privacidade"
+  },
   {
     id: 29,
     title: "Tinder vs Bumble em 2026: Comparativo Completo (Qual É o Melhor para Você?)",
