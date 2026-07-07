@@ -32,6 +32,8 @@ import articleBioPerfeita from "@/assets/article-bio-perfeita-apps.jpg";
 import articleTinderVsBumble from "@/assets/article-tinder-vs-bumble.jpg";
 import articleVpnAppsNamoro from "@/assets/article-vpn-apps-namoro.jpg";
 import articleFotosPerfilApps from "@/assets/article-fotos-perfil-apps.jpg";
+import articlePrimeiraMensagemTinder from "@/assets/article-primeira-mensagem-tinder.jpg";
+import articleGhostingApps from "@/assets/article-ghosting-apps-namoro.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -48,6 +50,32 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 33,
+    title: "Ghosting em Apps de Namoro: Por Que Acontece e Como Superar em 2026",
+    excerpt: "Entenda a psicologia do ghosting, como reagir nas primeiras 72h, superar sem endurecer o coração e reduzir as chances de acontecer de novo.",
+    category: "Relacionamento",
+    categoryId: "relacionamento",
+    categoryIds: ["relacionamento", "apps-de-namoro", "aplicativos", "autoestima"],
+    image: articleGhostingApps,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de julho de 2026",
+    link: "/blog/posts/ghosting-em-apps-de-namoro-como-lidar"
+  },
+  {
+    id: 32,
+    title: "Primeira Mensagem no Tinder: 27 Aberturas que Recebem Resposta em 2026",
+    excerpt: "Chega de 'oi, tudo bem?'. Veja 27 aberturas testadas por categoria, com exemplos reais, para triplicar sua taxa de resposta no Tinder.",
+    category: "Aplicativos",
+    categoryId: "aplicativos",
+    categoryIds: ["aplicativos", "apps-de-namoro", "conquista", "paquera"],
+    image: articlePrimeiraMensagemTinder,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "7 de julho de 2026",
+    link: "/blog/posts/primeira-mensagem-tinder-que-recebe-resposta"
+  },
   {
     id: 31,
     title: "Fotos de Perfil para Apps de Namoro: O Guia Definitivo para Homens em 2026",

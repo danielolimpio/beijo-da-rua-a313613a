@@ -81,6 +81,8 @@ const BioPerfeitaAppsDeNamoro = lazy(() => import("./pages/blog/posts/BioPerfeit
 const TinderVsBumbleComparativo = lazy(() => import("./pages/blog/posts/TinderVsBumbleComparativo"));
 const VpnParaAppsDeNamoro = lazy(() => import("./pages/blog/posts/VpnParaAppsDeNamoro"));
 const FotosPerfilAppsNamoro = lazy(() => import("./pages/blog/posts/FotosPerfilAppsNamoro"));
+const PrimeiraMensagemTinder = lazy(() => import("./pages/blog/posts/PrimeiraMensagemTinder"));
+const GhostingEmAppsDeNamoro = lazy(() => import("./pages/blog/posts/GhostingEmAppsDeNamoro"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
 const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
@@ -216,6 +218,10 @@ const App = () => (
             <Route path="/blog/vpn-para-apps-de-namoro-privacidade" element={<VpnParaAppsDeNamoro />} />
             <Route path="/blog/posts/fotos-perfil-apps-namoro-guia-homens" element={<FotosPerfilAppsNamoro />} />
             <Route path="/blog/fotos-perfil-apps-namoro-guia-homens" element={<FotosPerfilAppsNamoro />} />
+            <Route path="/blog/posts/primeira-mensagem-tinder-que-recebe-resposta" element={<PrimeiraMensagemTinder />} />
+            <Route path="/blog/primeira-mensagem-tinder-que-recebe-resposta" element={<PrimeiraMensagemTinder />} />
+            <Route path="/blog/posts/ghosting-em-apps-de-namoro-como-lidar" element={<GhostingEmAppsDeNamoro />} />
+            <Route path="/blog/ghosting-em-apps-de-namoro-como-lidar" element={<GhostingEmAppsDeNamoro />} />
             {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
             <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
             <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
