@@ -81,6 +81,8 @@ const BioPerfeitaAppsDeNamoro = lazy(() => import("./pages/blog/posts/BioPerfeit
 const TinderVsBumbleComparativo = lazy(() => import("./pages/blog/posts/TinderVsBumbleComparativo"));
 const VpnParaAppsDeNamoro = lazy(() => import("./pages/blog/posts/VpnParaAppsDeNamoro"));
 const FotosPerfilAppsNamoro = lazy(() => import("./pages/blog/posts/FotosPerfilAppsNamoro"));
+const PrimeiraMensagemTinder = lazy(() => import("./pages/blog/posts/PrimeiraMensagemTinder"));
+const GhostingEmAppsDeNamoro = lazy(() => import("./pages/blog/posts/GhostingEmAppsDeNamoro"));
 const Quiz = lazy(() => import("./pages/Quiz"));
 const QuizPage1 = lazy(() => import("./pages/quiz/QuizPage1"));
 const QuizPage2 = lazy(() => import("./pages/quiz/QuizPage2"));
