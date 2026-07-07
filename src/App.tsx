@@ -218,6 +218,10 @@ const App = () => (
             <Route path="/blog/vpn-para-apps-de-namoro-privacidade" element={<VpnParaAppsDeNamoro />} />
             <Route path="/blog/posts/fotos-perfil-apps-namoro-guia-homens" element={<FotosPerfilAppsNamoro />} />
             <Route path="/blog/fotos-perfil-apps-namoro-guia-homens" element={<FotosPerfilAppsNamoro />} />
+            <Route path="/blog/posts/primeira-mensagem-tinder-que-recebe-resposta" element={<PrimeiraMensagemTinder />} />
+            <Route path="/blog/primeira-mensagem-tinder-que-recebe-resposta" element={<PrimeiraMensagemTinder />} />
+            <Route path="/blog/posts/ghosting-em-apps-de-namoro-como-lidar" element={<GhostingEmAppsDeNamoro />} />
+            <Route path="/blog/ghosting-em-apps-de-namoro-como-lidar" element={<GhostingEmAppsDeNamoro />} />
             {/* Blog posts - rotas alternativas SEM /posts/ para compatibilidade com URLs externas */}
             <Route path="/blog/cantadas-irresistiveis-que-funcionam" element={<CantadasIrresistiveisQueFuncionam />} />
             <Route path="/blog/como-abordar-uma-mulher-com-confianca" element={<ComoAbordarUmaMulherComConfianca />} />
