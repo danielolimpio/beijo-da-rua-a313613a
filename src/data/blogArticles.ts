@@ -32,6 +32,8 @@ import articleBioPerfeita from "@/assets/article-bio-perfeita-apps.jpg";
 import articleTinderVsBumble from "@/assets/article-tinder-vs-bumble.jpg";
 import articleVpnAppsNamoro from "@/assets/article-vpn-apps-namoro.jpg";
 import articleFotosPerfilApps from "@/assets/article-fotos-perfil-apps.jpg";
+import articlePrimeiraMensagemTinder from "@/assets/article-primeira-mensagem-tinder.jpg";
+import articleGhostingApps from "@/assets/article-ghosting-apps-namoro.jpg";
 
 export interface BlogArticle {
   id: number;
