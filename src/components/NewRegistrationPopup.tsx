@@ -45,18 +45,16 @@ const NewRegistrationPopup = () => {
   useEffect(() => {
     if (!FEATURE_FLAGS.SHOW_REGISTRATION_POPUP) return;
 
-    // Delay first popup to not block initial interaction
-    const initialTimeout = setTimeout(showRandomProfile, 5000);
+    // Show only once per session to avoid interfering with AdSense review
+    try {
+      if (sessionStorage.getItem("registration_popup_shown") === "1") return;
+      sessionStorage.setItem("registration_popup_shown", "1");
+    } catch {
+      // ignore storage errors
+    }
 
-    const interval = setInterval(() => {
-      const randomDelay = Math.random() * 7000 + 8000;
-      setTimeout(showRandomProfile, randomDelay);
-    }, 15000);
-
-    return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
-    };
+    const initialTimeout = setTimeout(showRandomProfile, 8000);
+    return () => clearTimeout(initialTimeout);
   }, [showRandomProfile]);
 
   if (!FEATURE_FLAGS.SHOW_REGISTRATION_POPUP || !currentProfile) return null;
