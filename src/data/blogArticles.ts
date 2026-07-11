@@ -34,6 +34,7 @@ import articleVpnAppsNamoro from "@/assets/article-vpn-apps-namoro.jpg";
 import articleFotosPerfilApps from "@/assets/article-fotos-perfil-apps.jpg";
 import articlePrimeiraMensagemTinder from "@/assets/article-primeira-mensagem-tinder.jpg";
 import articleGhostingApps from "@/assets/article-ghosting-apps-namoro.jpg";
+import articlePerfisFalsos from "@/assets/article-perfis-falsos-catfishing.jpg";
 
 export interface BlogArticle {
   id: number;
@@ -50,6 +51,19 @@ export interface BlogArticle {
 }
 
 export const recentArticles: BlogArticle[] = [
+  {
+    id: 34,
+    title: "Perfis Falsos em Apps de Namoro: Guia Anti-Catfishing 2026",
+    excerpt: "Sinais claros, ferramentas gratuitas de verificação, perguntas que desmascaram catfish e o passo a passo se você foi vítima.",
+    category: "Segurança Digital",
+    categoryId: "seguranca",
+    categoryIds: ["seguranca", "apps-de-namoro", "aplicativos", "privacidade"],
+    image: articlePerfisFalsos,
+    author: "Daniel Olimpio",
+    authorImage: authorImage,
+    date: "11 de julho de 2026",
+    link: "/blog/posts/perfis-falsos-catfishing-apps-de-namoro"
+  },
   {
     id: 33,
     title: "Ghosting em Apps de Namoro: Por Que Acontece e Como Superar em 2026",
